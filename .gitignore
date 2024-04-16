@@ -1,0 +1,15 @@
+.cache
+.DS_Store
+.idea
+.output
+.temp
+*.local
+*.log
+*.vsix
+_temp
+coverage
+dist
+node_modules
+.eslintcache
+docs/.vitepress/cache/
+vite.config.ts.timestamp-*
