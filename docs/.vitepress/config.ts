@@ -117,6 +117,19 @@ export default defineConfig({
               text: 'levelup',
               link: '/guide/levelup',
             },
+            {
+              text: 'Tools',
+              items: [
+                {
+                  text: 'Linting',
+                  link: '/guide/tools/linting'
+                },
+                {
+                  text: 'Command-line',
+                  link: '/guide/tools/cli'
+                }
+              ]
+            }
           ],
         },
       ],
