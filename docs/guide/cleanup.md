@@ -7,7 +7,7 @@ amount of technical debt along the way.
 Much of this is in the form of packages which are redundant, bloated or have
 since fallen out of active maintenance.
 
-In an attempt to clean up this up, the
+In an attempt to clean this up, the
 [ecosystem-cleanup effort](https://github.com/43081j/ecosystem-cleanup) has
 been started.
 
