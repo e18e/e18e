@@ -16,9 +16,6 @@ hero:
       text: Learn More
       link: /guide/
     - theme: alt
-      text: Why?
-      link: /guide/why
-    - theme: alt
       text: Join us
       link: https://chat.e18e.dev
 
