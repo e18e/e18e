@@ -98,13 +98,18 @@ export default defineConfig({
           text: 'Guide',
           items: [
             {
-              text: 'Why',
-              link: '/guide/why',
-            },
-            {
-              text: 'e18e',
+              text: 'Why e18e',
               link: '/guide/',
             },
+            {
+              text: 'Resources',
+              link: '/guide/resources',
+            },
+          ]
+        },
+        {
+          text: 'Performance',
+          items: [
             {
               text: 'cleanup',
               link: '/guide/cleanup',
@@ -117,19 +122,6 @@ export default defineConfig({
               text: 'levelup',
               link: '/guide/levelup',
             },
-            {
-              text: 'Tools',
-              items: [
-                {
-                  text: 'Linting',
-                  link: '/guide/tools/linting'
-                },
-                {
-                  text: 'Command-line',
-                  link: '/guide/tools/cli'
-                }
-              ]
-            }
           ],
         },
       ],
