@@ -1,9 +1,6 @@
-<h1 align="center">
-e18e
-</h1>
-<p align="center">
-Ecosystem Performance
-<p>
+![e18e (Ecosystem Performance)](/docs/public/e18e-og-image.png)
+
+<br><br>
 
 <p align="center">
 <a href="https://chat.e18e.dev"><b>Get involved!</b></a>
