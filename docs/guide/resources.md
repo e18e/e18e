@@ -6,6 +6,7 @@
 - [Tinylibs](https://github.com/tinylibs)
 - [unjs](https://github.com/unjs/)
 - [es-tooling](https://github.com/es-tooling/)
+- [Awesome Low-Fat JS](https://github.com/terrablue/awesome-lowfat-js)
 
 ## Tools
 
