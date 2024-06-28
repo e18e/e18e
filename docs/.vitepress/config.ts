@@ -4,7 +4,7 @@ import { buildEnd } from './buildEnd.config'
 
 const ogTitle = 'e18e'
 const ogDescription = 'Ecosystem Performance'
-const ogImage = 'https://e18e.dev/og-image.png'
+const ogImage = 'https://e18e.dev/e18e-og-image.png'
 const ogUrl = 'https://e18e.dev'
 
 // netlify envs
@@ -15,7 +15,7 @@ export default defineConfig({
   description: 'Ecosystem Performance',
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     [
       'link',
       { rel: 'alternate', type: 'application/rss+xml', href: '/blog.rss' },

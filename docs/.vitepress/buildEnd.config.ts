@@ -13,7 +13,7 @@ export const buildEnd = async (config: SiteConfig) => {
     id: blogUrl,
     link: blogUrl,
     language: 'en',
-    image: 'https://e18e.dev/og-image.png',
+    image: 'https://e18e.dev/e18e-og-image.png',
     favicon: 'https://e18e.dev/favicon.svg',
     copyright: 'Copyright © 2024-present e18e Contributors',
   })
