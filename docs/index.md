@@ -23,12 +23,15 @@ features:
   - icon: ✨
     title: Cleanup
     details: Improving packages by removing redundant dependencies or replacing them with modern alternatives.
+    link: /guide/cleanup
   - icon: ⚡️
     title: Speedup
     details: Improving performance of widely used packages.
+    link: /guide/speedup
   - icon: 🧩
     title: Levelup
     details: Building modern alternatives to outdated packages.
+    link: /guide/levelup
 ---
 
 ## Welcome to e18e!
