@@ -2,18 +2,22 @@
 
 ## Efforts
 
-- [JS ecosystem cleanup](https://github.com/43081j/ecosystem-cleanup)
-- [Tinylibs](https://github.com/tinylibs)
-- [unjs](https://github.com/unjs/)
-- [es-tooling](https://github.com/es-tooling/)
+|  | Description |
+| -- | -- |
+| [JS ecosystem cleanup](https://github.com/43081j/ecosystem-cleanup) | Efforts to provide a cleaner dependency tree in the JS ecosystem |
+| [Tinylibs](https://github.com/tinylibs) | A place for tiny and minimal libraries |
+| [unjs](https://github.com/unjs/) | Purpose-built, high-quality JavaScript utilities, libraries, and tools |
+| [es-tooling](https://github.com/es-tooling/) | A collection of tooling for the JS ecosystem |
 
 ## Tools
 
-- [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
-- [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files)
-- [Biome's noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)
-- [Biome's noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)
-- [unplugin-purge-polyfills](https://github.com/danielroe/unplugin-purge-polyfills)
+|  | Description |
+| -- | -- |
+| [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) | ESLint plugin to suggest dependencies alternatives |
+| [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files) | ESLint plugin to avoid barrel files |
+| [Biome's noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/) | Biome plugin to avoid barrel files |
+| [Biome's noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/) | Biome plugin to avoid re-export all |
+| [unplugin-purge-polyfills](https://github.com/danielroe/unplugin-purge-polyfills) | Unplugin to replace package imports with native code |
 
 ## Learning
 
