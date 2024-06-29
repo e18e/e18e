@@ -29,3 +29,22 @@ Biome supports some rules out of the box which align with e18e:
 
 - [noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)
 - [noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)
+
+## Coding tips
+
+The code you write plays an important role in the performance of your app. Some patterns are highlighted below for common pitfalls and ways to improve it. Remember to always profile your code when making performance changes!
+
+<!-- Headers below are sorted alphabetically -->
+<!-- TODO: Add inline benchmark comparison playground -->
+
+### Avoid generators for hot code paths
+
+At the moment, most JavaScript engines do not optimize [generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) function calls which leads to a large performance hit if used extensively.
+
+Prefer using non-async [iterators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) or plain arrays.
+
+### Avoid chaining array methods
+
+Chaining array methods like `map`, `filter`, `reduce`, etc leads to many intermediate arrays being created and disposed, causing more work for the garbage collector. Each chain also leads to an extra iteration, which can be more times than needed.
+
+Prefer using [`for` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...in` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), and[`for...of` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), or a single chain method only to prevent the caveats above.
