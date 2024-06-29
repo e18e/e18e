@@ -11,8 +11,8 @@
 
 - [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)
 - [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files)
-- [noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)
-- [noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)
+- [Biome's noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)
+- [Biome's noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)
 - [unplugin-purge-polyfills](https://github.com/danielroe/unplugin-purge-polyfills)
 
 ## Learning

@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "npm -C docs run dev",
     "build": "npm -C docs run build",
+    "serve": "npm -C docs run serve",
     "lint": "eslint --cache .",
     "lint:fix": "nr lint --fix"
   },
