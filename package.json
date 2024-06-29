@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.15.7",
+  "packageManager": "pnpm@9.4.0",
   "scripts": {
     "dev": "npm -C docs run dev",
     "build": "npm -C docs run build",
@@ -17,8 +17,14 @@
     "eslint": "^9.0.0",
     "eslint-plugin-antfu": "^2.1.2",
     "lint-staged": "^15.2.2",
-    "pnpm": "8.15.7",
     "simple-git-hooks": "^2.11.1"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowAny": [
+        "eslint"
+      ]
+    }
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
