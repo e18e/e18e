@@ -15,4 +15,6 @@ This project aims to drive contributions upstream to many different open-source 
 
 If you'd like to get involved, we suggest reading the [Ecosystem Cleanup Guide](https://github.com/43081j/ecosystem-cleanup/blob/main/docs/guide.md), which explains how to discover common problems to resolve in upstream packages.
 
-And make sure to checkout the [Module Replacements](https://github.com/es-tooling/module-replacements/tree/main?tab=readme-ov-file#module-replacements) project. It provides a collection of module replacements (i.e. possible alternative packages) and tools to automatically detect possible improvements.
+Make sure to checkout the [Module Replacements](https://github.com/es-tooling/module-replacements/tree/main?tab=readme-ov-file#module-replacements) project. It provides a collection of module replacements (i.e. possible alternative packages) and tools to automatically detect possible improvements.
+
+And join us at the [e18e Discord server](https://chat.e18e.dev) to connect with others to share your wins or get help along the way!
