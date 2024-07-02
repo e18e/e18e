@@ -4,24 +4,20 @@ The JavaScript ecosystem has grown massively over the years, in good and bad way
 
 Much of this is in the form of packages which are redundant, bloated or have since fallen out of active maintenance.
 
-In an attempt to clean this up, the [ecosystem-cleanup effort](https://github.com/43081j/ecosystem-cleanup) has been started.
-
-This project aims to drive contributions upstream to many different open-source projects. A few of the things we will do:
+A good example of the current efforts to clean our packages up, is [@43081j's ecosystem-cleanup](https://github.com/43081j/ecosystem-cleanup). This project aims to [drive contributions upstream](https://github.com/43081j/ecosystem-cleanup/issues) to many different open-source projects. The project aims to:
 
 - Modernize existing packages
 - Migrate from redundant packages
 - Migrate from inactive packages
 - Migrate to lighter and/or faster alternatives
 
-If you'd like to get involved, we suggest reading the [Ecosystem Cleanup Guide](https://github.com/43081j/ecosystem-cleanup/blob/main/docs/guide.md), which explains how to discover common problems to resolve in upstream packages.
-
-Make sure to checkout the [Module Replacements](https://github.com/es-tooling/module-replacements/tree/main?tab=readme-ov-file#module-replacements) project. It provides a collection of module replacements (i.e. possible alternative packages) and tools to automatically detect possible improvements.
-
-And join us at the [e18e Discord server](https://chat.e18e.dev) to connect with others to share your wins or get help along the way!
-
 ## Contribution Guide
 
 This guide is here to help you discover and contribute improvements to the ecosystem. We will go through some common discovery techniques and common problems to resolve in upstream packages.
+
+::: info Collaborate with the community
+Join the [e18e Discord server](https://chat.e18e.dev) to connect with others to share your wins or get help along the way!
+:::
 
 ### Discovery
 
