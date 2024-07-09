@@ -22,3 +22,4 @@
 ## Learning
 
 - [Marvin's Speeding Up the JS Ecosystem series](https://marvinh.dev/blog/speeding-up-javascript-ecosystem/)
+- [Practical barrel file guide for library authors](https://thepassle.netlify.app/blog/practical-barrel-file-guide-for-library-authors)
