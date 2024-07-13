@@ -1,0 +1,12 @@
+.vp-doc table {
+  display: table;
+  width: 100%;
+}
+
+.vp-doc table td:first-child {
+  min-width: 200px;
+}
+
+.vp-doc table a {
+  text-decoration: none;
+}

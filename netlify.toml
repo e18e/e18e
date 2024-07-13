@@ -1,0 +1,10 @@
+[build]
+publish = "docs/.vitepress/dist"
+command = "pnpm run build"
+
+[build.environment]
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max_old_space_size=4096"
+
+[functions]
+node_bundler = "esbuild"
