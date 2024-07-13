@@ -82,6 +82,8 @@ Even if you will try tackle them yourself, this will help improve visibility so 
 
 Or if you do not have time to tackle it yourself, it is possible someone else can follow your findings.
 
+Feel free to also attach a package report using [DevMiner's package-size-calculator](https://github.com/TheDevMinerTV/package-size-calculator) to the issue, to give an overview over the package's size and the changes you are proposing.
+
 ### Fixes
 
 We've now identified some dependency which introduces performance problems.
