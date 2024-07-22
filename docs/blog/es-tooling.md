@@ -52,7 +52,7 @@ The cleanup project exists primarily as an issue tracker, tracking:
 
 If you want to help out, this project is a good starting point to find some open issues.
 
-Read more at the [ecosystem cleanup project](https://github.com/43081j/ecosystem-cleanup).
+Read more at the [ecosystem cleanup project](https://github.com/es-tooling/ecosystem-cleanup).
 
 ## Module replacements
 
