@@ -56,7 +56,7 @@ Read more at the [ecosystem cleanup project](https://github.com/es-tooling/ecosy
 
 ## Module replacements
 
-The module replacements project is a community lead list of popular NPM packages and their possible replacements.
+The module replacements project is a community lead list of popular npm packages and their possible replacements.
 
 Often, these replacements are native, or much faster and more modern packages. If you know of a good alternative to something, get involved and add to the list!
 
