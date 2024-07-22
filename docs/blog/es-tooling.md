@@ -23,7 +23,7 @@ head:
 
 _July 22, 2024_
 
-The e18e initiative has seen huge growth since launch. We've seen hundreds of performance contributions upstream to popular projects, and many community lead tools.
+The e18e initiative has seen huge growth since launch. We've seen hundreds of performance contributions upstream to popular projects, and the creation of many community lead tools.
 
 A notable example of this is the [ES Tooling](https://github.com/orgs/es-tooling/repositories) community GitHub organisation.
 
