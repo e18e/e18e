@@ -68,7 +68,22 @@ Read more at the [module replacements project](https://github.com/es-tooling/mod
 
 ## Module replacements codemods
 
-TODO
+The module replacements codemods project is an effort to automate the ecosystem cleanup. Taking the module replacements as input, we aim to have automated codemods for all packages listed. This way other tooling can use these codemods to perform transformations on projects automatically. For example, a codemod for the `is-even` package would result in:
+
+Before:
+```js
+const isEven = require('is-even')
+console.log(isEven(2))
+```
+
+After:
+```js
+console.log(2 % 2 === 0)
+```
+
+We'll also be looking into implementing a CLI around these codemods so people can run them on their own projects, or so they can run them on other projects and create pull requests to them, hopefully simplifying the amount of effort it takes to replace dependencies.
+
+You can find more information about the [module replacements codemods](https://github.com/es-tooling/module-replacements-codemods) repository. If you're interested in seeing the before/after states of the codemods, take a look at the [test fixtures](https://github.com/es-tooling/module-replacements-codemods/tree/main/test/fixtures), every codemod has one or more before/after example available.
 
 ## What's next?
 
