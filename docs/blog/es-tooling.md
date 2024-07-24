@@ -29,6 +29,8 @@ A notable example of this is the [ES Tooling](https://github.com/orgs/es-tooling
 
 The ES Tooling organisation has been created to hold various e18e-focused tools and forks maintained by the community.
 
+If you haven't yet encountered e18e, read more in the [guide](https://e18e.dev/guide/#why-e18e) and [join the community](https://chat.e18e.dev/).
+
 ## A home for e18e-focused tools
 
 Over the last few months, many of us have collaborated and connected through the e18e community. The ES tooling organisation is a result of that - a place for us to store and own forks, tools, and other code bases we're working on together.
@@ -37,7 +39,7 @@ A few popular projects that were running solo until now, have come together to c
 
 - [ecosystem cleanup](https://github.com/43081j/ecosystem-cleanup).
 - [module replacements](https://github.com/es-tooling/module-replacements).
-- [module replacements code mods](https://github.com/thepassle/module-replacements-codemods)
+- [module replacements codemods](https://github.com/thepassle/module-replacements-codemods)
 - [fd-package-json](https://github.com/es-tooling/fd-package-json)
 
 The ES Tooling org predates the creation of the e18e initiative. In case you're wondering about why these efforts won't live under the e18e org, we think that it is better to keep this organization focused on [fostering the space to connect us](https://chat.e18e.dev/), and maintaining a curation of ecosystem performance projects.
@@ -64,7 +66,7 @@ Often, these replacements are native, or much faster and more modern packages. I
 
 Read more at the [module replacements project](https://github.com/es-tooling/module-replacements).
 
-## Module replacements code mods
+## Module replacements codemods
 
 TODO
 
