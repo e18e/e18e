@@ -40,6 +40,8 @@ A few popular projects that were running solo until now, have come together to c
 - [module replacements code mods](https://github.com/thepassle/module-replacements-codemods)
 - [fd-package-json](https://github.com/es-tooling/fd-package-json)
 
+The ES Tooling org predates the creation of the e18e initiative. In case you're wondering about why these efforts won't live under the e18e org, we think that it is better to keep this organization focused on [fostering the space to connect us](https://chat.e18e.dev/), and maintaining a curation of ecosystem performance projects.
+
 ## Ecosystem cleanup
 
 One of the projects which kicked much of this initiative off - the ecosystem cleanup project has now moved into the ES Tooling organisation to allow better visibility and maintenance.
