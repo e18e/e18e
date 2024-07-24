@@ -1,7 +1,7 @@
 ---
 title: ES Tooling - community lead e18e-focused tooling
 author:
-  - name: The e18e Contributors
+  - name: James Garbutt and Pascal Schilp
 sidebar: false
 date: 2024-07-22
 head:
