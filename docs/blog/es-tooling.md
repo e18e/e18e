@@ -42,6 +42,8 @@ A few popular projects that were running solo until now, have come together to c
 
 While e18e exists to connect us all and provide a space to collaborate, it doesn't exist to own the projects coming out of the initiative. That is where projects like es-tooling, unjs and more come in to play.
 
+**We expect es-tooling will be one of many community lead orgs with an e18e focus.**
+
 ## Ecosystem cleanup
 
 One of the projects which kicked much of this initiative off - the ecosystem cleanup project has now moved into the ES Tooling organisation to allow better visibility and maintenance.
