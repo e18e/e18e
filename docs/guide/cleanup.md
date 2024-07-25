@@ -1,10 +1,10 @@
-# Cleanup
+# Clean up
 
 The JavaScript ecosystem has grown massively over the years, in good and bad ways. We have all the packages and choice we want, but have built up a vast amount of technical debt along the way.
 
 Much of this is in the form of packages which are redundant, bloated or have since fallen out of active maintenance.
 
-A good example of the current efforts to clean our packages up, is [@43081j's ecosystem-cleanup](https://github.com/43081j/ecosystem-cleanup). This project aims to [drive contributions upstream](https://github.com/43081j/ecosystem-cleanup/issues) to many different open-source projects. The project aims to:
+A good example of the current efforts to clean our packages up is [@43081j's ecosystem-cleanup](https://github.com/43081j/ecosystem-cleanup). This project aims to [drive contributions upstream](https://github.com/43081j/ecosystem-cleanup/issues) to many different open-source projects. The project aims to:
 
 - Modernize existing packages
 - Migrate from redundant packages
@@ -70,7 +70,7 @@ What we should be looking for:
 - Dependencies which are duplicated (either through multiple versions, or multiple dependencies achieving the same goals).
 - Very large (install size) dependencies.
 
-Back to our vite example - at the time of writing this, we can see in the rollup bundle that both `fast-glob` and `glob` are bundled into vite.
+Back to our vite example: At the time of writing this, we can see in the rollup bundle that both `fast-glob` and `glob` are bundled into vite.
 
 This will mean we are bundling two non-trivial packages which essentially do the same thing. We have found a possible performance improvement!
 
