@@ -25,7 +25,7 @@ _July 22, 2024_
 
 The e18e initiative has seen huge growth since launch. We've seen hundreds of performance contributions upstream to popular projects, and the creation of many community lead tools.
 
-A notable example of this is the [ES Tooling](https://github.com/orgs/es-tooling/repositories) community GitHub organisation.
+A notable example of this is the [ES Tooling](https://github.com/orgs/es-tooling/) community GitHub organisation.
 
 If you haven't yet encountered e18e, read more in the [guide](https://e18e.dev/guide/#why-e18e) and [join the community](https://chat.e18e.dev/).
 
