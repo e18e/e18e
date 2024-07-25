@@ -10,7 +10,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: es tooling - community lead e18e-focused tooling
+      content: ES tooling - community lead e18e-focused tooling
   - - meta
     - property: og:url
       content: https://e18e.dev/blog/es-tooling
@@ -27,8 +27,6 @@ The e18e initiative has seen huge growth since launch. We've seen hundreds of pe
 
 A notable example of this is the [ES Tooling](https://github.com/orgs/es-tooling/repositories) community GitHub organisation.
 
-The ES Tooling organisation has been created to hold various e18e-focused tools and forks maintained by the community.
-
 If you haven't yet encountered e18e, read more in the [guide](https://e18e.dev/guide/#why-e18e) and [join the community](https://chat.e18e.dev/).
 
 ## A home for e18e-focused tools
@@ -37,12 +35,12 @@ Over the last few months, many of us have collaborated and connected through the
 
 A few popular projects that were running solo until now, have come together to create this:
 
-- [ecosystem cleanup](https://github.com/43081j/ecosystem-cleanup).
-- [module replacements](https://github.com/es-tooling/module-replacements).
-- [module replacements codemods](https://github.com/thepassle/module-replacements-codemods)
+- [ecosystem-cleanup](https://github.com/43081j/ecosystem-cleanup).
+- [module-replacements](https://github.com/es-tooling/module-replacements).
+- [module-replacements-codemods](https://github.com/thepassle/module-replacements-codemods)
 - [fd-package-json](https://github.com/es-tooling/fd-package-json)
 
-The ES Tooling org predates the creation of the e18e initiative. In case you're wondering about why these efforts won't live under the e18e org, we think that it is better to keep this organization focused on [fostering the space to connect us](https://chat.e18e.dev/), and maintaining a curation of ecosystem performance projects.
+While e18e exists to connect us all and provide a space to collaborate, it doesn't exist to own the projects coming out of the initiative. That is where projects like es-tooling, unjs and more come in to play.
 
 ## Ecosystem cleanup
 
@@ -83,7 +81,7 @@ console.log(2 % 2 === 0)
 
 We'll also be looking into implementing a CLI around these codemods so people can run them on their own projects, or so they can run them on other projects and create pull requests to them, hopefully simplifying the amount of effort it takes to replace dependencies.
 
-You can find more information about the [module replacements codemods](https://github.com/es-tooling/module-replacements-codemods) repository. If you're interested in seeing the before/after states of the codemods, take a look at the [test fixtures](https://github.com/es-tooling/module-replacements-codemods/tree/main/test/fixtures), every codemod has one or more before/after example available.
+You can find more information about the [module replacements codemods](https://github.com/es-tooling/module-replacements-codemods) repository. If you're interested in seeing the before/after states of the codemods, take a look at the [test fixtures](https://github.com/es-tooling/module-replacements-codemods/tree/main/test/fixtures). Every codemod has one or more before/after examples available.
 
 ## What's next?
 
