@@ -12,7 +12,7 @@ A good example of the current efforts to clean our packages up, is [es-tooling/e
 - Migrate to lighter and/or faster alternatives
 
 ::: info Jump into action!
-The es-tooling community maintains a list of [open cleanup opportunities in the cleanup repo](https://github.com/43081j/ecosystem-cleanup/issues). After reading this guide, check out these issues for ideas to improve popular packages. And if you do research and find other places we can clean up a dependency tree, or speed it up, please do open some tracking issues in the cleanup repo, so you give others good starting points to get involved.
+The es-tooling community maintains a list of [open opportunities in the ecosystem-cleanup repo](https://github.com/43081j/ecosystem-cleanup/issues). After reading this guide, check out these issues for ideas to improve popular packages. And if you do research and find other places we can clean up a dependency tree, or speed it up, please do open some tracking issues in the cleanup repo, so you give others good starting points to get involved.
 
 We can have a bigger effect working together. Join the [e18e Discord server](https://chat.e18e.dev) to connect with others to share your wins or get help along the way!
 :::
