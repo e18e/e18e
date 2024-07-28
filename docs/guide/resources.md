@@ -18,6 +18,7 @@
 | [Biome's noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/) | Biome plugin to avoid barrel files |
 | [Biome's noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/) | Biome plugin to avoid re-export all |
 | [unplugin-purge-polyfills](https://github.com/danielroe/unplugin-purge-polyfills) | Unplugin to replace package imports with native code |
+| [Package Size Calculator](https://github.com/TheDevMinerTV/package-size-calculator) | CLI to calculate the size of a package after removing/replacing dependencies, or calculating the difference of two versions of the same package |
 
 ## Websites
 

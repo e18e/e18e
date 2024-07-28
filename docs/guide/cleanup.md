@@ -4,20 +4,22 @@ The JavaScript ecosystem has grown massively over the years, in good and bad way
 
 Much of this is in the form of packages which are redundant, bloated or have since fallen out of active maintenance.
 
-A good example of the current efforts to clean our packages up, is [@43081j's ecosystem-cleanup](https://github.com/43081j/ecosystem-cleanup). This project aims to [drive contributions upstream](https://github.com/43081j/ecosystem-cleanup/issues) to many different open-source projects. The project aims to:
+A good example of the current efforts to clean our packages up, is [es-tooling/ecosystem-cleanup](https://github.com/es-tooling/ecosystem-cleanup). This project aims to drive contributions upstream to popular open-source projects. The project aims to:
 
 - Modernize existing packages
 - Migrate from redundant packages
 - Migrate from inactive packages
 - Migrate to lighter and/or faster alternatives
 
+::: info Jump into action!
+The es-tooling community maintains a list of [open opportunities in the ecosystem-cleanup repo](https://github.com/43081j/ecosystem-cleanup/issues). After reading this guide, check out these issues for ideas to improve popular packages. And if you do research and find other places we can clean up a dependency tree, or speed it up, please do open some tracking issues in the cleanup repo, so you give others good starting points to get involved.
+
+We can have a bigger effect working together. Join the [e18e Discord server](https://chat.e18e.dev) to connect with others to share your wins or get help along the way!
+:::
+
 ## Contribution Guide
 
 This guide is here to help you discover and contribute improvements to the ecosystem. We will go through some common discovery techniques and common problems to resolve in upstream packages.
-
-::: info Collaborate with the community
-Join the [e18e Discord server](https://chat.e18e.dev) to connect with others to share your wins or get help along the way!
-:::
 
 ### Discovery
 
@@ -81,6 +83,8 @@ At this point, if you have identified some potential performance improvements, y
 Even if you will try tackle them yourself, this will help improve visibility so people do not duplicate work and can help you out.
 
 Or if you do not have time to tackle it yourself, it is possible someone else can follow your findings.
+
+Feel free to also attach a package report using [DevMiner's package-size-calculator](https://github.com/TheDevMinerTV/package-size-calculator) to the issue, to give an overview over the package's size and the changes you are proposing.
 
 ### Fixes
 
