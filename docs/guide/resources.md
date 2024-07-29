@@ -24,7 +24,7 @@
 
 |  | Description |
 | -- | -- |
-| [DepTree](https://deptree.rschristian.dev/) | Visualizes a projects dependencies and highlights which of those dependencies could be replaced |
+| [DepTree](https://deptree.rschristian.dev/) | Visualizes a project's dependencies and highlights which of those dependencies could be replaced |
 | [npmgraph](https://npmgraph.js.org/) | Visually displays a graph of a project's dependencies to get an idea of a projects module graph |
 | [Ecosyste.ms](https://packages.ecosyste.ms/) | An open API service providing package, version and dependency metadata of many open source software ecosystems and registries |
 
