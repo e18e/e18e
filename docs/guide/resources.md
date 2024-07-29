@@ -20,6 +20,14 @@
 | [unplugin-purge-polyfills](https://github.com/danielroe/unplugin-purge-polyfills) | Unplugin to replace package imports with native code |
 | [Package Size Calculator](https://github.com/TheDevMinerTV/package-size-calculator) | CLI to calculate the size of a package after removing/replacing dependencies, or calculating the difference of two versions of the same package |
 
+## Websites
+
+|  | Description |
+| -- | -- |
+| [DepTree](https://deptree.rschristian.dev/) | Visualizes a projects dependencies and highlights which of those dependencies could be replaced |
+| [npmgraph](https://npmgraph.js.org/) | Visually displays a graph of a project's dependencies to get an idea of a projects module graph |
+| [Ecosyste.ms](https://packages.ecosyste.ms/) | An open API service providing package, version and dependency metadata of many open source software ecosystems and registries |
+
 ## Learning
 
 - [Marvin's Speeding Up the JS Ecosystem series](https://marvinh.dev/blog/speeding-up-javascript-ecosystem/)
