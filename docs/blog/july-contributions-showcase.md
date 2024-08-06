@@ -16,7 +16,7 @@ head:
       content: https://e18e.dev/blog/july-contributions-showcase
   - - meta
     - property: og:description
-      content: A showcase of e18e-focused contributions fron July
+      content: A showcase of e18e-focused contributions from July
 ---
 
 # July contributions
