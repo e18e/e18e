@@ -1,5 +1,5 @@
 ---
-title: ES Tooling - community lead e18e-focused tooling
+title: ES Tooling - community-led e18e-focused tooling
 author:
   - name: James Garbutt and Pascal Schilp
 sidebar: false
@@ -10,28 +10,28 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: ES tooling - community lead e18e-focused tooling
+      content: ES tooling - community-led e18e-focused tooling
   - - meta
     - property: og:url
       content: https://e18e.dev/blog/es-tooling
   - - meta
     - property: og:description
-      content: ES Tooling - a community lead, e18e-focused collection of tools for the ecosystem
+      content: ES Tooling - a community-led , e18e-focused collection of tools for the ecosystem
 ---
 
 # ES Tooling
 
 _July 22, 2024_
 
-The e18e initiative has seen huge growth since launch. We've seen hundreds of performance contributions upstream to popular projects, and the creation of many community lead tools.
+The e18e initiative has seen huge growth since launch. We've seen hundreds of performance contributions upstream to popular projects, and the creation of many community-led tools.
 
-A notable example of this is the [ES Tooling](https://github.com/orgs/es-tooling/) community GitHub organisation.
+A notable example of this is the [ES Tooling](https://github.com/orgs/es-tooling/) community GitHub organization.
 
 If you haven't yet encountered e18e, read more in the [guide](https://e18e.dev/guide/#why-e18e) and [join the community](https://chat.e18e.dev/).
 
 ## A home for e18e-focused tools
 
-Over the last few months, many of us have collaborated and connected through the e18e community. The ES tooling organisation is a result of that - a place for us to store and own forks, tools, and other code bases we're working on together.
+Over the last few months, many of us have collaborated and connected through the e18e community. The ES tooling organization is a result of that - a place for us to store and own forks, tools, and other code bases we're working on together.
 
 A few popular projects that were running solo until now, have come together to create this:
 
@@ -42,11 +42,11 @@ A few popular projects that were running solo until now, have come together to c
 
 While e18e exists to connect us all and provide a space to collaborate, it doesn't exist to own the projects coming out of the initiative. That is where projects like es-tooling, unjs and more come in to play.
 
-**We expect es-tooling will be one of many community lead orgs with an e18e focus.**
+**We expect es-tooling will be one of many community-led orgs with an e18e focus.**
 
 ## Ecosystem cleanup
 
-One of the projects which kicked much of this initiative off - the ecosystem cleanup project has now moved into the ES Tooling organisation to allow better visibility and maintenance.
+One of the projects which kicked much of this initiative off - the ecosystem cleanup project has now moved into the ES Tooling organization to allow better visibility and maintenance.
 
 The cleanup project exists primarily as an issue tracker, tracking:
 
@@ -60,7 +60,7 @@ Read more at the [ecosystem cleanup project](https://github.com/es-tooling/ecosy
 
 ## Module replacements
 
-The module replacements project is a community lead list of popular npm packages and their possible replacements.
+The module replacements project is a community-led list of popular npm packages and their possible replacements.
 
 Often, these replacements are native, or much faster and more modern packages. If you know of a good alternative to something, get involved and add to the list!
 

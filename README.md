@@ -34,7 +34,7 @@ See [Contributing Guide](https://github.com/e18e/e18e/blob/main/CONTRIBUTING.md)
 ## Credits
 
 - The cleanup docs were originally part of [James Garbutt](https://github.com/43081j)'s ecosystem-cleanup.
-- The docs site was inited using the [Vite docs](https://vitejs.dev) as a base.
+- The docs site was created using the [Vite docs](https://vitejs.dev) as a base.
 - The repo follows [Anthony Fu](https://github.com/antfu)'s recommendations.
 
 ## License
