@@ -1,8 +1,8 @@
 # Levelup
 
-Especially with the features modern runtimes bring today, many packages can now be leaner, faster and more focused.
+With the features available today in modern JavaScript runtimes, many packages can now be leaner, faster, and more focused.
 
-Just like the introduction of esbuild as a lean alternative when you don't need the full customisability of webpack, these packages are here to be **fast and small**.
+Just like the introduction of esbuild as a lean alternative when you don't need the full customizability of webpack, these packages are here to be **fast and small**.
 
 Some projects contributing heavily to this effort:
 
@@ -10,4 +10,4 @@ Some projects contributing heavily to this effort:
 - [unjs](https://github.com/unjs/)
 - [es-tooling](https://github.com/es-tooling/)
 
-The levelup and cleanup efforts cross paths often, as these focused packages greatly reduce your install size while giving you great perf boosts.
+The levelup and cleanup efforts cross paths often, as these focused packages greatly reduce install size while giving great performance boosts.

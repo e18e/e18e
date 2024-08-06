@@ -1,5 +1,5 @@
 ---
-title: ES Tooling - community-led e18e-focused tooling
+title: ES Tooling - community-led tooling for e18e
 author:
   - name: James Garbutt and Pascal Schilp
 sidebar: false
@@ -10,13 +10,13 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: ES tooling - community-led e18e-focused tooling
+      content: ES Tooling - community-led tooling for e18e
   - - meta
     - property: og:url
       content: https://e18e.dev/blog/es-tooling
   - - meta
     - property: og:description
-      content: ES Tooling - a community-led , e18e-focused collection of tools for the ecosystem
+      content: ES Tooling - a community-led, e18e-focused collection of tools for the ecosystem
 ---
 
 # ES Tooling
@@ -31,22 +31,22 @@ If you haven't yet encountered e18e, read more in the [guide](https://e18e.dev/g
 
 ## A home for e18e-focused tools
 
-Over the last few months, many of us have collaborated and connected through the e18e community. The ES tooling organization is a result of that - a place for us to store and own forks, tools, and other code bases we're working on together.
+Over the last few months, many of us have collaborated and connected through the e18e community. The ES Tooling organization is a result of that - a place for us to store and own forks, tools, and other codebases we're working on together.
 
-A few popular projects that were running solo until now, have come together to create this:
+A few popular projects that were running solo until now have come together to create this:
 
 - [ecosystem-cleanup](https://github.com/43081j/ecosystem-cleanup).
 - [module-replacements](https://github.com/es-tooling/module-replacements).
 - [module-replacements-codemods](https://github.com/thepassle/module-replacements-codemods)
 - [fd-package-json](https://github.com/es-tooling/fd-package-json)
 
-While e18e exists to connect us all and provide a space to collaborate, it doesn't exist to own the projects coming out of the initiative. That is where projects like es-tooling, unjs and more come in to play.
+While e18e exists to connect us all and provide a space to collaborate, it doesn't exist to own the projects coming out of the initiative. That is where projects like ES Tooling, unjs and more come in to play.
 
-**We expect es-tooling will be one of many community-led orgs with an e18e focus.**
+**We expect ES Tooling will be one of many community-led organizations with an e18e focus.**
 
 ## Ecosystem cleanup
 
-One of the projects which kicked much of this initiative off - the ecosystem cleanup project has now moved into the ES Tooling organization to allow better visibility and maintenance.
+One of the projects which kicked much of this initiative off, the ecosystem cleanup project, has now moved into the ES Tooling organization to allow better visibility and maintenance.
 
 The cleanup project exists primarily as an issue tracker, tracking:
 
@@ -68,16 +68,14 @@ Read more at the [module replacements project](https://github.com/es-tooling/mod
 
 ## Module replacements codemods
 
-The module replacements codemods project is an effort to automate the ecosystem cleanup. Taking the module replacements as input, we aim to have automated codemods for all packages listed. This way other tooling can use these codemods to perform transformations on projects automatically. For example, a codemod for the `is-even` package would result in:
+The module replacements codemods project is an effort to automate ecosystem cleanup. Taking the module replacements as input, we aim to have automated codemods for all packages listed. This way other tooling can use these codemods to perform transformations on projects automatically. For example, a codemod for the `is-even` package would result in:
 
-Before:
 ```js
+// Before:
 const isEven = require('is-even')
 console.log(isEven(2))
-```
 
-After:
-```js
+// After:
 console.log(2 % 2 === 0)
 ```
 
@@ -87,4 +85,4 @@ You can find more information about the [module replacements codemods](https://g
 
 ## What's next?
 
-If you own an e18e-focused project, or need a home for a new project, [get involved!](https://chat.e18e.dev/)
+If you own an e18e-focused project, or need a home for a new project, [get involved](https://chat.e18e.dev/)!
