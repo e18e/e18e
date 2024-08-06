@@ -13,7 +13,7 @@
 
 |  | Description |
 | -- | -- |
-| [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) | ESLint plugin to suggest dependencies alternatives |
+| [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) | ESLint plugin to suggest alternative dependencies |
 | [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files) | ESLint plugin to avoid barrel files |
 | [Biome's noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/) | Biome plugin to avoid barrel files |
 | [Biome's noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/) | Biome plugin to avoid re-export all |
@@ -25,10 +25,10 @@
 |  | Description |
 | -- | -- |
 | [DepTree](https://deptree.rschristian.dev/) | Visualizes a project's dependencies and highlights which of those dependencies could be replaced |
-| [npmgraph](https://npmgraph.js.org/) | Visually displays a graph of a project's dependencies to get an idea of a projects module graph |
-| [Ecosyste.ms](https://packages.ecosyste.ms/) | An open API service providing package, version and dependency metadata of many open source software ecosystems and registries |
+| [npmgraph](https://npmgraph.js.org/) | Visually displays a graph of a project's dependencies to get an idea of a project's module graph |
+| [Ecosyste.ms](https://packages.ecosyste.ms/) | An open API service providing package, version, and dependency metadata of many open-source software ecosystems and registries |
 
 ## Learning
 
-- [Marvin's Speeding Up the JS Ecosystem series](https://marvinh.dev/blog/speeding-up-javascript-ecosystem/)
+- [Marvin's series on Speeding Up the JS Ecosystem](https://marvinh.dev/blog/speeding-up-javascript-ecosystem/)
 - [Practical barrel file guide for library authors](https://thepassle.netlify.app/blog/practical-barrel-file-guide-for-library-authors)

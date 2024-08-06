@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { buildEnd } from './buildEnd.config'
@@ -105,21 +106,21 @@ export default defineConfig({
               text: 'Resources',
               link: '/guide/resources',
             },
-          ]
+          ],
         },
         {
           text: 'Performance',
           items: [
             {
-              text: 'cleanup',
+              text: 'Cleanup',
               link: '/guide/cleanup',
             },
             {
-              text: 'speedup',
+              text: 'Speedup',
               link: '/guide/speedup',
             },
             {
-              text: 'levelup',
+              text: 'Levelup',
               link: '/guide/levelup',
             },
           ],
