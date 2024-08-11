@@ -4,7 +4,7 @@ A major part of improving the ecosystem for everyone is _speed_. The speed of co
 
 A few groups and individuals are working in this space. Just some of these are listed below:
 
-- [Speeding up the Javascript Ecosystem](https://marvinh.dev/blog/speeding-up-javascript-ecosystem).
+- [Speeding up the JavaScript Ecosystem](https://marvinh.dev/blog/speeding-up-javascript-ecosystem).
 
 ## Linting
 
