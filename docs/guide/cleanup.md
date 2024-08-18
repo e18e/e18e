@@ -86,13 +86,13 @@ We've now identified a dependency which introduces performance problems. Dependi
 
 #### Large subtrees
 
-For these dependencies, we should first find out if there's a reason the dependency is necessary and shouldn't be replaced with an alternative.
+For these dependencies, we should first find out if there's a reason the dependency _is_ necessary and shouldn't be replaced with an alternative.
 
-Common things to check:
+Reasons the dependency might still be necessary:
 
-- [`engines`](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#engines) specifying a lower Node version that this dependency supports, but alternatives don't
-- Whether there is any known alternative (if not, there is a good opportunity to make one!)
-- If every deep dependency in the subtree is necessary (in many cases the tree may be deep but for good reason, to share modules, etc.)
+- There are no known alternatives (if not, there is a good opportunity to make one!)
+- The library supports an older version of Node than any available alternative
+- Every deep dependency in the subtree is necessary (in many cases the tree may be deep but for good reason, to share modules, etc.)
 
 If it is indeed replaceable, you should find an alternative. Good resources for that are:
 
