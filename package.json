@@ -16,7 +16,6 @@
     "@antfu/ni": "^0.21.12",
     "@types/node": "^20.12.7",
     "eslint": "^9.0.0",
-    "eslint-plugin-antfu": "^2.1.2",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.11.1"
   },
