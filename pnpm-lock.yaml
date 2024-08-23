@@ -20,9 +20,6 @@ importers:
       eslint:
         specifier: ^9.0.0
         version: 9.0.0
-      eslint-plugin-antfu:
-        specifier: ^2.1.2
-        version: 2.1.2(eslint@9.0.0)
       lint-staged:
         specifier: ^15.2.2
         version: 15.2.2
@@ -41,9 +38,6 @@ importers:
       vitepress:
         specifier: ^1.1.0
         version: 1.1.0(@algolia/client-search@4.23.3)(@types/node@20.12.7)(postcss@8.4.38)(search-insights@2.13.0)(typescript@5.4.5)
-      vue:
-        specifier: ^3.4.22
-        version: 3.4.22(typescript@5.4.5)
 
 packages:
 
