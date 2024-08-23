@@ -30,6 +30,7 @@ We're mostly looking for packages which fit the following criteria:
 - Outdated
 - Slow
 - Redundant
+- Unused
 
 A good start to this is to choose the **target package** you want to improve. For example, we could choose to improve [vite](https://github.com/vitejs/vite).
 
