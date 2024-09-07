@@ -39,7 +39,7 @@ import { x } from 'tinyexec'
 await x('npm', ['install'])
 ```
 
-In many places where we need to launch a command, we don't need a high level abstractions so we can save a lot on performance and footprint by using this instead.
+In many places where we need to launch a command, we don't need a high level abstraction so we can save a lot on performance and footprint by using this instead.
 
 [vitest](https://github.com/vitest-dev/vitest/), [nuxt](https://github.com/nuxt/nuxt) and many others have already moved over.
 
