@@ -125,7 +125,7 @@ This has allowed many, many projects to migrate to it from other slower and larg
 
 If you need terminal colors, this is the one to use.
 
-If you're using node 20 or above, and don't need to support older runtimes, also check out [styletext](https://nodejs.org/api/util.html#utilstyletextformat-text-options) which is built in!
+If you're using node 20 or above, and don't need to support older runtimes, also check out [styleText](https://nodejs.org/api/util.html#utilstyletextformat-text-options) which is built in!
 
 # Get involved
 
