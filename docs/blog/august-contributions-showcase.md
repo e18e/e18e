@@ -75,7 +75,7 @@ Great work by both [@thecodrr](https://x.com/thecodrr) and [@superchupudev](http
 
 # package-manager-detector
 
-[`package-manager-detector`](https://github.com/antfu-collective/package-manager-detector) is used to detect the local package manager (e.g. `npm`).
+[`package-manager-detector`](https://github.com/antfu-collective/package-manager-detector) is used to detect the local package manager (e.g. `npm`, `pnpm`, `yarn`, etc.)
 
 Much lighter than other alternatives, this package has quickly been adopted by many projects across the ecosystem.
 
