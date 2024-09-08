@@ -41,7 +41,7 @@ await x('npm', ['install'])
 
 In many places where we need to launch a command, we don't need a high level abstraction so we can save a lot on performance and footprint by using this instead.
 
-[vitest](https://github.com/vitest-dev/vitest/), [nuxt](https://github.com/nuxt/nuxt) and many others have already moved over.
+[vitest](https://github.com/vitest-dev/vitest/), [nuxt](https://github.com/nuxt/nuxt), [astro](https://github.com/withastro/astro), and many others have already moved over.
 
 For places where we do want a higher level interface, we still have projects like [zx](https://github.com/google/zx).
 
