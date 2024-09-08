@@ -79,7 +79,7 @@ Great work by both [@thecodrr](https://x.com/thecodrr) and [@superchupudev](http
 
 Much lighter than other alternatives, this package has quickly been adopted by many projects across the ecosystem.
 
-As an example, [@benjaminmccann](https://x.com/benjaminmccann) switched from `preferred-pm` (1MB) to `package-manager-detector` (28KB) in [changesets](https://github.com/changesets/changesets/pull/1446) recently. Great work :pray:
+As an example, [@benjaminmccann](https://x.com/benjaminmccann) switched from `preferred-pm` (1MB) to `package-manager-detector` (28KB) in [`changesets`](https://github.com/changesets/changesets/pull/1446) and [`svelte-add`](https://github.com/svelte-add/svelte-add/pull/535) recently. Great work :pray:
 
 Thanks to [@antfu7](https://x.com/antfu7) and [@userquin](https://x.com/userquin) for building this!
 
