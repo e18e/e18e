@@ -107,7 +107,7 @@ const User = t.object({
 
 For example, [mocha](https://github.com/mochajs/mocha/pull/5042) has already adopted this and cleaned up a huge amount of deep dependencies thanks to the efforts of [@voxpelli](https://x.com/voxpelli).
 
-# Contributions
+# Contributions / Improvements
 
 As well as some cool new libraries, we've seen many great contributions to performance and clean up across the ecosystem.
 
@@ -134,6 +134,17 @@ This has allowed many, many projects to migrate to it from other slower and larg
 If you need terminal colors, this is the one to use.
 
 If you're using node 20 or above, and don't need to support older runtimes, also check out [styleText](https://nodejs.org/api/util.html#utilstyletextformat-text-options) which is built in!
+
+## payload CMS
+
+The [payload CMS](https://github.com/payloadcms/payload/) team have been doing some impressive work optimizing the install size and performance of their packages.
+
+Some quick stats:
+
+- **Before:** 277MB, 603 packages
+- **After:** 54MB, 148 packages
+
+To get an idea of the change, take a look at the npmgraph [before](https://npmgraph.js.org/?q=payload@2) and [after](https://npmgraph.js.org/?q=payload@3.0.0-beta.100).
 
 # Get involved
 
