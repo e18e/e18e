@@ -23,7 +23,7 @@ head:
 
 _September 7, 2024_
 
-We've seen another great month of contributions from the community :tada: Here's just a few highlights.
+This post is a little late thanks to me being stuck in the middle of a super typhoon, but here's some highlights of what the community has been up to in August!
 
 If you want to get involved, remember to come [join the discussion](https://chat.e18e.dev)!
 
