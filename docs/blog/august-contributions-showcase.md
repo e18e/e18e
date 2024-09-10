@@ -27,7 +27,11 @@ We've seen another great month of contributions from the community :tada: Here's
 
 If you want to get involved, remember to come [join the discussion](https://chat.e18e.dev)!
 
-# tinyexec
+# Libraries
+
+Here are just some of the great libraries we've seen this August.
+
+## tinyexec
 
 [tinyexec](https://github.com/tinylibs/tinyexec) is a new library from the [tinylibs](https://github.com/tinylibs) group to provide a super lightweight abstraction around `child_process`.
 
@@ -45,7 +49,7 @@ In many places where we need to launch a command, we don't need a high level abs
 
 For places where we do want a higher level interface, we still have projects like [zx](https://github.com/google/zx).
 
-# tinyglobby / fdir
+## tinyglobby / fdir
 
 Much of the community has been hard at work moving projects away from various heavyweight glob libraries to [fdir](https://github.com/thecodrr/fdir).
 
@@ -73,7 +77,7 @@ So many projects have been quick to adopt these libraries, saving on install siz
 
 Great work by both [@thecodrr](https://x.com/thecodrr) and [@superchupudev](https://x.com/superchupu) here!
 
-# package-manager-detector
+## package-manager-detector
 
 [`package-manager-detector`](https://github.com/antfu-collective/package-manager-detector) is used to detect the local package manager (e.g. `npm`, `pnpm`, `yarn`, etc.)
 
@@ -83,7 +87,7 @@ As an example, [@benjaminmccann](https://x.com/benjaminmccann) switched from `pr
 
 Thanks to [@antfu7](https://x.com/antfu7) and [@userquin](https://x.com/userquin) for building this!
 
-# tschema
+## tschema
 
 [tschema](https://github.com/lukeed/tschema) is a cool new library to generate JSON schema types by [@lukeed05](https://x.com/lukeed05).
 
@@ -97,19 +101,23 @@ const User = t.object({
 })
 ```
 
-# knip
+## knip
 
 [knip](https://github.com/webpro-nl/knip) is a tool for detecting unused files and dependencies in your project. This has been incredibly useful and widely used across the e18e community already.
 
 For example, [mocha](https://github.com/mochajs/mocha/pull/5042) has already adopted this and cleaned up a huge amount of deep dependencies thanks to the efforts of [@voxpelli](https://x.com/voxpelli).
 
-# dotenvx
+# Contributions
+
+As well as some cool new libraries, we've seen many great contributions to performance and clean up across the ecosystem.
+
+## dotenvx
 
 The maintainers of [dotenvx](https://github.com/dotenvx/dotenvx) have been hard at work with [@superchupudev](https://x.com/superchupu) to massively reduce the install size and depedency tree complexity.
 
 Down from [142 dependencies](https://npmgraph.js.org/?q=@dotenvx/dotenvx@1.0.0) to only [28 dependencies](https://npmgraph.js.org/?q=@dotenvx/dotenvx), this is a great achievement :tada:
 
-# changesets
+## changesets
 
 The [changesets](https://github.com/changesets/changesets) project has been busy merging _many_ e18e-focused improvements.
 
@@ -117,7 +125,7 @@ Just a quick look at the [changelog](https://github.com/changesets/changesets/re
 
 Thanks to [@bluwyoo](https://x.com/bluwyoo), [@benjaminmccann](https://x.com/benjaminmccann) and [@trivikram](https://x.com/trivikram) in particular for pushing this forward :pray:
 
-# picocolors
+## picocolors
 
 [picocolors](https://github.com/alexeyraspopov/picocolors) has been around a while already, but recently published a new version with support for bright variants of colours.
 
