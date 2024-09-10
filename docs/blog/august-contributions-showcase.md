@@ -146,6 +146,12 @@ Some quick stats:
 
 To get an idea of the change, take a look at the npmgraph [before](https://npmgraph.js.org/?q=payload@2) and [after](https://npmgraph.js.org/?q=payload@3.0.0-beta.100).
 
+## postcss
+
+The PostCSS maintainers are taking a good focus on e18e lately. In [postcss-mixins](https://www.npmjs.com/package/postcss-mixins), the size has gone from 1.3MB to 930KB, dropping ~15 dependencies.
+
+Great work by [@sitnikcode](https://x.com/sitnikcode) and the team on taking an e18e focus recently.
+
 # Get involved
 
 If you want to help out, [join the discord](https://chat.e18e.dev). We'd love to have the help :pray:
