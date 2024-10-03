@@ -58,7 +58,7 @@ In version [6.4.0](https://github.com/thecodrr/fdir/releases/tag/v6.4.0), we saw
 
 These two changes have helped the community migrate even more high level tools and frameworks across.
 
-Similarly, tinyglobby has shipped a few new versions. Particularly it is now able to determine if a string is a glob or not. This is super useful for migrating more projects to it.
+Similarly, [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) has shipped a few new versions. Particularly it is now able to determine if a string is a glob or not. This is super useful for migrating more projects to it.
 
 Thanks to pralkarz, [@benjaminmccann](https://x.com/benjaminmccann) and [@superchupudev](https://x.com/superchupu) for already migrating so many projects to these two libraries!
 
