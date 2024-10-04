@@ -72,9 +72,9 @@ There are many more PRs currently in progress to do just the same :pray: Great w
 
 # Contributions / Improvements
 
-## storybook
+## Storybook
 
-The [storybook](https://storybook.js.org/) team have been working closely with the e18e community for some time now, dedicating huge amounts of time to improving the performance and install footprint for everyone.
+The [Storybook](https://storybook.js.org/) team have been working closely with the e18e community for some time now, dedicating huge amounts of time to improving the performance and install footprint for everyone.
 
 This month, they've kept up the pace! Just a few examples of what has landed:
 
