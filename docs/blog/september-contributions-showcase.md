@@ -64,7 +64,7 @@ Thanks to pralkarz, [@benjaminmccann](https://x.com/benjaminmccann) and [@superc
 
 ## tinyexec migrations
 
-The community has been working wonders migrating countless projects from `execa` and other heavyweight libraries to the super lean [tinyexec](https://github.com/tinylibs/tinyexec/).
+The community has been working wonders migrating countless projects from `execa`, `ez-spawn`, and other libraries to the super lean [tinyexec](https://github.com/tinylibs/tinyexec/).
 
 For example, thanks to pralkarz, [vitest](https://github.com/vitest-dev/vitest) has already moved over!
 
