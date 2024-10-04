@@ -60,7 +60,7 @@ These two changes have helped the community migrate even more high level tools a
 
 Similarly, [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) has shipped a few new versions. Particularly it is now able to determine if a string is a glob or not. This is super useful for migrating more projects to it.
 
-Thanks to pralkarz, [@benjaminmccann](https://x.com/benjaminmccann) and [@superchupudev](https://x.com/superchupu) for already migrating so many projects to these two libraries!
+Thanks to [pralkarz](https://github.com/ziebam), [@benjaminmccann](https://x.com/benjaminmccann) and [@superchupudev](https://x.com/superchupu) for already migrating so many projects to these two libraries!
 
 ## tinyexec migrations
 
