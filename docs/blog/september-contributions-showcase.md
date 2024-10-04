@@ -37,7 +37,7 @@ Almost all of us depend on this library in some way, often through the toolchain
 
 Paul ([@paulmillr](https://x.com/paulmillr/), the author of chokidar) and I ([@43081j](https://x.com/43081j)) have been working hard to get the next major version of it over the line for a long time now (the branch was made in 2021!).
 
-Recently, we finally released [4.0.0](https://github.com/paulmillr/chokidar/releases/tag/4.0.0)! :partying_face: this massively reduces the size and complexity.
+Recently, we finally released [4.0.0](https://github.com/paulmillr/chokidar/releases/tag/4.0.0)! :partying_face: This massively reduces the size and complexity.
 
 Those of you who remember the `is-number` fiasco on social media will now also be super happy that we (chokidar) were the largest consumer of it and have since dropped it entirely :tada:
 
