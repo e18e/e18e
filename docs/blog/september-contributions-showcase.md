@@ -88,7 +88,11 @@ On top of this, the team has actually started a full project focusing on [reduci
 
 For anyone interested in helping out in the e18e space, this issue a great way to learn some of the techniques used to track down bundle/install size issues.
 
-As a bonus, they even integrated bundle size analysis into their CI so all new PRs can be compared with the main branch. Would love to see that in more projects!
+As a bonus, they even integrated visual bundle size analysis into their CI so all new PRs can be compared with the main branch.
+They did this by generating [esbuild metafiles](https://esbuild.github.io/api/#build-metadata) for all of their packages every time they're built and storing links to the [esbuild Bundle Size Analyzer website](https://esbuild.github.io/analyze/) with those metafiles embedded.
+The final result is a visual overview of all package's bundle, that you can [play around with here](https://next--635781f3500dd2c49e189caf.chromatic.com/?path=/story/bench--es-build-analyzer&args=metafile:builder-vite__metafile).
+
+Would love to see that in more projects! You can get inspiration from [the PR](https://github.com/storybookjs/storybook/pull/29117) that implemented the work.
 
 This has all been so great to see and will hopefully lead to other large projects making similar efforts! Definitely some big wins ahead :raised_hands:
 
