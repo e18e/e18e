@@ -79,7 +79,7 @@ The [storybook](https://storybook.js.org/) team have been working closely with t
 This month, they've kept up the pace! Just a few examples of what has landed:
 
 - Migrated from `chalk` to `picocolors`
-- Migrated from `fs-extra` to built in `fs` functions
+- [pralkarz](https://github.com/ziebam) migrated from `fs-extra` to built in `fs` functions
 - Removed `handlebars` and simplified templating internally
 - Removed `prettier` from the core bundle (saved **4MB** on the install size)
 - Replaced `lodash` with `es-toolkit` (more huge savings, especially with tree shaking)
