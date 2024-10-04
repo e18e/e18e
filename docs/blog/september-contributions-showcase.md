@@ -66,7 +66,7 @@ Thanks to [pralkarz](https://github.com/ziebam), [@benjaminmccann](https://x.com
 
 The community has been working wonders migrating countless projects from `execa`, `ez-spawn`, and other libraries to the super lean [tinyexec](https://github.com/tinylibs/tinyexec/).
 
-For example, thanks to pralkarz, [vitest](https://github.com/vitest-dev/vitest) has already moved over!
+For example, thanks to [pralkarz](https://github.com/ziebam), [vitest](https://github.com/vitest-dev/vitest) has already moved over!
 
 There are many more PRs currently in progress to do just the same :pray: Great work by the community here.
 
