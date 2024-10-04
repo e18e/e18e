@@ -81,7 +81,7 @@ This month, they've kept up the pace! Just a few examples of what has landed:
 - Migrated from `chalk` to `picocolors`
 - [pralkarz](https://github.com/ziebam) migrated from `fs-extra` to built in `fs` functions
 - Removed `handlebars` and simplified templating internally
-- Removed `prettier` from the core bundle (saved **4MB** on the install size)
+- Removed `prettier` from the core bundle (saved **10MB** on the install size)
 - Replaced `lodash` with `es-toolkit` (more huge savings, especially with tree shaking)
 
 On top of this, the team has actually started a full project focusing on [reducing the install footprint](https://github.com/storybookjs/storybook/issues/29038) in collaboration with the e18e community.
