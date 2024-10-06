@@ -3,7 +3,7 @@ title: September contributions showcase
 author:
   - name: James Garbutt
 sidebar: false
-date: 2024-10-03
+date: 2024-10-06
 head:
   - - meta
     - property: og:type
@@ -21,7 +21,7 @@ head:
 
 # September contributions
 
-_October 3, 2024_
+_October 6, 2024_
 
 It's that time of month again where we show off some of the great contributions we've seen around the e18e community in the past month!
 
