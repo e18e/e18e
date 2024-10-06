@@ -110,6 +110,16 @@ Just a few examples of the improvements made:
 
 These are all improving the CPU performance of nx and cutting huge subtrees out of the dependency tree at the same time.
 
+## changesets
+
+The [changesets](https://github.com/changesets/changesets) project recently started collaborating directly with the e18e community and we've already seen a good amount of optimisations contributed.
+
+There's a tracking discussion [here](https://github.com/changesets/changesets/discussions/1473) if you want to get involved.
+
+It is awesome to see the maintainers of a large project working so closely with the community on these things :heart:
+
+Big thanks to [@bluwyoo](https://x.com/bluwyoo) and [@andaristrake](https://x.com/andaristrake) for getting this setup!
+
 ## jimp
 
 [jimp](https://github.com/jimp-dev/jimp), an image manipulation library, has reduced their package size by an impressive amount:
