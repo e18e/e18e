@@ -35,7 +35,7 @@ This month has been a great one for improvements to existing and upcoming librar
 
 Almost all of us depend on this library in some way, often through the toolchain or framework we use.
 
-Paul ([@paulmillr](https://x.com/paulmillr/), the author of chokidar) and I ([@43081j](https://x.com/43081j)) have been working hard to get the next major version of it over the line for a long time now (the branch was made in 2021!).
+[@paulmillr](https://x.com/paulmillr/), the author of chokidar, and I ([@43081j](https://x.com/43081j)) have been working hard to get the next major version of it over the line for a long time now (the branch was made in 2021!).
 
 Recently, we finally released [4.0.0](https://github.com/paulmillr/chokidar/releases/tag/4.0.0)! :partying_face: This massively reduces the size and complexity.
 
@@ -58,7 +58,7 @@ In version [6.4.0](https://github.com/thecodrr/fdir/releases/tag/v6.4.0), we saw
 
 These two changes have helped the community migrate even more high level tools and frameworks across.
 
-Similarly, [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) has shipped a few new versions. Particularly it is now able to determine if a string is a glob or not. This is super useful for migrating more projects to it.
+Similarly, [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) has shipped a few new versions and **hit 1M downloads/week**. This is amazing work, especially keeping up with the feature requests and feedback of people migrating.
 
 Thanks to [pralkarz](https://github.com/ziebam), [@benjaminmccann](https://x.com/benjaminmccann) and [@superchupudev](https://x.com/superchupu) for already migrating so many projects to these two libraries!
 
@@ -92,9 +92,9 @@ As a bonus, they even integrated visual bundle size analysis into their CI so al
 They did this by generating [esbuild metafiles](https://esbuild.github.io/api/#build-metadata) for all of their packages every time they're built and storing links to the [esbuild Bundle Size Analyzer website](https://esbuild.github.io/analyze/) with those metafiles embedded.
 The final result is a visual overview of all package's bundle, that you can [play around with here](https://next--635781f3500dd2c49e189caf.chromatic.com/?path=/story/bench--es-build-analyzer&args=metafile:builder-vite__metafile).
 
-Would love to see that in more projects! You can get inspiration from [the PR](https://github.com/storybookjs/storybook/pull/29117) that implemented the work.
+We would love to see this in more projects! You can get inspiration from [the PR](https://github.com/storybookjs/storybook/pull/29117) that implemented the work.
 
-This has all been so great to see and will hopefully lead to other large projects making similar efforts! Definitely some big wins ahead :raised_hands:
+This has all been great to see and will hopefully lead to other large projects making similar efforts! Definitely some big wins ahead :raised_hands:
 
 ## nx
 
@@ -112,12 +112,20 @@ These are all improving the CPU performance of nx and cutting huge subtrees out 
 
 ## jimp
 
-[jimp](https://github.com/jimp-dev/jimp), an image manipulation library, has dropped an impressive amount of dependencies and reduced their package size hugely.
+[jimp](https://github.com/jimp-dev/jimp), an image manipulation library, has reduced their package size by an impressive amount:
 
 - Before: 120MB, 392 packages
 - After: 25MB, 66 packages
 
 This is awesome work :raised_hands:
+
+# Bonus: ViteConf
+
+[ViteConf](https://viteconf.org/) happened recently and had some amazing talks across all topics.
+
+While it didn't happen in September, it still deserves a mention thanks to how many of the talks mentioned the e18e community.
+
+Our own Bjorn did an excellent talk on performance ([watch here](https://viteconf.org/24/replay/performance)). Similarly, the great people at [Storybook](https://storybook.js.org/) explained a lot of their efforts to reduce their install footprint and how they've collaborated with the e18e community ([watch here](https://viteconf.org/24/replay/storybook)).
 
 # Get involved
 
