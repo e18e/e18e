@@ -56,7 +56,15 @@ import * as find from 'empathic/find'
 const file = find.up('foobar.config.js', { cwd })
 ```
 
-We will soon be migrating many projects to both of these libraries for sure :raised_hands:
+Let the migrations begin!
+
+## nano-staged
+
+Another one by [@usmanyunusov](https://x.com/usmanyunusov), [nano-staged](https://github.com/usmanyunusov/nano-staged) is a tiny replacement for `lint-staged`.
+
+Benchmarks show it is much faster, and comes in with a much smaller footprint (currently only 47kB, 1 dependency).
+
+This is another easy migration we will soon be kicking off across the ecosystem :rocket:
 
 # Contributions / Improvements
 
