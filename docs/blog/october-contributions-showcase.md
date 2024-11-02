@@ -66,6 +66,14 @@ Benchmarks show it is much faster, and comes in with a much smaller footprint (c
 
 This is another easy migration we will soon be kicking off across the ecosystem :rocket:
 
+## milliparsec
+
+In the web server space, [milliparsec](https://github.com/tinyhttp/milliparsec) has gained a huge amount of usage as a replacement for `body-parser`.
+
+At only 11kB, this is much smaller than older alternatives, and much faster!
+
+Excellent work by [v1rtl](https://github.com/talentlessguy) on building this and actively working on feedback from the community :heart:
+
 # Contributions / Improvements
 
 ## Storybook
