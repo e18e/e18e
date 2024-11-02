@@ -119,8 +119,11 @@ As part of this becoming available, the e18e community is preparing to help in a
 
 - Migrate projects pinned to older CJS versions of dependencies to their later, ESM-only versions
 - Migrate projects with a dual package setup to ESM-only
+- Migrate projects which have `type: "module"` but also have CJS exports to ESM-only
 
 Huge reductions will happen once we are able to stop publishing dual packages. Big wins ahead!
+
+If you want to help out with this, we're [tracking the work here](https://github.com/es-tooling/ecosystem-cleanup/issues/129).
 
 ## porffor passes 50% of ECMAScript tests
 
