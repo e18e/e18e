@@ -1,0 +1,99 @@
+---
+title: October contributions showcase
+author:
+  - name: James Garbutt
+sidebar: false
+date: 2024-11-04
+head:
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - property: og:title
+      content: October contributions showcase
+  - - meta
+    - property: og:url
+      content: https://e18e.dev/blog/october-contributions-showcase
+  - - meta
+    - property: og:description
+      content: A showcase of e18e-focused contributions from October
+---
+
+# September contributions
+
+_October 4, 2024_
+
+A few days late again because I was caught in another typhoon :grimacing:, but here's the latest wins from the e18e community!
+
+# Libraries
+
+## picospinner & nanospinner
+
+Two small but great additions, these CLI spinner libraries are here to replace heavier weight alternatives like `ora`.
+
+[`picospinner`](https://github.com/tinylibs/picospinner/) was recently adopted into the [tinylibs](https://github.com/tinylibs) organisation, and is being lead by [Pondwader](https://github.com/PondWader).
+
+[`nanospinner`](https://github.com/usmanyunusov/nanospinner) author [@usmanyunusov](https://x.com/usmanyunusov) has also recently joined the e18e community and is actively helping move things forward.
+
+Both of these libraries are great alternatives and unblock a whole bunch of future migrations. Looking forward to see more!
+
+## empathic / fd-package-json
+
+As part of the cleanup project, we needed an alternative package for finding the closest `package.json`. To fill the gap, [`fd-package-json`](https://github.com/es-tooling/fd-package-json) was created **and recently passed 800,000 downloads/week!**
+
+However, we still had many gaps where we wanted to traverse for other files and directories without having to pull in a heavy library.
+
+This is where [empathic](https://github.com/lukeed/empathic) comes in!
+
+Another great library by [@lukeed](https://x.com/lukeed05), this provides a bunch of useful utilities for dealing with paths and traversals.
+
+This library can easily replace many of the `find-up`-like packages floating around the ecosystem:
+
+```ts
+import * as find from 'empathic/find'
+
+// Find closest "foobar.config.js" file
+const file = find.up('foobar.config.js', { cwd })
+```
+
+We will soon be migrating many projects to both of these libraries for sure :raised_hands:
+
+# Contributions / Improvements
+
+## Storybook
+
+# Other news
+
+## `require(esm)` in Node
+
+[@joyeecheung](https://x.com/joyeecheung) and others have recently been working hard on allowing Node to `require(...)` ES modules.
+
+For example, this means the following code would now work:
+
+```ts
+// chai 5.x is ESM only
+const { expect } = require('chai')
+```
+
+Until now, many of us have been publishing "dual packages" - packages which contain both CommonJS and ES module syntax.
+
+This is unfortunate since it means we're often shipping double our package size in order to support both systems.
+
+With the ability to `require` ES modules, this will all change and we should be able to ship _only ESM_! :tada:
+
+As part of this becoming available, the e18e community is preparing to help in a few ways:
+
+- Migrate projects pinned to older CJS versions of dependencies to their later, ESM-only versions
+- Migrate projects with a dual package setup to ESM-only
+
+Huge reductions will happen once we are able to stop publishing dual packages. Big wins ahead!
+
+## e18e on Bluesky
+
+The e18e community now also has a profile on Bluesky: [e18e.dev](https://bsky.app/profile/e18e.dev).
+
+Give us a follow and we'll post updates on the cool stuff happening in the community! :butterfly:
+
+# Get involved
+
+If you want to help out, [join the discord](https://chat.e18e.dev). We'd love to have the help :pray:
