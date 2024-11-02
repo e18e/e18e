@@ -62,6 +62,14 @@ We will soon be migrating many projects to both of these libraries for sure :rai
 
 ## Storybook
 
+## Docusaurus
+
+This one didn't originate from e18e but is still well worth a mention. [Docusaurus](https://github.com/facebook/docusaurus) is currently tackling a pretty huge project of [improving build performance](https://github.com/facebook/docusaurus/issues/10556).
+
+Great to see another large project taking a focus on performance :pray:
+
+They have already shaved off minutes from their build times :fire: very impressive work by the team.
+
 # Other news
 
 ## `require(esm)` in Node
