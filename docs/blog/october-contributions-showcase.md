@@ -70,6 +70,16 @@ This is another easy migration we will soon be kicking off across the ecosystem 
 
 ## Storybook
 
+## strip-ansi
+
+The community had a realisation recently that `strip-ansi` can be replaced very easily by the built-in [stripVTControlCharacters](https://nodejs.org/api/util.html#utilstripvtcontrolcharactersstr)!
+
+Since then, [Namchee](https://github.com/Namchee), [@ari_perkkio](https://x.com/ari_perkkio) and others have contributed a whole raft of PRs migrating away from the library.
+
+This was a great catch and has allowed us to drop the dependency in dozens of projects already.
+
+If you're using Node 16.x and above, you can drop this one too!
+
 ## Docusaurus
 
 This one didn't originate from e18e but is still well worth a mention. [Docusaurus](https://github.com/facebook/docusaurus) is currently tackling a pretty huge project of [improving build performance](https://github.com/facebook/docusaurus/issues/10556).
