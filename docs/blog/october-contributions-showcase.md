@@ -78,6 +78,25 @@ Excellent work by [v1rtl](https://github.com/talentlessguy) on building this and
 
 ## Storybook
 
+## ESLint plugins (and removing older node support!)
+
+A big win for the community this month - removing support for very old Node versions in a few popular ESLint plugins :tada:
+
+For some time now, these plugins have been a source of considerable bloat for those of us who do not need to support such old engines. It is awesome to see the source projects finally dropping these polyfills in new major (breaking) versions.
+
+Just a couple of plugins that are moving ahead on this:
+
+- `eslint-plugin-react` (thanks to [@MichaelDeBoey93](https://x.com/MichaelDeBoey93))
+- `eslint-plugin-jsx-a11y` (thanks to [v1rtl](https://github.com/talentlessguy) and [@MichaelDeBoey93](https://x.com/MichaelDeBoey93))
+- `eslint-plugin-import` (thanks to [@MichaelDeBoey93](https://x.com/MichaelDeBoey93) again)
+
+**None of these have been released yet** but they are well on their way and are being supported by the maintainers.
+
+Do note, the community lead alternatives will certainly live on as they drop even more opinionated dependencies and logic. If you want to reduce your install footprint and get some performance gains, check out the alternatives docs for them here:
+
+- [`eslint-plugin-import`](https://github.com/es-tooling/module-replacements/blob/main/docs/modules/eslint-plugin-import.md)
+- [`eslint-plugin-react`](https://github.com/es-tooling/module-replacements/blob/main/docs/modules/eslint-plugin-react.md)
+
 ## strip-ansi
 
 The community had a realisation recently that `strip-ansi` can be replaced very easily by the built-in [stripVTControlCharacters](https://nodejs.org/api/util.html#utilstripvtcontrolcharactersstr)!
