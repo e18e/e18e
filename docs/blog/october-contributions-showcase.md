@@ -129,9 +129,9 @@ If you want to help out with this, we're [tracking the work here](https://github
 
 If you haven't seen it yet, check out [porffor](https://porffor.dev/), a very cool experimental ahead-of-time JavaScript compiler/engine.
 
-Built by [@canadahonk](https://x.com/canadahonk) (an active member of our community! :heart:), porffor has the potential to become an extremely useful tool for producing much smaller and faster WASM binaries.
+Built by [@canadahonk](https://x.com/canadahonk) (an active member of our community :heart:), porffor has the potential to become an extremely useful tool for producing much smaller and faster WASM binaries.
 
-Instead of packaging a runtime alongside the code, porffor will compile down to native (which comes with huge performance gains!).
+Instead of packaging a runtime alongside the code, porffor will compile down to native (which comes with huge performance gains).
 
 Recently, the biggest win has been to see the engine pass 50% of the Test262 tests! You can [read more about this here](https://goose.icu/porffor-50/).
 
