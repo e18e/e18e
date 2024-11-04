@@ -113,7 +113,7 @@ This one didn't originate from e18e but is still well worth a mention. [Docusaur
 
 Great to see another large project taking a focus on performance :pray:
 
-They have already shaved off minutes from their build times :fire: very impressive work by the team.
+They have already shaved off minutes from their build times :fire: very impressive work by [@sebastienlorber](https://x.com/sebastienlorber) and the team.
 
 ## Other news
 
