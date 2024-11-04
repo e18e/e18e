@@ -26,6 +26,8 @@ head:
 
 _October 4, 2024_
 
+![October Contributions Cover Image](/og/october-contributions-showcase.png)
+
 A few days late again because I was caught in another typhoon :grimacing:, but here's the latest wins from the e18e community!
 
 ## Libraries
