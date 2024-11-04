@@ -29,7 +29,7 @@ Most of us will have been affected by these contributions somewhere down the lin
 
 The people contributing these changes deserve so many thanks for their work, so here is a summary of some of the highlights from the past month!
 
-# `svelte-preprocess` becomes dependency-free
+## `svelte-preprocess` becomes dependency-free
 
 The svelte team have been busy reducing the footprint of [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess).
 
@@ -45,7 +45,7 @@ You can read about how this was achieve through these two PRs in particular:
 - https://github.com/sveltejs/svelte-preprocess/pull/640
 - https://github.com/sveltejs/svelte-preprocess/pull/645
 
-# codemods
+## codemods
 
 One of the biggest steps forward with the [replacements project](https://github.com/es-tooling/module-replacements) has certainly been the [codemods](https://github.com/es-tooling/module-replacements-codemods) repo.
 
@@ -57,7 +57,7 @@ The [codemods project](https://github.com/es-tooling/module-replacements-codemod
 
 The future of the [es-tooling](https://github.com/es-tooling) organisation will likely involve a CLI which can apply these codemods for you. Keep an eye out for it in future!
 
-# Removing `is-number` from `micromatch`
+## Removing `is-number` from `micromatch`
 
 While this hasn't been published yet, it is great progress, showing that even some aged projects are open to performance contributions.
 
@@ -67,7 +67,7 @@ While this hasn't been published yet, it is great progress, showing that even so
 
 Credit to [@talentlessguy](https://github.com/talentlessguy) for this contribution!
 
-# Removing `rimraf` from `node-pre-gyp`
+## Removing `rimraf` from `node-pre-gyp`
 
 Node has had a `recursive` option for `rmdir` (or `rm` in newer versions) for a while now. This can achieve the same functionality `rimraf` was providing in many cases.
 
@@ -77,7 +77,7 @@ It is worth mentioning, for those cases where you'd still like a CLI, you can us
 
 Credit to [@benjaminmccann](https://x.com/benjaminmccann) for this one!
 
-# picoquery
+## picoquery
 
 As part of the [cleanup project](https://github.com/es-tooling/ecosystem-cleanup), we were in need of a fast and lightweight query-string parser/stringifier.
 
@@ -92,7 +92,7 @@ This is why [picoquery](https://github.com/43081j/picoquery) was born! A super f
 
 Our hope is that we see more and more of these alternatives being produced by the community. Many popular, bloated or outdated packages still need alternatives. Join the [discussion](https://chat.e18e.dev) if you're interested!
 
-# neotraverse
+## neotraverse
 
 Similar to how `picoquery` came about, we needed a lighter alternative to the popular `traverse` package.
 
@@ -103,7 +103,7 @@ The savings are great:
 - **traverse:** 3.9MB / 67 packages
 - **neotraverse:** 140KB / 1 package
 
-# package-size-calculator
+## package-size-calculator
 
 Built by [@DevMiner](https://github.com/TheDevMinerTV), this is a cool little CLI that can provide package size stats and an estimate of the monthly bandwidth usage.
 

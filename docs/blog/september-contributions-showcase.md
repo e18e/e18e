@@ -25,11 +25,11 @@ _October 6, 2024_
 
 It's that time of month again where we show off some of the great contributions we've seen around the e18e community in the past month!
 
-# Libraries
+## Libraries
 
 This month has been a great one for improvements to existing and upcoming libraries. Many have been listening closely to the e18e community and pushing forward together.
 
-## chokidar 4.x
+### chokidar 4.x
 
 [chokidar](https://github.com/paulmillr/chokidar) is a library for watching for changes on a file system. Built on top of node's own watcher capabilities, it provides a higher level and simpler interface.
 
@@ -45,7 +45,7 @@ Big wins for the e18e community!
 
 Thanks to [@benjaminmccann](https://x.com/benjaminmccann) and talentlessguy for contributing _many_ v3 to v4 upgrades already!
 
-## fdir / tinyglobby
+### fdir / tinyglobby
 
 `fdir` was in last month's showcase but has earned another mention thanks to the author ([thecodrr](https://x.com/thecodrr)) landing various community contributed PRs and features.
 
@@ -62,7 +62,7 @@ Similarly, [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) has shipped
 
 Thanks to [pralkarz](https://github.com/ziebam), [@benjaminmccann](https://x.com/benjaminmccann) and [@superchupudev](https://x.com/superchupu) for already migrating so many projects to these two libraries!
 
-## tinyexec migrations
+### tinyexec migrations
 
 The community has been working wonders migrating countless projects from `execa`, `ez-spawn`, and other libraries to the super lean [tinyexec](https://github.com/tinylibs/tinyexec/).
 
@@ -70,9 +70,9 @@ For example, thanks to [pralkarz](https://github.com/ziebam), [vitest](https://g
 
 There are many more PRs currently in progress to do just the same :pray: Great work by the community here.
 
-# Contributions / Improvements
+## Contributions / Improvements
 
-## Storybook
+### Storybook
 
 The [Storybook](https://storybook.js.org/) team have been working closely with the e18e community for some time now, dedicating huge amounts of time to improving the performance and install footprint for everyone.
 
@@ -96,7 +96,7 @@ We would love to see this in more projects! You can get inspiration from [the PR
 
 This has all been great to see and will hopefully lead to other large projects making similar efforts! Definitely some big wins ahead :raised_hands:
 
-## nx
+### nx
 
 The folks over at [nx](https://github.com/nrwl/nx/) have been incredibly active with the e18e community. They are definitely on the same page and have been moving fast to work with the community to land many improvements.
 
@@ -110,7 +110,7 @@ Just a few examples of the improvements made:
 
 These are all improving the CPU performance of nx and cutting huge subtrees out of the dependency tree at the same time.
 
-## changesets
+### changesets
 
 The [changesets](https://github.com/changesets/changesets) project recently started collaborating directly with the e18e community and we've already seen a good amount of optimisations contributed.
 
@@ -120,7 +120,7 @@ It is awesome to see the maintainers of a large project working so closely with 
 
 Big thanks to [@bluwyoo](https://x.com/bluwyoo) and [@andaristrake](https://x.com/andaristrake) for getting this setup!
 
-## jimp
+### jimp
 
 [jimp](https://github.com/jimp-dev/jimp), an image manipulation library, has reduced their package size by an impressive amount:
 
@@ -129,7 +129,7 @@ Big thanks to [@bluwyoo](https://x.com/bluwyoo) and [@andaristrake](https://x.co
 
 This is awesome work :raised_hands:
 
-# Bonus: ViteConf
+## Bonus: ViteConf
 
 [ViteConf](https://viteconf.org/) happened recently and had some amazing talks across all topics.
 
@@ -137,6 +137,6 @@ While it didn't happen in September, it still deserves a mention thanks to how m
 
 Our own Bjorn did an excellent talk on performance ([watch here](https://viteconf.org/24/replay/performance)). Similarly, the great people at [Storybook](https://storybook.js.org/) explained a lot of their efforts to reduce their install footprint and how they've collaborated with the e18e community ([watch here](https://viteconf.org/24/replay/storybook)).
 
-# Get involved
+## Get involved
 
 If you want to help out, [join the discord](https://chat.e18e.dev). We'd love to have the help :pray:
