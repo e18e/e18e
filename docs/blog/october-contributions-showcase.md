@@ -17,6 +17,9 @@ head:
   - - meta
     - property: og:description
       content: A showcase of e18e-focused contributions from October
+  - - meta
+    - property: og:image
+      content: https://e18e.dev/og/october-contributions-showcase.png
 ---
 
 # October contributions
