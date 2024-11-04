@@ -19,15 +19,15 @@ head:
       content: A showcase of e18e-focused contributions from October
 ---
 
-# September contributions
+# October contributions
 
 _October 4, 2024_
 
 A few days late again because I was caught in another typhoon :grimacing:, but here's the latest wins from the e18e community!
 
-# Libraries
+## Libraries
 
-## picospinner & nanospinner
+### picospinner & nanospinner
 
 Two small but great additions, these CLI spinner libraries are here to replace heavier weight alternatives like `ora`.
 
@@ -37,7 +37,7 @@ Two small but great additions, these CLI spinner libraries are here to replace h
 
 Both of these libraries are great alternatives and unblock a whole bunch of future migrations. Looking forward to see more!
 
-## empathic / fd-package-json
+### empathic / fd-package-json
 
 As part of the cleanup project, we needed an alternative package for finding the closest `package.json`. To fill the gap, [`fd-package-json`](https://github.com/es-tooling/fd-package-json) was created **and recently passed 800,000 downloads/week!**
 
@@ -58,7 +58,7 @@ const file = find.up('foobar.config.js', { cwd })
 
 Let the migrations begin!
 
-## nano-staged
+### nano-staged
 
 Another one by [@usmanyunusov](https://x.com/usmanyunusov), [nano-staged](https://github.com/usmanyunusov/nano-staged) is a tiny replacement for `lint-staged`.
 
@@ -66,7 +66,7 @@ Benchmarks show it is much faster, and comes in with a much smaller footprint (c
 
 This is another easy migration we will soon be kicking off across the ecosystem :rocket:
 
-## milliparsec
+### milliparsec
 
 In the web server space, [milliparsec](https://github.com/tinyhttp/milliparsec) has gained a huge amount of usage as a replacement for `body-parser`.
 
@@ -74,11 +74,11 @@ At only 11kB, this is much smaller than older alternatives, and much faster!
 
 Excellent work by [v1rtl](https://github.com/talentlessguy) on building this and actively working on feedback from the community :heart:
 
-# Contributions / Improvements
+## Contributions / Improvements
 
-## Storybook
+### Storybook
 
-## ESLint plugins (and removing older node support!)
+### ESLint plugins (and removing older node support!)
 
 A big win for the community this month - removing support for very old Node versions in a few popular ESLint plugins :tada:
 
@@ -97,7 +97,7 @@ Do note, the community lead alternatives will certainly live on as they drop eve
 - [`eslint-plugin-import`](https://github.com/es-tooling/module-replacements/blob/main/docs/modules/eslint-plugin-import.md)
 - [`eslint-plugin-react`](https://github.com/es-tooling/module-replacements/blob/main/docs/modules/eslint-plugin-react.md)
 
-## strip-ansi
+### strip-ansi
 
 The community had a realisation recently that `strip-ansi` can be replaced very easily by the built-in [stripVTControlCharacters](https://nodejs.org/api/util.html#utilstripvtcontrolcharactersstr)!
 
@@ -107,7 +107,7 @@ This was a great catch and has allowed us to drop the dependency in dozens of pr
 
 If you're using Node 16.x and above, you can drop this one too!
 
-## Docusaurus
+### Docusaurus
 
 This one didn't originate from e18e but is still well worth a mention. [Docusaurus](https://github.com/facebook/docusaurus) is currently tackling a pretty huge project of [improving build performance](https://github.com/facebook/docusaurus/issues/10556).
 
@@ -115,9 +115,9 @@ Great to see another large project taking a focus on performance :pray:
 
 They have already shaved off minutes from their build times :fire: very impressive work by the team.
 
-# Other news
+## Other news
 
-## `require(esm)` in Node
+### `require(esm)` in Node
 
 [@joyeecheung](https://x.com/joyeecheung) and others have recently been working hard on allowing Node to `require(...)` ES modules.
 
@@ -144,7 +144,7 @@ Huge reductions will happen once we are able to stop publishing dual packages. B
 
 If you want to help out with this, we're [tracking the work here](https://github.com/es-tooling/ecosystem-cleanup/issues/129).
 
-## porffor passes 50% of ECMAScript tests
+### porffor passes 50% of ECMAScript tests
 
 If you haven't seen it yet, check out [porffor](https://porffor.dev/), a very cool experimental ahead-of-time JavaScript compiler/engine.
 
@@ -154,12 +154,12 @@ Instead of packaging a runtime alongside the code, porffor will compile down to 
 
 Recently, the biggest win has been to see the engine pass 50% of the Test262 tests! You can [read more about this here](https://goose.icu/porffor-50/).
 
-## e18e on Bluesky
+### e18e on Bluesky
 
 The e18e community now also has a profile on Bluesky: [e18e.dev](https://bsky.app/profile/e18e.dev).
 
 Give us a follow and we'll post updates on the cool stuff happening in the community! :butterfly:
 
-# Get involved
+## Get involved
 
 If you want to help out, [join the discord](https://chat.e18e.dev). We'd love to have the help :pray:
