@@ -83,7 +83,7 @@ Excellent work by [v1rtl](https://github.com/talentlessguy) on building this and
 
 ### Storybook
 
-### ESLint plugins (and removing older node support!)
+### ESLint plugins (and removing older Node support!)
 
 A big win for the community this month - removing support for very old Node versions in a few popular ESLint plugins :tada:
 
