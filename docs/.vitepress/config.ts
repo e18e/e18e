@@ -40,6 +40,7 @@ export default defineConfig({
     },
 
     socialLinks: [
+      { icon: 'bluesky', link: 'https://bsky.app/profile/e18e.dev' },
       { icon: 'mastodon', link: 'https://elk.zone/m.webtoo.ls/@e18e' },
       { icon: 'twitter', link: 'https://twitter.com/e18e_dev' },
       { icon: 'discord', link: 'https://chat.e18e.dev' },
@@ -70,6 +71,10 @@ export default defineConfig({
           { text: 'Blog', link: '/blog' },
           {
             items: [
+              {
+                text: 'Bluesky',
+                link: 'https://bsky.app/profile/e18e.dev',
+              },
               {
                 text: 'Mastodon',
                 link: 'https://elk.zone/m.webtoo.ls/@e18e',
