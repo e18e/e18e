@@ -24,7 +24,7 @@ head:
 
 # October contributions
 
-_October 4, 2024_
+_November 4, 2024_
 
 ![October Contributions Cover Image](/og/october-contributions-showcase.png)
 
