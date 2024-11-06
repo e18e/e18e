@@ -83,6 +83,14 @@ Excellent work by [v1rtl](https://github.com/talentlessguy) on building this and
 
 ### Storybook
 
+The [Storybook](https://storybook.js.org) team has continued to pour effort into improving the performance and install footprint in collaboration with the e18e community, as [we reported on last month](https://e18e.dev/blog/september-contributions-showcase.html#storybook).
+
+The biggest win by far this month was migrating from `express` to `polka`, installing 69 fewer dependencies and decreasing the install size by 6 MB! :tada: The effort was initially led by [@43081j](https://x.com/43081j) and driven home by [Jeppe Reinhold](https://bsky.app/profile/reinhold.is) of the Storybook core team.
+
+The team has also been on a dependency-prebundling-spree to cleanup and tree-share dependencies across `@storybook/builder-vite`, `@storybook/react` and `@storybook/addon-docs`, removing a total of 77 dependencies.
+
+To ensure none of these gains are lost in future, they also did some great work to add benchmarking to all new pull requests. This is a super nice idea for making sure we don't regress. Hopefully other projects can implement similar in the near future :pray:
+
 ### ESLint plugins (and removing older Node support!)
 
 A big win for the community this month - removing support for very old Node versions in a few popular ESLint plugins :tada:
