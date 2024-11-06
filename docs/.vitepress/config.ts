@@ -42,7 +42,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'bluesky', link: 'https://bsky.app/profile/e18e.dev' },
       { icon: 'mastodon', link: 'https://elk.zone/m.webtoo.ls/@e18e' },
-      { icon: 'twitter', link: 'https://twitter.com/e18e_dev' },
       { icon: 'discord', link: 'https://chat.e18e.dev' },
       { icon: 'github', link: 'https://github.com/e18e/e18e' },
     ],
@@ -78,10 +77,6 @@ export default defineConfig({
               {
                 text: 'Mastodon',
                 link: 'https://elk.zone/m.webtoo.ls/@e18e',
-              },
-              {
-                text: 'Twitter',
-                link: 'https://twitter.com/e18e_dev',
               },
               {
                 text: 'Discord Chat',
