@@ -26,6 +26,8 @@ head:
 
 _December 3, 2024_
 
+![November Contributions Cover Image](/og/november-contributions-showcase.png)
+
 Another month, another great list of performance gains across the ecosystem. This month, we've also seen a huge effort to improving visibility of these things so more people can get involved. Let's take a look!
 
 ## Libraries
