@@ -64,7 +64,19 @@ In the wild, there are not many tools to do this analysis and do it accurately. 
 
 All good, though, [Filip](https://bsky.app/profile/filipsobol.bsky.social) has come to the rescue with his new tool: [sonda](https://github.com/filipsobol/sonda/tree/main/packages/sonda)!
 
-Sonda is a bundle analyzer which works with all popular bundlers by leaning on sourcemaps to determine the bundle contents. This works great and has already helped us with many investigations into footprint reduction of some projects :pray:
+Sonda is a bundle analyzer which works with all popular bundlers and accurately determines the bundle contents by leaning on sourcemaps. This works great and has already helped us with many investigations into footprint reduction of some projects :pray:
+
+### fuzzyma's e18e tools
+
+Another great contribution to the community recently is a tool by [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social) which can determine the dependents of a given package.
+
+You can see the source [here](https://github.com/fuzzyma/e18e-tools) and an example of the produced output [here](https://github.com/es-tooling/ecosystem-cleanup/issues/137#issue-2702026306).
+
+This is such a useful tool since we have no easy API access to find this information right now.
+
+In many of the issues of the [cleanup project](https://github.com/es-tooling/ecosystem-cleanup/), we now have an incredibly useful list of all the top dependents of the target package. This is making the cleanup work so much easier.
+
+Big thanks to [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social) and [@devminer.xyz](https://bsky.app/profile/devminer.xyz) for making this a thing!
 
 ## Contributions / Improvements
 
@@ -98,7 +110,7 @@ This is huge news and should open many doors for us being able to migrate librar
 
 Read more about this in [Node's blog post](https://nodejs.org/en/blog/release/v22.12.0#requireesm-is-now-enabled-by-default).
 
-Excellent work by [@joyeecheung.bsky.social](https://bsky.app/profile/joyeecheung.bsky.social) as always :pray:
+Excellent work by [@joyeecheung](https://bsky.app/profile/joyeecheung.bsky.social) as always :pray:
 
 ### vite 6.0
 
