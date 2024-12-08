@@ -124,6 +124,14 @@ Two big changes are the upgrade of [chokidar](https://github.com/paulmillr/choki
 
 On top of that, various other dependency upgrades and performance improvements mean this is by far the fastest and smallest vite so far. Great work as always by the team and the community :heart:
 
+### e18e social (Bluesky)
+
+We recently decided to move our main social account to Bluesky. Given that most of the e18e community has already made this same move, it seemed to make the most sense that we do so too.
+
+Our other social accounts will likely stick around for archive purposes, but we will most actively be posting on Bluesky.
+
+If you haven't already yet, you can [follow us here](https://bsky.app/profile/e18e.dev)!
+
 ## Get involved
 
 If you want to help out, [join the discord](https://chat.e18e.dev). We'd love to have the help :pray:
