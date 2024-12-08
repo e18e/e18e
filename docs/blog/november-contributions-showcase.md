@@ -54,7 +54,7 @@ As part of the bluesky contributions mentioned later in this post, some of the c
 
 This library is used to split or count the number of grapheme clusters in a string (i.e. the visual symbols we would perceive as individual characters). It does a good job at this but comes in at a whopping 812KB!
 
-Fortunately, [@hyeseong.kim](https://bsky.app/profile/hyeseong.kim) came along and built [unicode-segmenter](https://github.com/cometkim/unicode-segmenter) :tada: This library achieves the same functionality at a fraction of the size (250KB).
+Fortunately, [@hyeseong.kim](https://bsky.app/profile/hyeseong.kim) came along and built [unicode-segmenter](https://github.com/cometkim/unicode-segmenter) :tada: This library achieves the same functionality at a fraction of the size (147KB).
 
 Really great work here. This helped us reduce bundle sizes in a whole bunch of projects.
 
