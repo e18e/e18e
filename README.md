@@ -27,6 +27,12 @@ Currently, there are three main areas of focus:
 - [speedup](https://e18e.dev/guide/speedup) - speeding up parts of the ecosystem many of us depend on.
 - [levelup](https://e18e.dev/guide/levelup) - documenting and providing modern, lighter alternatives to established tools and libraries we all regularly use.
 
+### e18e on Social
+
+Connect with us at the [e18e.dev bluesky account](https://bsky.app/profile/e18e.dev) to discuss with others and stay up-to-date on the cool stuff happening in the community!
+
+You can also find us in Mastodon and the fediverse at our bridged [@e18e.dev@bsky.brid.gy](https://m.webtoo.ls/@e18e.dev@bsky.brid.gy) account.
+
 ## Contributing
 
 See [Contributing Guide](https://github.com/e18e/e18e/blob/main/CONTRIBUTING.md).
