@@ -64,7 +64,7 @@ As part of the cleanup effort in the e18e space, it is a common need that we wan
 
 In the wild, there are not many tools to do this analysis and do it accurately. This has left us with often manually inspecting bundles and the process taking a lot longer than it should.
 
-All good, though, [Filip](https://bsky.app/profile/filipsobol.bsky.social) has come to the rescue with his new tool: [sonda](https://github.com/filipsobol/sonda/tree/main/packages/sonda)!
+All good, though, [Filip](https://bsky.app/profile/filipsobol.bsky.social) has come to the rescue with his new tool: [sonda](https://sonda.dev/)!
 
 Sonda is a bundle analyzer which works with all popular bundlers and accurately determines the bundle contents by leaning on sourcemaps. This works great and has already helped us with many investigations into footprint reduction of some projects :pray:
 
