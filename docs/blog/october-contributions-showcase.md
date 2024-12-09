@@ -155,7 +155,7 @@ As part of this becoming available, the e18e community is preparing to help in a
 
 Huge reductions will happen once we are able to stop publishing dual packages. Big wins ahead!
 
-If you want to help out with this, we're [tracking the work here](https://github.com/es-tooling/ecosystem-cleanup/issues/129).
+If you want to help out with this, we're [tracking the work on GitHub](https://github.com/es-tooling/ecosystem-cleanup/issues/129).
 
 ### porffor passes 50% of ECMAScript tests
 
@@ -165,7 +165,7 @@ Built by [@canadahonk](https://x.com/canadahonk) (an active member of our commun
 
 Instead of packaging a runtime alongside the code, porffor will compile down to native (which comes with huge performance gains).
 
-Recently, the biggest win has been to see the engine pass 50% of the Test262 tests! You can [read more about this here](https://goose.icu/porffor-50/).
+Recently, the biggest win has been to see the engine pass 50% of the Test262 tests! Read more in [Porffor passes 50% of Test262](https://goose.icu/porffor-50/).
 
 ### e18e on Bluesky
 

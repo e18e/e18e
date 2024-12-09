@@ -90,7 +90,7 @@ For anyone interested in helping out in the e18e space, this issue a great way t
 
 As a bonus, they even integrated visual bundle size analysis into their CI so all new PRs can be compared with the main branch.
 They did this by generating [esbuild metafiles](https://esbuild.github.io/api/#build-metadata) for all of their packages every time they're built and storing links to the [esbuild Bundle Size Analyzer website](https://esbuild.github.io/analyze/) with those metafiles embedded.
-The final result is a visual overview of all package's bundle, that you can [play around with here](https://next--635781f3500dd2c49e189caf.chromatic.com/?path=/story/bench--es-build-analyzer&args=metafile:builder-vite__metafile).
+The final result is a visual overview of all package's bundle, that you can [play around with in the Chromatic visualizer](https://next--635781f3500dd2c49e189caf.chromatic.com/?path=/story/bench--es-build-analyzer&args=metafile:builder-vite__metafile).
 
 We would love to see this in more projects! You can get inspiration from [the PR](https://github.com/storybookjs/storybook/pull/29117) that implemented the work.
 
@@ -114,7 +114,7 @@ These are all improving the CPU performance of nx and cutting huge subtrees out 
 
 The [changesets](https://github.com/changesets/changesets) project recently started collaborating directly with the e18e community and we've already seen a good amount of optimisations contributed.
 
-There's a tracking discussion [here](https://github.com/changesets/changesets/discussions/1473) if you want to get involved.
+There's [a tracking discussion](https://github.com/changesets/changesets/discussions/1473) if you want to get involved.
 
 It is awesome to see the maintainers of a large project working so closely with the community on these things :heart:
 
@@ -135,7 +135,7 @@ This is awesome work :raised_hands:
 
 While it didn't happen in September, it still deserves a mention thanks to how many of the talks mentioned the e18e community.
 
-Our own Bjorn did an excellent talk on performance ([watch here](https://viteconf.org/24/replay/performance)). Similarly, the great people at [Storybook](https://storybook.js.org/) explained a lot of their efforts to reduce their install footprint and how they've collaborated with the e18e community ([watch here](https://viteconf.org/24/replay/storybook)).
+Our own Bjorn did [an excellent talk on performance](https://viteconf.org/24/replay/performance). Similarly, the great people at [Storybook](https://storybook.js.org/) explained a lot of their efforts to reduce their install footprint and how they've [collaborated with the e18e community](https://viteconf.org/24/replay/storybook).
 
 ## Get involved
 

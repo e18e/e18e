@@ -72,7 +72,7 @@ Sonda is a bundle analyzer which works with all popular bundlers and accurately 
 
 Another great contribution to the community recently is a tool by [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social) which can determine the dependents of a given package.
 
-You can see the source [here](https://github.com/fuzzyma/e18e-tools) and an example of the produced output [here](https://github.com/es-tooling/ecosystem-cleanup/issues/137#issue-2702026306).
+Feel free to explore [e18e-tools source](https://github.com/fuzzyma/e18e-tools) and [an example of the produced output](https://github.com/es-tooling/ecosystem-cleanup/issues/137#issue-2702026306).
 
 This is such a useful tool since we have no easy API access to find this information right now.
 
@@ -130,7 +130,7 @@ We recently decided to move our main social account to Bluesky. Given that most 
 
 Our other social accounts will likely stick around for archive purposes, but we will most actively be posting on Bluesky.
 
-If you haven't already yet, you can [follow us here](https://bsky.app/profile/e18e.dev)!
+If you haven't already yet, you can [follow us on Bluesky](https://bsky.app/profile/e18e.dev)!
 
 ## Get involved
 
