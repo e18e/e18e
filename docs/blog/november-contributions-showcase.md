@@ -120,7 +120,7 @@ A big milestone this month - vite 6.0 was released!
 
 This new release has a huge number of changes and, in the context of e18e, has a great list of performance improvements many of our community worked on.
 
-Two big changes are the upgrade of [chokidar](https://github.com/paulmillr/chokidar) to 4.x, and the migration to [tinyglobby](https://github.com/SuperchupuDev/tinyglobby). These two alone reduced the bundle size greatly :broom:
+One big change is the the migration to [tinyglobby](https://github.com/SuperchupuDev/tinyglobby). This alone introduced a good size reduction and performance boost :rocket:
 
 On top of that, various other dependency upgrades and performance improvements mean this is by far the fastest and smallest vite so far. Great work as always by the team and the community :heart:
 
