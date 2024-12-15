@@ -136,7 +136,7 @@ In this situation, it is worth looking for a lighter (and hopefully faster) alte
 
 Once you identify a package that has potential for replacement, create an issue in our [cleanup-repository](https://github.com/es-tooling/ecosystem-cleanup) to inform other community members.
 
-Next, use[fuzzymas tool](https://github.com/fuzzyma/e18e-tools) to find the dependents of the package. You can find documentation on how to use the tool in its README.
+Next, use [fuzzymas tool](https://github.com/fuzzyma/e18e-tools) to find the dependents of the package. You can find documentation on how to use the tool in its README.
 
 Here’s an example that displays the top 100 dependents of `lodash`:
 
