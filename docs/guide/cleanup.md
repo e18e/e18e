@@ -132,7 +132,7 @@ The fix here is often that we either:
 
 In this situation, it is worth looking for a lighter (and hopefully faster) alternative.
 
-::: tip Tip: Finding Dependents of a Packages
+### Tip: Finding Dependents of a Packages
 
 Once you identify a package that has potential for replacement, create an issue in our [cleanup-repository](https://github.com/es-tooling/ecosystem-cleanup) to inform other community members.
 
@@ -149,4 +149,3 @@ You can post the list as Markdown in the GitHub issue you created and then proce
 ```bash
 npx github:Fuzzyma/e18e-tools lodash -n 100 -q -o md  -U https://npm.devminer.xyz/registry > md-output.md
 ```
-:::
