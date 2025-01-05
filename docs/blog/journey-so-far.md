@@ -80,6 +80,7 @@ This is really impressive work by the community, as it has resulted in hundreds,
 To get an idea of some large projects focusing in this space now:
 
 - [storybook](https://github.com/storybookjs/storybook/) have been working hard all year to reduce their footprint and have had some [amazing results](https://bsky.app/profile/shilman.net/post/3l7ik3onbbs2b)
+- [svelte](https://github.com/sveltejs/svelte) had some great wins - to name a few, [svelte-check dropped many dependencies](https://x.com/BenjaminMcCann/status/1839349949605236753), [svelte-add did the same](https://x.com/BenjaminMcCann/status/1821685785554501786) and [svelte-preprocess went zero-dependencies](https://x.com/BenjaminMcCann/status/1810698991820321028)!
 - [knip](https://github.com/webpro-nl/knip) has seen wide usage in CI pipelines to help detect unused dependencies and many other things
 
 > [!NOTE]
