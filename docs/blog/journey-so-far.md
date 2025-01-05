@@ -111,6 +111,14 @@ Automating a lot of the investigation work would also be a huge win.
 
 Lots to think about! Some of this will be kicking off in the discord server early in the year.
 
+### Meet up
+
+Early in 2025, we will be organising the first in-person e18e meetup!
+
+We haven't decided yet what the structure of this will be (just a social, or something more), but we will post more details very soon.
+
+It'll be great to see people connecting, and what awesome ideas come out of it!
+
 ## Get involved
 
 We'd love to have you in our community, whatever it is you're working on.
