@@ -62,20 +62,18 @@ All of these people and many others were working on some aspect of performance. 
 
 ## Results so far
 
-Several months later, we now have over **1000 members** :tada:
-
-Just a few project-level stats from the past year:
+Several months later, here's a few stats from the past year:
 
 - ~150 issues in the [cleanup project](https://github.com/es-tooling/ecosystem-cleanup/) to track contributions to performance of other projects
 - ~100 merged PRs in the [module-replacements project](https://github.com/es-tooling/module-replacements) to document performant replacements to popular modules
 - ~150 codemods in the [module-replacements-codemods project](https://github.com/es-tooling/module-replacements-codemods) to automatically migrate to suggested replacements
-
-> [!NOTE]
-> TODO - better or more stats?
+- 1000+ members in the [discord](https://chat.e18e.dev)
 
 Most of these PRs and issues are umbrella style, in that they're used to track contributions to _many_ projects.
 
 This is really impressive work by the community, as it has resulted in hundreds, if not over a thousand contributions to many high impact projects around the ecosystem.
+
+### Projects focusing on performance
 
 To get an idea of some large projects focusing in this space now:
 
@@ -85,6 +83,27 @@ To get an idea of some large projects focusing in this space now:
 - [chokidar](https://github.com/paulmillr/chokidar/) had a v4 in the works [since 2022](https://github.com/paulmillr/chokidar/pull/1195) and completed it in 2024, dropping down to 1 dependency
 - [nx](https://github.com/nrwl/nx) have dropped a hefty list of dependencies and migrated to many lighter ones like `picocolors`, `tinyglobby`, etc.
 - [chai](https://github.com/chaijs/chai) went ESM only and modernised a huge amount of code across the core and various plugins
+
+### Projects & tools
+
+Another big win by the community has been the number of projects it has helped gain adoption, and the projects launched by members.
+
+To name a few:
+
+- [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) - a glob library built on top of [fdir](https://github.com/thecodrr/fdir)
+- [tinyexec](https://github.com/tinylibs/tinyexec/) - a library for executing commands
+- [picospinner](https://github.com/tinylibs/picospinner/) - a library for rendering CLI spinners
+- [sonda](https://github.com/filipsobol/sonda) - a bundle visualiser
+- [knip](https://github.com/webpro-nl/knip) - a dependency & code analyser
+- [picoquery](https://github.com/43081j/picoquery) - a query string parser and stringifier
+- [fdir](https://github.com/thecodrr/fdir/) - a file system traversal library
+- [milliparsec](https://github.com/tinyhttp/milliparsec) - a body parser for web servers
+- [unicode-segmenter](https://github.com/cometkim/unicode-segmenter) - a unicode segmentation library
+- [nano-staged](https://github.com/usmanyunusov/nano-staged) - a tool to run commands for staged git files
+
+I could go on, but there are far too many to list.
+
+Some of these already existed before e18e, but the community has done great work driving adoption of them and collaborating with the maintainers (all of whom are in our community!).
 
 ## The year ahead
 
