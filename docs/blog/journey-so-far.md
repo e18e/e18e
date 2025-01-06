@@ -84,6 +84,7 @@ To get an idea of some large projects focusing in this space now:
 - [knip](https://github.com/webpro-nl/knip) has seen wide usage in CI pipelines to help detect unused dependencies and many other things
 - [chokidar](https://github.com/paulmillr/chokidar/) had a v4 in the works [since 2022](https://github.com/paulmillr/chokidar/pull/1195) and completed it in 2024, dropping down to 1 dependency
 - [nx](https://github.com/nrwl/nx) have dropped a hefty list of dependencies and migrated to many lighter ones like `picocolors`, `tinyglobby`, etc.
+- [chai](https://github.com/chaijs/chai) went ESM only and modernised a huge amount of code across the core and various plugins
 
 ## The year ahead
 
