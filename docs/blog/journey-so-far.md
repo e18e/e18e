@@ -3,7 +3,7 @@ title: The journey so far
 author:
   - name: James Garbutt
 sidebar: false
-date: 2024-12-16
+date: 2025-01-06
 head:
   - - meta
     - property: og:type
@@ -17,9 +17,16 @@ head:
   - - meta
     - property: og:description
       content: Our journey so far as a community leading into 2025
+  - - meta
+    - property: og:image
+      content: https://e18e.dev/og/journey-so-far.jpg
 ---
 
 # e18e - Journey so far
+
+_January 6, 2025_
+
+![Journey so far Cover Image](/og/journey-so-far.jpg)
 
 This month we're skipping the usual monthly showcase post to write a little about what we got upto in 2024 and what lies ahead for us in 2025 :rocket:
 
