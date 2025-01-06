@@ -36,7 +36,7 @@ Enough about me though! Let's take a look at some history and what lies ahead fo
 
 ## Way back...
 
-For a long time, I found myself returning many times to the need for a clean up of the JavaScript ecosystem, particularly npm at the time.
+For a long time, I found myself returning many times to the need for a more performant JavaScript ecosystem.
 
 As far back as 2017, I was involved with [depcheck](https://github.com/depcheck/depcheck), a tool which detects unused dependencies amongst other things. I worked on a whole bunch of features and fixes for this tool so I could start introducing it to projects to keep a closer eye on dependency trees.
 
@@ -47,6 +47,19 @@ Every few months, I'd think about this again and start submitting another bunch 
 I even made a few attempts at creating repos to share this effort (e.g. [you-dont-need-x](https://github.com/43081j/you-dont-need-x) and [eslint-plugin-clutter](https://github.com/43081j/eslint-plugin-clutter)).
 
 Unfortunately, none of these efforts really went anywhere. I struggled to find anyone who cared and would often move on to something else for a few months before I got the itch in my brain to tackle it again.
+
+## Starting a cleanup
+
+Eventually, I created the [ecosystem-cleanup](https://github.com/es-tooling/ecosystem-cleanup) project as place to track performance improvements in popular open source projects.
+
+In the early days, this was basically me creating issues for myself to contribute to various OSS projects.  Things like:
+
+- Removing redundant polyfills
+- Upgrading packages
+- Replacing large packages with lighter, more focused ones
+- Replacing unmaintained packages with modern, maintained alternatives
+
+It was a lot of work for one person, but I kept chipping away in the hope that I could raise awareness of performance and start to improve some of the ecosystem.
 
 ## Beginnings of a community
 
