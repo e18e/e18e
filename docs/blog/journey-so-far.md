@@ -19,14 +19,14 @@ head:
       content: Our journey so far as a community leading into 2025
   - - meta
     - property: og:image
-      content: https://e18e.dev/e18e-og-image.png
+      content: https://e18e.dev/og/journey-so-far.jpg
 ---
 
 # e18e - Journey so far
 
 _January 6, 2025_
 
-![e18e Cover Image](/e18e-og-image.png)
+![Journey so far Cover Image](/og/journey-so-far.jpg)
 
 This month we're skipping the usual monthly showcase post to write a little about what we got upto in 2024 and what lies ahead for us in 2025 :rocket:
 
