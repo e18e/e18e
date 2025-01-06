@@ -23,6 +23,10 @@ head:
 
 This month we're skipping the usual monthly showcase post to write a little about what we got upto in 2024 and what lies ahead for us in 2025 :rocket:
 
+Before we start, a little about me - I'm one of the leads of e18e and can be found in most places as [@43081j](https://bsky.app/profile/43081j.com). I maintain and contribute to a whole bunch of things but have been focusing on this community for the past year.
+
+Enough about me though! Let's take a look at some history and what lies ahead for us as a community.
+
 ## Way back...
 
 For a long time, I found myself returning many times to the need for a clean up of the JavaScript ecosystem, particularly npm at the time.
@@ -57,6 +61,7 @@ To name a few:
 - [@aslemammad](https://bsky.app/profile/aslemammad.bsky.social) had been working hard on the [tinylibs organisation](https://github.com/tinylibs/)
 - [@passle.dev](https://bsky.app/profile/passle.dev) had been digging into barrel files for a while (but hadn't yet made his [eslint plugin for detecting barrel files](https://github.com/thepassle/eslint-plugin-barrel-files))
 - [@pi0.io](https://bsky.app/profile/pi0.io) had been working on [unjs](https://github.com/unjs)
+- [@benmccann.com](https://bsky.app/profile/benmccann.com) had already been working on svelte performance
 
 All of these people and many others were working on some aspect of performance. Seeing them connect and have a space to collaborate was awesome :heart:
 
@@ -72,6 +77,10 @@ Several months later, here's a few stats from the past year:
 Most of these PRs and issues are umbrella style, in that they're used to track contributions to _many_ projects.
 
 This is really impressive work by the community, as it has resulted in hundreds, if not over a thousand contributions to many high impact projects around the ecosystem.
+
+Graphs like this dependency reduction of svelte-preprocess are becoming a common sight:
+
+![graph showing the dependency tree of svelte-preprocess in version 5 vs version 6](https://pbs.twimg.com/media/GSDjnNjboAAnrc5?format=jpg&name=4096x4096)
 
 ### Projects focusing on performance
 
@@ -91,15 +100,21 @@ Another big win by the community has been the number of projects it has helped g
 To name a few:
 
 - [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) - a glob library built on top of [fdir](https://github.com/thecodrr/fdir)
+  - Created by [@superchupu.dev](https://bsky.app/profile/superchupu.dev), and lots of help from [@benmccann.com](https://bsky.app/profile/benmccann.com) migrating projects to it
 - [tinyexec](https://github.com/tinylibs/tinyexec/) - a library for executing commands
 - [picospinner](https://github.com/tinylibs/picospinner/) - a library for rendering CLI spinners
 - [sonda](https://github.com/filipsobol/sonda) - a bundle visualiser
+  - Created by [@filipsobol](https://bsky.app/profile/filipsobol.bsky.social)
 - [knip](https://github.com/webpro-nl/knip) - a dependency & code analyser
+  - Created by [@webpro.nl](https://bsky.app/profile/webpro.nl)
 - [picoquery](https://github.com/43081j/picoquery) - a query string parser and stringifier
 - [fdir](https://github.com/thecodrr/fdir/) - a file system traversal library
 - [milliparsec](https://github.com/tinyhttp/milliparsec) - a body parser for web servers
 - [unicode-segmenter](https://github.com/cometkim/unicode-segmenter) - a unicode segmentation library
+  - Created by [@hyeseong.kim](https://bsky.app/profile/hyeseong.kim)
 - [nano-staged](https://github.com/usmanyunusov/nano-staged) - a tool to run commands for staged git files
+- [module-replacements-codemods](https://github.com/es-tooling/module-replacements-codemods) - a growing collection of codemods to automate migrations to replacement libraries
+  - Created by [@passle.dev](https://bsky.app/profile/passle.dev)
 
 I could go on, but there are far too many to list.
 
