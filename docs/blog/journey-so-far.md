@@ -61,6 +61,8 @@ In the early days, this was basically me creating issues for myself to contribut
 
 It was a lot of work for one person, but I kept chipping away in the hope that I could raise awareness of performance and start to improve some of the ecosystem.
 
+Over time, the maintainers of the projects receiving these contributions started to focus more on performance themselves, and we got a few contributors to the cleanup issue tracker!
+
 ## Beginnings of a community
 
 A few years later, [@bluwy](https://bsky.app/profile/bluwy.me) was posting about his efforts to speed up [astro's](https://github.com/withastro/astro) tooling. Around the same time, [@antfu](https://bsky.app/profile/antfu.me) quote posted this with the following:
