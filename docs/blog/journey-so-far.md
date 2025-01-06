@@ -30,7 +30,7 @@ _January 6, 2025_
 
 This month we're skipping the usual monthly showcase post to write a little about what we got upto in 2024 and what lies ahead for us in 2025 :rocket:
 
-Before we start, a little about me - I'm one of the leads of e18e and can be found in most places as [@43081j](https://bsky.app/profile/43081j.com). I maintain and contribute to a whole bunch of things but have been focusing on this community for the past year.
+Before we start, a little about me - I'm one of the creators of e18e and can be found in most places as [@43081j](https://bsky.app/profile/43081j.com). I maintain and contribute to a whole bunch of things but have been focusing on this community for the past year.
 
 Enough about me though! Let's take a look at some history and what lies ahead for us as a community.
 
