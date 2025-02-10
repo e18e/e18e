@@ -33,7 +33,7 @@ Before we continue, let's explain some of these terms and what's going on here.
 
 If we _inline_ a dependency, that usually means we take the source of it and copy it into our codebase rather than depending on it as an npm package.
 
-If we _pre-bundle_ (or just "bundle") a dependency, that would mean we run our library through a bundler like [rollup]() before publishing it.
+If we _pre-bundle_ (or just "bundle") a dependency, that would mean we run our library through a bundler like [rollup](https://github.com/rollup/rollup) before publishing it.
 
 In both cases, the dependency is no longer taken from npm and is instead stored in our published package as if we wrote it ourselves (and are "dependency free").
 
@@ -126,8 +126,10 @@ Ideally, we want to declare our dependencies so we can leave npm to de-dupe and 
 
 ## Conclusion
 
-There's usually no good reason to bundle your dependencies.
+Given we don't always have the time to contribute upstream to our dependencies and clean things up, it may still be a valid _temporary_ solution to bundle some of them.
 
-The most valid reason above is that you want to bundle some internal single-use dependencies, without having to keep them all in one project.
+The community is working hard to clean dependency trees up and provide alternatives, though, so this should become less of a problem over time.
 
-Other than that, the rest can be avoided, though that may mean spending time creating an alternative dependency.
+Usually there is no good reason to bundle your dependencies long term, and it should be seen as a short term solution.
+
+The most valid reason above is that you want to bundle some internal single-use dependencies, without having to keep them all in one project. This seems fine and will help keep code tidy internally.
