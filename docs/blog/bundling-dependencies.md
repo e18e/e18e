@@ -23,7 +23,7 @@ head:
 
 As part of [e18e](https://e18e.dev), the community is often asked when you should or shouldn't bundle your dependencies _as a library author_.
 
-Much of this has come around thanks to people noticing that [vite]() does indeed bundle some of its dependencies. Similarly, [storybook]() has been known to do the same but for internal packages.
+Much of this has come around thanks to people noticing that [vite](https://github.com/vitejs/vite) does indeed bundle most of its dependencies. Similarly, [storybook](https://github.com/storybookjs/storybook/) has been known to do the same but for internal packages.
 
 So when is this the right thing to do, and when is it not?
 
@@ -84,13 +84,15 @@ Especially with e18e community raising awareness of dependency bloat (amongst ma
 
 In some projects, this makes a lot of sense for various reasons. For example, using more of what the platform provides rather than dependencies.
 
-However, some projects have seen this (especially the ones losing users because they have bloated dependencies), and tried to "solve" the problem (trick people) by bundling _all_ of their dependencies.
+However, some projects have seen this rise in demand for "dependency free", and tried to shortcut a solution by bundling _all_ of their dependencies.
+
+This just hides the fact that they still have a bloated dependency tree, and worsens things by removing npm's ablity to de-dupe dependencies.
 
 These projects often include a `vendor/` directory of their npm packages, or run a bundler at pre-publish time.
 
-This is really poor and such projects should be avoided.
+This is really poor since it will hide the problem, but not solve it. So it is best to avoid these projects if there are alternatives available.
 
-**Advice:** trying to trick people isn't the best approach. Put the work in and become dependency-free properly (if it really should be).
+**Advice:** Put the work in and become dependency-free properly (if it really should be).
 
 ## Additional notes
 
