@@ -24,7 +24,7 @@ head:
 
 _February 10, 2025_
 
-![Bundling Dependencies (and when not to do it)](/og/bundling-dependencies.png)
+# ![Bundling Dependencies (and when not to do it)](/og/bundling-dependencies.png)
 
 As part of [e18e](https://e18e.dev), the community is often asked when you should or shouldn't bundle your dependencies _as a library author_.
 
