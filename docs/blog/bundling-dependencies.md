@@ -154,12 +154,34 @@ Whatever you do, if you bundle, you're at risk of removing the benefits npm give
 
 Ideally, we want to declare our dependencies so we can leave npm to de-dupe and share them across other libraries being used in parallel to ours.
 
+## Real-world examples
+
+### vite
+
+vite currently bundles most of its dependencies as a way to tree-shake things up front so its consumers don't have to.
+
+Given that it is a developer tool, unused in production, this made sense at the time it was decided.
+
+However, dependencies have vastly improved since then and the community has been hard at work improving performance across the board. These days, it is likely the vite team would not choose to bundle most of their dependencies.
+
+Many are now very lean and shipped as ES modules, using modern APIs, etc. These would now be better off moved outside of the bundle.
+
+### storybook
+
+Storybook bundles a lot of their dependencies, both internal and external.
+
+Similar to vite, they are a developer tool and rarely would reach production. Due to this, the decision made sense to keep the tree-shaking burden in-house rather than placing it on consumers.
+
+Due to the complexity of storybook, they also have many more dependencies than vite. It doesn't make much sense to declare all of these if only very small parts of each one are used.
+
+For these reasons, storybook is likely to continue bundling dependencies it doesn't use in their entirety at least.
+
 ## Conclusion
 
 Given we don't always have the time to contribute upstream to our dependencies and clean things up, it may still be a valid _temporary_ solution to bundle some of them.
 
-The community is working hard to clean dependency trees up and provide alternatives, though, so this should become less of a problem over time.
+As seen with storybook, there are also some valid reasons to bundle long-term. These are rare but do exist, especially for dev tools.
 
-Usually there is no good reason to bundle your dependencies long term, and it should be seen as a short term solution.
+The community is working hard to clean dependency trees up and provide alternatives, though, so this need should become less over time.
 
-The most valid reason above is that you want to bundle some internal single-use dependencies, without having to keep them all in one project. This seems fine and will help keep code tidy internally.
+Generally, you should not bundle your dependencies. Though it is clearly a per-case basis, as there are some edge cases where it is indeed beneficial.
