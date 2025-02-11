@@ -93,13 +93,11 @@ In some projects, this makes a lot of sense for various reasons. For example, us
 
 However, some projects have seen this rise in demand for "dependency free", and tried to shortcut a solution by bundling _all_ of their dependencies.
 
-This just hides the fact that they still have a bloated dependency tree, and worsens things by removing npm's ablity to de-dupe dependencies.
+This just hides the fact that they still have a bloated dependency tree, and worsens things by removing npm's ablity to de-dupe dependencies. The bundling step does reduce some of the size, but still pulls in the same bloated tree which could've been replaced with leaner, more modern code.
 
 These projects often include a `vendor/` directory of their npm packages, or run a bundler at pre-publish time.
 
-This is really poor since it will hide the problem, but not solve it. So it is best to avoid these projects if there are alternatives available.
-
-**Advice:** Put the work in and become dependency-free properly (if it really should be).
+**Advice:** Put the work in and become dependency-free properly if possible (if it really should be).
 
 ## Additional notes
 
