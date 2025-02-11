@@ -28,7 +28,7 @@ _February 10, 2025_
 
 As part of [e18e](https://e18e.dev), the community is often asked when you should or shouldn't bundle your dependencies _as a library author_.
 
-Much of this has come around thanks to people noticing that [vite](https://github.com/vitejs/vite) does indeed bundle most of its dependencies. Similarly, [storybook](https://github.com/storybookjs/storybook/) has been known to do the same but for internal packages.
+Much of this has come around thanks to people noticing that [vite](https://github.com/vitejs/vite) does indeed bundle most of its dependencies. Similarly, [storybook](https://github.com/storybookjs/storybook/) has been known to do the same.
 
 So when is this the right thing to do, and when is it not?
 
@@ -56,13 +56,15 @@ If this is the case, ideally you would either move away from the package to an E
 
 This isn't always possible though - e.g. if this is a fairly niche package or is no longer actively maintained.
 
-**Advice:** If it is unmaintained, build your own and contribute back to the community. Either way, there should be a solution to this without bundling.
+**Advice:** If the dependency is unmaintained, consider building your own and contributing it back to the community. Either way, there should be a solution to this without bundling.
 
 ### Using only a small part of the dependency
 
 Sometimes, you may depend on a fairly large dependency but only actually use a tiny part of it.
 
 While it is true that you can tree-shake the rest, that burden is then on your consumers who have to pull down an unnecessarily large dependency and have to remember to setup tree-shaking in the first place.
+
+Bundling the dependency can solve this up front without the consumer having to.
 
 **Advice:** Suggest that the authors extract this functionality into its own package (within reason), or find/create an alternative more focused package.
 
@@ -100,6 +102,29 @@ This is really poor since it will hide the problem, but not solve it. So it is b
 **Advice:** Put the work in and become dependency-free properly (if it really should be).
 
 ## Additional notes
+
+### Advantages/disadvantages of bundling
+
+A few advantages to bundling:
+
+- We don't want to block our release waiting for a dependency to have an alternative
+  - This may be waiting for an ESM alternative, something less bloated, or something using newer standards
+- We are producing a developer tool (i.e. it'll never reach production), so we want to tree-shake our dependencies for our consumers
+- We want to patch a dependency in a way that the dependency is unlikely to ever accept upstream
+
+Disadvantages:
+
+- Packages no longer receive downloads
+  - The number of downloads is a commonly used metric for sponsoring OSS projects, or deciding if to use such a package
+- Dependencies no longer receive updates
+  - They will be locked to the version at the time of bundling. The burden to release security updates is then on you (to re-bundle)
+- Bloated dependency trees are hidden but still exist
+  - These dependencies would be better replaced by alternatives, or contributed to
+- npm de-duplication no longer happens
+  - If a consumer has many copies of this dependency, the bundled ones will be duplicates since npm isn't aware of them
+- Maintainers don't receive help/contributions to improve
+  - Bundling the dependency often means the core problem is put off for longer (e.g. bloated sub-dependencies). Helping the maintainers solve the problem would be better
+- Issues are often opened with your project rather than the dependency
 
 ### Tree-shaking in libraries
 
