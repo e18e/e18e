@@ -160,7 +160,7 @@ Vite currently bundles most of its dependencies as a way to tree-shake things up
 
 Given that it is a developer tool, unused in production, this made sense at the time it was decided.
 
-However, dependencies have vastly improved since then and the community has been hard at work improving performance across the board. These days, it is likely the Vite team would not choose to bundle most of their dependencies.
+However, dependencies have vastly improved since then and the community has been hard at work improving performance across the board. Thanks to this, it is likely the Vite team will stop bundling some of their dependencies in future.
 
 Many are now very lean and shipped as ES modules, using modern APIs, etc. These would now be better off moved outside of the bundle.
 
