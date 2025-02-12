@@ -28,7 +28,7 @@ _February 10, 2025_
 
 As part of [e18e](https://e18e.dev), the community is often asked when you should or shouldn't bundle your dependencies _as a library author_.
 
-Much of this has come around thanks to people noticing that [vite](https://github.com/vitejs/vite) does indeed bundle most of its dependencies. Similarly, [storybook](https://github.com/storybookjs/storybook/) has been known to do the same.
+Much of this has come around thanks to people noticing that [Vite](https://github.com/vitejs/vite) does indeed bundle most of its dependencies. Similarly, [Storybook](https://github.com/storybookjs/storybook/) has been known to do the same.
 
 So when is this the right thing to do, and when is it not?
 
@@ -154,31 +154,31 @@ Ideally, we want to declare our dependencies so we can leave npm to de-dupe and 
 
 ## Real-world examples
 
-### vite
+### Vite
 
-vite currently bundles most of its dependencies as a way to tree-shake things up front so its consumers don't have to.
+Vite currently bundles most of its dependencies as a way to tree-shake things up front so its consumers don't have to.
 
 Given that it is a developer tool, unused in production, this made sense at the time it was decided.
 
-However, dependencies have vastly improved since then and the community has been hard at work improving performance across the board. These days, it is likely the vite team would not choose to bundle most of their dependencies.
+However, dependencies have vastly improved since then and the community has been hard at work improving performance across the board. These days, it is likely the Vite team would not choose to bundle most of their dependencies.
 
 Many are now very lean and shipped as ES modules, using modern APIs, etc. These would now be better off moved outside of the bundle.
 
-### storybook
+### Storybook
 
 Storybook bundles a lot of their dependencies, both internal and external.
 
-Similar to vite, they are a developer tool and rarely would reach production. Due to this, the decision made sense to keep the tree-shaking burden in-house rather than placing it on consumers.
+Similar to Vite, they are a developer tool and rarely would reach production. Due to this, the decision made sense to keep the tree-shaking burden in-house rather than placing it on consumers.
 
-Due to the complexity of storybook, they also have many more dependencies than vite. It doesn't make much sense to declare all of these if only very small parts of each one are used.
+Due to the complexity of Storybook, they also have many more dependencies than Vite. It doesn't make much sense to declare all of these if only very small parts of each one are used.
 
-For these reasons, storybook is likely to continue bundling dependencies it doesn't use in their entirety at least.
+For these reasons, Storybook is likely to continue bundling dependencies it doesn't use in their entirety at least.
 
 ## Conclusion
 
 Given we don't always have the time to contribute upstream to our dependencies and clean things up, it may still be a valid _temporary_ solution to bundle some of them.
 
-As seen with storybook, there are also some valid reasons to bundle long-term. These are rare but do exist, especially for dev tools.
+As seen with Storybook, there are also some valid reasons to bundle long-term. These are rare but do exist, especially for dev tools.
 
 The community is working hard to clean dependency trees up and provide alternatives, though, so this need should become less over time.
 
