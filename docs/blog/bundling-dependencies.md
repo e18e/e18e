@@ -99,30 +99,49 @@ These projects often include a `vendor/` directory of their npm packages, or run
 
 **Advice:** Put the work in and become dependency-free properly if possible (if it really should be).
 
+## Advantages & disadvantages
+
+### Advantages of bundling
+
+**We don't want to block our release waiting for a dependency to have an alternative**
+
+This may be waiting for an ESM alternative, something less bloated, or something using newer standards
+
+**We are producing a developer tool (i.e. it'll never reach production), so we want to tree-shake our dependencies for our consumers**
+
+This is the most common reason and still very valid. If you're shipping a developer tool and have a complex dependency tree with a lot of unused code, it may be better to tree-shake it up front.
+
+**We want to patch a dependency in a way that the dependency is unlikely to ever accept upstream**
+
+Less common, but you may want to patch something to work better in your particular case, in a way that the maintainers wouldn't be able to accept across the board.
+
+### Disadvantages of bundling
+
+**Packages no longer receive downloads**
+
+The number of downloads is a commonly used metric for sponsoring OSS projects, or deciding if to use such a package
+
+**Dependencies no longer receive updates**
+
+They will be locked to the version at the time of bundling. The burden to release security updates is then on you (to re-bundle)
+
+**Bloated dependency trees are hidden but still exist**
+
+These dependencies would be better replaced by alternatives, or contributed to
+
+**npm de-duplication no longer happens**
+
+If a consumer has many copies of this dependency, the bundled ones will be duplicates since npm isn't aware of them
+
+**Maintainers don't receive help/contributions to improve**
+
+Bundling the dependency often means the core problem is put off for longer (e.g. bloated sub-dependencies). Helping the maintainers solve the problem would be better
+
+**Issues are often opened with your project rather than the dependency**
+
+Since consumers don't know you pull much of your code from dependencies, issues with it will be raised with you rather than the packages responsible for it.
+
 ## Additional notes
-
-### Advantages/disadvantages of bundling
-
-A few advantages to bundling:
-
-- We don't want to block our release waiting for a dependency to have an alternative
-  - This may be waiting for an ESM alternative, something less bloated, or something using newer standards
-- We are producing a developer tool (i.e. it'll never reach production), so we want to tree-shake our dependencies for our consumers
-- We want to patch a dependency in a way that the dependency is unlikely to ever accept upstream
-
-Disadvantages:
-
-- Packages no longer receive downloads
-  - The number of downloads is a commonly used metric for sponsoring OSS projects, or deciding if to use such a package
-- Dependencies no longer receive updates
-  - They will be locked to the version at the time of bundling. The burden to release security updates is then on you (to re-bundle)
-- Bloated dependency trees are hidden but still exist
-  - These dependencies would be better replaced by alternatives, or contributed to
-- npm de-duplication no longer happens
-  - If a consumer has many copies of this dependency, the bundled ones will be duplicates since npm isn't aware of them
-- Maintainers don't receive help/contributions to improve
-  - Bundling the dependency often means the core problem is put off for longer (e.g. bloated sub-dependencies). Helping the maintainers solve the problem would be better
-- Issues are often opened with your project rather than the dependency
 
 ### Tree-shaking in libraries
 
@@ -178,8 +197,6 @@ For these reasons, Storybook is likely to continue bundling dependencies it does
 
 Given we don't always have the time to contribute upstream to our dependencies and clean things up, it may still be a valid _temporary_ solution to bundle some of them.
 
-As seen with Storybook, there are also some valid reasons to bundle long-term. These are rare but do exist, especially for dev tools.
+If you're building a developer tool (e.g. a CLI), it may make sense to bundle long-term. Especially if your dependency tree is rather complex and contains a lot of code you don't actually make use of. This is exactly what Vite and Storybook are both doing.
 
-The community is working hard to clean dependency trees up and provide alternatives, though, so this need should become less over time.
-
-Generally, you should not bundle your dependencies. Though it is clearly a per-case basis, as there are some edge cases where it is indeed beneficial.
+If you're building a library, you generally should not be bundling your dependencies. It may make sense short term to unblock you, but ultimately should not stay that way (ideally dependencies improve over time).
