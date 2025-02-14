@@ -4,7 +4,7 @@
 
 |  | Description |
 | -- | -- |
-| [JS ecosystem cleanup](https://github.com/43081j/ecosystem-cleanup) | Efforts to provide a cleaner dependency tree in the JS ecosystem |
+| [JS ecosystem cleanup](https://github.com/e18e/ecosystem-issues) | Efforts to provide a cleaner dependency tree in the JS ecosystem |
 | [Tinylibs](https://github.com/tinylibs) | A place for tiny and minimal libraries |
 | [unjs](https://github.com/unjs/) | Purpose-built, high-quality JavaScript utilities, libraries, and tools |
 | [es-tooling](https://github.com/es-tooling/) | A collection of tooling for the JS ecosystem |
