@@ -11,9 +11,6 @@ importers:
       '@antfu/eslint-config':
         specifier: ^2.14.0
         version: 2.14.0(@vue/compiler-sfc@3.5.12)(eslint@9.0.0)(typescript@5.4.5)
-      '@antfu/ni':
-        specifier: ^0.21.12
-        version: 0.21.12
       '@types/node':
         specifier: ^20.12.7
         version: 20.12.7
@@ -168,10 +165,6 @@ packages:
 
   '@antfu/install-pkg@0.3.2':
     resolution: {integrity: sha512-FFYqME8+UHlPnRlX/vn+8cTD4Wo/nG/lzRxpABs3XANBmdJdNImVz3QvjNAE/W3PSCNbG387FOz8o5WelnWOlg==}
-
-  '@antfu/ni@0.21.12':
-    resolution: {integrity: sha512-2aDL3WUv8hMJb2L3r/PIQWsTLyq7RQr3v9xD16fiz6O8ys1xEyLhhTOv8gxtZvJiTzjTF5pHoArvRdesGL1DMQ==}
-    hasBin: true
 
   '@babel/code-frame@7.24.2':
     resolution: {integrity: sha512-y5+tLQyV8pg3fsiln67BVLD1P13Eg4lh5RW9mF0zUuvLrv9uIQ4MCL+CRT+FTsBlBjcIan6PGsLcBN0m3ClUyQ==}
@@ -2636,8 +2629,6 @@ snapshots:
   '@antfu/install-pkg@0.3.2':
     dependencies:
       execa: 8.0.1
-
-  '@antfu/ni@0.21.12': {}
 
   '@babel/code-frame@7.24.2':
     dependencies:

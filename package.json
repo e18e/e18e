@@ -5,15 +5,14 @@
   "private": true,
   "packageManager": "pnpm@9.4.0",
   "scripts": {
-    "dev": "npm -C docs run dev",
-    "build": "npm -C docs run build",
-    "serve": "npm -C docs run serve",
+    "dev": "pnpm -C docs run dev",
+    "build": "pnpm -C docs run build",
+    "serve": "pnpm -C docs run serve",
     "lint": "eslint --cache .",
-    "lint:fix": "nr lint --fix"
+    "lint:fix": "pnpm lint --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.14.0",
-    "@antfu/ni": "^0.21.12",
     "@types/node": "^20.12.7",
     "eslint": "^9.0.0",
     "lint-staged": "^15.2.2",
