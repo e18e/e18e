@@ -26,7 +26,7 @@ _February 10, 2025_
 
 # ![Bundling Dependencies (and when not to do it)](/og/bundling-dependencies.png)
 
-As part of [e18e](https://e18e.dev), the community is often asked when you should or shouldn't bundle your dependencies _as a library author_.
+As part of [e18e](https://e18e.dev), the community is often asked when you should or shouldn't bundle your dependencies _as a library or developer tool author_.
 
 Much of this has come around thanks to people noticing that [Vite](https://github.com/vitejs/vite) does indeed bundle most of its dependencies. Similarly, [Storybook](https://github.com/storybookjs/storybook/) has been known to do the same.
 
