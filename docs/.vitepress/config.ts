@@ -1,5 +1,6 @@
-import { defineConfig } from 'vitepress'
+import process from 'node:process'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import { defineConfig } from 'vitepress'
 import { buildEnd } from './buildEnd.config'
 
 const ogTitle = 'e18e'
@@ -105,7 +106,7 @@ export default defineConfig({
               text: 'Resources',
               link: '/guide/resources',
             },
-          ]
+          ],
         },
         {
           text: 'Performance',
