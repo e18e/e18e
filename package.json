@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@10.4.0",
   "scripts": {
     "dev": "pnpm -C docs run dev",
     "build": "pnpm -C docs run build",
@@ -12,18 +12,23 @@
     "lint:fix": "pnpm lint --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.14.0",
-    "@types/node": "^20.12.7",
-    "eslint": "^9.0.0",
-    "lint-staged": "^15.2.2",
-    "simple-git-hooks": "^2.11.1"
+    "@antfu/eslint-config": "^4.2.0",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.1",
+    "lint-staged": "^15.4.3",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "~5.7.3"
   },
   "pnpm": {
     "peerDependencyRules": {
       "allowAny": [
         "eslint"
       ]
-    }
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "simple-git-hooks"
+    ]
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

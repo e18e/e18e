@@ -4,7 +4,7 @@ The JavaScript ecosystem has grown massively over the years, in good and bad way
 
 Much of this is in the form of packages which are redundant, bloated or have since fallen out of active maintenance.
 
-A good example of the current efforts to clean our packages up, is [es-tooling/ecosystem-cleanup](https://github.com/es-tooling/ecosystem-cleanup). This project aims to drive contributions upstream to popular open-source projects. The project aims to:
+The e18e community maintains [e18e/ecosystem-issues](https://github.com/e18e/ecosystem-issues), which aims to drive contributions upstream to popular open-source projects, including:
 
 - Modernize existing packages
 - Migrate from redundant packages
@@ -12,7 +12,7 @@ A good example of the current efforts to clean our packages up, is [es-tooling/e
 - Migrate to lighter and/or faster alternatives
 
 ::: info Jump into action!
-The es-tooling community maintains a list of [open opportunities in the ecosystem-cleanup repo](https://github.com/43081j/ecosystem-cleanup/issues). After reading this guide, check out these issues for ideas to improve popular packages. And if you do research and find other places we can clean up a dependency tree, or speed it up, please do open some tracking issues in the cleanup repo, so you give others good starting points to get involved.
+Check out the list of [open opportunities in the ecosystem-issues repo](https://github.com/e18e/ecosystem-issues/issues). After reading this guide, check out these issues for ideas to improve popular packages. And if you do research and find other places we can clean up a dependency tree, or speed it up, please do open some tracking issues in the cleanup repo, so you give others good starting points to get involved.
 
 We can have a bigger effect working together. Join the [e18e Discord server](https://chat.e18e.dev) to connect with others to share your wins or get help along the way!
 :::
@@ -134,7 +134,7 @@ In this situation, it is worth looking for a lighter (and hopefully faster) alte
 
 ### Tip: Finding Dependents of a Packages
 
-Once you identify a package that has potential for replacement, create an issue in our [cleanup-repository](https://github.com/es-tooling/ecosystem-cleanup) to inform other community members.
+Once you identify a package that has potential for replacement, create an issue in our [cleanup-repository](https://github.com/e18e/ecosystem-issues) to inform other community members.
 
 Next, use [fuzzymas tool](https://github.com/fuzzyma/e18e-tools) to find the dependents of the package. You can find documentation on how to use the tool in its README.
 

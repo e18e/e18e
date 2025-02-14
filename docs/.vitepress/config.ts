@@ -1,5 +1,6 @@
-import { defineConfig } from 'vitepress'
+import process from 'node:process'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import { defineConfig } from 'vitepress'
 import { buildEnd } from './buildEnd.config'
 
 const ogTitle = 'e18e'
@@ -64,32 +65,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
-      {
-        text: 'Resources',
-        items: [
-          { text: 'Blog', link: '/blog' },
-          {
-            items: [
-              {
-                text: 'Bluesky',
-                link: 'https://bsky.app/profile/e18e.dev',
-              },
-              {
-                text: 'Mastodon',
-                link: 'https://elk.zone/m.webtoo.ls/@e18e',
-              },
-              {
-                text: 'Discord Chat',
-                link: 'https://chat.e18e.dev',
-              },
-              {
-                text: 'Contributing',
-                link: 'https://github.com/e18e/e18e/blob/main/CONTRIBUTING.md',
-              },
-            ],
-          },
-        ],
-      },
+      { text: 'Blog', link: '/blog' },
     ],
 
     sidebar: {
@@ -105,7 +81,7 @@ export default defineConfig({
               text: 'Resources',
               link: '/guide/resources',
             },
-          ]
+          ],
         },
         {
           text: 'Performance',
