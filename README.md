@@ -17,7 +17,7 @@
 
 The e18e (Ecosystem Performance) project is an initiative to bring together the groups and individuals who are passionate about improving performance of the JavaScript ecosystem.
 
-Many ongoing efforts are already happening in this space, from [dependency tree cleanups](https://github.com/43081j/ecosystem-cleanup) to [performance optimizations](https://marvinh.dev/blog/speeding-up-javascript-ecosystem/), and much more.
+Many ongoing efforts are already happening in this space, from [dependency tree cleanups](https://github.com/e18e/ecosystem-issues) to [performance optimizations](https://marvinh.dev/blog/speeding-up-javascript-ecosystem/), and much more.
 
 Our aim is to provide a space for contributions, ideas and knowledge sharing around the importance of performance across the ecosystem. Hopefully, with this collaboration, we can improve visibility of the impact of things like dependency choices. Join us at the [e18e Discord Server](https://chat.e18e.dev) to connect with other like-minded devs.
 
