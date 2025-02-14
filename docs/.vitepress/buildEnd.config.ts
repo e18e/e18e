@@ -1,12 +1,13 @@
-import path from 'path'
-import { writeFileSync } from 'fs'
+import type { SiteConfig } from 'vitepress'
+import { writeFileSync } from 'node:fs'
+import path from 'node:path'
 import { Feed } from 'feed'
-import { createContentLoader, type SiteConfig } from 'vitepress'
+import { createContentLoader } from 'vitepress'
 
 const siteUrl = 'https://e18e.dev'
 const blogUrl = `${siteUrl}/blog`
 
-export const buildEnd = async (config: SiteConfig) => {
+export async function buildEnd(config: SiteConfig) {
   const feed = new Feed({
     title: 'e18e',
     description: 'Ecosystem Performance',
@@ -25,8 +26,8 @@ export const buildEnd = async (config: SiteConfig) => {
 
   posts.sort(
     (a, b) =>
-      +new Date(b.frontmatter.date as string) -
-      +new Date(a.frontmatter.date as string),
+      +new Date(b.frontmatter.date as string)
+      - +new Date(a.frontmatter.date as string),
   )
 
   for (const { url, excerpt, frontmatter, html } of posts) {
