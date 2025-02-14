@@ -27,7 +27,7 @@ importers:
         specifier: ^2.11.1
         version: 2.11.1
       typescript:
-        specifier: ^5.7.3
+        specifier: ~5.7.3
         version: 5.7.3
 
   docs:

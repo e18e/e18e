@@ -25,7 +25,11 @@
       "allowAny": [
         "eslint"
       ]
-    }
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "simple-git-hooks"
+    ]
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
