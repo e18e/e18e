@@ -17,9 +17,14 @@ head:
   - - meta
     - property: og:description
       content: An update on the progress we're making migrating packages to ES modules
+  - - meta
+    - property: og:image
+      content: https://e18e.dev/og/migrating-the-ecosystem-to-esm.png
 ---
 
 _March 19, 2025_
+
+# ![Migrating the ecosystem to ES modules](/og/migrating-the-ecosystem-to-esm.png)
 
 Node made some huge steps forward recently by releasing `require(esm)` to each of the long-term support versions (other than the soon to fall out of LTS 18.x). Awesome work by [@joyeecheung](https://bsky.app/profile/joyeecheung.bsky.social) getting it over the line!
 
