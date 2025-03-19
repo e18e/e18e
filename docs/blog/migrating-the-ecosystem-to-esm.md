@@ -111,6 +111,7 @@ We've already seen a huge amount of packages make the jump. Here are just a few 
 - [eslint-plugin-lit](https://github.com/43081j/eslint-plugin-lit)
 - [eslint-plugin-wc](https://github.com/43081j/eslint-plugin-wc)
 - [eslint-plugin-svelte](https://github.com/sveltejs/eslint-plugin-svelte)
+- [eslint-plugin-github](https://github.com/github/eslint-plugin-github)
 
 This is just a subset of the packages we've seen migrate, many more PRs are still in progress by contributors and maintainers alike.
 
