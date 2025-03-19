@@ -63,12 +63,32 @@ As part of this migration, we have three types of package to deal with:
 
 In most cases, this is as simple as setting `type` to `"module"` in `package.json`, then updating all imports to include file extensions.
 
-For example:
+For example, in `package.json`:
 
 ```json
 {
   "name": "my-package",
   "type": "module"
+}
+```
+
+And updating the imports:
+
+```ts
+// before
+import './foo'
+
+// after
+import './foo.js'
+```
+
+If you want to expose extensionless imports to your consumers, you can use an export map:
+
+```json
+{
+  "exports": {
+    "./foo": "./foo.js"
+  }
 }
 ```
 
