@@ -42,6 +42,15 @@ So we were blocked...
 
 That is until `require(esm)` came along! This basically means we _can_ `require` an ES module inside a CJS module now. CJS packages can consume ES module packages and vice versa. A huge move forward and unblocks us all to get back on the migration path!
 
+For example:
+
+```ts
+// file: foo.cjs
+
+// chai is esm only, but this now works!
+const { expect } = require('chai')
+```
+
 ## Types of package
 
 As part of this migration, we have three types of package to deal with:
