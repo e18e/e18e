@@ -112,6 +112,7 @@ We've already seen a huge amount of packages make the jump. Here are just a few 
 - [eslint-plugin-wc](https://github.com/43081j/eslint-plugin-wc)
 - [eslint-plugin-svelte](https://github.com/sveltejs/eslint-plugin-svelte)
 - [eslint-plugin-github](https://github.com/github/eslint-plugin-github)
+- [picospinner](https://github.com/tinylibs/picospinner)
 
 This is just a subset of the packages we've seen migrate, many more PRs are still in progress by contributors and maintainers alike.
 
