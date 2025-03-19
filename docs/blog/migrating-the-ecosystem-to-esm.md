@@ -122,7 +122,7 @@ For example, in `tsup`:
 
 ## How the community is helping
 
-Within the e18e community, we have been tracking this in an [issue](https://github.com/e18e/ecosystem-issues/issues/129) for some time.
+Within the e18e community, we have been tracking the migration from CJS to ESM in an [issue](https://github.com/e18e/ecosystem-issues/issues/129) for some time.
 
 It is a crazy amount of work for us to try migrate every possible package, so we have opted for the approach of helping migrate high impact tools, starter kits, frameworks and what not. This should hopefully help others to follow suit and give plenty of example migrations to work from.
 
