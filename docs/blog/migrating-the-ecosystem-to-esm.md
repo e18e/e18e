@@ -94,7 +94,7 @@ If you want to expose extensionless imports to your consumers, you can use an ex
 
 ### Migrating a dual package
 
-Dual packages are basically a necessary evil if you want to support both CJS and ESM _before `require(esm)` was available_.
+Dual packages are basically a necessary evil if you want to support both CJS and ESM _before `require(esm)` was available_ and don't want to force your CJS users to use an async dynamic import.
 
 These packages work by having **two copies** of the sources and the types.
 
