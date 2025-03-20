@@ -66,7 +66,11 @@ As part of this migration, we have three types of package to deal with:
 
 ### Migrating a CommonJS package
 
-In most cases, this is as simple as setting `type` to `"module"` in `package.json`, then updating all imports to include file extensions.
+In most cases, this is as simple as doing the following steps:
+
+- Set `type` to `"module"` in `package.json`
+- Update all imports to include file extensions
+- Update sources to use `export` / `import` syntax
 
 For example, in `package.json`:
 
