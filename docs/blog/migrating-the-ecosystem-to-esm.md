@@ -87,7 +87,7 @@ import './foo'
 import './foo.js'
 ```
 
-If you want to expose extensionless imports to your consumers, you can use an export map:
+It is preferred that you have file extensions, but if you want to expose extensionless imports to your consumers, you can use an export map:
 
 ```json
 {
