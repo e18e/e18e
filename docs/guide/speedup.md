@@ -41,6 +41,6 @@ Prefer using non-async [iterators](https://developer.mozilla.org/en-US/docs/Web/
 
 ### Avoid chaining array methods
 
-Chaining array methods like `map`, `filter`, `reduce`, etc leads to many intermediate arrays being created and disposed, causing more work for the garbage collector. Each chain also leads to an extra iteration, which can be more times than needed.
+Chaining array methods like `map`, `filter`, `reduce`, etc. leads to many intermediate arrays being created and disposed, causing more work for the garbage collector. Each chain also leads to an extra iteration, which can be more times than needed.
 
 Prefer using [`for` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...in` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in), and[`for...of` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), or a single chain method only to prevent the caveats above.

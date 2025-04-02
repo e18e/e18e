@@ -101,7 +101,7 @@ Common things to check:
 
 - node `engines` specifying a node version low enough that this dependency supports (and alternatives don't).
 - there is no known alternative (good opportunity to make one!).
-- every deep dependency in the subtree is necessary (in many cases the tree may be deep but for good reason, to share modules, etc).
+- every deep dependency in the subtree is necessary (in many cases the tree may be deep but for good reason, to share modules, etc.).
 
 If it is indeed replaceable, you should find an alternative. Good resources for that are:
 
