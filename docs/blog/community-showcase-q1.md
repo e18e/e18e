@@ -82,11 +82,44 @@ A while ago, we started a conversation around migrating the [TSESLint](https://g
 
 The idea was that this would greatly improve test run performance, modernise some of the tests themselves and lighten the install size for maintainers.
 
-Around the same time, [Arya](https://github.com/aryaemami59) had already started work on it, and there the collaboration began! He has done a huge amount of work moving every sub-package of the repo to vitest one by one, and we're now at the stage where the TSESLint team can start reviewing and merging many of them.
+Around the same time, we discovered [Arya](https://github.com/aryaemami59) had already been working on this for a few months in some unfinished branches. From there, we decided to lend a helping hand in reviews and such to help get this over the line.
+
+Arya has done a huge amount of work moving every sub-package of the repo to vitest one by one, and we're now at the stage where many of them are near enough ready to merge.
 
 This is a great example of where it will not affect the end user directly, but will speed up CI and maintainer workflows significantly.
 
 If you want to follow the work, keep an eye on the [tracking issue](https://github.com/typescript-eslint/typescript-eslint/issues/7112).
+
+## Stream cleanup
+
+Streams are very useful for dealing with large amounts of data in a performant way. You'll find them in use in most of the tools we use today, especially those which deal with reading large files, network resources, etc.
+
+Over the years, many packages have been published to provide utilities for dealing with these. For example, utilities to create pipelines, buffer windows, concatenation and much more
+
+These have all been of great use, but many have since been made redundant by Node itself shipping similar functionality in the [`stream` module](https://nodejs.org/api/stream.html).
+
+For example, you can now use the built-in [`pipeline`](https://nodejs.org/api/stream.html#streampipelinesource-transforms-destination-callback) function for transforming a stream through a pipeline of transforms:
+
+```ts
+pipeline(source, transform1, transform2, (err) => {
+  if (err) {
+    // error thrown
+  }
+  else {
+    // pipeline finished successfully
+  }
+})
+```
+
+In an effort to clean up these redundant usages, and use the built-in standard library, the community has been contributing to many different projects and removing them.
+
+Just a few packages which have seen improvements:
+
+- [metro](https://github.com/facebook/metro) dropped `through2`
+- [postcss](https://github.com/postcss/postcss-cli) dropped `get-stdin` and more
+- [exegesis](https://github.com/exegesis-js/exegesis) dropped `pump`
+
+Huge thanks to [talentlessguy](https://github.com/talentlessguy) for leading this effort!
 
 ## Collaborations
 
