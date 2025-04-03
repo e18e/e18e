@@ -42,7 +42,7 @@ This makes it very difficult for maintainers to check their own packages for pos
 
 That is why we are now working on an e18e CLI and somewhere we can produce reports for packages on the web. Our vision is that you can throw your package name or `package.json` into this tool and see all of the recommended changes, warnings, etc.
 
-This is very early stage right now, but will be coming very soon! :raised_hands:
+This is very early stage right now and being worked on by [antfu](https://bsky.app/profile/antfu.me), [blu](https://bsky.app/profile/bluwy.me) and [43081j](https://bsky.app/profile/43081j.com), but will be coming very soon! :raised_hands:
 
 ## Prettier CLI
 
@@ -72,7 +72,7 @@ Just a few wins we've seen so far:
 
 - [`eslint-plugin-import-x`](https://github.com/un-ts/eslint-plugin-import-x) moves to a rust-based resolver
   - Big thanks to [JounQin](https://bsky.app/profile/1stg.me) and [sukka](https://bsky.app/profile/skk.moe) for the various improvements on this and other ESLint plugins they maintain
-- [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n/) had an almost 20x perf improvement on some rules
+- [`eslint-plugin-n`](https://github.com/eslint-community/eslint-plugin-n/) had an almost 20x perf improvement on one of their rules
   - Thanks to [pralkarz](https://github.com/pralkarz) for this one
 - [`eslint-plugin-svelte`](https://github.com/sveltejs/eslint-plugin-svelte) dropped a bunch of compat code for older versions of ESLint
 
