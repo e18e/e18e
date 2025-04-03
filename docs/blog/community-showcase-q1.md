@@ -121,6 +121,12 @@ Big thanks to the people who managed to make it :heart: There will be more of th
 
 We've collaborated a lot with the svelte community in the past, so this will be an exciting opportunity to meet some familiar faces in person and talk about where we can help in future.
 
+### Vite Conf
+
+[ViteConf](https://viteconf.amsterdam) was recently announced and will be taking place in Amsterdam this October.
+
+Quite a few of the e18e community will be attending. If you'll be there too, let us know, as we'd love to catch up :pray:
+
 ## Get involved
 
 **TODO**
