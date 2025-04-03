@@ -82,7 +82,7 @@ A while ago, we started a conversation around migrating the [TSESLint](https://g
 
 The idea was that this would greatly improve test run performance, modernise some of the tests themselves and lighten the install size for maintainers.
 
-Around the same time, [Arya](https://github.com/aryaemami59) started work on this and there the collaboration began! He has done a huge amount of work moving every sub-package of the repo to vitest one by one, and we're now at the stage where the TSESLint team can start reviewing and merging many of them.
+Around the same time, [Arya](https://github.com/aryaemami59) had already started work on it, and there the collaboration began! He has done a huge amount of work moving every sub-package of the repo to vitest one by one, and we're now at the stage where the TSESLint team can start reviewing and merging many of them.
 
 This is a great example of where it will not affect the end user directly, but will speed up CI and maintainer workflows significantly.
 
