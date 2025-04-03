@@ -25,6 +25,25 @@ It has been a while since we posted one of our monthly showcases. This is mostly
 
 Today, we're going to give some updates on those and share what we've been up to. We'll also be switching these posts to be quarterly since much of the work is longer running, but we'll still be posting about other things in between! :heart:
 
+## e18e CLI / web report
+
+One of the pain points in adopting recommendations from the e18e community has been the fact that it mostly involves manual work and joining the dots between various tools.
+
+For example, just some of the great tools we use today:
+
+- [arethetypeswrong](https://github.com/arethetypeswrong/arethetypeswrong.github.io) - analyzes your package for TypeScript publishing/configuration problems
+- [publint](https://github.com/publint/publint) - verifies that you publish your package correctly
+- [node-modules.dev](https://node-modules.dev/) - analyzes your dependency tree and various other aspects
+- [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) - analyzes your dependencies for replaceable/redundant packages
+
+These tools are often combined with various manual processes and scripts to do the investigation work of what we can improve in a package.
+
+This makes it very difficult for maintainers to check their own packages for possible improvements. We want to solve this and provide good enough tooling that you can do it yourself, with ease.
+
+That is why we are now working on an e18e CLI and somewhere we can produce reports for packages on the web. Our vision is that you can throw your package name or `package.json` into this tool and see all of the recommended changes, warnings, etc.
+
+This is very early stage right now, but will be coming very soon! :raised_hands:
+
 ## Prettier CLI
 
 For the last couple of months, we have been hard at work on the new prettier CLI. The idea is that this will eventually replace the current one, but initially be available behind a flag.
