@@ -144,7 +144,7 @@ At some point we will also be looking to do talks at events like this, so keep a
 
 As part of this, we also had our first ever meetup :partying_face: Taking place in Amsterdam, we had a great turnout and a lot of productive discussions.
 
-**IMAGE HERE**
+![e18e Amsterdam Meetup](/images/meetup-amsterdam-25-3.jpg)
 
 Big thanks to the people who managed to make it :heart: There will be more of these in future, so come along if you're able to and meet some of the community.
 
