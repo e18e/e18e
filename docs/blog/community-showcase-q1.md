@@ -17,9 +17,14 @@ head:
   - - meta
     - property: og:description
       content: An update on what the community has been up to in Q1 of 2025
+  - - meta
+    - property: og:image
+      content: https://e18e.dev/og/community-showcase-25-q1.png
 ---
 
-_April 1, 2025_
+_April 3, 2025_
+
+# ![Community Showcase (Q1 2025)](/og/community-showcase-25-q1.png)
 
 It has been a while since we posted one of our monthly showcases. This is mostly because the community has been hard at work on some exciting but rather large projects!
 
