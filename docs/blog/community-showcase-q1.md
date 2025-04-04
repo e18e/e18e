@@ -124,7 +124,7 @@ Just a few packages which have seen improvements:
 - [postcss-cli](https://github.com/postcss/postcss-cli) dropped `get-stdin` and more ([PR](https://github.com/postcss/postcss-cli/pull/489))
 - [exegesis](https://github.com/exegesis-js/exegesis) dropped `pump` ([PR](https://github.com/exegesis-js/exegesis/pull/500))
 
-Huge thanks to [v1rtl](https://github.com/talentlessguy) for leading this effort!
+Huge thanks to [v1rtl](https://bsky.app/profile/v1rtl.site) for leading this effort!
 
 ## Collaborations
 
