@@ -121,10 +121,10 @@ In an effort to clean up these redundant usages, and use the built-in standard l
 Just a few packages which have seen improvements:
 
 - [metro](https://github.com/facebook/metro) dropped `through2`
-- [postcss](https://github.com/postcss/postcss-cli) dropped `get-stdin` and more
+- [postcss-cli](https://github.com/postcss/postcss-cli) dropped `get-stdin` and more
 - [exegesis](https://github.com/exegesis-js/exegesis) dropped `pump`
 
-Huge thanks to [talentlessguy](https://github.com/talentlessguy) for leading this effort!
+Huge thanks to [v1rtl](https://github.com/talentlessguy) for leading this effort!
 
 ## Collaborations
 
