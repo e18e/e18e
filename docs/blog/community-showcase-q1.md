@@ -137,7 +137,7 @@ Here's just a few of the projects and organisations we've been collaborating wit
 - nx ([tracking issue](https://github.com/e18e/ecosystem-issues/issues/117))
 - changesets
 
-We're also continuing to collaborate with storybook, vitest, svelte, and many other projects.
+We're also continuing to collaborate with storybook, vite, svelte, and many other projects.
 
 ## Events
 
@@ -167,6 +167,4 @@ Quite a few of the e18e community will be attending. If you'll be there too, let
 
 ## Get involved
 
-**TODO**
-
-[Join our discord](https://chat.e18e.dev)
+If you'd like to help out, or you're a maintainer and want to collaborate more closely, [join our discord](https://chat.e18e.dev) and say Hi!
