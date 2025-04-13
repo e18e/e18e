@@ -44,7 +44,7 @@ export default defineConfig({
       { icon: 'bluesky', link: 'https://bsky.app/profile/e18e.dev' },
       { icon: 'mastodon', link: 'https://elk.zone/m.webtoo.ls/@e18e' },
       { icon: 'discord', link: 'https://chat.e18e.dev' },
-      { icon: 'github', link: 'https://github.com/e18e/e18e' },
+      { icon: 'github', link: 'https://github.com/e18e' },
     ],
 
     /* TODO: Algolia search
