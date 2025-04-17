@@ -1,10 +1,10 @@
 # Speedup
 
-A major part of improving the ecosystem for everyone is _speed_. The speed of core packages, tools and more can always be improved and will benefit the community as a whole.
+A major part of improving the ecosystem for everyone is _speed_. The speed of core packages, tools, and more can always be improved and will benefit the community as a whole.
 
-A few groups and individuals are working in this space. Just some of these are listed below:
+A few groups and individuals are working in this space. Some examples include:
 
-- [Speeding up the JavaScript Ecosystem](https://marvinh.dev/blog/speeding-up-javascript-ecosystem).
+- [Speeding up the JavaScript Ecosystem](https://marvinh.dev/blog/speeding-up-javascript-ecosystem)
 
 ## Linting
 
@@ -35,7 +35,7 @@ The code you write plays an important role in the performance of your app. Some 
 
 ### Avoid generators for hot code paths
 
-At the moment, most JavaScript engines do not optimize [generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) function calls which leads to a large performance hit if used extensively.
+At the moment, most JavaScript engines do not optimize [generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) function calls, which leads to a large performance hit if used extensively.
 
 Prefer using non-async [iterators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) or plain arrays.
 
@@ -43,4 +43,4 @@ Prefer using non-async [iterators](https://developer.mozilla.org/en-US/docs/Web/
 
 Chaining array methods like `map`, `filter`, `reduce`, etc. leads to many intermediate arrays being created and disposed, causing more work for the garbage collector. Each chain also leads to an extra iteration, which can be more times than needed.
 
-Prefer using [`for` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...in` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in), and[`for...of` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), or a single chain method only to prevent the caveats above.
+Prefer using [`for` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...in` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in), and [`for...of` loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of), or a single chain method only to prevent the caveats above.
