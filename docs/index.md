@@ -26,7 +26,7 @@ features:
     link: /guide/cleanup
   - icon: ⚡️
     title: Speedup
-    details: Enhancing the performance of widely used packages.
+    details: Improving the performance of widely used packages.
     link: /guide/speedup
   - icon: 🧩
     title: Levelup
