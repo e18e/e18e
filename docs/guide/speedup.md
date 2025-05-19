@@ -26,7 +26,7 @@ Biome supports some rules out of the box which align with e18e:
 - [noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)
 - [noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)
 
-## Coding tips
+## Coding Tips
 
 The code you write plays an important role in the performance of your app. Some patterns are highlighted below for common pitfalls and ways to improve it. Remember to always profile your code when making performance changes!
 
