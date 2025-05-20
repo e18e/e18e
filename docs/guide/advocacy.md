@@ -72,7 +72,7 @@ Non-user-facing metrics such as GitHub Stars and npm download statistics are not
 Both can easily be gamed and thus are not generally seen as reliable metrics.
 
 If your goal is to show that a package is well-known and trusted, it's better to demonstrate the factors that would result in those high numbers.
-Most often that is from showing lists of dependents that include many dependencies and/or high-profile projects.
+Most often that is from showing lists of dependents that include many existing projects, especially other high-profile ones.
 
 ### Support Ranges
 
