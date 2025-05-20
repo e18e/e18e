@@ -61,7 +61,7 @@ Be careful not to make the common mistakes of those contributions, as that weake
 ### Abstract Reports
 
 Don't be vague.
-Indicating that a cleanup could offer bug fixes, improved developer experience, more features, or other features in the abstract is not convincing without any evidence those impact the project.
+Indicating that a cleanup could offer bug fixes, improved developer experience, or other features in the abstract is not convincing without any evidence those impact the project.
 
 * For bug fixes, be sure to have a reproduction -- much like any other kind of bug report
 * For developer experience and other features, you'll similarly want to be able to demonstrate why the new way is tangibly better
