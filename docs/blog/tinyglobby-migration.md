@@ -20,7 +20,7 @@ head:
       content: Our journey so far as a community leading into 2025
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/tinyglobby-migration.jpg
+      content: https://e18e.dev/og/tinyglobby-migration.png
 ---
 
 _May XX, 2025_
