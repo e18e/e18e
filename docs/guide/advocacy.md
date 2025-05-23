@@ -46,7 +46,7 @@ See also [Bundle Size](#bundle-size).
 
 ### Speed
 
-If a cleanup is meant to improve the performance of a project, show actual performance measurements for the project.
+If a cleanup is meant to improve the performance of a project, showing actual performance measurements for the project would be the best option followed by sharing a more general benchmark together with an explanation of why it is relevant such as the benchmarked method being called in a hot code path.
 Performance-oriented developers generally don't believe any comparisons not backed up with a reproducible experiment.
 
 Isolated benchmarks of a new dependency are not convincing on their own.
