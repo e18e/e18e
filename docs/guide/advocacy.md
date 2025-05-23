@@ -20,8 +20,7 @@ If a maintainer requests a preference, especially one to not be sent e18e pull r
 
 ## Explaining Changes
 
-Most maintainers are not active participants in e18e.
-Many will have not heard of the initiative in the first place.
+Some maintainers are not active participants in e18e or have not heard of it.
 Suggested changes need to include the contextual information that can clearly and quickly explain to a repository maintainer why the change is for the better.
 
 In general, it's best to demonstrate _tangible benefits_ that are _specific to the project_.
