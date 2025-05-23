@@ -81,6 +81,10 @@ export default defineConfig({
               text: 'Resources',
               link: '/guide/resources',
             },
+            {
+              text: 'Advocacy',
+              link: '/guide/advocacy',
+            },
           ],
         },
         {
