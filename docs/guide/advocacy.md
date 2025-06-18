@@ -41,7 +41,9 @@ In the latter case, you might consider prioritizing working on the upstream cons
 
 If a dependency cleanup is meant to reduce the size of a project's dependency tree, show the actual change to the tree.
 
-Linking to just the npmgraph.js.org visualization of a package can be informative in isolation but doesn't directly indicate end-user benefits.
+An isolated dependency graph (e.g. via `npmgraph.js.org`) can be useful to give a quick overview of the difference between two dependencies. However, sometimes it is not representative of how the overall project's dependency tree will be affected. This can be for various reasons, such as the project pulling the same dependencies in elsewhere.
+
+Showing a project dependency graph before and after can be more beneficial for this reason, and may help you find occurrences of target packages you weren't aware of.
 See also [Bundle Size](#bundle-size).
 
 ### Speed
@@ -49,7 +51,9 @@ See also [Bundle Size](#bundle-size).
 If a cleanup is meant to improve the performance of a project, showing actual performance measurements for the project would be the best option followed by sharing a more general benchmark together with an explanation of why it is relevant such as the benchmarked method being called in a hot code path.
 Performance-oriented developers generally don't believe any comparisons not backed up with a reproducible experiment.
 
-Isolated benchmarks of a new dependency are not convincing on their own.
+Isolated benchmarks of a new dependency can be useful when the comparison is large (i.e. you're comparing against a _much_ slower dependency). However, in cases where the gap is small, it is often better to benchmark the project before and after instead of the dependency itself in isolation.
+
+Many maintainers just prefer a project benchmark too, so always refer to the contribution guide or ask the maintainers what their preference is.
 Downstream users often have very different usage scenarios and/or don't use some dependencies in hot paths.
 
 ## What Isn't Convincing
