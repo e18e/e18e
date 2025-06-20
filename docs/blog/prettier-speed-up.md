@@ -92,13 +92,13 @@ Huge thanks to the community for the time spent on this, and thanks to [@fisker]
 The new CLI can be used today by using the experimental flag:
 
 ```sh
-# TODO
+PRETTIER_EXPERIMENTAL_CLI=1 prettier . --check
 ```
 
-If we run this on the same terrible Macbook:
+If we run this on the same Macbook:
 
 ```sh
-$ time node node_modules/@prettier/cli/dist/bin.js --check .
+$ PRETTIER_EXPERIMENTAL_CLI=1 time npx prettier . --check
 Checking formatting...
 All matched files use Prettier code style!
 node node_modules/@prettier/cli/dist/bin.js --check .  30.51s user 1.82s system 208% cpu 15.494 total
@@ -109,7 +109,7 @@ This was ~36s using the old CLI, so we've dropped a whole 20s! :fire:
 We are cheating slightly in that the new CLI has parallelisation enabled by default. If we turn that and the caching layer off:
 
 ```sh
-$ time node node_modules/@prettier/cli/dist/bin.js --no-cache --no-parallel --check .
+$ PRETTIER_EXPERIMENTAL_CLI=1 time npx prettier --no-cache --no-parallel --check .
 Checking formatting...
 All matched files use Prettier code style!
 node node_modules/@prettier/cli/dist/bin.js --no-cache --no-parallel --check   22.44s user 1.80s system 145% cpu 16.687 total
