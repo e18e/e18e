@@ -86,7 +86,17 @@ PRETTIER_EXPERIMENTAL_CLI=1 npx prettier --check .  54.18s user 4.76s system 647
 
 That's **9 seconds** in the new CLI, vs **29 seconds** in the old CLI!
 
-We are cheating slightly in that the new CLI has parallelisation and caching enabled by default. If we turn that and the caching layer off:
+If we run this again, it'll get even faster now that the cache is populated:
+
+```sh
+Checking formatting...
+All matched files use Prettier code style!
+PRETTIER_EXPERIMENTAL_CLI=1 npx prettier . --check  2.78s user 1.08s system 231% cpu 1.671 total
+```
+
+So now we're at **1.6 seconds** vs the original **29 seconds**!
+
+If we turn parallelisation and caching off, we still see a significant improvement:
 
 ```sh
 $ PRETTIER_EXPERIMENTAL_CLI=1 time npx prettier --no-cache --no-parallel --check .
