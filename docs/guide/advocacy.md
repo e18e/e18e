@@ -7,7 +7,7 @@ It's important when suggesting changes to repositories to respect those workflow
 ## Coordinating Issues
 
 Many repositories prefer discussing potential changes in an issue before they can fully review a pull request.
-Unless a repository maintainer has explicitly indicated a willingness to bypass issue practices, stick with their normal flow of filing an issue and fully filling out the most applicable issue template.
+Unless a repository maintainer has explicitly indicated a willingness to bypass issue practices, stick with their normal flow and fully fill out the most applicable issue template if they prefer an issue to be filed ahead of any PRs.
 [Explaining Changes](#explaining-changes) covers the common information you'll want to include.
 
 ### Umbrella e18e Tracking
@@ -51,7 +51,7 @@ See also [Bundle Size](#bundle-size).
 ### Speed
 
 If a cleanup is meant to improve the performance of a project, showing actual performance measurements for the project would be the best option followed by sharing a more general benchmark together with an explanation of why it is relevant such as the benchmarked method being called in a hot code path.
-Performance-oriented developers generally don't believe any comparisons not backed up with a reproducible experiment.
+Performance-oriented developers generally expect comparisons to include reproducible experiments.
 
 Isolated benchmarks of a new dependency can be useful when the comparison is large (i.e. you're comparing against a _much_ slower dependency).
 However, in cases where the gap is small, it is often better to benchmark the project before and after instead of the dependency itself in isolation.
@@ -62,7 +62,7 @@ Downstream users often have very different usage scenarios and/or don't use some
 ## What Isn't Convincing
 
 Most open source maintainers regularly deal with drive-by contributions that ignore their workflows and do a poor job of explaining themselves.
-Be careful not to make the common mistakes of those contributions, as that weakens the case for your change and for e18e as a whole.
+Be careful not to make these common mistakes, as that weakens the case for your change and for e18e as a whole.
 
 ### Abstract Reports
 
@@ -75,7 +75,7 @@ Indicating that a cleanup could offer bug fixes, improved developer experience, 
 ### Downloads and Stars
 
 Non-user-facing metrics such as GitHub Stars and npm download statistics are not generally convincing.
-Both can easily be gamed and thus are not generally seen as reliable metrics.
+Both can easily be gamed and thus may not be seen as reliable metrics.
 
 If your goal is to show that a package is well-known and trusted, it's better to demonstrate the factors that would result in those high numbers.
 Most often that is from showing lists of dependents that include many existing projects, especially other high-profile ones.
@@ -83,7 +83,7 @@ Most often that is from showing lists of dependents that include many existing p
 ### Support Ranges
 
 Some cleanups involve restricting project dependency ranges, such as raising a minimum Node.js version from an older version to the current LTS.
-Stricter dependency or platform support ranges on their own are not convincing, user-facing benefits.
-You'll want to instead demonstrate the tangible benefits that come from them.
+Stricter dependency or platform support ranges are a drawback to users as it may cause additional difficulty in upgrading the library.
+You'll want to demonstrate that the tangible benefits that come from them are large enough for the majority of users that they they are worth the trade-off.
 
 For example, if you're proposing removing old code, show that the cleanup improves the bundle size, performance, and any other improved metrics.
