@@ -23,105 +23,87 @@ head:
 
 _June 09, 2025_
 
-Over the last several months, we've been working on a new version of the [Prettier](https://github.com/prettier/prettier/) CLI. Today, I'm happy to announce that it is now available behind a flag in the latest version of Prettier!
+Over the last several months, we've been working with the Prettier team on a new version of the [Prettier](https://github.com/prettier/prettier/) CLI. Today, I'm happy to announce that it is now available behind a flag in the latest version of Prettier!
 
-Here's just some of the story of how we got there and how you can give it a try today.
+## Try it out!
 
-## Investigation
+To use the new CLI, install [Prettier 3.6.0](https://prettier.io/blog/2025/06/23/3.6.0):
 
-While using Prettier to format a project I was working on, I was left wondering - "what takes so long?".
+```sh
+npm i prettier@latest
+```
 
-Of course, I went off on a huge tangent and started profiling the CLI to see where the time was going!
+You can then enable the experimental CLI like so:
 
-On my fairly slow Intel Macbook Pro, we can see this kind of result in the [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/) project:
+```sh
+# via the CLI flag
+prettier . --check --experimental-cli
+
+# via an environment variable
+PRETTIER_EXPERIMENTAL_CLI=1 prettier . --check
+```
+
+## Community investigation
+
+We started investigating the performance of Prettier in the e18e community after noticing it was quite slow in various larger projects. Given how widely used it is, this would be a great opportunity to improve performance for huge amounts of people in one go.
+
+Through a lot of CPU profiling and debugging, we discovered that much of the time was lost in the CLI rather than in the formatter itself.
+
+At this point, [Fabio](https://bsky.app/profile/fabiospampinato.bsky.social) popped up and pointed out that he was also tackling this a few years ago! He already had a work-in-progress CLI he had been building with the Prettier team, and had already done some great investigation work.
+
+There, we decided to collaborate and finish the new CLI together, getting it over the line to be released in the next version of Prettier.
+
+You can read a deeper dive into this in his [blog post](https://prettier.io/blog/2023/11/30/cli-deep-dive), along with how he architected it and the results.
+
+## What's changed?
+
+The new CLI is a complete rewrite of the existing one, with a focus on performance and modernisation.
+
+From the outside, the CLI should feel and look the same. However, under the hood it has various performance improvements and a much smaller footprint.
+
+Just some of the gains:
+
+- Built in parallelism
+- Improved caching layer
+- Faster config file resolution
+- Leaner dependency tree
+
+## Results
+
+If we run this against the TSESLint codebase, we can see a significant performance improvement:
 
 ```sh
 $ time npx prettier --check .
 Checking formatting...
 All matched files use Prettier code style!
-npx prettier --check .  37.96s user 5.20s system 117% cpu 36.843 total
-```
+npx prettier --check .  34.24s user 7.39s system 141% cpu 29.407 total
 
-**~36s** is quite a long time to wait, especially given we're not writing any of the formatting results back to disk.
-
-To get a quick overview of what's going on here, we can use [pprof-it](https://github.com/jakebailey/pprof-it):
-
-```sh
-npx pprof-it node_modules/prettier/bin/prettier.cjs --check .
-```
-
-This will generate a `pprof-time-{number}.pb.gz` file we can then visualise in [pprof](https://github.com/google/pprof).
-
-A quick glance at this shows us a whole bunch of time is spent in these functions:
-
-- `getOptionsForFile`
-- `normalizeFormatOptions`
-- `loadEditorconfigInternal`
-- `searchInDirectory`
-
-All of this points at config loading being a slow down here.
-
-It turns out, Prettier supports config files _at any level_. This means it has to scan every directory it encounters in case there is a Prettier config file.
-
-That may not sound like a lot, but remember, Prettier supports multiple config formats. We're actually looking for `.prettierrc`, `.prettierrc.json`, `.editorconfig`, and many more. In every directory.
-
-## Discovering the prior work
-
-At this point, it was fairly clear that we could make things a _lot_ faster if we just look for a root config file. Even if we still scan for all the different types of file, we can do it in the current directory rather than every directory.
-
-I raised this in the [e18e discord](https://chat.e18e.dev) to see if anyone was interested in trying to tackle it.
-
-As it turns out, [Fabio](https://bsky.app/profile/fabiospampinato.bsky.social) had already started work on this a couple of years ago with the Prettier team!
-
-He even has a very well explained [blog post](https://prettier.io/blog/2023/11/30/cli-deep-dive) where he discovered much more than I did, and had already started work on a new version of the official CLI to solve the problem.
-
-The work was never quite finished and was never released outside of various pre-release tags. So we decided to join forces and pick it back up :tada:
-
-## Collaborating
-
-Fabio, myself ([@43081j](https://bsky.app/profile/43081j.com)) and [pralkarz](https://github.com/pralkarz) collaborated for the next several months.
-
-Our task mostly involved porting integration tests from Prettier to the new CLI to ensure everything passes as it did before. If we could prove all of the existing tests passed, we would be in a good place to start migrating people to the new CLI.
-
-Out of this, we found various changes we needed to make and improved the performance even further.
-
-Huge thanks to the community for the time spent on this, and thanks to [@fisker](https://github.com/fisker) for helping us integrate it into Prettier itself.
-
-## The new CLI
-
-The new CLI can be used today by using the experimental flag:
-
-```sh
-PRETTIER_EXPERIMENTAL_CLI=1 prettier . --check
-```
-
-If we run this on the same Macbook:
-
-```sh
 $ PRETTIER_EXPERIMENTAL_CLI=1 time npx prettier . --check
 Checking formatting...
 All matched files use Prettier code style!
-node node_modules/@prettier/cli/dist/bin.js --check .  30.51s user 1.82s system 208% cpu 15.494 total
+PRETTIER_EXPERIMENTAL_CLI=1 npx prettier --check .  54.18s user 4.76s system 647% cpu 9.096 total
 ```
 
-This was ~36s using the old CLI, so we've dropped a whole 20s! :fire:
+That's **9 seconds** in the new CLI, vs **29 seconds** in the old CLI!
 
-We are cheating slightly in that the new CLI has parallelisation enabled by default. If we turn that and the caching layer off:
+We are cheating slightly in that the new CLI has parallelisation and caching enabled by default. If we turn that and the caching layer off:
 
 ```sh
 $ PRETTIER_EXPERIMENTAL_CLI=1 time npx prettier --no-cache --no-parallel --check .
 Checking formatting...
 All matched files use Prettier code style!
-node node_modules/@prettier/cli/dist/bin.js --no-cache --no-parallel --check   22.44s user 1.80s system 145% cpu 16.687 total
+PRETTIER_EXPERIMENTAL_CLI=1 npx prettier --check --no-cache --no-parallel .  19.26s user 2.01s system 172% cpu 12.313 total
 ```
 
-It is still _much_ faster.
+**12 seconds**, still _much_ faster.
 
-## What's next?
+![prettier run time results](/images/prettier-chart.png)
 
-Once we have this in wider use, there's still many optimisations we can make elsewhere in the CLI, and in Prettier itself.
+## Wrap up
 
-This is already a great improvement, though. Try it out today and let us know how it goes!
+Big thanks to Fabio, [pralkarz](https://github.com/pralkarz) and [@fisker](https://github.com/fisker) for working together on this with me ([@43081j](https://bsky.app/profile/43081j.com)).
+
+This has been a great community effort, with months of collaboration happening and a lot of back and forth in the Discord.
 
 ## Get involved
 
