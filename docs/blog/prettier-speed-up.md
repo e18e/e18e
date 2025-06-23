@@ -3,7 +3,7 @@ title: Improving Prettier performance with the new CLI
 author:
   - name: James Garbutt
 sidebar: false
-date: 2025-06-09
+date: 2025-06-23
 head:
   - - meta
     - property: og:type
@@ -21,7 +21,7 @@ head:
 
 # Improving Prettier performance with the new CLI
 
-_June 09, 2025_
+_June 23, 2025_
 
 Over the last several months, we've been working with the Prettier team on a new version of the [Prettier](https://github.com/prettier/prettier/) CLI. Today, I'm happy to announce that it is now available behind a flag in the latest version of Prettier!
 
