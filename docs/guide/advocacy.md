@@ -60,7 +60,7 @@ Consider using a high-level tool like [hyperfine](https://github.com/sharkdp/hyp
 Many maintainers just prefer a project benchmark too, so always refer to the contribution guide or ask the maintainers what their preference is.
 Downstream users often have very different usage scenarios and/or don't use some dependencies in hot paths.
 
-If your change does noticeable speed something up, be sure to call it out in the issue/PR description.
+If your change does noticeably speed something up, be sure to call it out in the issue/PR description.
 Developers love noticeable performance improvements!
 
 ## What Isn't Convincing
