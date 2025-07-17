@@ -72,6 +72,8 @@ All of this should lead to a world where maintainers can keep a closer eye on th
 
 If you want to get involved, we'd love the help. Or if you just want to test the CLI out as we build the alpha. Come join us in the [e18e Discord](https://chat.e18e.dev) and join the `#cli` channel!
 
+You can also follow along with the release roadmap in the [roadmap issue](https://github.com/e18e/cli/issues/6).
+
 ## Storybook 9
 
 Storybook recently released version 9! :rocket:
