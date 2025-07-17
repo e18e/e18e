@@ -54,9 +54,23 @@ Without any other changes, this should speed up your formatting runs a whole lot
 
 Read more about how we got here in the [blog post](https://e18e.dev/blog/prettier-speed-up.html).
 
-## tinyglobby
+## e18e CLI
 
-TODO
+We posted about the upcoming e18e CLI some time ago and the rough idea behind it. Since then, the community has been hard at work building it and shaping the definition of what's to come.
+
+We now have the basics in place and a much fuller list of features to work towards. Just a few of the things this CLI will be able to do:
+
+- Automatically migrate from a dependency to an alternative replacement
+- Lint your dependency tree for possible replacements and removals
+- Lint your publishing setup (with help from Publint!)
+- Visualise CJS vs. ESM usage in your project
+- Bring your own codemods and replacements lists (so the CLI can migrate and detect migrations of your own internal dependencies)
+
+We're also working towards having a GitHub automation which can create these migration PRs for you, and run the lint steps in your CI.
+
+All of this should lead to a world where maintainers can keep a closer eye on their dependency tree and project performance themselves using the tooling we provide.
+
+If you want to get involved, we'd love the help. Or if you just want to test the CLI out as we build the alpha. Come join us in the [e18e Discord](https://chat.e18e.dev) and join the `#cli` channel!
 
 ## Storybook 9
 
@@ -95,27 +109,35 @@ Some future migrations on the horizon too:
 - [chokidar](https://github.com/paulmillr/chokidar/)
 - [storybook](https://github.com/storybookjs/storybook/)
 
-## e18e CLI
+Thanks to [@michael.faith](https://bsky.app/profile/michael.faith) for migrating some of these, and the maintainers who made the move themselves!
 
-We posted about the upcoming e18e CLI some time ago and the rough idea behind it. Since then, the community has been hard at work building it and shaping the definition of what's to come.
+## tinyglobby
 
-We now have the basics in place and a much fuller list of features to work towards. Just a few of the things this CLI will be able to do:
+TODO
 
-- Automatically migrate from a dependency to an alternative replacement
-- Lint your dependency tree for possible replacements and removals
-- Lint your publishing setup (with help from Publint!)
-- Visualise CJS vs. ESM usage in your project
-- Bring your own codemods and replacements lists (so the CLI can migrate and detect migrations of your own internal dependencies)
+## npmgraph suggested replacements
 
-We're also working towards having a GitHub automation which can create these migration PRs for you, and run the lint steps in your CI.
+The [npmgraph](https://npmgraph.js.org/) tool now suggests replacements for your dependencies!
 
-All of this should lead to a world where maintainers can keep a closer eye on their dependency tree and project performance themselves using the tooling we provide.
+To do this, it uses the community-driven [`module-replacements`](https://github.com/es-tooling/module-replacements) project.
 
-If you want to get involved, we'd love the help. Or if you just want to test the CLI out as we build the alpha. Come join us in the [e18e Discord](https://chat.e18e.dev) and join the `#cli` channel!
+This is such a great addition, and will be a huge help for finding optimisations in your project.
+
+All thanks to [@broofa](https://github.com/broofa) for implementing this! :tada:
 
 ## Project collaborations
 
 We've seen another great few months of collaborations, both with projects and with individual maintainers.
+
+### h3
+
+[h3](https://github.com/h3js/h3) is a tiny HTTP server framework by one of our favourite people - [@pi0](https://bsky.app/profile/pi0.io)!
+
+Often one of the largest and/or most complex dependencies is the web server, and the various middlewares and dependencies it pulls in. h3 is a super nice alternative to many of these - staying small, close to the platform, and incredibly fast.
+
+A really awesome collaboration recently was one between pi0 and [reve](https://github.com/aquapi) to introduce compiled routes. This allows you to compile a static routing table at build time, resulting in some huge performance boosts.
+
+Definitely check out both [h3](https://github.com/h3js/h3) and the underlying router, [rou3](https://github.com/h3js/rou3).
 
 ### react-router
 
@@ -136,8 +158,8 @@ Notable changes include:
 - Reduced the install size of Netlify CLI
 - Improved the performance of the Netlify CLI by 2-3x ([changelog](https://www.netlify.com/changelog/netlify-cli-is-twice-as-fast/))
 
-It has been awesome to see a company collaborating with the community on this and sharing their roadmap/vision. Big thanks to [@serhalp](https://bsky.app/profile/serhalp.bsky.social) in particular for being active in the community and helping get contributions over the line.
+It has been awesome to see a company collaborating with the community on this and sharing their roadmap/vision. Big thanks to [@philippeserhal](https://bsky.app/profile/philippeserhal.com) in particular for being active in the community and helping get contributions over the line.
 
 ## Get involved
 
-If you'd like to help out, or you're a maintainer and want to collaborate more closely, [join our discord](https://chat.e18e.dev) and say Hi!
+If you'd like to help out, come [join our discord](https://chat.e18e.dev) and say Hi!
