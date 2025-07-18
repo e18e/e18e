@@ -153,7 +153,9 @@ Thanks to [@thecodrr](https://github.com/thecodrr/) for all the work on this :pr
 
 Most notably, the underlying filtering in tinyglobby had a large rework which bumped performance massively.
 
-Here's the results _before_ the change:
+Much of this was made possible by introducing some reproducible benchmarks to the project. These have allowed the maintainers to track down and fix performance bottlenecks in various places.
+
+For example, here's the result of searching for `packages/*/tsconfig.json` _before_ the change:
 
 | Task name          | Throughput avg (ops/s) | Throughput med (ops/s)  |
 | ------------------ | ---------------------- | ----------------------- |
@@ -162,7 +164,7 @@ Here's the results _before_ the change:
 | 'glob'             | '1725 ± 0.61%'         | '1767 ± 95'             |
 | 'node:fs glob'     | '923 ± 0.67%'          | '941 ± 74'              |
 
-After the changes:
+And the result after the changes:
 
 | Task name        | Throughput avg (ops/s) | Throughput med (ops/s)  |
 | ---------------- | ---------------------- | ----------------------- |
