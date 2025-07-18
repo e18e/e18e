@@ -126,9 +126,28 @@ Some future migrations on the horizon too:
 
 Thanks to [@michael.faith](https://bsky.app/profile/michael.faith) for migrating some of these, and the maintainers who made the move themselves!
 
-## tinyglobby
+## tinyglobby & fdir
 
-TODO
+Yet again, tinyglobby and fdir have both been busy improving performance and usability.
+
+With help from [@sxzz](https://bsky.app/profile/sxzz.dev) and [@thealexlichter](https://bsky.app/profile/thealexlichter.com), fdir is now bundled using [tsdown](https://github.com/rolldown/tsdown). This has lead to almost a 3x reduction in install size and a much faster build time for the maintainers!
+
+tinyglobby itself has also recently seen the introduction of some reproducible benchmarks, and these have lead to even more performance improvements. We're now able to show that tinyglobby is the fastest glob library out there in many cases :fire:
+
+Finally, an upcoming feature for fdir (which tinyglobby may lean on) is the ability to use async iterators rather than callback-style APIs. This should come with a massive reduction in memory usage and will look something like this:
+
+```ts
+import { fdir } from 'fdir'
+const files = fdir().crawl('/path/to/dir').withIterator()
+
+for await (const file of files) {
+  console.log(file)
+}
+```
+
+Can't wait for this to land, as it is so important in large projects. It'll be another great step forward.
+
+Thanks to [@thecodrr](https://github.com/thecodrr/) and [@superchupu](https://bsky.app/profile/superchupu.dev) for both of these libraries.
 
 ## npmgraph suggested replacements
 
