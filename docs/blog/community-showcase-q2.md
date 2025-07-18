@@ -126,15 +126,13 @@ Some future migrations on the horizon too:
 
 Thanks to [@michael.faith](https://bsky.app/profile/michael.faith) for migrating some of these, and the maintainers who made the move themselves!
 
-## tinyglobby & fdir
-
-Yet again, tinyglobby and fdir have both been busy improving performance and usability.
+## fdir
 
 With help from [@sxzz](https://bsky.app/profile/sxzz.dev) and [@thealexlichter](https://bsky.app/profile/thealexlichter.com), fdir is now bundled using [tsdown](https://github.com/rolldown/tsdown). This has lead to almost a 3x reduction in install size and a much faster build time for the maintainers!
 
-tinyglobby itself has also recently seen the introduction of some reproducible benchmarks, and these have lead to even more performance improvements. We're now able to show that tinyglobby is the fastest glob library out there in many cases :fire:
+This is unreleased as of writing, but will be coming soon. Keep an eye on the [releases page](https://github.com/thecodrr/fdir/releases).
 
-Finally, an upcoming feature for fdir (which tinyglobby may lean on) is the ability to use async iterators rather than callback-style APIs. This should come with a massive reduction in memory usage and will look something like this:
+Another upcoming feature for fdir is the ability to use async iterators rather than callback-style APIs. This should come with a massive reduction in memory usage and will look something like this:
 
 ```ts
 import { fdir } from 'fdir'
@@ -145,9 +143,39 @@ for await (const file of files) {
 }
 ```
 
-Can't wait for this to land, as it is so important in large projects. It'll be another great step forward.
+Since this means fdir doesn't need to hold the full set of files in memory, it should be far better in large projects than the current callback API.
 
-Thanks to [@thecodrr](https://github.com/thecodrr/) and [@superchupu](https://bsky.app/profile/superchupu.dev) for both of these libraries.
+Thanks to [@thecodrr](https://github.com/thecodrr/) for all the work on this :pray:
+
+## tinyglobby
+
+[tinyglobby](https://github.com/SuperchupuDev/tinyglobby) also has some unreleased performance improvements on the horizon, almost doubling its CPU performance in some cases.
+
+Most notably, the underlying filtering in tinyglobby had a large rework which bumped performance massively.
+
+Here's the results _before_ the change:
+
+| Task name          | Throughput avg (ops/s) | Throughput med (ops/s)  |
+| ------------------ | ---------------------- | ----------------------- |
+| **'tinyglobby'**   | **'891 ± 1.35%'**      | **'981 ± 131'**         |
+| 'fast-glob'        | '1822 ± 0.68%'         | '1878 ± 110'            |
+| 'glob'             | '1725 ± 0.61%'         | '1767 ± 95'             |
+| 'node:fs glob'     | '923 ± 0.67%'          | '941 ± 74'              |
+
+After the changes:
+
+| Task name        | Throughput avg (ops/s) | Throughput med (ops/s)  |
+| ---------------- | ---------------------- | ----------------------- |
+| **'tinyglobby'** | **'2254 ± 0.42%'**     | **'2312 ± 89'**         |
+| 'fast-glob'      | '1868 ± 0.60%'         | '1903 ± 103'            |
+| 'glob'           | '1714 ± 0.58%'         | '1754 ± 85'             |
+| 'node:fs glob'   | '927 ± 0.78%'          | '983 ± 49'              |
+
+In many cases, this now makes tinyglobby the fastest glob library available.
+
+Keep an eye on the [releases page](https://github.com/SuperchupuDev/tinyglobby/releases) for when this becomes available!
+
+Thanks to [@superchupu](https://bsky.app/profile/superchupu.dev) and [@benmccann](https://bsky.app/profile/benmccann.com) for these huge improvements :fire:
 
 ## npmgraph suggested replacements
 
