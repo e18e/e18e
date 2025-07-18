@@ -26,7 +26,7 @@ _July 17, 2025_
 
 # ![Community Showcase (Q2 2025)](/og/community-showcase-25-q1.png)
 
-A little late, but its time for another community showcase! :tada:
+A little late, but it's time for another community showcase! :tada:
 
 So many good things have happened over the last quarter in the community and around the ecosystem, and there's so much more to come :rocket:
 
@@ -78,7 +78,7 @@ We now have the basics in place and a much fuller list of features to work towar
 
 We're also working towards having a GitHub automation which can create these migration PRs for you, and run the lint steps in your CI.
 
-If you want to get involved, we'd love the help. Or if you just want to test the CLI out as we build the alpha. Come join us in the [e18e Discord](https://chat.e18e.dev) and join the `#cli` channel!
+If you want to contribute or if you just want to test the CLI as we build it, we'd love the help. Come join us in the [e18e Discord](https://chat.e18e.dev) and join the `#cli` channel!
 
 You can also follow along with the release roadmap in the [roadmap issue](https://github.com/e18e/cli/issues/6).
 
@@ -98,6 +98,8 @@ They've almost flattened their dependency tree! This is some great progress and 
 
 You can read more about how they achieved this and how they're keeping on top of it in their [blog post](https://storybook.js.org/blog/storybook-bloat-fixed/).
 
+We also recently held a webinar where [Jeppe](https://bsky.app/profile/reinhold.is) from the Storybook team and [James](https://bsky.app/profile/43081j.com) from e18e discussed the technical details behind these improvements. You can watch the recording on YouTube: [Lessons learned from reducing bloat in Storybook](https://www.youtube.com/watch?v=h863b0nfsWg) where they dive deeper into the process and lessons learned.
+
 Big thanks to the Storybook team for taking a lead on this kind of improvement, and for working so closely with the community throughout :heart:
 
 ## ESM-only migration
@@ -115,11 +117,12 @@ Here's just a few projects we've seen migrated:
 - [uuid](https://github.com/uuidjs/uuid)
 - [eslint-plugin-package-json](https://github.com/JoshuaKGoldberg/eslint-plugin-package-json)
 - [package-json-validator](https://github.com/JoshuaKGoldberg/package-json-validator)
+- [eslint-fix-utils](https://github.com/JoshuaKGoldberg/eslint-fix-utils)
 
 Some future migrations on the horizon too:
 
 - [chokidar](https://github.com/paulmillr/chokidar/)
-- [storybook](https://github.com/storybookjs/storybook/)
+- [storybook](https://github.com/storybookjs/storybook/) ([tracking issue](https://github.com/storybookjs/storybook/issues/31787))
 
 Thanks to [@michael.faith](https://bsky.app/profile/michael.faith) for migrating some of these, and the maintainers who made the move themselves!
 
@@ -157,7 +160,7 @@ With lots of help from [@MichaelDeBoey](https://github.com/MichaelDeBoey), we've
 
 All sorts of clean up has been going on - including running [knip](https://knip.dev/) across the project, migrating to native functionality, and a possible future "unforking" of [clack](https://github.com/bombshell-dev/clack).
 
-Big thanks to Michael and the React Router team for holding these discussions and helping the community follow the contribution process, too.
+Big thanks to Michaël and the React Router team for holding these discussions and helping the community follow the contribution process, too.
 
 ### Netlify
 
