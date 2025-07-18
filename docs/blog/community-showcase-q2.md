@@ -19,12 +19,12 @@ head:
       content: An update on what the community has been up to in Q2 of 2025
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/community-showcase-25-q1.png
+      content: https://e18e.dev/og/community-showcase-25-q2.png
 ---
 
 _July 17, 2025_
 
-# ![Community Showcase (Q2 2025)](/og/community-showcase-25-q1.png)
+# ![Community Showcase (Q2 2025)](/og/community-showcase-25-q2.png)
 
 A little late, but it's time for another community showcase! :tada:
 
