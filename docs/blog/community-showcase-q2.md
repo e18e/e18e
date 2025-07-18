@@ -72,7 +72,7 @@ We now have the basics in place and a much fuller list of features to work towar
 
 - Automatic migrations to suggested replacements
 - Lint your dependency tree for common issues
-- Lint your publishing setup (with help from Publint!)
+- Lint your publishing setup (with help from publint!)
 - Visualise CJS vs. ESM usage in your project
 - Bring your own codemods and replacements lists (so the CLI can migrate and detect migrations of your own internal dependencies)
 
@@ -211,7 +211,7 @@ Big thanks to Michaël and the React Router team for holding these discussions a
 
 ### Netlify
 
-Some time ago, we reached out to the Netlify team to see if the community can help modernise and clean up some of the netlify CLI. A few months later, we've seen many discussions happen and many PRs land. A lot of good collaboration has happened, and the Netlify team has done a lot of good work internally aligned with our goals.
+Some time ago, we reached out to the Netlify team to see if the community can help modernise and clean up some of the Netlify CLI. A few months later, we've seen many discussions happen and many PRs land. A lot of good collaboration has happened, and the Netlify team has done a lot of good work internally aligned with our goals.
 
 Notable changes include:
 
