@@ -58,21 +58,31 @@ Read more about how we got here in the [blog post](https://e18e.dev/blog/prettie
 
 We posted about the upcoming e18e CLI some time ago and the rough idea behind it. Since then, the community has been hard at work building it and shaping the definition of what's to come.
 
+Soon you will be able to do cool things like this:
+
+```sh
+npx @e18e/cli migrate chalk # automatically migrate chalk to picocolors
+
+npx @e18e/cli migrate --interactive chalk # interactively choose which library to migrate chalk to
+
+npx @e18e/cli analyze # lint your dependency tree and produce useful stats
+```
+
 We now have the basics in place and a much fuller list of features to work towards. Just a few of the things this CLI will be able to do:
 
-- Automatically migrate from a dependency to an alternative replacement
-- Lint your dependency tree for possible replacements and removals
+- Automatic migrations to suggested replacements
+- Lint your dependency tree for common issues
 - Lint your publishing setup (with help from Publint!)
 - Visualise CJS vs. ESM usage in your project
 - Bring your own codemods and replacements lists (so the CLI can migrate and detect migrations of your own internal dependencies)
 
 We're also working towards having a GitHub automation which can create these migration PRs for you, and run the lint steps in your CI.
 
-All of this should lead to a world where maintainers can keep a closer eye on their dependency tree and project performance themselves using the tooling we provide.
-
 If you want to get involved, we'd love the help. Or if you just want to test the CLI out as we build the alpha. Come join us in the [e18e Discord](https://chat.e18e.dev) and join the `#cli` channel!
 
 You can also follow along with the release roadmap in the [roadmap issue](https://github.com/e18e/cli/issues/6).
+
+Huge thanks to [@paul](https://bsky.app/profile/paul.studiocms.dev), [@passle](https://bsky.app/profile/passle.dev) and [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social) for all the work so far.
 
 ## Storybook 9
 
