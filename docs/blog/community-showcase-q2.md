@@ -155,7 +155,7 @@ Most notably, the underlying filtering in tinyglobby had a large rework which bu
 
 Much of this was made possible by introducing some reproducible benchmarks to the project. These have allowed the maintainers to track down and fix performance bottlenecks in various places.
 
-For example, here's the result of searching for `packages/*/tsconfig.json` in TSESLint's monorepo _before_ the change:
+For example, here's the result of searching for `packages/*/tsconfig.json` in TSESLint's monorepo _before_ the changes:
 
 | Task name          | Throughput avg (ops/s) | Throughput med (ops/s)  |
 | ------------------ | ---------------------- | ----------------------- |
@@ -164,7 +164,7 @@ For example, here's the result of searching for `packages/*/tsconfig.json` in TS
 | 'glob'             | '1725 ± 0.61%'         | '1767 ± 95'             |
 | 'node:fs glob'     | '923 ± 0.67%'          | '941 ± 74'              |
 
-And the result after the changes:
+And the result _after_ the changes:
 
 | Task name        | Throughput avg (ops/s) | Throughput med (ops/s)  |
 | ---------------- | ---------------------- | ----------------------- |
@@ -176,6 +176,8 @@ And the result after the changes:
 In many cases, this now makes tinyglobby the fastest glob library available.
 
 Keep an eye on the [releases page](https://github.com/SuperchupuDev/tinyglobby/releases) for when this becomes available!
+
+The library also recently passed 20M downloads/week on npm, a great achievement for the maintainers and the community!
 
 Thanks to [@superchupu](https://bsky.app/profile/superchupu.dev) and [@benmccann](https://bsky.app/profile/benmccann.com) for these huge improvements :fire:
 
