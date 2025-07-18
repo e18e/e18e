@@ -207,6 +207,8 @@ With lots of help from [@MichaelDeBoey](https://github.com/MichaelDeBoey), we've
 
 All sorts of clean up has been going on - including running [knip](https://knip.dev/) across the project, migrating to native functionality, and a possible future "unforking" of [clack](https://github.com/bombshell-dev/clack).
 
+As part of the upcoming Remix v3, there's also the new [node-fetch-server](https://github.com/mjackson/remix-the-web/tree/main/packages/node-fetch-server) worth keeping an eye on. This is a new web server built on top of Node primitives and a fetch-like API.
+
 Big thanks to Michaël and the React Router team for holding these discussions and helping the community follow the contribution process, too.
 
 ### Netlify
