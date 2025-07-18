@@ -155,7 +155,7 @@ Most notably, the underlying filtering in tinyglobby had a large rework which bu
 
 Much of this was made possible by introducing some reproducible benchmarks to the project. These have allowed the maintainers to track down and fix performance bottlenecks in various places.
 
-For example, here's the result of searching for `packages/*/tsconfig.json` _before_ the change:
+For example, here's the result of searching for `packages/*/tsconfig.json` in TSESLint's monorepo _before_ the change:
 
 | Task name          | Throughput avg (ops/s) | Throughput med (ops/s)  |
 | ------------------ | ---------------------- | ----------------------- |
