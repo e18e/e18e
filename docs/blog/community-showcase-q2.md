@@ -136,6 +136,7 @@ Another upcoming feature for fdir is the ability to use async iterators rather t
 
 ```ts
 import { fdir } from 'fdir'
+
 const files = fdir().crawl('/path/to/dir').withIterator()
 
 for await (const file of files) {
