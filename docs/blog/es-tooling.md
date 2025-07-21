@@ -73,6 +73,7 @@ The module replacements codemods project is an effort to automate the ecosystem 
 Before:
 ```js
 const isEven = require('is-even')
+
 console.log(isEven(2))
 ```
 
