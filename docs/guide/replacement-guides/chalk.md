@@ -44,3 +44,29 @@ console.log(picocolors.blue(picocolors.bgRed('blue on red'))) // [!code ++]
 > `picocolors` currently does not support RGB and hex colors (e.g. `#EFEFEF` or `255, 239, 235`).
 
 ## `ansis`
+
+[`ansis`](https://github.com/webdiscus/ansis/) supports a chaining syntax similar to chalk and supports both RGB, and hex colors.
+
+Example:
+
+```ts
+import chalk from 'chalk' // [!code --]
+import ansis from 'ansis' // [!code ++]
+
+console.log(`Hello ${chalk.blue('blue')} world!`) // [!code --]
+console.log(`Hello ${ansis.blue('blue')} world!`) // [!code ++]
+```
+
+When using multiple styles, you can chain them just like in chalk:
+
+```ts
+console.log(chalk.blue.bgRed('blue on red')) // [!code --]
+console.log(ansis.blue.bgRed('blue on red')) // [!code ++]
+```
+
+Similarly, you can use RGB and hex colors:
+
+```ts
+console.log(chalk.rgb(239, 239, 239)('Hello world!')) // [!code --]
+console.log(ansis.rgb(239, 239, 239)('Hello world!')) // [!code ++]
+```
