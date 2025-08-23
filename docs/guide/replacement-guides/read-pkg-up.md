@@ -1,4 +1,4 @@
-# Replacements for `read-package-up`
+# Replacements for `read-pkg-up`
 
 ## `pkg-types`
 
@@ -7,7 +7,7 @@
 For example:
 
 ```ts
-import { readPackageUp } from 'read-package-up' // [!code --]
+import { readPackageUp } from 'read-pkg-up' // [!code --]
 import { readPackageJSON } from 'pkg-types' // [!code ++]
 
 const packageJson = await readPackageUp() // [!code --]
@@ -29,7 +29,7 @@ const packageJsonPath = await resolvePackageJSON()
 It can be combined with `node:fs` to read `package.json` files:
 
 ```ts
-import { readPackageUp } from 'read-package-up' // [!code --]
+import { readPackageUp } from 'read-pkg-up' // [!code --]
 import * as pkg from 'empathic' // [!code ++]
 import fs from 'node:fs/promises' // [!code ++]
 

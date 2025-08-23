@@ -23,3 +23,5 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |
 | [`find-cache-directory`](./replacement-guides/find-cache-directory.md) | :x: |
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
+| [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
+| [`read-pkg-up`](./replacement-guides/read-pkg-up.md) | :x: |
