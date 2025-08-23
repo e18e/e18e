@@ -16,3 +16,10 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`buffer-equals`](./replacement-guides/buffer-equals.md) | :x: |
 | [`chalk`](./replacement-guides/chalk.md) | :x: |
 | [`deep-equal`](./replacement-guides/deep-equal.md) | :x: |
+| [`find-up`](./replacement-guides/find-up.md) | :x: |
+| [`find-pkg`](./replacement-guides/find-pkg.md) | :x: |
+| [`find-file-up`](./replacement-guides/find-file-up.md) | :x: |
+| [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
+| [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |
+| [`find-cache-directory`](./replacement-guides/find-cache-directory.md) | :x: |
+| [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
