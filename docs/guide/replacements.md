@@ -25,3 +25,4 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
 | [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
 | [`read-pkg-up`](./replacement-guides/read-pkg-up.md) | :x: |
+| [`glob`](./replacement-guides/glob.md) | :x: |
