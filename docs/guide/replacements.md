@@ -15,3 +15,4 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`buffer-equal`](./replacement-guides/buffer-equal.md) | :x: |
 | [`buffer-equals`](./replacement-guides/buffer-equals.md) | :x: |
 | [`chalk`](./replacement-guides/chalk.md) | :x: |
+| [`deep-equal`](./replacement-guides/deep-equal.md) | :x: |
