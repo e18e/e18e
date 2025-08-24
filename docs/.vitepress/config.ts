@@ -104,6 +104,15 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: 'Documentation',
+          items: [
+            {
+              text: 'Replacements',
+              link: '/guide/replacements',
+            },
+          ],
+        },
       ],
     },
 
