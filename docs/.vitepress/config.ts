@@ -85,10 +85,6 @@ export default defineConfig({
               text: 'Advocacy',
               link: '/guide/advocacy',
             },
-            {
-              text: 'Replacements',
-              link: '/guide/replacements',
-            }
           ],
         },
         {
@@ -105,6 +101,15 @@ export default defineConfig({
             {
               text: 'levelup',
               link: '/guide/levelup',
+            },
+          ],
+        },
+        {
+          text: 'Documentation',
+          items: [
+            {
+              text: 'Replacements',
+              link: '/guide/replacements',
             },
           ],
         },
