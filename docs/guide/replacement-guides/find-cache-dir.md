@@ -7,8 +7,8 @@
 Example:
 
 ```ts
-import findCacheDirectory from 'find-cache-dir' // [!code --]
 import * as pkg from 'empathic' // [!code ++]
+import findCacheDirectory from 'find-cache-dir' // [!code --]
 
 findCacheDirectory({ name: 'foo' }) // [!code --]
 pkg.cache('foo') // [!code ++]

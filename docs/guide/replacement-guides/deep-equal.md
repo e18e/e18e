@@ -13,8 +13,8 @@ import dequal from 'dequal' // [!code ++]
 const a = { foo: 'bar' }
 const b = { foo: 'bar' }
 
-equal(a, b) // true // [!code --]
-dequal(a, b) // true // [!code ++]
+equal(a, b) // true [!code --]
+dequal(a, b) // true [!code ++]
 ```
 
 ## `fast-deep-equal`
@@ -24,14 +24,14 @@ dequal(a, b) // true // [!code ++]
 Example:
 
 ```ts
-import fastDeepEqual from 'fast-deep-equal' // [!code ++]
 import deepEqual from 'deep-equal' // [!code --]
+import fastDeepEqual from 'fast-deep-equal' // [!code ++]
 
 const a = { foo: 'bar' }
 const b = { foo: 'bar' }
 
-deepEqual(a, b) // true // [!code --]
-fastDeepEqual(a, b) // true // [!code ++]
+deepEqual(a, b) // true [!code --]
+fastDeepEqual(a, b) // true [!code ++]
 ```
 
 > [!NOTE]

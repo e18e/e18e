@@ -7,8 +7,8 @@
 For example:
 
 ```ts
-import { readPackageUp } from 'read-package-up' // [!code --]
 import { readPackageJSON } from 'pkg-types' // [!code ++]
+import { readPackageUp } from 'read-package-up' // [!code --]
 
 const packageJson = await readPackageUp() // [!code --]
 const packageJson = await readPackageJSON() // [!code ++]
@@ -29,13 +29,13 @@ const packageJsonPath = await resolvePackageJSON()
 It can be combined with `node:fs` to read `package.json` files:
 
 ```ts
-import { readPackageUp } from 'read-package-up' // [!code --]
-import * as pkg from 'empathic' // [!code ++]
 import fs from 'node:fs/promises' // [!code ++]
+import * as pkg from 'empathic' // [!code ++]
+import { readPackageUp } from 'read-package-up' // [!code --]
 
 const packageJson = await readPackageUp() // [!code --]
 const packageJsonPath = pkg.up() // [!code ++]
-const packageJson = packageJsonPath ? JSON.parse(await readFile(packageJsonPath, 'utf8')) : undefined; // [!code ++]
+const packageJson = packageJsonPath ? JSON.parse(await readFile(packageJsonPath, 'utf8')) : undefined // [!code ++]
 ```
 
 > [!NOTE]
