@@ -25,11 +25,14 @@ export default [
 ]
 ```
 
-If you're using a legacy JSON config:
+If you're using a legacy config format:
 
-```json
-{
-  "extends": ["eslint:recommended", "plugin:node/recommended"] // [!code --]
-  "extends": ["eslint:recommended", "plugin:n/recommended"]    // [!code ++]
-}
+```js
+module.exports = {
+  extends: [
+    "eslint:recommended",
+    "plugin:node/recommended", // [!code --]
+    "plugin:n/recommended",    // [!code ++]
+  ],
+};
 ```
