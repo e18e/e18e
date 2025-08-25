@@ -28,8 +28,8 @@ function isBuiltin(moduleName) { // [!code ++]
   return builtinModules.includes(name) // [!code ++]
 } // [!code ++]
 
-isBuiltin('fs') // true // [!code ++]
-isBuiltinModule('fs') // true // [!code --]
+isBuiltin('fs') // true [!code ++]
+isBuiltinModule('fs') // true  [!code --]
 ```
 
 ## Getting all built-in modules
