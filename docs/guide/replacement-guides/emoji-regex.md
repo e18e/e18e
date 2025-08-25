@@ -8,11 +8,6 @@
 import emojiRegex from 'emoji-regex' // [!code --]
 import emojiRegex from 'emoji-regex-xs' // [!code ++]
 
-// Note: because the regular expression has the global flag set, this module
-// exports a function that returns the regex rather than exporting the regular
-// expression itself, to make it impossible to (accidentally) mutate the
-// original regular expression.
-
 const text = `
 \u{231A}: ⌚ default emoji presentation character (Emoji_Presentation)
 \u{2194}\u{FE0F}: ↔️ default text presentation character rendered as emoji
