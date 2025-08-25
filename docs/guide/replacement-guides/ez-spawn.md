@@ -18,8 +18,8 @@ Alternatively, you can use [`args-tokenizer`](https://github.com/TrySound/args-t
 
 ```ts
 import ezSpawn from '@jsdevtools/ez-spawn' // [!code --]
-import { x } from 'tinyexec' // [!code ++]
 import { tokenizeArgs } from 'args-tokenizer' // [!code ++]
+import { x } from 'tinyexec' // [!code ++]
 
 const [command, ...args] = tokenizeArgs('ls -l') // [!code ++]
 await ezSpawn.async('ls -l') // [!code --]
