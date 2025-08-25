@@ -13,12 +13,12 @@ const text = `
 \u{2194}\u{FE0F}: ↔️ default text presentation character rendered as emoji
 \u{1F469}: 👩 emoji modifier base (Emoji_Modifier_Base)
 \u{1F469}\u{1F3FF}: 👩🏿 emoji modifier base followed by a modifier
-`;
+`
 
-const regex = emojiRegex();
+const regex = emojiRegex()
 for (const match of text.matchAll(regex)) {
-  const emoji = match[0];
-  console.log(`Matched sequence ${emoji} — code points: ${[...emoji].length}`);
+  const emoji = match[0]
+  console.log(`Matched sequence ${emoji} — code points: ${[...emoji].length}`)
 }
 ```
 
@@ -29,11 +29,11 @@ If your target runtime supports ES2024 Unicode property sets, you can use the na
 ```ts
 import emojiRegex from 'emoji-regex' // [!code --]
 
-const regex = emojiRegex(); // [!code --]
+const regex = emojiRegex() // [!code --]
 const regex = /\p{RGI_Emoji}/gv // [!code ++]
 
 for (const match of text.matchAll(regex)) {
-  const emoji = match[0];
-  console.log(`Matched sequence ${emoji} — code points: ${[...emoji].length}`);
+  const emoji = match[0]
+  console.log(`Matched sequence ${emoji} — code points: ${[...emoji].length}`)
 }
 ```
