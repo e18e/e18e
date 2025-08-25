@@ -34,6 +34,7 @@ If your target runtime supports ES2024 Unicode property sets, you can use the na
 ```ts
 import emojiRegex from 'emoji-regex' // [!code --]
 
+const regex = emojiRegex(); // [!code --]
 const regex = /\p{RGI_Emoji}/gv // [!code ++]
 
 for (const match of text.matchAll(regex)) {
