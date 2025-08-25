@@ -16,12 +16,17 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`buffer-equals`](./replacement-guides/buffer-equals.md) | :x: |
 | [`chalk`](./replacement-guides/chalk.md) | :x: |
 | [`deep-equal`](./replacement-guides/deep-equal.md) | :x: |
+| [`emoji-regex`](./replacement-guides/emoji-regex.md) | :x: |
+| [`eslint-plugin-node`](./replacement-guides/eslint-plugin-node.md) | :x: |
+| [`eslint-plugin-vitest`](./replacement-guides/eslint-plugin-vitest.md) | :x: |
 | [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |
 | [`find-cache-directory`](./replacement-guides/find-cache-directory.md) | :x: |
 | [`find-file-up`](./replacement-guides/find-file-up.md) | :x: |
 | [`find-pkg`](./replacement-guides/find-pkg.md) | :x: |
 | [`find-up`](./replacement-guides/find-up.md) | :x: |
 | [`glob`](./replacement-guides/glob.md) | :x: |
+| [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :x: |
+| [`md5`](./replacement-guides/md5.md) | :x: |
 | [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
 | [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
