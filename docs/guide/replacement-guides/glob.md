@@ -7,10 +7,10 @@
 Example:
 
 ```ts
-import { glob } from "glob" // [!code --]
-import { glob } from "tinyglobby" // [!code ++]
+import { glob } from 'glob' // [!code --]
+import { glob } from 'tinyglobby' // [!code ++]
 
-const files = await glob("**/*.ts");
+const files = await glob('**/*.ts')
 ```
 
 Most options available to `glob` are available in `tinyglobby`, read more at the [tinyglobby documentation](https://github.com/SuperchupuDev/tinyglobby?tab=readme-ov-file#options).
@@ -48,8 +48,8 @@ for await (const result of glob('src/**/*.ts', { cwd })) {
 Example:
 
 ```ts
-import { glob } from 'glob' // [!code --]
 import { fdir } from 'fdir' // [!code ++]
+import { glob } from 'glob' // [!code --]
 
 const files = new fdir() // [!code ++]
   .withBasePath() // [!code ++]
