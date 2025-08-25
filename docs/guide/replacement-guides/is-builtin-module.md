@@ -8,8 +8,8 @@ For determining if a module is built-in or not, you can use [isBuiltin](https://
 import { isBuiltin } from 'node:module' // [!code ++]
 import isBuiltinModule from 'is-builtin-module' // [!code --]
 
-isBuiltin('fs') // true // [!code ++]
-isBuiltinModule('fs') // true // [!code --]
+isBuiltin('fs') // true [!code ++]
+isBuiltinModule('fs') // true [!code --]
 ```
 
 ## Node.js 6.x to 15.x
