@@ -37,7 +37,7 @@ isBuiltinModule('fs') // true  [!code --]
 For a full list of built-in modules (available since Node.js 6.x), you can use [builtinModules](https://nodejs.org/api/module.html#modulebuiltinmodules):
 
 ```ts
-import { builtinModules } from 'node:module' // [!code ++]
+import { builtinModules } from 'node:module'
 
 console.log(builtinModules)
 ```
