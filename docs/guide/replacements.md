@@ -18,7 +18,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`deep-equal`](./replacement-guides/deep-equal.md) | :x: |
 | [`emoji-regex`](./replacement-guides/emoji-regex.md) | :x: |
 | [`eslint-plugin-es`](./replacement-guides/eslint-plugin-es.md) | :x: |
-| [`eslint-plugin-eslint-comments.md`](./replacement-guides/eslint-plugin-eslint-comments.md) | :x: |
+| [`eslint-plugin-eslint-comments`](./replacement-guides/eslint-plugin-eslint-comments.md) | :x: |
 | [`eslint-plugin-node`](./replacement-guides/eslint-plugin-node.md) | :x: |
 | [`eslint-plugin-vitest`](./replacement-guides/eslint-plugin-vitest.md) | :x: |
 | [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |

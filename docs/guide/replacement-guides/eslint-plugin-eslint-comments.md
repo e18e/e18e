@@ -1,4 +1,4 @@
-Replacements for `eslint-plugin-eslint-comments`
+# Replacements for `eslint-plugin-eslint-comments`
 
 ## `@eslint-community/eslint-plugin-eslint-comments`
 
