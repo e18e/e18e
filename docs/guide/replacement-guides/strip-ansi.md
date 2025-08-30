@@ -17,9 +17,11 @@ console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')); // [!code ++]
 Deno implements the Node `util` API, and also provides [`util.stripVTControlCharacters`](https://docs.deno.com/api/node/util/~/stripVTControlCharacters). The usage is identical:
 
 ```js
-import { stripVTControlCharacters } from 'node:util';
+import { stripVTControlCharacters } from 'node:util' // [!code ++]
+import stripAnsi from 'strip-ansi' // [!code --]
 
-console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')); // returns 'e18e'
+console.log(stripAnsi('\u001B[4me18e\u001B[0m')); // [!code --]
+console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')); // [!code ++]
 ```
 
 ## Bun
@@ -31,10 +33,13 @@ Bun provides two options:
 
 ```js
 // Node-compatible API
-import { stripVTControlCharacters } from 'node:util';
-console.log(stripVTControlCharacters('\u001b[1mHello\u001b[0m')); // 'Hello'
+import { stripVTControlCharacters } from 'node:util' // [!code ++]
+import stripAnsi from 'strip-ansi' // [!code --]
+
+console.log(stripAnsi('\u001b[1mHello\u001b[0m')); // [!code --]
+console.log(stripVTControlCharacters('\u001b[1mHello\u001b[0m')); // [!code ++]
 
 // Bun’s native API (>=1.2.21)
-const plain = Bun.stripANSI('\u001b[31mHello World\u001b[0m');
-console.log(plain); // 'Hello World'
+import { stripANSI } from 'bun' // [!code ++]
+console.log(Bun.stripANSI('\u001b[31mHello World\u001b[0m')); // [!code ++]
 ```
