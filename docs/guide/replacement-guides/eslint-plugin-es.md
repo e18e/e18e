@@ -2,7 +2,7 @@
 
 ## `eslint-plugin-es-x`
 
-eslint-plugin-es-x is a direct fork which is actively maintained. It has new features, bugfixes and updated dependencies.
+[eslint-plugin-es-x](https://github.com/eslint-community/eslint-plugin-es-x) is a direct fork which is actively maintained. It has new features, bugfixes and updated dependencies.
 
 ```js
 import pluginESx from "eslint-plugin-es-x" // [!code ++]
@@ -26,7 +26,7 @@ module.exports = {
     'es-x'   // [!code ++]
   ],
   rules: {
-    // 'es/no-regexp-lookbehind-assertions': 'error', // [!code --]
+    'es/no-regexp-lookbehind-assertions': 'error', // [!code --]
     'es-x/no-regexp-lookbehind-assertions': 'error', // [!code ++]
   }
 }
