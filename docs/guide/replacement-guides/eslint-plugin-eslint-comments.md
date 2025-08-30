@@ -29,7 +29,7 @@ module.exports = {
         "plugin:@eslint-community/eslint-comments/recommended" // [!code ++]
     ],
     rules: {
-        // "eslint-comments/no-unused-disable": "error" // [!code --]
+        "eslint-comments/no-unused-disable": "error" // [!code --]
         "@eslint-community/eslint-comments/no-unused-disable": "error" // [!code ++]
     }
 }
