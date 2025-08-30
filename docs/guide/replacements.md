@@ -18,6 +18,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`deep-equal`](./replacement-guides/deep-equal.md) | :x: |
 | [`emoji-regex`](./replacement-guides/emoji-regex.md) | :x: |
 | [`eslint-plugin-es`](./replacement-guides/eslint-plugin-es.md) | :x: |
+| [`eslint-plugin-eslint-comments.md`](./replacement-guides/eslint-plugin-eslint-comments.md) | :x: |
 | [`eslint-plugin-node`](./replacement-guides/eslint-plugin-node.md) | :x: |
 | [`eslint-plugin-vitest`](./replacement-guides/eslint-plugin-vitest.md) | :x: |
 | [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |
@@ -28,6 +29,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`glob`](./replacement-guides/glob.md) | :x: |
 | [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :x: |
 | [`md5`](./replacement-guides/md5.md) | :x: |
+| [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
 | [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
 | [`read-pkg-up`](./replacement-guides/read-pkg-up.md) | :x: |
