@@ -8,7 +8,7 @@ eslint-plugin-es-x is a direct fork which is actively maintained. It has new fea
 import pluginESx from "eslint-plugin-es-x" // [!code ++]
 
 export default [
-    pluginESx.configs['flat/restrict-to-es2018'],
+    pluginESx.configs['flat/restrict-to-es2018'], // [!code ++]
 ]
 ```
 
