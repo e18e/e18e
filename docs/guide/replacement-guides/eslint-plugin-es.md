@@ -5,10 +5,10 @@
 [eslint-plugin-es-x](https://github.com/eslint-community/eslint-plugin-es-x) is a direct fork which is actively maintained. It has new features, bugfixes and updated dependencies.
 
 ```js
-import pluginESx from "eslint-plugin-es-x" // [!code ++]
+import pluginESx from 'eslint-plugin-es-x' // [!code ++]
 
 export default [
-    pluginESx.configs['flat/restrict-to-es2018'], // [!code ++]
+  pluginESx.configs['flat/restrict-to-es2018'], // [!code ++]
 ]
 ```
 
@@ -22,8 +22,8 @@ module.exports = {
     'plugin:es-x/restrict-to-es2018', // [!code ++]
   ],
   plugins: [
-    'es',    // [!code --]
-    'es-x'   // [!code ++]
+    'es', // [!code --]
+    'es-x' // [!code ++]
   ],
   rules: {
     'es/no-regexp-lookbehind-assertions': 'error', // [!code --]

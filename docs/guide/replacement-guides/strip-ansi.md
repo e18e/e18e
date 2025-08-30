@@ -8,8 +8,8 @@ Added in v16.11.0, [util.stripVTControlCharacters](https://nodejs.org/api/util.h
 import { stripVTControlCharacters } from 'node:util' // [!code ++]
 import stripAnsi from 'strip-ansi' // [!code --]
 
-console.log(stripAnsi('\u001B[4me18e\u001B[0m')); // [!code --]
-console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')); // [!code ++]
+console.log(stripAnsi('\u001B[4me18e\u001B[0m')) // [!code --]
+console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')) // [!code ++]
 ```
 
 ## Deno
@@ -20,8 +20,8 @@ Deno implements the Node `util` API, and also provides [`util.stripVTControlChar
 import { stripVTControlCharacters } from 'node:util' // [!code ++]
 import stripAnsi from 'strip-ansi' // [!code --]
 
-console.log(stripAnsi('\u001B[4me18e\u001B[0m')); // [!code --]
-console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')); // [!code ++]
+console.log(stripAnsi('\u001B[4me18e\u001B[0m')) // [!code --]
+console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')) // [!code ++]
 ```
 
 ## Bun
@@ -34,12 +34,12 @@ Bun provides two options:
 ```js
 // Node-compatible API
 import { stripVTControlCharacters } from 'node:util' // [!code ++]
-import stripAnsi from 'strip-ansi' // [!code --]
-
-console.log(stripAnsi('\u001b[1mHello\u001b[0m')); // [!code --]
-console.log(stripVTControlCharacters('\u001b[1mHello\u001b[0m')); // [!code ++]
-
 // Bun’s native API (>=1.2.21)
 import { stripANSI } from 'bun' // [!code ++]
-console.log(Bun.stripANSI('\u001b[31mHello World\u001b[0m')); // [!code ++]
+
+import stripAnsi from 'strip-ansi' // [!code --]
+
+console.log(stripAnsi('\u001B[1mHello\u001B[0m')) // [!code --]
+console.log(stripVTControlCharacters('\u001B[1mHello\u001B[0m')) // [!code ++]
+console.log(Bun.stripANSI('\u001B[31mHello World\u001B[0m')) // [!code ++]
 ```
