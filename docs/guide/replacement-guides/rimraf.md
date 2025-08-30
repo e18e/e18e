@@ -29,7 +29,7 @@ await rmdir('./dist', { recursive: true }); // [!code ++]
 To replace `rimraf` inside npm scripts, you can run Node directly in eval mode:
 
 ```sh
-node -e "require('fs').rmSync('./dist', { recursive: true, force: true })"
+node -e "require('fs').rmSync('./dist', { recursive: true, force: true, maxRetries: process.platform === 'win32' ? 10 : 0 })"
 ```
 
 ---
