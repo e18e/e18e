@@ -14,7 +14,7 @@ await rm('./dist', { recursive: true, force: true }); // [!code ++]
 
 ## Node.js (older versions)
 
-If you need to support Node 12, you can use fs.rmdir with the recursive option. This option has been available since Node v12.10, but will print a deprecation warning in Node v14 and newer.
+If you need to support Node 12, you can use [`fs.rmdir`](https://nodejs.org/api/fs.html#fsrmdirpath-options-callback) with the recursive option. This option has been available since Node v12.10, but will print a deprecation warning in Node v14 and newer.
 
 ```js
 import { rmdir } from 'node:fs/promises';
@@ -36,7 +36,7 @@ node -e "require('fs').rmSync('./dist', { recursive: true, force: true, maxRetri
 
 ## `premove`
 
-For cases where you cannot rely on Node being available, use [`premove`](https://www.npmjs.com/package/premove). It includes a CLI and works on Node v8 and newer.
+For cases where you cannot rely on Node being available, use [`premove`](https://github.com/lukeed/premove). It includes a CLI and works on Node v8 and newer.
 
 ```sh
 premove ./dist
