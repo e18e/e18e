@@ -40,7 +40,12 @@ node -e "require('fs').rmSync('./dist', { recursive: true, force: true, maxRetri
 
 If you are on an older Node.js version (before v12.10) or you specifically need a CLI replacement, you can use [`premove`](https://github.com/lukeed/premove). It provides both an API and a CLI and works on Node.js v8 and newer.
 
-```sh
-rimraf ./dist # [!code --]
-premove ./dist # [!code ++]
+```json
+/* eslint-disable jsonc/no-dupe-keys */
+{
+  "scripts": {
+    "clean": "rimraf lib",   // [!code --]
+    "clean": "premove lib"  // [!code ++]
+  }
+}
 ```
