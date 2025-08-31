@@ -5,17 +5,20 @@
 [`@eslint-community/eslint-plugin-eslint-comments`](https://github.com/eslint-community/eslint-plugin-eslint-comments) is the actively maintained successor with updated dependencies, flat config support, and continued development.
 
 ```js
-import comments from '@eslint-community/eslint-plugin-eslint-comments/configs' // [!code ++]
-import js from '@eslint/js'
+import commentsCommunity from '@eslint-community/eslint-plugin-eslint-comments/configs' // [!code ++]
+import eslintComments from 'eslint-plugin-eslint-comments' // [!code --]
 
 export default [
-  js.configs.recommended,
-  comments.recommended, // [!code ++]
+  commentsCommunity.recommended, // [!code ++]
   {
+    plugins: {
+      'eslint-comments': eslintComments, // [!code --]
+    },
     rules: {
+      'eslint-comments/no-unused-disable': 'error',         // [!code --]
       '@eslint-community/eslint-comments/no-unused-disable': 'error', // [!code ++]
     }
-  },
+  }
 ]
 ```
 
