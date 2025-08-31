@@ -5,8 +5,9 @@
 [`@eslint-community/eslint-plugin-eslint-comments`](https://github.com/eslint-community/eslint-plugin-eslint-comments) is the actively maintained successor with updated dependencies, flat config support, and continued development.
 
 ```js
-import commentsCommunity from '@eslint-community/eslint-plugin-eslint-comments/configs' // [!code ++]
 import eslintComments from 'eslint-plugin-eslint-comments' // [!code --]
+// eslint-disable-next-line perfectionist/sort-imports
+import commentsCommunity from '@eslint-community/eslint-plugin-eslint-comments/configs' // [!code ++]
 
 export default [
   commentsCommunity.recommended, // [!code ++]
