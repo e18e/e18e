@@ -7,7 +7,7 @@
 ```json
 {
   "scripts": {
-    "build": "npm-run-all clean lint compile" // (scripts remains the same)
+    "build": "npm-run-all clean lint compile"
   }
 }
 ```
