@@ -26,20 +26,26 @@ console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')) // [!code ++]
 
 ## Bun
 
-Bun provides two options:
+### Using Node‑compatible API
 
-1. [`util.stripVTControlCharacters`](https://bun.sh/reference/node/util/stripVTControlCharacters) is supported through Bun’s Node API layer.
-2. [Since Bun v1.2.21, `Bun.stripANSI`](https://bun.com/blog/release-notes/bun-v1.2.21#bun-stripansi-simd-accelerated-ansi-escape-removal) is available as a built‑in method for removing ANSI escape sequences.
+Bun also implements Node’s [`util.stripVTControlCharacters`](https://bun.sh/reference/node/util/stripVTControlCharacters) through its Node compat layer:
 
 ```js
-// Node-compatible API
 import { stripVTControlCharacters } from 'node:util' // [!code ++]
-// Bun’s native API (>=1.2.21)
-import { stripANSI } from 'bun' // [!code ++]
-
 import stripAnsi from 'strip-ansi' // [!code --]
 
 console.log(stripAnsi('\u001B[1mHello\u001B[0m')) // [!code --]
 console.log(stripVTControlCharacters('\u001B[1mHello\u001B[0m')) // [!code ++]
+```
+
+### Using Bun's native API (>=1.2.21)
+
+Since Bun v1.2.21, you can use the built-in [`Bun.stripANSI`](https://bun.com/blog/release-notes/bun-v1.2.21#bun-stripansi-simd-accelerated-ansi-escape-removal) method.
+
+```js
+import { stripANSI } from 'bun' // [!code ++]
+import stripAnsi from 'strip-ansi' // [!code --]
+
+console.log(stripAnsi('\u001B[31mHello World\u001B[0m')) // [!code --]
 console.log(Bun.stripANSI('\u001B[31mHello World\u001B[0m')) // [!code ++]
 ```
