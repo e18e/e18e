@@ -29,7 +29,7 @@ console.log(stripVTControlCharacters('\u001B[4me18e\u001B[0m')) // [!code ++]
 Bun provides two options:
 
 1. [`util.stripVTControlCharacters`](https://bun.sh/reference/node/util/stripVTControlCharacters) is supported through Bun’s Node API layer.
-2. [Since Bun v1.2.21, `Bun.stripANSI`](https://bun.com/blog/release-notes/bun-v1.2.21#bun-stripansi-simd-accelerated-ansi-escape-removal) offers a high‑performance, SIMD‑accelerated alternative, often 6×–57× faster than strip-ansi.
+2. [Since Bun v1.2.21, `Bun.stripANSI`](https://bun.com/blog/release-notes/bun-v1.2.21#bun-stripansi-simd-accelerated-ansi-escape-removal) is available as a built‑in method for removing ANSI escape sequences.
 
 ```js
 // Node-compatible API
