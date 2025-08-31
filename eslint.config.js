@@ -16,4 +16,11 @@ export default antfu(
       'eslint-comments/no-unlimited-disable': 'off',
     },
   },
+  {
+    files: ['docs/guide/replacement-guides/**/*.md/*'],
+    rules: {
+      'perfectionist/sort-imports': 'off',
+      'jsonc/no-dupe-keys': 'off',
+    },
+  },
 )
