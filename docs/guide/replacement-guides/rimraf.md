@@ -6,7 +6,6 @@ Node.js v14.14.0 and above provide a native alternative: [`fs.rm`](https://nodej
 
 ```js
 import rimraf from 'rimraf' // [!code --]
-// eslint-disable-next-line perfectionist/sort-imports
 import { rm } from 'node:fs/promises' // [!code ++]
 
 await rimraf('./dist') // [!code --]
@@ -19,7 +18,6 @@ If you need to support Node.js 12 up to 14.13, you can use [`fs.rmdir`](https://
 
 ```js
 import rimraf from 'rimraf' // [!code --]
-// eslint-disable-next-line perfectionist/sort-imports
 import { rmdir } from 'node:fs/promises'
 
 await rimraf('./dist') // [!code --]
@@ -41,7 +39,6 @@ node -e "require('fs').rmSync('./dist', { recursive: true, force: true, maxRetri
 If you are on an older Node.js version (before v12.10) or you specifically need a CLI replacement, you can use [`premove`](https://github.com/lukeed/premove). It provides both an API and a CLI and works on Node.js v8 and newer.
 
 ```json
-/* eslint-disable jsonc/no-dupe-keys */
 {
   "scripts": {
     "clean": "rimraf lib", // [!code --]

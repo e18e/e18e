@@ -19,7 +19,6 @@ The commands remain the same: `npm-run-all`, `run-s`, and `run-p`.
 Another option is [concurrently](https://github.com/open-cli-tools/concurrently), which focuses on running scripts in parallel with colored output and process control. It uses a slightly different syntax but works well for replacing the `--parallel` use case.
 
 ```json
-/* eslint-disable jsonc/no-dupe-keys */
 {
   "scripts": {
     "dev": "npm-run-all --parallel \"watch-*\" start", // [!code --]

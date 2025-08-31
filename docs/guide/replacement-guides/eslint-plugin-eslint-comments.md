@@ -6,7 +6,6 @@
 
 ```js
 import eslintComments from 'eslint-plugin-eslint-comments' // [!code --]
-// eslint-disable-next-line perfectionist/sort-imports
 import commentsCommunity from '@eslint-community/eslint-plugin-eslint-comments/configs' // [!code ++]
 
 export default [
