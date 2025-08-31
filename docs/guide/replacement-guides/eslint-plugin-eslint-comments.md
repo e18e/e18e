@@ -15,7 +15,7 @@ export default [
       'eslint-comments': eslintComments, // [!code --]
     },
     rules: {
-      'eslint-comments/no-unused-disable': 'error',         // [!code --]
+      'eslint-comments/no-unused-disable': 'error', // [!code --]
       '@eslint-community/eslint-comments/no-unused-disable': 'error', // [!code ++]
     }
   }
@@ -26,14 +26,14 @@ If you're using a legacy config format:
 
 ```js
 module.exports = {
-    extends: [
-        "eslint:recommended",
-        "plugin:eslint-comments/recommended", // [!code --]
-        "plugin:@eslint-community/eslint-comments/recommended" // [!code ++]
-    ],
-    rules: {
-        "eslint-comments/no-unused-disable": "error", // [!code --]
-        "@eslint-community/eslint-comments/no-unused-disable": "error" // [!code ++]
-    }
+  extends: [
+    'eslint:recommended',
+    'plugin:eslint-comments/recommended', // [!code --]
+    'plugin:@eslint-community/eslint-comments/recommended' // [!code ++]
+  ],
+  rules: {
+    'eslint-comments/no-unused-disable': 'error', // [!code --]
+    '@eslint-community/eslint-comments/no-unused-disable': 'error' // [!code ++]
+  }
 }
 ```
