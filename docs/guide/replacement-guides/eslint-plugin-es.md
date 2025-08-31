@@ -28,7 +28,7 @@ export default [
   },
 
   ...compat.extends('plugin:es/restrict-to-es2018'), // [!code --]
-  pluginESx.configs['flat/restrict-to-es2018'],
+  pluginESx.configs['flat/restrict-to-es2018'], // [!code ++]
 ]
 ```
 
