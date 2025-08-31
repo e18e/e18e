@@ -36,9 +36,9 @@ node -e "require('fs').rmSync('./dist', { recursive: true, force: true, maxRetri
 
 ## `premove`
 
-For cases where you cannot rely on Node being available, use [`premove`](https://github.com/lukeed/premove). It includes a CLI and works on Node v8 and newer.
+If you are on an older Node.js version (before v12.10) or you specifically need a CLI replacement, use [`premove`](https://github.com/lukeed/premove). It provides both an API and a CLI and works on Node.js v8 and newer.
 
 ```sh
-rimraf ./dist       # [!code --]
-premove ./dist      # [!code ++]
+rimraf ./dist # [!code --]
+premove ./dist # [!code ++]
 ```
