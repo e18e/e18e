@@ -44,8 +44,8 @@ If you are on an older Node.js version (before v12.10) or you specifically need 
 /* eslint-disable jsonc/no-dupe-keys */
 {
   "scripts": {
-    "clean": "rimraf lib",   // [!code --]
-    "clean": "premove lib"  // [!code ++]
+    "clean": "rimraf lib", // [!code --]
+    "clean": "premove lib" // [!code ++]
   }
 }
 ```
