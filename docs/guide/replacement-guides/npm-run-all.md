@@ -2,10 +2,14 @@
 
 ## `npm-run-all2`
 
-[npm-run-all2](https://github.com/bcomnes/npm-run-all2) is an actively maintained fork with important fixes, dependency updates. The CLI is fully compatible, so you can migrate by replacing the package name.
+[npm-run-all2](https://github.com/bcomnes/npm-run-all2) is an actively maintained fork with important fixes, dependency updates.
 
 ```json
 {
+  "devDependencies": {
+    "npm-run-all": "^X.Y.Z", // [!code --]
+    "npm-run-all2": "^X.Y.Z" // [!code ++]
+  },
   "scripts": {
     "build": "npm-run-all clean lint compile"
   }
@@ -21,7 +25,8 @@ Another option is [concurrently](https://github.com/open-cli-tools/concurrently)
 ```json
 {
   "scripts": {
-    "dev": "concurrently \"npm:watch-*\" \"npm:start\""
+    "dev:npm-run-all": "npm-run-all --parallel \"watch-*\" start", // [!code --]
+    "dev:concurrently": "concurrently \"npm:watch-*\" \"npm:start\"" // [!code ++]
   }
 }
 ```
