@@ -6,12 +6,8 @@
 
 ```json
 {
-  "devDependencies": {
-    "npm-run-all": "^X.Y.Z", // [!code --]
-    "npm-run-all2": "^X.Y.Z" // [!code ++]
-  },
   "scripts": {
-    "build": "npm-run-all clean lint compile"
+    "build": "npm-run-all clean lint compile" // (scripts remains the same)
   }
 }
 ```
