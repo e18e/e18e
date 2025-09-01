@@ -7,6 +7,9 @@
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
+  "dependencies": {
+    "vitepress-plugin-group-icons": "1.6.3"
+  },
   "devDependencies": {
     "@shikijs/vitepress-twoslash": "^2.3.2",
     "feed": "^4.2.2",
