@@ -18,7 +18,7 @@ If you need to support Node.js 12 up to 14.13, you can use [`fs.rmdir`](https://
 
 ```js
 import rimraf from 'rimraf' // [!code --]
-import { rmdir } from 'node:fs/promises'
+import { rmdir } from 'node:fs/promises' // [!code ++]
 
 await rimraf('./dist') // [!code --]
 await rmdir('./dist', { recursive: true }) // [!code ++]
@@ -31,8 +31,6 @@ To replace `rimraf` inside npm scripts, you can run Node directly in eval mode:
 ```sh
 node -e "require('fs').rmSync('./dist', { recursive: true, force: true, maxRetries: process.platform === 'win32' ? 10 : 0 })"
 ```
-
----
 
 ## `premove`
 
