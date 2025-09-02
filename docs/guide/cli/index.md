@@ -1,6 +1,6 @@
 # CLI
 
-The e18e CLI is a powerful tool for analyzing and optimizing your JavaScript/TypeScript projects. It helps you identify performance issues, find optimization opportunities, and migrate to better alternatives.
+The e18e CLI is a powerful tool for analyzing and optimizing your JavaScript/TypeScript projects. It helps you identify performance issues, find optimization opportunities, and automatically migrate to suggested dependencies
 
 ## Quick Start
 
