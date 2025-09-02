@@ -9,7 +9,8 @@
     "build": "pnpm -C docs run build",
     "serve": "pnpm -C docs run serve",
     "lint": "eslint --cache .",
-    "lint:fix": "pnpm lint --fix"
+    "lint:fix": "pnpm lint --fix",
+    "add-replacement": "node ./scripts/add-replacement.js"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.17.0",
