@@ -1,3 +1,7 @@
+---
+description: Modern alternatives to the deep-equal package for deep object comparison
+---
+
 # Replacements for `deep-equal`
 
 ## `dequal`
