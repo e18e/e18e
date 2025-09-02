@@ -13,7 +13,7 @@ The analyze command runs multiple analysis plugins on your project:
 
 ## Usage
 
-```bash
+```sh
 e18e-cli analyze [path] [options]
 ```
 
@@ -35,7 +35,7 @@ e18e-cli analyze [path] [options]
 
 ### Basic Analysis
 
-```bash
+```sh
 # Analyze current directory
 e18e-cli analyze
 
@@ -177,7 +177,7 @@ Use the `--manifest` option to provide custom module replacement configurations:
 ### Common Issues
 
 **"No package.json found"**
-```bash
+```sh
 # Make sure you're in a project directory
 ls package.json
 # If not found, navigate to your project root
@@ -186,7 +186,7 @@ e18e-cli analyze
 ```
 
 **"Path must be a tarball file or a directory"**
-```bash
+```sh
 # Check if the path exists and is valid
 ls -la /path/to/analyze
 # For tarballs, ensure it has .tgz extension
@@ -194,7 +194,7 @@ mv my-package.tar.gz my-package.tgz
 ```
 
 **Permission errors**
-```bash
+```sh
 # Try using npx instead of global installation
 npx @e18e/cli analyze
 # Or check file permissions
@@ -205,7 +205,7 @@ chmod -R 755 ./my-project
 
 For detailed debugging information:
 
-```bash
+```sh
 e18e-cli analyze --log-level debug
 ```
 
@@ -231,7 +231,7 @@ The analyze command can be used in your development workflow:
 
 ### Local Development
 
-```bash
+```sh
 # Run analysis during development
 npm run analyze
 

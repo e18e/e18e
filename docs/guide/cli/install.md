@@ -47,7 +47,7 @@ e18e-cli migrate chalk
 
 Use the CLI without installing it:
 
-```bash
+```sh
 npx @e18e/cli analyze
 npx @e18e/cli migrate chalk
 ```
@@ -89,7 +89,7 @@ The CLI respects these environment variables:
 | `NO_COLOR` | Disable colored output | `false` |
 
 Example:
-```bash
+```sh
 # Enable debug output
 DEBUG=e18e:* e18e-cli analyze
 
@@ -119,8 +119,8 @@ sudo npm install -g @e18e/cli
 # Or change npm's default directory
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.shrc
+source ~/.shrc
 npm install -g @e18e/cli
 ```
 

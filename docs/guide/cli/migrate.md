@@ -173,7 +173,7 @@ Automatically updates your `package.json`:
 
 When using `--interactive`, the CLI provides a selection interface:
 
-```bash
+```sh
 e18e-cli migrate --interactive
 ```
 
@@ -306,7 +306,7 @@ export function error(message: string) {
 ### Common Issues
 
 **"No package.json found"**
-```bash
+```sh
 # Make sure you're in a project directory
 ls package.json
 cd /path/to/your/project
@@ -314,7 +314,7 @@ e18e-cli migrate chalk
 ```
 
 **"Target package has no available migrations"**
-```bash
+```sh
 # Check available migrations
 e18e-cli migrate --interactive
 # Or use --all to see all available options
@@ -322,7 +322,7 @@ e18e-cli migrate --all --dry-run
 ```
 
 **"Permission denied"**
-```bash
+```sh
 # Check file permissions
 chmod -R 755 ./src
 # Or use npx
@@ -385,7 +385,7 @@ npx @e18e/cli migrate chalk
 
 ### Local Development
 
-```bash
+```sh
 # Preview migrations before applying
 npm run migrate:preview
 

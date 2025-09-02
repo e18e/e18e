@@ -1,10 +1,10 @@
 # CLI
 
-The e18e CLI is a powerful tool for analyzing and optimizing your JavaScript/TypeScript projects. It helps you identify performance issues, find optimization opportunities, and automatically migrate to suggested dependencies
+The e18e CLI is a powerful tool for analyzing and optimizing your JavaScript/TypeScript projects. It helps you identify performance issues, find optimization opportunities, and automatically migrate to suggested dependencies.
 
 ## Quick Start
 
-```bash
+```sh
 # Install and run analysis
 npx @e18e/cli analyze
 
@@ -42,7 +42,7 @@ bun add -g @e18e/cli
 
 Analyzes your project for various issues and provides recommendations for optimization.
 
-```bash
+```sh
 e18e-cli analyze [path] [options]
 ```
 
@@ -70,7 +70,7 @@ e18e-cli analyze --pack pnpm
 
 Migrates your project from packages to more performant alternatives.
 
-```bash
+```sh
 e18e-cli migrate [packages...] [options]
 ```
 
@@ -85,7 +85,7 @@ e18e-cli migrate [packages...] [options]
 - `--manifest <path>` - Use custom migration manifest file(s)
 
 **Examples:**
-```bash
+```sh
 # Migrate specific packages
 e18e-cli migrate chalk lodash
 
@@ -107,11 +107,8 @@ e18e-cli migrate --manifest ./custom-migrations.json
 The CLI uses an [opinionated codemod](https://github.com/es-tooling/module-replacements-codemods) approach for migrations, based on e18e's curated list of performance-focused package replacements. This ensures consistent, well-tested migrations across the ecosystem.
 
 ### Default Migrations
-The CLI comes with pre-configured migrations for common performance optimizations:
-- `chalk` → `picocolors` (smaller, faster)
-- `lodash` → `lodash-es` (ESM version)
-- `moment` → `date-fns` (tree-shakeable)
-- `axios` → `undici` (native fetch-like API)
+
+The CLI comes with pre-configured migrations for common performance optimizations here is the list of the current [replacements](https://github.com/es-tooling/module-replacements/tree/main/manifests).
 
 > [!IMPORTANT]
 > The replacement list is still being developed and expanded. The current list represents the initial set of well-tested migrations. More replacements will be added as they are validated and tested across the ecosystem.
@@ -123,16 +120,16 @@ You can bring your own migration rules by providing custom manifest files:
 {
   "replacements": [
     {
-      "from": "old-package",
-      "to": "new-package",
-      "reason": "Better performance and smaller bundle"
+      "moduleName": "@e18e/fake-0",
+      "type": "simple",
+      "replacement": "Use picocolors, kleur, or native console styling"
     }
   ]
 }
 ```
 
 Use custom manifests with the `--manifest` option:
-```bash
+```sh
 e18e-cli migrate --manifest ./my-migrations.json
 ```
 
@@ -140,19 +137,10 @@ e18e-cli migrate --manifest ./my-migrations.json
 
 The `analyze` command runs several checks on your project:
 
-1. **ATTW (Are The Types Wrong)** - Checks for TypeScript declaration file issues
-2. **Publint** - Validates package.json and publishing configuration
-3. **Module Replacements** - Identifies opportunities to replace packages with faster alternatives
-4. **Dependency Analysis** - Analyzes your dependency tree for optimization opportunities
-
-## Documentation
-
-### Getting Started
-- **[Installation](./install.md)** - Detailed installation guide for all package managers
-
-### Commands
-- **[analyze](./analyze.md)** - Detailed guide to the analyze command
-- **[migrate](./migrate.md)** - Complete guide to package migration
+1. Check for TypeScript declaration file issues (using [ATTW](https://github.com/arethetypeswrong/arethetypeswrong))
+2. Validate package.json and publishing configuration (using [Publint](https://github.com/arethetypeswrong/publint))
+3. Identify opportunities to replace packages with more performant alternatives (using [module-replacements](https://github.com/es-tooling/module-replacements))
+4. Analyze your dependency tree for optimization opportunities
 
 ## Features
 
@@ -173,7 +161,7 @@ The `analyze` command runs several checks on your project:
 
 ## Example Workflow
 
-```bash
+```sh
 # 1. Analyze your project
 e18e-cli analyze
 
@@ -205,7 +193,7 @@ The CLI can be used in your development workflow:
 ```
 
 ### Local Development
-```bash
+```sh
 # Run analysis during development
 npm run analyze
 
@@ -239,7 +227,7 @@ e18e-cli migrate --dry-run
 
 For detailed debugging information, use the `--log-level debug` option:
 
-```bash
+```sh
 e18e-cli analyze --log-level debug
 ```
 
