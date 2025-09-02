@@ -1,3 +1,7 @@
+---
+description: Native Node.js alternatives to the buf-compare package for buffer comparison
+---
+
 # Replacements for `buf-compare`
 
 ## `Buffer.compare` (native)
