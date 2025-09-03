@@ -4,6 +4,9 @@ description: Modern alternatives to the chalk package for terminal string stylin
 
 # Replacements for `chalk`
 
+> [!NOTE]  
+> If you want colors in _Chromium_ browsers, you will probably choose `ansis`, since `picocolors` strips colors and `node:util` is not known in this environment.  
+
 ## `styleText` (native)
 
 Since Node 20.x, you can use the [`styleText`](https://nodejs.org/api/util.html#utilstyletextformat-text-options) function from the `node:util` module to style text in the terminal.
