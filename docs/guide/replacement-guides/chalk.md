@@ -4,9 +4,6 @@ description: Modern alternatives to the chalk package for terminal string stylin
 
 # Replacements for `chalk`
 
-> [!NOTE]  
-> If you want colors in _Chromium_ browsers, you will probably choose `ansis`, since `picocolors` strips colors and `node:util` is not known in this environment.  
-
 ## `styleText` (native)
 
 Since Node 20.x, you can use the [`styleText`](https://nodejs.org/api/util.html#utilstyletextformat-text-options) function from the `node:util` module to style text in the terminal.
@@ -77,3 +74,26 @@ Similarly, you can use RGB and hex colors:
 console.log(chalk.rgb(239, 239, 239)('Hello world!')) // [!code --]
 console.log(ansis.rgb(239, 239, 239)('Hello world!')) // [!code ++]
 ```
+
+## Browser support
+
+While these libraries are primarily designed for terminal output, some projects may need colored output in browser environments.
+
+Following [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/console#styling_console_output), the native approach is `%c` directive in `console.log`:
+
+```js
+console.log(
+  'Hello %ce%c1%c8%ce',
+  'color: #ec8f5e;',
+  'color: #f2ca60;',
+  'color: #bece57;',
+  'color: #7bb560;',
+  'Ecosystem Performance'
+)
+```
+
+Library support:
+- `chalk` - colors are supported in _Chromium_ browsers
+- `ansis` - colors are supported in _Chromium_ browsers
+- `picocolors` - strips colors in browser environments
+- `node:util` - is not available in browsers
