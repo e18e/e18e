@@ -14,6 +14,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`buf-compare`](./replacement-guides/buf-compare.md) | :x: |
 | [`buffer-equal`](./replacement-guides/buffer-equal.md) | :x: |
 | [`buffer-equals`](./replacement-guides/buffer-equals.md) | :x: |
+| [`builtin-modules`](./replacement-guides/builtin-modules.md) | :x: |
 | [`chalk`](./replacement-guides/chalk.md) | :x: |
 | [`deep-equal`](./replacement-guides/deep-equal.md) | :x: |
 | [`emoji-regex`](./replacement-guides/emoji-regex.md) | :x: |
