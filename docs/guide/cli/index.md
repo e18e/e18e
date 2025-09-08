@@ -104,7 +104,7 @@ e18e-cli migrate --manifest ./custom-migrations.json
 
 ## Migration System
 
-The CLI uses an [opinionated codemod](https://github.com/es-tooling/module-replacements-codemods) approach for migrations, based on e18e's curated list of performance-focused package replacements. This ensures consistent, well-tested migrations across the ecosystem.
+The CLI uses a set of codemods from the [module-replacements](https://github.com/es-tooling/module-replacements-codemods) project for migrations.
 
 ### Default Migrations
 
