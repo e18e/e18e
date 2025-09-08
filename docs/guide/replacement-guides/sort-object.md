@@ -10,27 +10,35 @@ For simple cases:
 
 ```ts
 import sortObj from 'sort-object' // [!code --]
+
 const sorted = sortObj(object) // [!code --]
 
 // Ascending A→Z
-const sorted = Object.keys(object) // [!code ++]
-  .sort() // [!code ++]
-  .reduce((acc, k) => (acc[k] = object[k], acc), {}) // [!code ++]
+const sorted = Object.fromEntries( // [!code ++]
+  Object.entries(object).sort((a, b) => a[0].localeCompare(b[0])) // [!code ++]
+) // [!code ++]
 ```
 
 Replicating `sortBy` (function returns an ordered key list):
 
 ```ts
 import sortObj from 'sort-object' // [!code --]
-const sorted = sortObj(object, { sortBy: (obj) => { // [!code --]
-  const arr: string[] = []  // [!code --]
-  Object.keys(obj).forEach((k) => { if (/^a/.test(obj[k])) arr.push(k) })  // [!code --]
-  return arr.reverse()  // [!code --]
-}})  // [!code --]
 
-const sortBy = (obj: Record<string, any>) => // [!code ++]
-  Object.keys(obj).filter(k => /^a/.test(obj[k])).reverse()  // [!code ++]
-const sorted = sortBy(object).reduce((acc, k) => (acc[k] = object[k], acc), {})  // [!code ++]
+const sorted = sortObj(object, { sortBy: (obj) => { // [!code --]
+  const arr = [] // [!code --]
+  Object.keys(obj).forEach((k) => { // [!code --]
+    if (obj[k].startsWith('a')) // [!code --]
+      arr.push(k) // [!code --]
+  }) // [!code --]
+  return arr.reverse() // [!code --]
+} }) // [!code --]
+
+function sortBy(obj) {
+  return Object.keys(obj).filter(k => obj[k].startsWith('a')).reverse()
+} // [!code ++]
+const sorted = Object.fromEntries( // [!code ++]
+  sortBy(object).map(k => [k, object[k]]) // [!code ++]
+) // [!code ++]
 ```
 
 ## `sort-object-keys`
