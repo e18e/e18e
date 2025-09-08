@@ -20,6 +20,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`emoji-regex`](./replacement-guides/emoji-regex.md) | :x: |
 | [`eslint-plugin-es`](./replacement-guides/eslint-plugin-es.md) | :x: |
 | [`eslint-plugin-eslint-comments`](./replacement-guides/eslint-plugin-eslint-comments.md) | :x: |
+| [`eslint-plugin-import`](./replacement-guides/eslint-plugin-import.md) | :x: |
 | [`eslint-plugin-node`](./replacement-guides/eslint-plugin-node.md) | :x: |
 | [`eslint-plugin-vitest`](./replacement-guides/eslint-plugin-vitest.md) | :x: |
 | [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |
