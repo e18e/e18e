@@ -26,6 +26,7 @@ Added in v0.1.21. Synchronous existence check with [`fs.existsSync`](https://nod
 import pathExists from 'path-exists' // [!code --]
 import { existsSync } from 'node:fs' // [!code ++]
 
+if (await pathExists('/etc/passwd')) // [!code --]
 if (existsSync('/etc/passwd')) // [!code ++]
   console.log('The path exists.')
 ```
@@ -40,5 +41,5 @@ import pathExists from 'path-exists' // [!code --]
 
 const path = '/path/to/package.json'
 const file = Bun.file(path) // [!code ++]
-const exists = await file.exists() // boolean // [!code ++]
+const exists = await file.exists() // boolean [!code ++]
 ```
