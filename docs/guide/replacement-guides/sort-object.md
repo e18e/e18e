@@ -33,9 +33,7 @@ const sorted = sortObj(object, { sortBy: (obj) => { // [!code --]
   return arr.reverse() // [!code --]
 } }) // [!code --]
 
-function sortBy(obj) {
-  return Object.keys(obj).filter(k => obj[k].startsWith('a')).reverse()
-} // [!code ++]
+const sortBy = obj => Object.keys(obj).filter(k => obj[k].startsWith('a')).reverse() // [!code ++]
 const sorted = Object.fromEntries( // [!code ++]
   sortBy(object).map(k => [k, object[k]]) // [!code ++]
 ) // [!code ++]
