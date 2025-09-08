@@ -22,6 +22,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`eslint-plugin-eslint-comments`](./replacement-guides/eslint-plugin-eslint-comments.md) | :x: |
 | [`eslint-plugin-node`](./replacement-guides/eslint-plugin-node.md) | :x: |
 | [`eslint-plugin-vitest`](./replacement-guides/eslint-plugin-vitest.md) | :x: |
+| [`faker`](./replacement-guides/faker.md) | :x: |
 | [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |
 | [`find-cache-directory`](./replacement-guides/find-cache-directory.md) | :x: |
 | [`find-file-up`](./replacement-guides/find-file-up.md) | :x: |
