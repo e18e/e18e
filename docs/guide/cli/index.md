@@ -108,7 +108,7 @@ The CLI uses an [opinionated codemod](https://github.com/es-tooling/module-repla
 
 ### Default Migrations
 
-The CLI comes with pre-configured migrations for common performance optimizations here is the list of the current [replacements](https://github.com/es-tooling/module-replacements/tree/main/manifests).
+The CLI comes with pre-configured migrations for common performance optimizations. You can find the list of the current replacements in the [module-replacements](https://github.com/es-tooling/module-replacements/tree/main/manifests) repository.
 
 > [!IMPORTANT]
 > The replacement list is still being developed and expanded. The current list represents the initial set of well-tested migrations. More replacements will be added as they are validated and tested across the ecosystem.
@@ -120,7 +120,7 @@ You can bring your own migration rules by providing custom manifest files:
 {
   "replacements": [
     {
-      "moduleName": "@e18e/fake-0",
+      "moduleName": "custom-module",
       "type": "simple",
       "replacement": "Use picocolors, kleur, or native console styling"
     }
