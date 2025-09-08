@@ -36,4 +36,5 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`read-pkg-up`](./replacement-guides/read-pkg-up.md) | :x: |
 | [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
 | [`rimraf`](./replacement-guides/rimraf.md) | :x: |
+| [`string-width`](./replacement-guides/string-width.md) | :x: |
 | [`strip-ansi`](./replacement-guides/strip-ansi.md) | :x: |
