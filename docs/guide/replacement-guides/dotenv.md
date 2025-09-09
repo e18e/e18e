@@ -50,30 +50,3 @@ In package.json scripts:
   }
 }
 ```
-
-### pnpm shell-emulator
-
-Use pnpm’s [shell-emulator](https://pnpm.io/cli/run#shellemulator) to run POSIX-style env assignments in `package.json` scripts on all platforms (no cross-env needed).
-
-```ini
-# .npmrc
-shell-emulator=true
-```
-
-Script simplification:
-
-```json
-{
-  "scripts": {
-    "serve": "cross-env NODE_ENV=production node server", // [!code --]
-    "serve": "NODE_ENV=production node server" // [!code ++]
-  }
-}
-```
-
-CLI alternative:
-
-```bash
-pnpm config set shell-emulator true
-```
-
