@@ -7,8 +7,8 @@
 For example:
 
 ```ts
-import invariant from 'tiny-invariant' // [!code ++]
 import invariant from 'invariant' // [!code --]
+import invariant from 'tiny-invariant' // [!code ++]
 
 invariant(ok, 'Hello %s, code %d', name, code) // [!code --]
 invariant(ok, `Hello ${name}, code ${code}`) // [!code ++]
