@@ -12,18 +12,17 @@ Although dotenv is reliable, it may not be necessary or may lack certain feature
 
 Built into Node.js (v20.6.0+; v22.9.0 for `--env-file-if-exists`). Zero dependencies—perfect for most apps that just need to load a `.env` at startup.
 
-`--env-file` throws if the file is missing. If the file may be absent, use `--env-file-if-exists`.
+[`--env-file`](https://nodejs.org/dist/latest-v20.x/docs/api/cli.html#--env-fileconfig) throws if the file is missing. If the file may be absent, use [`--env-file-if-exists`](https://nodejs.org/docs/latest-v22.x/api/cli.html#--env-file-if-existsconfig).
 
 ```bash
 node --env-file=.env index.js
 ```
 
 Also supported by:
+
 - [tsx](https://www.npmjs.com/package/tsx)
 - [Bun](https://bun.sh/docs/runtime/env#manually-specifying-env-files)
 - [Deno](https://docs.deno.com/runtime/reference/env_variables/#.env-file)
-
-Node docs: [`--env-file`](https://nodejs.org/dist/latest-v20.x/docs/api/cli.html#--env-fileconfig) / [`--env-file-if-exists`](https://nodejs.org/docs/latest-v22.x/api/cli.html#--env-file-if-existsconfig)
 
 Remove dotenv preload:
 
@@ -51,3 +50,30 @@ In package.json scripts:
   }
 }
 ```
+
+### pnpm shell-emulator
+
+Use pnpm’s [shell-emulator](https://pnpm.io/cli/run#shellemulator) to run POSIX-style env assignments in `package.json` scripts on all platforms (no cross-env needed).
+
+```ini
+# .npmrc
+shell-emulator=true
+```
+
+Script simplification:
+
+```json
+{
+  "scripts": {
+    "serve": "cross-env NODE_ENV=production node server", // [!code --]
+    "serve": "NODE_ENV=production node server" // [!code ++]
+  }
+}
+```
+
+CLI alternative:
+
+```bash
+pnpm config set shell-emulator true
+```
+
