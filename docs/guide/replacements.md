@@ -22,6 +22,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`eslint-plugin-eslint-comments`](./replacement-guides/eslint-plugin-eslint-comments.md) | :x: |
 | [`eslint-plugin-node`](./replacement-guides/eslint-plugin-node.md) | :x: |
 | [`eslint-plugin-vitest`](./replacement-guides/eslint-plugin-vitest.md) | :x: |
+| [`ez-spawn`](./replacement-guides/ez-spawn.md) | :x: |
 | [`find-cache-dir`](./replacement-guides/find-cache-dir.md) | :x: |
 | [`find-cache-directory`](./replacement-guides/find-cache-directory.md) | :x: |
 | [`find-file-up`](./replacement-guides/find-file-up.md) | :x: |
@@ -29,12 +30,17 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-up`](./replacement-guides/find-up.md) | :x: |
 | [`glob`](./replacement-guides/glob.md) | :x: |
 | [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :x: |
+| [`jsx-ast-utils`](./replacement-guides/jsx-ast-utils.md) | :x: |
 | [`md5`](./replacement-guides/md5.md) | :x: |
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
+| [`path-exists`](./replacement-guides/path-exists.md) | :x: |
 | [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
 | [`read-pkg-up`](./replacement-guides/read-pkg-up.md) | :x: |
 | [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
 | [`rimraf`](./replacement-guides/rimraf.md) | :x: |
 | [`shortid`](./replacement-guides/shortid.md) | :x: |
+| [`sort-object`](./replacement-guides/sort-object.md) | :x: |
+| [`string-width`](./replacement-guides/string-width.md) | :x: |
 | [`strip-ansi`](./replacement-guides/strip-ansi.md) | :x: |
+| [`traverse`](./replacement-guides/traverse.md) | :x: |
