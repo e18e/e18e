@@ -1,3 +1,7 @@
+---
+description: Native Node.js alternatives to the is-builtin-module package for checking built-in modules
+---
+
 # Replacements for `is-builtin-module`
 
 ## Node.js (since 16.x)
@@ -30,14 +34,4 @@ function isBuiltin(moduleName) { // [!code ++]
 
 isBuiltin('fs') // true [!code ++]
 isBuiltinModule('fs') // true [!code --]
-```
-
-## Getting all built-in modules
-
-For a full list of built-in modules (available since Node.js 6.x), you can use [builtinModules](https://nodejs.org/api/module.html#modulebuiltinmodules):
-
-```ts
-import { builtinModules } from 'node:module'
-
-console.log(builtinModules)
 ```

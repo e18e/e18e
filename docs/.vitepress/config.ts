@@ -129,6 +129,12 @@ export default defineConfig({
       'link',
       { rel: 'canonical', href: canonicalUrl },
     ])
+    if (pageData.frontmatter.description) {
+      pageData.frontmatter.head.push([
+        'meta',
+        { property: 'og:description', content: pageData.frontmatter.description },
+      ])
+    }
     return pageData
   },
   markdown: {

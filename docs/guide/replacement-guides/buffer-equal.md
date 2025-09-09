@@ -1,3 +1,7 @@
+---
+description: Native Node.js alternatives to the buffer-equal package for buffer equality checks
+---
+
 # Replacements for `buffer-equal`
 
 ## `Buffer#equals` (native)
