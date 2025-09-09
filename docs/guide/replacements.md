@@ -40,5 +40,6 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
 | [`rimraf`](./replacement-guides/rimraf.md) | :x: |
 | [`sort-object`](./replacement-guides/sort-object.md) | :x: |
+| [`string-width`](./replacement-guides/string-width.md) | :x: |
 | [`strip-ansi`](./replacement-guides/strip-ansi.md) | :x: |
 | [`traverse`](./replacement-guides/traverse.md) | :x: |
