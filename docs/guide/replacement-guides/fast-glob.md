@@ -21,7 +21,8 @@ const files = await fg('**/*.ts', { // [!code --]
 
 const files = await glob('**/*.ts', { // [!code ++]
   cwd: process.cwd(), // [!code ++]
-  ignore: ['**/node_modules/**'] // [!code ++]
+  ignore: ['**/node_modules/**'], // [!code ++]
+  expandDirectories: false // [!code ++]
 }) // [!code ++]
 ```
 
