@@ -4,9 +4,6 @@ description: Modern alternatives to lint-staged for running commands on staged G
 
 # Replacements for `lint-staged`
 
-> [!NOTE]
-> `lint-staged` is still a solid, widely used choice and completely fine for most projects. Below is a smaller/faster alternative if you want fewer deps and a simpler tool.
-
 ## `nano-staged`
 
 [`nano-staged`](https://www.npmjs.com/package/nano-staged) is a tiny pre-commit runner for staged (and more) files; much smaller and faster than `lint-staged`, with a simple config.
