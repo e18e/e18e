@@ -15,15 +15,11 @@ import fg from 'fast-glob' // [!code --]
 import { glob } from 'tinyglobby' // [!code ++]
 
 const files = await fg('**/*.ts', { // [!code --]
-  cwd: process.cwd(), // [!code --]
-  ignore: ['**/node_modules/**'] // [!code --]
-}) // [!code --]
-
 const files = await glob('**/*.ts', { // [!code ++]
-  cwd: process.cwd(), // [!code ++]
-  ignore: ['**/node_modules/**'], // [!code ++]
+  cwd: process.cwd(),
+  ignore: ['**/node_modules/**'],
   expandDirectories: false // [!code ++]
-}) // [!code ++]
+})
 ```
 
 Most options from `fast-glob` have direct equivalents in `tinyglobby`. Check the [tinyglobby documentation](https://superchupu.dev/tinyglobby/migration) for the complete list of supported options.
