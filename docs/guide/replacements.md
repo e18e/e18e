@@ -38,6 +38,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
 | [`read-pkg-up`](./replacement-guides/read-pkg-up.md) | :x: |
 | [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
+| [`readable-stream`](./replacement-guides/readable-stream.md) | :x: |
 | [`rimraf`](./replacement-guides/rimraf.md) | :x: |
 | [`shortid`](./replacement-guides/shortid.md) | :x: |
 | [`sort-object`](./replacement-guides/sort-object.md) | :x: |
