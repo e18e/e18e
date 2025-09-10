@@ -31,6 +31,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`glob`](./replacement-guides/glob.md) | :x: |
 | [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :x: |
 | [`jsx-ast-utils`](./replacement-guides/jsx-ast-utils.md) | :x: |
+| [`lint-staged`](./replacement-guides/lint-staged.md) | :x: |
 | [`md5`](./replacement-guides/md5.md) | :x: |
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
 | [`path-exists`](./replacement-guides/path-exists.md) | :x: |
