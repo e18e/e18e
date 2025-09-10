@@ -26,7 +26,7 @@ Remove dotenv preload:
 
 ```ts
 import 'dotenv/config' // [!code --]
-// No import needed when using --env-file // [!code ++]
+// No import needed when using --env-file [!code ++]
 ```
 
 Remove explicit dotenv config:
@@ -35,7 +35,7 @@ Remove explicit dotenv config:
 import dotenv from 'dotenv' // [!code --]
 
 dotenv.config({ path: '.env' }) // [!code --]
-// No runtime configuration needed // [!code ++]
+// No runtime configuration needed [!code ++]
 ```
 
 In package.json scripts:
