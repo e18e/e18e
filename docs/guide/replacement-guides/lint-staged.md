@@ -16,12 +16,9 @@ package.json config:
 ```json
 {
   "lint-staged": { // [!code --]
-    "*.{js,ts}": ["prettier --write"] // [!code --]
-  }, // [!code --]
-
   "nano-staged": { // [!code ++]
-    "*.{js,ts}": ["prettier --write"] // [!code ++]
-  } // [!code ++]
+    "*.{js,ts}": ["prettier --write"]
+  },
 }
 ```
 
