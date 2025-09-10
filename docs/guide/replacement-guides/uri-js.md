@@ -24,7 +24,7 @@ new URL('../../g', 'https://a/b/c/d?q').href // [!code ++]
 ```
 
 > [!NOTE]
-> WHATWG URL differs from RFC 3986 in some details and may not cover arbitrary custom schemes/URNs.
+> [WHATWG URL](https://url.spec.whatwg.org/) differs from [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) in some details and may not cover arbitrary custom schemes/URNs.
 
 ## `uri-js-replace`
 
