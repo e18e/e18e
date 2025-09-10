@@ -13,11 +13,11 @@ description: Modern alternatives to js-yaml for YAML parsing and stringifying
 Parse (load):
 
 ```ts
-import yaml from 'js-yaml'      // [!code --]
-import { parse } from 'yaml'    // [!code ++]
+import yaml from 'js-yaml' // [!code --]
+import { parse } from 'yaml' // [!code ++]
 
-const obj = yaml.load(src)      // [!code --]
-const obj = parse(src)          // [!code ++]
+const obj = yaml.load(src) // [!code --]
+const obj = parse(src) // [!code ++]
 ```
 
 Stringify (dump):
