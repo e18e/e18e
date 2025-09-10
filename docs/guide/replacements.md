@@ -33,6 +33,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`glob`](./replacement-guides/glob.md) | :x: |
 | [`invariant`](./replacement-guides/invariant.md) | :x: |
 | [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :x: |
+| [`js-yaml`](./replacement-guides/js-yaml.md) | :x: |
 | [`jsx-ast-utils`](./replacement-guides/jsx-ast-utils.md) | :x: |
 | [`md5`](./replacement-guides/md5.md) | :x: |
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
