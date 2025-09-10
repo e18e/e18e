@@ -45,3 +45,4 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`string-width`](./replacement-guides/string-width.md) | :x: |
 | [`strip-ansi`](./replacement-guides/strip-ansi.md) | :x: |
 | [`traverse`](./replacement-guides/traverse.md) | :x: |
+| [`xmldom`](./replacement-guides/xmldom.md) | :x: |
