@@ -29,6 +29,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-pkg`](./replacement-guides/find-pkg.md) | :x: |
 | [`find-up`](./replacement-guides/find-up.md) | :x: |
 | [`glob`](./replacement-guides/glob.md) | :x: |
+| [`invariant`](./replacement-guides/invariant.md) | :x: |
 | [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :x: |
 | [`jsx-ast-utils`](./replacement-guides/jsx-ast-utils.md) | :x: |
 | [`md5`](./replacement-guides/md5.md) | :x: |
