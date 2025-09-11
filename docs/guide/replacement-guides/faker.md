@@ -12,22 +12,9 @@ description: Modern  replacements for the unmaintained faker package generating 
 const faker = require('faker') // [!code --]
 const { faker } = require('@faker-js/faker') // [!code ++]
 
-// Name → Person
-const name = faker.name.findName() // [!code --]
-const name = faker.person.fullName() // [!code ++]
+faker.datatype.boolean() // [!code --]
+faker.datatype.boolean() // [!code ++]
 
-// “createCard” → compose your own object
-const card = faker.helpers.createCard() // [!code --]
-const user = { // [!code ++]
-  id: faker.string.uuid(), // [!code ++]
-  name: faker.person.fullName(), // [!code ++]
-  email: faker.internet.email(), // [!code ++]
-  phone: faker.phone.number(), // [!code ++]
-  address: {  // [!code ++]
-    street: faker.location.streetAddress(), // [!code ++]
-    city: faker.location.city(), // [!code ++]
-    zip: faker.location.zipCode(), // [!code ++]
-    country: faker.location.country(), // [!code ++]
-  }, // [!code ++]
-} // [!code ++]
+faker.image.avatar() // [!code --]
+faker.image.avatar() // [!code ++]
 ```
