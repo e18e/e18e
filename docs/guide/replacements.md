@@ -15,8 +15,8 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`buffer-equal`](./replacement-guides/buffer-equal.md) | :x: |
 | [`buffer-equals`](./replacement-guides/buffer-equals.md) | :x: |
 | [`builtin-modules`](./replacement-guides/builtin-modules.md) | :x: |
-| [`chalk`](./replacement-guides/chalk.md) | :x: |
-| [`deep-equal`](./replacement-guides/deep-equal.md) | :x: |
+| [`chalk`](./replacement-guides/chalk.md) | :ballot_box_with_check: |
+| [`deep-equal`](./replacement-guides/deep-equal.md) | :ballot_box_with_check: |
 | [`dotenv`](./replacement-guides/dotenv.md) | :x: |
 | [`emoji-regex`](./replacement-guides/emoji-regex.md) | :x: |
 | [`eslint-plugin-es`](./replacement-guides/eslint-plugin-es.md) | :x: |
@@ -34,11 +34,11 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-up`](./replacement-guides/find-up.md) | :x: |
 | [`glob`](./replacement-guides/glob.md) | :x: |
 | [`invariant`](./replacement-guides/invariant.md) | :x: |
-| [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :x: |
+| [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :ballot_box_with_check: |
 | [`js-yaml`](./replacement-guides/js-yaml.md) | :x: |
 | [`jsx-ast-utils`](./replacement-guides/jsx-ast-utils.md) | :x: |
 | [`lint-staged`](./replacement-guides/lint-staged.md) | :x: |
-| [`md5`](./replacement-guides/md5.md) | :x: |
+| [`md5`](./replacement-guides/md5.md) | :ballot_box_with_check: |
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
 | [`path-exists`](./replacement-guides/path-exists.md) | :x: |
 | [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
@@ -51,6 +51,6 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`sort-object`](./replacement-guides/sort-object.md) | :x: |
 | [`string-width`](./replacement-guides/string-width.md) | :x: |
 | [`strip-ansi`](./replacement-guides/strip-ansi.md) | :x: |
-| [`traverse`](./replacement-guides/traverse.md) | :x: |
+| [`traverse`](./replacement-guides/traverse.md) | :ballot_box_with_check: |
 | [`uri-js`](./replacement-guides/uri-js.md) | :x: |
 | [`xmldom`](./replacement-guides/xmldom.md) | :x: |
