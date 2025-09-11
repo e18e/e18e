@@ -12,9 +12,7 @@ description: Modern  replacements for the unmaintained faker package generating 
 const faker = require('faker') // [!code --]
 const { faker } = require('@faker-js/faker') // [!code ++]
 
-faker.datatype.boolean() // [!code --]
-faker.datatype.boolean() // [!code ++]
+faker.datatype.boolean()
 
-faker.image.avatar() // [!code --]
-faker.image.avatar() // [!code ++]
+faker.image.avatar()
 ```
