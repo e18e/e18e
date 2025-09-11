@@ -17,7 +17,7 @@ import { glob } from 'tinyglobby' // [!code ++]
 const files = await glob('**/*.ts')
 ```
 
-Most options available to `glob` are available in `tinyglobby`, read more at the [tinyglobby documentation](https://github.com/SuperchupuDev/tinyglobby?tab=readme-ov-file#options).
+Most options available to `glob` are available in `tinyglobby`, read more at the [tinyglobby documentation](https://superchupu.dev/tinyglobby/documentation).
 
 ## `fs.glob` (native, since Node 22.x)
 
