@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
+import process from 'node:process'
 import { createInterface } from 'node:readline'
 import { fileURLToPath } from 'node:url'
 
