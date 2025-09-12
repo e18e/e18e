@@ -15,11 +15,9 @@ const splitter = new GraphemeSplitter() // [!code --]
 
 const segmenter = new Intl.Segmenter() // [!code ++]
 
-// Split into grapheme clusters
 const graphemes = splitter.splitGraphemes(text) // [!code --]
 const graphemes = [...segmenter.segment(text)].map(s => s.segment) // [!code ++]
 
-// Count graphemes
 const count = splitter.countGraphemes(text) // [!code --]
 const count = [...segmenter.segment(text)].length // [!code ++]
 ```
