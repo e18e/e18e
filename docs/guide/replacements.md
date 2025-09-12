@@ -40,6 +40,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`lint-staged`](./replacement-guides/lint-staged.md) | :x: |
 | [`md5`](./replacement-guides/md5.md) | :ballot_box_with_check: |
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
+| [`ora`](./replacement-guides/ora.md) | :x: |
 | [`path-exists`](./replacement-guides/path-exists.md) | :x: |
 | [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
