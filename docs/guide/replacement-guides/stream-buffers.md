@@ -15,36 +15,11 @@ import streamBuffers from 'stream-buffers' // [!code --]
 import { pipeline } from 'node:stream/promises' // [!code --]
 import { buffer, text, json, blob, arrayBuffer } from 'node:stream/consumers' // [!code ++]
 
-// Buffer with full contents
-const sink1 = new streamBuffers.WritableStreamBuffer() // [!code --]
-await pipeline(readable, sink1) // [!code --]
-const buf = sink1.getContents() // [!code --]
-const buf = await buffer(readable) // [!code ++]
+const sink = new streamBuffers.WritableStreamBuffer() // [!code --]
+await pipeline(readable, sink) // [!code --]
 
-// UTF‑8 string
-const sink2 = new streamBuffers.WritableStreamBuffer() // [!code --]
-await pipeline(readable, sink2) // [!code --]
-const str = sink2.getContentsAsString('utf8') // [!code --]
-const str = await text(readable) // [!code ++]
-
-// JSON.parse() of a UTF‑8 string
-const sink3 = new streamBuffers.WritableStreamBuffer() // [!code --]
-await pipeline(readable, sink3) // [!code --]
-const data = JSON.parse(sink3.getContentsAsString('utf8')) // [!code --]
-const data = await json(readable) // [!code ++]
-
-// Blob
-const sink4 = new streamBuffers.WritableStreamBuffer() // [!code --]
-await pipeline(readable, sink4) // [!code --]
-const b = new Blob([sink4.getContents()]) // [!code --]
-const b = await blob(readable) // [!code ++]
-
-// ArrayBuffer
-const sink5 = new streamBuffers.WritableStreamBuffer() // [!code --]
-await pipeline(readable, sink5) // [!code --]
-const tmp = sink5.getContents() // Buffer [!code --]
-const ab = tmp.buffer.slice(tmp.byteOffset, tmp.byteOffset + tmp.byteLength) // [!code --]
-const ab = await arrayBuffer(readable) // [!code ++]
+const out = sink.getContents() // or sink.getContentsAsString('utf8') / JSON.parse(sink.getContentsAsString('utf8')) / new Blob([sink.getContents()]) / sink.getContents().buffer.slice(...) [!code --]
+const out = await buffer(readable) // or text(readable) / json(readable) / blob(readable) / arrayBuffer(readable) [!code ++]
 ```
 
 ## Capturing output when an API expects a Writable
