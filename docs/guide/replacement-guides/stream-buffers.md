@@ -22,9 +22,7 @@ const out = sink.getContents() // or sink.getContentsAsString('utf8') / JSON.par
 const out = await buffer(readable) // or text(readable) / json(readable) / blob(readable) / arrayBuffer(readable) [!code ++]
 ```
 
-## Capturing output when an API expects a Writable
-
-Example:
+Capturing output when an API expects a Writable example:
 
 ```ts
 import streamBuffers from 'stream-buffers' // [!code --]
@@ -42,8 +40,6 @@ await someFnThatWritesTo(sink) // [!code ++]
 sink.end() // [!code ++]
 const out = await resultP // [!code ++]
 ```
-
-## Creating a Readable from data
 
 Push data over time example:
 
