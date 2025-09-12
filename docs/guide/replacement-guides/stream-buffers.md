@@ -60,9 +60,9 @@ const sink = new streamBuffers.WritableStreamBuffer() // [!code --]
 const sink = new PassThrough() // [!code ++]
 
 await someFnThatWritesTo(sink) // [!code --]
-const out = sink.getContents() // or sink.getContentsAsString('utf8') // [!code --]
+const out = sink.getContents() // or sink.getContentsAsString('utf8') [!code --]
 
-const resultP = buffer(sink) // or text(sink) // [!code ++]
+const resultP = buffer(sink) // or text(sink) [!code ++]
 await someFnThatWritesTo(sink) // [!code ++]
 sink.end() // [!code ++]
 const out = await resultP // [!code ++]
