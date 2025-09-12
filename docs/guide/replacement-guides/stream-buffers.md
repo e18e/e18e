@@ -52,18 +52,20 @@ const ab = await arrayBuffer(readable) // [!code ++]
 Example:
 
 ```ts
-import streamBuffers from 'stream-buffers // [!code --]
+import streamBuffers from 'stream-buffers' // [!code --]
 import { PassThrough } from 'node:stream' // [!code ++]
-import { buffer as consumeBuffer, text as consumeText } from 'node:stream/consumers' // [!code ++]
+import { buffer, text } from 'node:stream/consumers' // [!code ++]
 
 const sink = new streamBuffers.WritableStreamBuffer() // [!code --]
 const sink = new PassThrough() // [!code ++]
 
-const resultP = consumeBuffer(sink) // or consumeText(sink)
+await someFnThatWritesTo(sink) // [!code --]
+const out = sink.getContents() // or sink.getContentsAsString('utf8') // [!code --]
 
-await someFnThatWritesTo(sink)
-sink.end()
-const out = await resultP
+const resultP = buffer(sink) // or text(sink) // [!code ++]
+await someFnThatWritesTo(sink) // [!code ++]
+sink.end() // [!code ++]
+const out = await resultP // [!code ++]
 ```
 
 ## Creating a Readable from data
