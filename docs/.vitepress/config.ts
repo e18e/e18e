@@ -66,6 +66,7 @@ export default defineConfig({
     nav: [
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       { text: 'Blog', link: '/blog' },
+      { text: 'Replacements', link: '/guide/replacements' },
     ],
 
     sidebar: {
