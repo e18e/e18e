@@ -17,7 +17,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`builtin-modules`](./replacement-guides/builtin-modules.md) | :x: |
 | [`chalk`](./replacement-guides/chalk.md) | :ballot_box_with_check: |
 | [`deep-equal`](./replacement-guides/deep-equal.md) | :ballot_box_with_check: |
-| [`dot-prop`](./replacement-guides/dot-prop.md) | :ballot_box_with_check: |
+| [`dot-prop`](./replacement-guides/dot-prop.md) | :x: |
 | [`dotenv`](./replacement-guides/dotenv.md) | :x: |
 | [`emoji-regex`](./replacement-guides/emoji-regex.md) | :x: |
 | [`eslint-plugin-es`](./replacement-guides/eslint-plugin-es.md) | :x: |
