@@ -33,6 +33,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-pkg`](./replacement-guides/find-pkg.md) | :x: |
 | [`find-up`](./replacement-guides/find-up.md) | :x: |
 | [`glob`](./replacement-guides/glob.md) | :x: |
+| [`graphemer`](./replacement-guides/graphemer.md) | :x: |
 | [`invariant`](./replacement-guides/invariant.md) | :x: |
 | [`is-builtin-module`](./replacement-guides/is-builtin-module.md) | :ballot_box_with_check: |
 | [`js-yaml`](./replacement-guides/js-yaml.md) | :x: |
