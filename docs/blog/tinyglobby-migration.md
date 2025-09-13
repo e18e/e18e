@@ -47,7 +47,13 @@ of less than 100 lines would be turned into its own library, so that others coul
 
 ## Dependency savings
 
-`globby` consists of [24 packages by 14 maintainers](https://npmgraph.js.org/?q=globby) with an [install size of 631KB](https://pkg-size.dev/globby) while [`fast-glob` consists of 18 packages by 12 maintainers](https://npmgraph.js.org/?q=fast-glob) with an [install size of 513KB](https://pkg-size.dev/fast-glob). In comparison, [`tinyglobby` consists of 3 packages by 6 maintainers](https://npmgraph.js.org/?q=tinyglobby) with an [install size of 162KB](https://pkg-size.dev/tinyglobby). Having fewer packages reduces the need to have as many people with access to merge and release new versions thus reducing supply chain vulnerabilities, of which we've seen a number of in the npm ecosystem. E.g. just recently, users of `glob`, which has 26 dependencies, were affected by a supply chain attack in which a dependency - `strip-ansi` - [was compromised](https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack). Users of `tinyglobby` would not have been affected by this particular attack and face far less risk of similar attacks in the future.
+Let's take a look at some comparisons with other libraries in this space:
+
+- `globby` consists of [24 packages by 14 maintainers](https://npmgraph.js.org/?q=globby) with an [install size of 631KB](https://pkg-size.dev/globby)
+- `fast-glob` consists of [18 packages by 12 maintainers](https://npmgraph.js.org/?q=fast-glob) with an [install size of 513KB](https://pkg-size.dev/fast-glob)
+- **`tinyglobby` consists of [3 packages by 6 maintainers](https://npmgraph.js.org/?q=tinyglobby) with an [install size of 162KB](https://pkg-size.dev/tinyglobby)**
+
+Having fewer packages reduces the need to have as many people with access to merge and release new versions thus reducing supply chain vulnerabilities, of which we've seen a number of in the npm ecosystem. For example, just recently, users of `glob`, which has 26 dependencies, were affected by a supply chain attack in which a dependency - `strip-ansi` - [was compromised](https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack). Users of `tinyglobby` would not have been affected by this particular attack and face far less risk of similar attacks in the future.
 
 ### Deduplication
 
