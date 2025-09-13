@@ -57,7 +57,35 @@ Having fewer packages reduces the need to have as many people with access to mer
 
 ### Deduplication
 
-Of course `globby` and `fast-glob` are widely used so you may question whether switching a library to use `tinyglobby` just results in more dependencies rather than any savings once dependency deduplication is factored in. Most build tool packages such as Vite, SWC, copy-webpack-plugin, tsup, tsdown, unbuild, nx, and lerna now use exclusively `tinyglobby` and do not use either `globby` or `fast-glob` (`@rollup/plugin-commonjs` shares dependencies with and dedupes much better with `tinyglobby` as well). Additionally, newly created React Router, Preact, Angular, SvelteKit, Astro, Starlight, and eleventy apps all use exclusively `tinyglobby` and do not use either `globby` or `fast-glob`. For others like Nuxt, SolidStart, and TanStack Start, all dependencies have fully switched to `tinyglobby` and those frameworks will only use `tinyglobby` once they update their dependencies. Most remaining frameworks use both `tinyglobby` and `fast-glob`.
+Of course `globby` and `fast-glob` are widely used so you may question whether switching a library to use `tinyglobby` just results in more dependencies rather than any savings once dependency deduplication is factored in.
+
+A whole raft of popular build tools now rely solely on tinyglobby for glob functionality:
+
+- Vite
+- SWC
+- copy-webpack-plugin
+- tsup
+- tsdown
+- unbuild
+- nx
+- lerna
+- and many more...
+
+None of these tools have a deep dependency on other glob libraries - all of them use tinyglobby all the way down 🎉 
+
+Similarly, many popular frameworks have made the same move:
+
+- React Router
+- Preact
+- Angular
+- SvelteKit
+- Astro
+- Starlight
+- Eleventy
+
+New apps using these frameworks will no longer have deep dependencies on multiple glob libraries.
+
+For others like Nuxt, SolidStart, and TanStack Start, all dependencies have fully switched to `tinyglobby` and those frameworks will only use `tinyglobby` once they update their dependencies. Most remaining frameworks use both `tinyglobby` and `fast-glob`.
 
 Some ecosystems now rely almost entirely on `tinyglobby` — Svelte maintainer [benmccann](https://www.benmccann.com/) has switched over most of the Svelte ecosystem to using `tinyglobby`. You can now setup a new SvelteKit project with [every integration it offers](https://svelte.dev/docs/cli/sv-add#Official-add-ons) (`drizzle`, `eslint`, `lucia`, `mdsvex`, `paraglide`, `playwright`, `prettier`, `storybook`, `tailwindcss`, `vitest`, and all SvelteKit adapters) and your project will exclusively use `tinyglobby` unless you use both typescript and eslint. Many other notable projects such as `pnpm`, `node-gyp`, and `eslint-import-resolver-typescript` have made the switch as well.
 
