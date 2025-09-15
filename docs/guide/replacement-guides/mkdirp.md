@@ -32,10 +32,10 @@ import { mkdir, mkdirSync } from 'node:fs' // [!code ++]
 import { mkdir as mkdirAsync } from 'node:fs/promises' // [!code ++]
 
 // Async
-await makeDirectory('unicorn/rainbow/cake') // [!code --]
-await mkdirAsync('unicorn/rainbow/cake', { recursive: true }) // [!code ++]
+await makeDirectory('/tmp/foo/bar/baz') // [!code --]
+await mkdirAsync('/tmp/foo/bar/baz', { recursive: true }) // [!code ++]
 
 // Sync
-makeDirectorySync('unicorn/rainbow/cake') // [!code --]
-mkdirSync('unicorn/rainbow/cake', { recursive: true }) // [!code ++]
+makeDirectorySync('/tmp/foo/bar/baz') // [!code --]
+mkdirSync('/tmp/foo/bar/baz', { recursive: true }) // [!code ++]
 ```
