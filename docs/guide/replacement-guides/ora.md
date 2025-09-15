@@ -12,8 +12,8 @@ description: Modern alternatives to the ora package for displaying elegant termi
 import ora from 'ora' // [!code --]
 import { createSpinner } from 'nanospinner' // [!code ++]
 
-const spinner = ora('Loading unicorns').start() // [!code --]
-const spinner = createSpinner('Loading unicorns').start() // [!code ++]
+const spinner = ora('Loading...').start() // [!code --]
+const spinner = createSpinner('Loading...').start() // [!code ++]
 
 spinner.succeed('Done!') // [!code --]
 spinner.success('Done!') // [!code ++]
@@ -33,10 +33,12 @@ import { Spinner } from 'picospinner' // [!code ++]
 const spinner = ora('Loading...').start() // [!code --]
 const spinner = new Spinner('Loading...') // [!code ++]
 spinner.start() // [!code ++]
+```
 
-spinner.color = 'yellow' // [!code --]
-// Custom colors via options // [!code ++]
-const colorSpinner = new Spinner('Loading...', { colors: { spinner: 'yellow' } }) // [!code ++]
+If you want to customize the color of the spinner, you can specify this when creating an instance:
+
+```ts
+const spinner = new Spinner('Loading...', { colors: { spinner: 'yellow' } })
 ```
 
 ## `tiny-spinner`
