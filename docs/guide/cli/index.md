@@ -108,7 +108,7 @@ The CLI uses a set of codemods from the [module-replacements](https://github.com
 
 ### Default Migrations
 
-The CLI comes with pre-configured migrations for common performance optimizations. You can find the list of the current replacements in the [module-replacements](https://github.com/es-tooling/module-replacements/tree/main/manifests) repository.
+The CLI comes with pre-configured migrations for common performance optimizations. You can find the list of the current replacements in the [replacements docs](https://e18e.dev/guide/replacements.html).
 
 > [!IMPORTANT]
 > The replacement list is still being developed and expanded. The current list represents the initial set of well-tested migrations. More replacements will be added as they are validated and tested across the ecosystem.
