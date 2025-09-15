@@ -10,42 +10,34 @@ description: Modern alternatives to the mkdirp and make-dir packages for recursi
 
 Node.js v10.12.0 and up supports the `recursive` option in the [`fs.mkdir`](https://nodejs.org/api/fs.html#fsmkdirpath-options-callback) function, which allows parent directories to be created automatically.
 
-From [`mkdirp`](https://github.com/isaacs/node-mkdirp) (async):
+From [`mkdirp`](https://github.com/isaacs/node-mkdirp):
 
 ```js
 import { mkdirp } from 'mkdirp' // [!code --]
-import { mkdir } from 'node:fs/promises' // [!code ++]
+import { mkdir, mkdirSync } from 'node:fs' // [!code ++]
+import { mkdir as mkdirAsync } from 'node:fs/promises' // [!code ++]
 
+// Async
 await mkdirp('/tmp/foo/bar/baz') // [!code --]
-await mkdir('/tmp/foo/bar/baz', { recursive: true }) // [!code ++]
-```
+await mkdirAsync('/tmp/foo/bar/baz', { recursive: true }) // [!code ++]
 
-From [`mkdirp`](https://github.com/isaacs/node-mkdirp) (sync):
-
-```js
-import { mkdirp } from 'mkdirp' // [!code --]
-import { mkdirSync } from 'node:fs' // [!code ++]
-
+// Sync
 mkdirp.sync('/tmp/foo/bar/baz') // [!code --]
 mkdirSync('/tmp/foo/bar/baz', { recursive: true }) // [!code ++]
 ```
 
-From [`make-dir`](https://github.com/sindresorhus/make-dir) (async):
+From [`make-dir`](https://github.com/sindresorhus/make-dir):
 
 ```js
-import { makeDirectory } from 'make-dir' // [!code --]
-import { mkdir } from 'node:fs/promises' // [!code ++]
+import { makeDirectory, makeDirectorySync } from 'make-dir' // [!code --]
+import { mkdir, mkdirSync } from 'node:fs' // [!code ++]
+import { mkdir as mkdirAsync } from 'node:fs/promises' // [!code ++]
 
+// Async
 await makeDirectory('unicorn/rainbow/cake') // [!code --]
-await mkdir('unicorn/rainbow/cake', { recursive: true }) // [!code ++]
-```
+await mkdirAsync('unicorn/rainbow/cake', { recursive: true }) // [!code ++]
 
-From [`make-dir`](https://github.com/sindresorhus/make-dir) (sync):
-
-```js
-import { makeDirectorySync } from 'make-dir' // [!code --]
-import { mkdirSync } from 'node:fs' // [!code ++]
-
+// Sync
 makeDirectorySync('unicorn/rainbow/cake') // [!code --]
 mkdirSync('unicorn/rainbow/cake', { recursive: true }) // [!code ++]
 ```
