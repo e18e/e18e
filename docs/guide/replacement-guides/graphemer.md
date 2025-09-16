@@ -12,7 +12,6 @@ description: Modern alternatives to the grapheme-splitter and graphemer packages
 import GraphemeSplitter from 'grapheme-splitter' // [!code --]
 
 const splitter = new GraphemeSplitter() // [!code --]
-
 const segmenter = new Intl.Segmenter() // [!code ++]
 
 const graphemes = splitter.splitGraphemes(text) // [!code --]
@@ -28,7 +27,6 @@ const count = [...segmenter.segment(text)].length // [!code ++]
 
 ```ts
 import GraphemeSplitter from 'grapheme-splitter' // [!code --]
-
 import { countGraphemes, splitGraphemes } from 'unicode-segmenter/grapheme' // [!code ++]
 
 const splitter = new GraphemeSplitter() // [!code --]
