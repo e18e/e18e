@@ -25,22 +25,3 @@ app.use(urlencoded()) // [!code ++]
 ```
 
 For API differences and feature comparison, see the [migration.md](https://github.com/tinyhttp/milliparsec/blob/master/migration.md).
-
-## Built-in Express parsers
-
-Express 4.16.0+ includes built-in body parsing middleware based on [`body-parser`](https://github.com/expressjs/body-parser).
-
-Example:
-
-```ts
-import bodyParser from 'body-parser' // [!code --]
-import express from 'express'
-
-const app = express()
-
-app.use(bodyParser.json()) // [!code --]
-app.use(bodyParser.urlencoded({ extended: true })) // [!code --]
-
-app.use(express.json()) // [!code ++]
-app.use(express.urlencoded({ extended: true })) // [!code ++]
-```
