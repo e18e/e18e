@@ -41,7 +41,7 @@ const count = countGraphemes(text) // [!code ++]
 You can also use it as an `Intl.Segmenter` polyfill:
 
 ```ts
-import 'unicode-segmenter/intl-polyfill' // [!code ++]
+import 'unicode-segmenter/intl-polyfill'
 
 const segmenter = new Intl.Segmenter()
 const graphemes = [...segmenter.segment(text)].map(s => s.segment)
