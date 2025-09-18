@@ -45,6 +45,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
 | [`path-exists`](./replacement-guides/path-exists.md) | :x: |
 | [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
+| [`qs`](./replacement-guides/qs.md) | :x: |
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
 | [`read-pkg-up`](./replacement-guides/read-pkg-up.md) | :x: |
 | [`read-pkg`](./replacement-guides/read-pkg.md) | :x: |
