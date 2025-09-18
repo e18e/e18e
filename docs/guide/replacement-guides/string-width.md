@@ -14,7 +14,7 @@ import stringWidth from 'fast-string-width' // [!code ++]
 
 console.log(stringWidth('abc')) // 3
 console.log(stringWidth('👩‍👩‍👧‍👦')) // 1
-console.log(stringWidth('\u001b[31mhello\u001b[39m')) // 5
+console.log(stringWidth('\u001B[31mhello\u001B[39m')) // 5
 ```
 
 ## Bun API (native)
@@ -27,8 +27,8 @@ import { stringWidth } from 'bun' // [!code ++]
 
 console.log(stringWidth('abc')) // 3
 console.log(stringWidth('👩‍👩‍👧‍👦')) // 1
-console.log(stringWidth('\u001b[31mhello\u001b[39m')) // 5
+console.log(stringWidth('\u001B[31mhello\u001B[39m')) // 5
 console.log(
-  stringWidth('\u001b[31mhello\u001b[39m', { countAnsiEscapeCodes: false })
+  stringWidth('\u001B[31mhello\u001B[39m', { countAnsiEscapeCodes: false })
 ) // 5
 ```
