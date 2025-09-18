@@ -54,6 +54,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`sort-object`](./replacement-guides/sort-object.md) | :x: |
 | [`string-width`](./replacement-guides/string-width.md) | :x: |
 | [`strip-ansi`](./replacement-guides/strip-ansi.md) | :x: |
+| [`tempy`](./replacement-guides/tempy.md) | :x: |
 | [`traverse`](./replacement-guides/traverse.md) | :ballot_box_with_check: |
 | [`uri-js`](./replacement-guides/uri-js.md) | :x: |
 | [`xmldom`](./replacement-guides/xmldom.md) | :x: |
