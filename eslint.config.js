@@ -17,7 +17,7 @@ export default antfu(
     },
   },
   {
-    files: ['docs/guide/replacement-guides/**/*.md/*'],
+    files: ['docs/docs/replacements/**/*.md/*'],
     rules: {
       'antfu/curly': 'off',
       'antfu/if-newline': 'off',

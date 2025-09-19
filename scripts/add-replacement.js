@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const repoRoot = join(__dirname, '..')
-const guidesDir = join(repoRoot, 'docs', 'guide', 'replacement-guides')
-const indexPath = join(repoRoot, 'docs', 'guide', 'replacements.md')
+const guidesDir = join(repoRoot, 'docs/docs/replacements')
+const indexPath = join(repoRoot, 'docs/docs/replacements/index.md')
 
 const rl = createInterface({
   input: process.stdin,
