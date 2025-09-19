@@ -40,6 +40,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`js-yaml`](./replacement-guides/js-yaml.md) | :x: |
 | [`jsx-ast-utils`](./replacement-guides/jsx-ast-utils.md) | :x: |
 | [`lint-staged`](./replacement-guides/lint-staged.md) | :x: |
+| [`materialize-css`](./replacement-guides/materialize-css.md) | :x: |
 | [`md5`](./replacement-guides/md5.md) | :ballot_box_with_check: |
 | [`moment`](./replacement-guides/moment.md) | :x: |
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
