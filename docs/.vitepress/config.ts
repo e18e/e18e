@@ -64,7 +64,7 @@ export default defineConfig({
     },
 
     nav: [
-      { text: 'Learn', link: '/learn' },
+      { text: 'Learn', link: '/learn/' },
       { text: 'Docs', link: '/docs/' },
       { text: 'Blog', link: '/blog' },
     ],
