@@ -121,7 +121,7 @@ export default defineConfig({
           items: [
             {
               text: 'List of replacements',
-              link: '/docs/replacements',
+              link: '/docs/replacements/',
             },
           ],
         },
