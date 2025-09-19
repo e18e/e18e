@@ -16,6 +16,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`buffer-equals`](./replacement-guides/buffer-equals.md) | :x: |
 | [`builtin-modules`](./replacement-guides/builtin-modules.md) | :x: |
 | [`chalk`](./replacement-guides/chalk.md) | :ballot_box_with_check: |
+| [`cpx`](./replacement-guides/cpx.md) | :x: |
 | [`deep-equal`](./replacement-guides/deep-equal.md) | :ballot_box_with_check: |
 | [`depcheck`](./replacement-guides/depcheck.md) | :x: |
 | [`dotenv`](./replacement-guides/dotenv.md) | :x: |
