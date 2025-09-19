@@ -2,6 +2,11 @@
 description: TODO
 ---
 
+<!-- lodash.callback - This package is discontinued. Use lodash.iteratee@^4.0.0. -->
+<!-- lodash.compose - This package is discontinued. Use lodash.flowright@^3.0.0. -->
+<!-- lodash.contains - This package is discontinued. Use lodash.includes@^4.0.0. -->
+<!-- lodash.createcallback - This package is discontinued. Use lodash.iteratee@^4.0.0. -->
+
 # Replacements for `lodash`, `underscore` and related
 
 ## `lodash.add`
@@ -826,12 +831,11 @@ function conformsTo(object, source) { // [!code ++]
 
 ## `lodash.constant`
 
-`lodash.constant` creates a function that always returns the same value.
-In plain JavaScript, you can replace it with an arrow function that closes over the value:
+Creates a function that always returns the provided value. Works for any value (including objects/arrays/functions); for reference types it returns the same reference each time.
 
 ```js
-var constant = require('lodash.constant') // [!code --]
-const constant = x => () => x // [!code ++]
+import constant from 'lodash/constant'; // [!code --]
+const constant = (value) => () => value; // [!code ++]
 
 const object = { user: 'fred' }
 const getter = constant(object)
@@ -839,6 +843,736 @@ const getter = constant(object)
 console.log(getter() === object) // true
 console.log(getter()) // { user: 'fred' }
 ```
+
+## `lodash.countBy`
+
+Counts elements in a collection by a key generated from each item. Works with arrays, array‑likes, and plain objects (own enumerable string keys). The iteratee defaults to identity and supports simple shorthands:
+
+- function
+- property path string (dot/bracket)
+- number/symbol key
+- [path, value] (matchesProperty → counts true/false)
+- plain object (partial match → counts true/false)
+
+```js
+import countBy from 'lodash/countBy'; // [!code --]
+function countBy(collection, iteratee) { // [!code ++]
+  if (collection == null) return {}; // [!code ++]
+  const fn = toIteratee(iteratee); // [!code ++]
+  const out = {}; // [!code ++]
+
+  if (isArrayLike(collection)) { // [!code ++]
+    const len = collection.length >>> 0; // [!code ++]
+    for (let i = 0; i < len; i++) { // [!code ++]
+      add(out, fn(collection[i])); // [!code ++]
+    }
+  } else {
+    for (const k of Object.keys(collection)) add(out, fn(collection[k])); // [!code ++]
+  }
+  return out; // [!code ++]
+
+  function add(obj, keyRaw) { // [!code ++]
+    const key = typeof keyRaw === 'symbol' ? keyRaw : String(keyRaw); // [!code ++]
+    obj[key] = Object.prototype.hasOwnProperty.call(obj, key) ? obj[key] + 1 : 1; // [!code ++]
+  } // [!code ++]
+
+  function isArrayLike(v) { // [!code ++]
+    return v != null && typeof v.length === 'number' && v.length >= 0 && typeof v !== 'function'; // [!code ++]
+  } // [!code ++]
+
+  function toIteratee(v) { // [!code ++]
+    if (typeof v === 'function') return v; // [!code ++]
+    if (v == null) return x => x; // identity // [!code ++]
+    if (typeof v === 'string') return o => get(o, v); // [!code ++]
+    if (typeof v === 'number' || typeof v === 'symbol') return o => (o == null ? undefined : o[v]); // [!code ++]
+    if (Array.isArray(v)) { // [!code ++]
+      if (v.length === 2) { const [path, expected] = v; return o => eq(get(o, path), expected); } // [!code ++]
+      return o => get(o, v); // [!code ++]
+    }
+    if (typeof v === 'object') { // [!code ++]
+      const src = v, ks = Object.keys(src); // [!code ++]
+      return o => ks.every(k => eq(o && o[k], src[k])); // [!code ++]
+    }
+    return x => x; // [!code ++]
+  } // [!code ++]
+
+  function get(obj, path) { // [!code ++]
+    if (Array.isArray(path)) { let o = obj; for (const k of path) { if (o == null) return undefined; o = o[k]; } return o; } // [!code ++]
+    if (typeof path !== 'string') return obj == null ? undefined : obj[path]; // [!code ++]
+    const parts = []; // [!code ++]
+    path.replace(/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])(.*?)\2)\]/g, (m, num, q, str) => { // [!code ++]
+      parts.push(num !== undefined ? Number(num) : (str !== undefined ? str : m)); // [!code ++]
+    }); // [!code ++]
+    let o = obj; for (const k of parts) { if (o == null) return undefined; o = o[k]; } return o; // [!code ++]
+  } // [!code ++]
+
+  function eq(a, b) { return a === b || (a !== a && b !== b); } // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.create`
+
+Creates an object that inherits from the given prototype, then shallow‑assigns own enumerable string‑keyed properties from the second argument onto it. If prototype isn’t object-like (null/primitive), returns a plain object {}. Note: unlike Object.create(proto, descriptors), the second argument is NOT treated as property descriptors.
+
+```js
+import create from 'lodash/create'; // [!code --]
+function create(prototype, properties) { // [!code ++]
+  const obj = (prototype != null && (typeof prototype === 'object' || typeof prototype === 'function')) // [!code ++]
+    ? Object.create(prototype) // [!code ++]
+    : {}; // [!code ++]
+
+  if (properties != null) { // [!code ++]
+    for (const k of Object.keys(Object(properties))) { // [!code ++]
+      obj[k] = properties[k]; // [!code ++]
+    } // [!code ++]
+  } // [!code ++]
+
+  return obj; // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.curry`
+
+Returns a function that keeps collecting arguments (across calls) until it has at least arity non‑placeholder args, then calls the original. Preserves this. Supports placeholders via curry.placeholder; the returned function also exposes .placeholder.
+
+```js
+import curry from 'lodash/curry'; // [!code --]
+function curry(fn, arity) { // [!code ++]
+  if (typeof fn !== 'function') throw new TypeError('Expected a function'); // [!code ++]
+  const ph = curry.placeholder; // [!code ++]
+  const a = Math.max(arity == null ? fn.length : (arity | 0), 0); // [!code ++]
+
+  function curried(collected) { // [!code ++]
+    return function(...args) { // [!code ++]
+      const filled = collected.slice(); // [!code ++]
+      let i = 0; // [!code ++]
+      for (let j = 0; j < filled.length && i < args.length; j++) { // [!code ++]
+        if (filled[j] === ph) filled[j] = args[i++]; // [!code ++]
+      } // [!code ++]
+      while (i < args.length) filled.push(args[i++]); // [!code ++]
+
+      let count = 0; // [!code ++]
+      for (const v of filled) if (v !== ph) count++; // [!code ++]
+
+      if (count >= a) {// [!code ++]
+        const finalArgs = []; // [!code ++]
+        for (const v of filled) if (v !== ph) finalArgs.push(v); // [!code ++]
+        return fn.apply(this, finalArgs); // [!code ++]
+      } // [!code ++]
+
+      const next = curried(filled); // [!code ++]
+      next.placeholder = ph; // [!code ++]
+      return next; // [!code ++]
+    }; // [!code ++]
+  } // [!code ++]
+
+  const out = curried([]); // [!code ++]
+  out.placeholder = ph; // [!code ++]
+  return out; // [!code ++]
+} // [!code ++]
+curry.placeholder = {}; // [!code ++]
+```
+
+## `lodash.curryRight`
+
+Like curry, but collects arguments from the right. Each call prepends new args to the left of the collected list; when the number of non‑placeholder args reaches arity (defaults to fn.length), the original function is invoked with args ordered right-to-left. Preserves this. Supports placeholders via curryRight.placeholder.
+
+```js
+import curryRight from 'lodash/curryRight'; // [!code --]
+function curryRight(fn, arity) { // [!code ++]
+  if (typeof fn !== 'function') throw new TypeError('Expected a function'); // [!code ++]
+  const ph = curryRight.placeholder; // [!code ++]
+  const a = Math.max(arity == null ? fn.length : (arity | 0), 0); // [!code ++]
+
+  function curried(collected) { // [!code ++]
+    return function(...args) { // [!code ++]
+      const filled = collected.slice(); // [!code ++]
+      let i = args.length - 1; // [!code ++]
+      for (let j = filled.length - 1; j >= 0 && i >= 0; j--) { // [!code ++]
+        if (filled[j] === ph) filled[j] = args[i--]; // [!code ++]
+      } // [!code ++]
+      const merged = args.slice(0, i + 1).concat(filled); // [!code ++]
+
+      let count = 0; for (const v of merged) if (v !== ph) count++; // [!code ++]
+
+      if (count >= a) { // [!code ++]
+        const finalArgs = []; // [!code ++]
+        for (const v of merged) if (v !== ph) finalArgs.push(v); // [!code ++]
+        return fn.apply(this, finalArgs); // [!code ++]
+      } // [!code ++]
+
+      const next = curried(merged); // [!code ++]
+      next.placeholder = ph; // [!code ++]
+      return next; // [!code ++]
+    }; // [!code ++]
+  } // [!code ++]
+
+  const out = curried([]); // [!code ++]
+  out.placeholder = ph; // [!code ++]
+  return out; // [!code ++]
+} // [!code ++]
+curryRight.placeholder = {}; // [!code ++]
+```
+
+## `lodash.debounce`
+
+Creates a debounced function that delays invoking fn until after wait ms have elapsed since the last call. Options:
+- leading: invoke on the leading edge
+- trailing: invoke on the trailing edge (default true)
+- maxWait: ensure fn is invoked at least once every maxWait ms
+
+The debounced function has .cancel() and .flush() methods.
+
+```js
+import debounce from 'lodash/debounce'; // [!code --]
+function debounce(fn, wait = 0, options) { // [!code ++]
+  if (typeof fn !== 'function') throw new TypeError('Expected a function'); // [!code ++]
+
+  let leading = false; // [!code ++]
+  let trailing = true; // [!code ++]
+  let maxing = false; // [!code ++]
+  let maxWait; // [!code ++]
+
+  if (options && typeof options === 'object') { // [!code ++]
+    leading = !!options.leading; // [!code ++]
+    trailing = 'trailing' in options ? !!options.trailing : trailing; // [!code ++]
+    if ('maxWait' in options) { // [!code ++]
+      maxing = true; // [!code ++]
+      maxWait = Math.max(Number(options.maxWait) || 0, Number(wait) || 0); // [!code ++]
+    } // [!code ++]
+  } // [!code ++]
+
+  wait = Number(wait) || 0; // [!code ++]
+
+  let timerId; // [!code ++]
+  let lastArgs; // [!code ++]
+  let lastThis; // [!code ++]
+  let lastCallTime; // [!code ++]
+  let lastInvokeTime = 0; // [!code ++]
+  let result; // [!code ++]
+
+  function now() { return Date.now(); } // [!code ++]
+
+  function invoke(time) { // [!code ++]
+    const args = lastArgs, thisArg = lastThis; // [!code ++]
+    lastArgs = lastThis = undefined; // [!code ++]
+    lastInvokeTime = time; // [!code ++]
+    result = fn.apply(thisArg, args); // [!code ++]
+    return result; // [!code ++]
+  } // [!code ++]
+
+  function leadingEdge(time) { // [!code ++]
+    lastInvokeTime = time; // [!code ++]
+    timerId = setTimeout(timerExpired, wait); // [!code ++]
+    return leading ? invoke(time) : result; // [!code ++]
+  } // [!code ++]
+
+  function remainingWait(time) { // [!code ++]
+    const timeSinceLastCall = time - lastCallTime; // [!code ++]
+    const timeSinceLastInvoke = time - lastInvokeTime; // [!code ++]
+    const timeWaiting = wait - timeSinceLastCall; // [!code ++]
+    return maxing ? Math.min(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting; // [!code ++]
+  } // [!code ++]
+
+  function shouldInvoke(time) { // [!code ++]
+    const timeSinceLastCall = time - lastCallTime; // [!code ++]
+    const timeSinceLastInvoke = time - lastInvokeTime; // [!code ++]
+    return (lastCallTime === undefined) // [!code ++]
+      || (timeSinceLastCall >= wait) // [!code ++]
+      || (timeSinceLastCall < 0) // [!code ++]
+      || (maxing && timeSinceLastInvoke >= maxWait); // force invoke // [!code ++]
+  } // [!code ++]
+
+  function timerExpired() { // [!code ++]
+    const t = now(); // [!code ++]
+    if (shouldInvoke(t)) return trailingEdge(t); // [!code ++]
+    timerId = setTimeout(timerExpired, remainingWait(t)); // [!code ++]
+  } // [!code ++]
+
+  function trailingEdge(time) { // [!code ++]
+    timerId = undefined; // [!code ++]
+    if (trailing && lastArgs) return invoke(time); // [!code ++]
+    lastArgs = lastThis = undefined; // [!code ++]
+    return result; // [!code ++]
+  } // [!code ++]
+
+  function cancel() { // [!code ++]
+    if (timerId !== undefined) clearTimeout(timerId); // [!code ++]
+    lastInvokeTime = 0; // [!code ++]
+    lastArgs = lastCallTime = lastThis = timerId = undefined; // [!code ++]
+  } // [!code ++]
+
+  function flush() { // [!code ++]
+    return timerId === undefined ? result : trailingEdge(now()); // [!code ++]
+  } // [!code ++]
+
+  function debounced(...args) { // [!code ++]
+    const t = now(); // [!code ++]
+    const isInvoking = shouldInvoke(t); // [!code ++]
+    lastArgs = args; // [!code ++]
+    lastThis = this; // [!code ++]
+    lastCallTime = t; // [!code ++]
+
+    if (isInvoking) { // [!code ++]
+      if (timerId === undefined) { // [!code ++]
+        return leadingEdge(lastCallTime); // [!code ++]
+      } // [!code ++]
+      if (maxing) { // [!code ++]
+        clearTimeout(timerId); // [!code ++]
+        timerId = setTimeout(timerExpired, wait); // [!code ++]
+        return invoke(lastCallTime); // [!code ++]
+      } // [!code ++]
+    } // [!code ++]
+
+    if (timerId === undefined) { // [!code ++]
+      timerId = setTimeout(timerExpired, wait); // [!code ++]
+    } // [!code ++]
+    return result; // [!code ++]
+  } // [!code ++]
+
+  debounced.cancel = cancel; // [!code ++]
+  debounced.flush = flush; // [!code ++]
+  return debounced; // [!code ++]
+} // [!code ++]
+```
+
+<!-- link to perfect-debounce ? -->
+
+## `lodash.deburr`
+
+Strips accents/diacritics from (mostly Latin) text. This “good enough” version uses Unicode NFKD to split base letters and combining marks, removes the marks, and applies a couple of extra Latin fixes (like ß → ss). Nullish input becomes "".
+
+```js
+import deburr from 'lodash/deburr'; // [!code --]
+function deburr(input) { // [!code ++]
+  if (input == null) return ""; // [!code ++]
+  let s = String(input); // [!code ++]
+  if (!s) return ""; // [!code ++]
+
+  if (typeof s.normalize === "function") { // [!code ++]
+    s = s.normalize("NFKD"); // split base letters and marks // [!code ++]
+  } // [!code ++]
+
+  try { // [!code ++]
+    s = s.replace(/\p{M}+/gu, ""); // [!code ++]
+  } catch { // [!code ++]
+    s = s.replace(/[\u0300-\u036f\uFE20-\uFE2F\u20D0-\u20FF]/g, ""); // [!code ++]
+  } // [!code ++]
+
+  s = s
+    .replace(/ß/g, "ss") // [!code ++]
+    .replace(/ẞ/g, "SS") // [!code ++]
+    .replace(/ı/g, "i"); // [!code ++]
+
+  return s; // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.defaults`
+
+Assigns missing properties to an object from one or more source objects. It:
+- Mutates and returns the target.
+- Uses own AND inherited enumerable string keys from sources (like for..in).
+- Only sets a key if target[key] is undefined, or if the key is only inherited from Object.prototype (e.g., toString) and not an own property.
+- Later sources don’t overwrite values set by earlier ones. Symbols aren’t copied.
+
+```js
+import defaults from 'lodash/defaults'; // [!code --]
+function defaults(object, ...sources) { // [!code ++]
+  const obj = Object(object); // [!code ++]
+  for (const src of sources) { // [!code ++]
+    if (src == null) continue; // [!code ++]
+    for (const key in src) { // [!code ++]
+      const val = obj[key]; // [!code ++]
+      if ( // [!code ++]
+        val === undefined || // truly missing // [!code ++]
+        ( // [!code ++]
+          !Object.prototype.hasOwnProperty.call(obj, key) && // [!code ++]
+          val === Object.prototype[key] // [!code ++]
+        ) // [!code ++]
+      ) { // [!code ++]
+        obj[key] = src[key]; // [!code ++]
+      } // [!code ++]
+    } // [!code ++]
+  } // [!code ++]
+  return obj; // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.defaultsDeep`
+
+Recursively assigns missing properties from one or more sources. It:
+- Mutates and returns the target
+- Walks own and inherited enumerable string keys (like for..in)
+- Only fills when the target value is undefined; otherwise it leaves it alone
+- Recurses into plain objects and arrays; other types (Date, RegExp, Map, Set, typed arrays, etc.) are copied only when missing
+- Skips dangerous keys like __proto__ and constructor (when it’s a function)
+- Handles circular references in sources
+
+```js
+import defaultsDeep from 'lodash/defaultsDeep'; // [!code --]
+function defaultsDeep(object, ...sources) { // [!code ++]
+  if (object == null) return object; // [!code ++]
+  const target = Object(object); // [!code ++]
+  const srcToDst = new WeakMap(); // [!code ++]
+
+  for (const src of sources) { // [!code ++]
+    if (src == null) continue; // [!code ++]
+    mergeInto(target, src); // [!code ++]
+  } // [!code ++]
+  return target; // [!code ++]
+
+  function mergeInto(t, s) { // [!code ++]
+    for (const key in s) { // [!code ++]
+      if (key === '__proto__') continue; // [!code ++]
+      if (key === 'constructor' && typeof s[key] === 'function') continue; // [!code ++]
+
+      const sv = s[key]; // [!code ++]
+      const tv = t[key]; // [!code ++]
+
+      if (isMergeable(sv)) { // plain object or array // [!code ++]
+        const existing = srcToDst.get(sv); // [!code ++]
+        if (existing) { // [!code ++]
+          if (tv === undefined) t[key] = existing; // [!code ++]
+          continue; // [!code ++]
+        } // [!code ++]
+
+        let dst = tv; // [!code ++]
+        if (!isMergeable(dst)) { // [!code ++]
+          dst = Array.isArray(sv) ? [] : {}; // [!code ++]
+          if (tv === undefined) t[key] = dst; // [!code ++]
+        } // [!code ++]
+
+        srcToDst.set(sv, dst); // [!code ++]
+        mergeInto(dst, sv); // [!code ++]
+      } else {
+        if (tv === undefined) t[key] = sv; // [!code ++]
+      }
+    } // [!code ++]
+  } // [!code ++]
+
+  function isMergeable(x) { // [!code ++]
+    return x != null && (Array.isArray(x) || isPlainObject(x)); // [!code ++]
+  } // [!code ++]
+
+  function isPlainObject(x) { // [!code ++]
+    if (Object.prototype.toString.call(x) !== '[object Object]') return false; // [!code ++]
+    const proto = Object.getPrototypeOf(x); // [!code ++]
+    return proto === null || proto === Object.prototype; // [!code ++]
+  } // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.defaultto`
+
+Returns defaultValue when value is null, undefined, or NaN; otherwise returns value. Unlike the nullish coalescing operator (??), this also treats NaN as “missing.”
+
+```js
+import defaultTo from 'lodash/defaultTo'; // [!code --]
+function defaultTo(value, defaultValue) { // [!code ++]
+  return value == null || value !== value ? defaultValue : value; // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.defer`
+
+Defers calling a function until the current call stack clears. It schedules a macrotask with setTimeout(..., 1), passes any extra args to the function, and returns the timer id.
+
+```js
+import defer from 'lodash/defer'; // [!code --]
+function defer(fn, ...args) { // [!code ++]
+  if (typeof fn !== 'function') throw new TypeError('Expected a function'); // [!code ++]
+  return setTimeout(() => { fn(...args); }, 1); // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.delay`
+
+Schedules a function to run after wait milliseconds, forwarding any extra arguments. Returns the timer id. Wait is coerced to a number (NaN -> 0).
+
+```js
+import delay from 'lodash/delay'; // [!code --]
+function delay(fn, wait, ...args) { // [!code ++]
+  if (typeof fn !== 'function') throw new TypeError('Expected a function'); // [!code ++]
+  const ms = Number(wait) || 0; // [!code ++]
+  return setTimeout(() => { fn.apply(undefined, args); }, ms); // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.difference`
+
+Returns a new array of values from the first array that are not present in the other arrays. Uses SameValueZero equality (so NaN matches NaN, -0 equals 0). Flattens only one level of the “values” inputs.
+
+```js
+import difference from 'lodash/difference'; // [!code --]
+function difference(array, ...values) { // [!code ++]
+  const arr = Array.from(array ?? []); // [!code ++]
+  if (values.length === 0) return arr.slice(); // [!code ++]
+
+  const exclude = new Set( // [!code ++]
+    values.flatMap(v => (v == null ? [] : Array.from(v))) // [!code ++]
+  ); // [!code ++]
+
+  return arr.filter(x => !exclude.has(x)); // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.differenceBy`
+
+Like difference, but compares values after running them through an iteratee. Returns the elements of the first array whose transformed values aren’t present in the transformed “values” arrays.
+
+- Flattens the “values” inputs one level
+- Iteratee can be a function, a property path string (dot/bracket), or a key (number/symbol)
+- If the last argument is array-like, it’s treated as part of “values” (no iteratee)
+- Uses SameValueZero equality on transformed values (NaN equals NaN, -0 equals 0)
+
+```js
+import differenceBy from 'lodash/differenceBy'; // [!code --]
+function differenceBy(array, ...rest) { // [!code ++]
+  const arr = Array.from(array ?? []); // [!code ++]
+  if (arr.length === 0) return []; // [!code ++]
+
+  let iteratee = rest[rest.length - 1]; // [!code ++]
+  const isArrayLike = v => v != null && typeof v === 'object' && typeof v.length === 'number'; // [!code ++]
+  const hasIteratee = rest.length > 0 && !isArrayLike(iteratee); // [!code ++]
+  const valuesLists = hasIteratee ? rest.slice(0, -1) : rest; // [!code ++]
+  const fn = toIteratee(hasIteratee ? iteratee : x => x); // [!code ++]
+
+  const flatValues = valuesLists.flatMap(v => (v == null ? [] : Array.from(v))); // [!code ++]
+  const exclude = new Set(flatValues.map(fn)); // SameValueZero in Set // [!code ++]
+
+  return arr.filter(x => !exclude.has(fn(x))); // [!code ++]
+
+  function toIteratee(v) { // [!code ++]
+    if (typeof v === 'function') return v; // [!code ++]
+    if (typeof v === 'string') return o => get(o, v); // path string // [!code ++]
+    if (typeof v === 'number' || typeof v === 'symbol') return o => (o == null ? undefined : o[v]); // [!code ++]
+    return x => x; // [!code ++]
+  } // [!code ++]
+
+  function get(obj, path) { // [!code ++]
+    if (Array.isArray(path)) { let o = obj; for (const k of path) { if (o == null) return undefined; o = o[k]; } return o; } // [!code ++]
+    if (typeof path !== 'string') return obj == null ? undefined : obj[path]; // [!code ++]
+    const parts = []; // [!code ++]
+    path.replace(/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])(.*?)\2)\]/g, (m, num, q, str) => {
+      parts.push(num !== undefined ? Number(num) : (str !== undefined ? str : m));
+    }); // [!code ++]
+    let o = obj; for (const k of parts) { if (o == null) return undefined; o = o[k]; } return o; // [!code ++]
+  } // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.differenceWith`
+
+## lodash.differenceWith
+
+Like difference, but lets you supply a custom comparator(a, b) to decide equality. Returns elements from the first array that aren’t considered equal to any element in the other arrays.
+
+- Flattens the “values” inputs one level
+- If the last arg is array-like, it’s treated as part of “values” (no comparator)
+- Comparator receives (arrVal, othVal) and should return true when equal
+- No iteratee transform here; use differenceBy for that
+
+```js
+import differenceWith from 'lodash/differenceWith'; // [!code --]
+function differenceWith(array, ...rest) { // [!code ++]
+  const arr = Array.from(array ?? []); // [!code ++]
+  if (arr.length === 0) return []; // [!code ++]
+
+  const maybe = rest[rest.length - 1]; // [!code ++]
+  const isArrayLike = v => v != null && typeof v === 'object' && typeof v.length === 'number'; // [!code ++]
+  const comparator = rest.length && !isArrayLike(maybe) ? maybe : undefined; // [!code ++]
+  const lists = comparator ? rest.slice(0, -1) : rest; // [!code ++]
+
+  const flatValues = lists.flatMap(v => (v == null ? [] : Array.from(v))); // [!code ++]
+  if (!comparator) { // [!code ++]
+    const exclude = new Set(flatValues); // [!code ++]
+    return arr.filter(x => !exclude.has(x)); // [!code ++]
+  }
+
+  return arr.filter(a => !flatValues.some(b => comparator(a, b))); // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.divide`
+
+Divides two values with lodash-y coercion rules:
+- If both are undefined, returns 1.
+- If one is undefined, returns the other.
+- If either arg is a string, both are converted to strings first (then JS / coerces to numbers).
+- Otherwise both are coerced to numbers. Symbols become NaN.
+
+```js
+import divide from 'lodash/divide'; // [!code --]
+function divide(a, b) { // [!code ++]
+  if (a === undefined && b === undefined) return 1; // [!code ++]
+  let result = a !== undefined ? a : undefined; // [!code ++]
+
+  if (b !== undefined) { // [!code ++]
+    if (result === undefined) return b; // [!code ++]
+    const strMode = (typeof a === 'string') || (typeof b === 'string'); // [!code ++]
+    const toNum = v => (typeof v === 'symbol' ? NaN : +v); // [!code ++]
+    const toStr = v => String(v); / [!code ++]
+    const x = strMode ? toStr(a) : toNum(a); // [!code ++]
+    const y = strMode ? toStr(b) : toNum(b); // [!code ++]
+    result = x / y; // [!code ++]
+  } // [!code ++]
+
+  return result; // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.drop`
+
+Returns a slice of array with n elements dropped from the start. Defaults to 1. Accepts array-like input.
+
+- n is coerced to an integer (truncated). NaN/undefined -> default 1; negative -> treated as 0.
+- If guard is truthy (internal iteratee calls), it uses the default of 1.
+- Nullish input returns [].
+
+```js
+import drop from 'lodash/drop'; // [!code --]
+function drop(array, n, guard) { // [!code ++]
+  if (array == null) return []; // [!code ++]
+  const len = array.length >>> 0; // array-like safe // [!code ++]
+  let count = (guard || n === undefined) ? 1 : Math.trunc(Number(n) || 0); // [!code ++]
+  if (count < 0) count = 0; // [!code ++]
+  if (count >= len) return []; // [!code ++]
+  const out = new Array(len - count); // [!code ++]
+  for (let i = count, j = 0; i < len; i++, j++) out[j] = array[i]; // [!code ++]
+  return out; // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.dropRight`
+
+Returns a slice of array with n elements dropped from the end. Defaults to 1. Accepts array-like input.
+
+- n is coerced to an integer (truncated). NaN/undefined -> default 1; negative -> treated as 0 (returns original array).
+- If guard is truthy (internal iteratee calls), uses the default of 1.
+- Nullish input returns [].
+
+```js
+import dropRight from 'lodash/dropRight'; // [!code --]
+function dropRight(array, n, guard) { // [!code ++]
+  if (array == null) return []; // [!code ++]
+  const len = array.length >>> 0; // [!code ++]
+  if (len === 0) return []; // [!code ++]
+
+  let count = (guard || n === undefined) ? 1 : Math.trunc(Number(n) || 0); // [!code ++]
+  if (count < 0) count = 0; // [!code ++]
+
+  let end = len - count; // [!code ++]
+  if (end < 0) end = 0; // [!code ++]
+  if (end > len) end = len; // [!code ++]
+
+  const out = new Array(end); // [!code ++]
+  for (let i = 0; i < end; i++) out[i] = array[i]; // [!code ++]
+  return out; // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.dropRightWhile`
+
+Creates a slice of array excluding elements dropped from the end while predicate returns truthy. Once predicate is falsey, it stops and returns the remaining front part.
+
+- Predicate receives (value, index, array)
+- Shorthands: function, property path string, [path, value], plain object
+- Nullish input returns []
+
+```js
+import dropRightWhile from 'lodash/dropRightWhile'; // [!code --]
+function dropRightWhile(array, predicate) { // [!code ++]
+  const len = array == null ? 0 : (array.length >>> 0); // [!code ++]
+  if (!len) return []; // [!code ++]
+  const fn = toIteratee(predicate); // [!code ++]
+
+  let i = len - 1; // [!code ++]
+  for (; i >= 0; i--) { if (!fn(array[i], i, array)) break; } // [!code ++]
+
+  const end = i + 1; // [!code ++]
+  const out = new Array(end); // [!code ++]
+  for (let j = 0; j < end; j++) out[j] = array[j]; // [!code ++]
+  return out; // [!code ++]
+
+  function toIteratee(v) { // [!code ++]
+    if (typeof v === 'function') return v; // [!code ++]
+    if (v == null) return x => x; // [!code ++]
+    if (Array.isArray(v) && v.length === 2) { // [path, value] // [!code ++]
+      const [path, expected] = v; return obj => eq(get(obj, path), expected); // [!code ++]
+    }
+    if (typeof v === 'object') { // [!code ++]
+      const src = v, ks = Reflect.ownKeys(src); // [!code ++]
+      return obj => { if (obj == null) return false; for (const k of ks) if (!eq(obj[k], src[k])) return false; return true; }; // [!code ++]
+    }
+    return obj => get(obj, v); // [!code ++]
+  } // [!code ++]
+
+  function get(obj, path) { // [!code ++]
+    if (Array.isArray(path)) { let o = obj; for (const k of path) { if (o == null) return undefined; o = o[k]; } return o; } // [!code ++]
+    if (typeof path !== 'string') return obj == null ? undefined : obj[path]; // [!code ++]
+    const parts = []; // [!code ++]
+    path.replace(/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])(.*?)\2)\]/g, (m, num, q, str) => { // [!code ++]
+      parts.push(num !== undefined ? Number(num) : (str !== undefined ? str : m)); // [!code ++]
+    }); // [!code ++]
+    let o = obj; for (const k of parts) { if (o == null) return undefined; o = o[k]; } return o; // [!code ++]
+  } // [!code ++]
+
+  function eq(a, b) { return a === b || (a !== a && b !== b); } // [!code ++]
+} // [!code ++]
+```
+
+## `lodash.dropWhile`
+
+Creates a slice of array excluding elements dropped from the beginning while predicate returns truthy. Once predicate is falsey, it stops and returns the rest.
+
+- Predicate is called with (value, index, array)
+- Shorthand supported: function, property path string, [path, value], plain object
+- Nullish input returns []
+
+```js
+import dropWhile from 'lodash/dropWhile'; // [!code --]
+function dropWhile(array, predicate) { // [!code ++]
+  const len = array == null ? 0 : (array.length >>> 0); // [!code ++]
+  if (!len) return []; // [!code ++]
+  const fn = toIteratee(predicate); // [!code ++]
+
+  let i = 0; // [!code ++]
+  for (; i < len; i++) { if (!fn(array[i], i, array)) break; } // [!code ++]
+
+  const outLen = len - i; // [!code ++]
+  const out = new Array(outLen); // [!code ++]
+  for (let j = 0; j < outLen; j++) out[j] = array[i + j]; // [!code ++]
+  return out; // [!code ++]
+
+  function toIteratee(v) { // [!code ++]
+    if (typeof v === 'function') return v; // [!code ++]
+    if (v == null) return x => x; // [!code ++]
+    if (Array.isArray(v) && v.length === 2) { / [!code ++]
+      const [path, expected] = v; return obj => eq(get(obj, path), expected); // [!code ++]
+    }
+    if (typeof v === 'object') { // [!code ++]
+      const src = v, ks = Reflect.ownKeys(src); // [!code ++]
+      return obj => { if (obj == null) return false; for (const k of ks) if (!eq(obj[k], src[k])) return false; return true; }; // [!code ++]
+    }
+    return obj => get(obj, v); // [!code ++]
+  } // [!code ++]
+
+  function get(obj, path) { // dot/bracket paths // [!code ++]
+    if (Array.isArray(path)) { let o = obj; for (const k of path) { if (o == null) return undefined; o = o[k]; } return o; } // [!code ++]
+    if (typeof path !== 'string') return obj == null ? undefined : obj[path]; // [!code ++]
+    const parts = []; // [!code ++]
+    path.replace(/[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])(.*?)\2)\]/g, (m, num, q, str) => { // [!code ++]
+      parts.push(num !== undefined ? Number(num) : (str !== undefined ? str : m)); // [!code ++]
+    }); // [!code ++]
+    let o = obj; for (const k of parts) { if (o == null) return undefined; o = o[k]; } return o; // [!code ++]
+  } // [!code ++]
+
+  function eq(a, b) { return a === b || (a !== a && b !== b); } // NaN-safe // [!code ++]
+} // [!code ++]
+```
+
+<!-- STOPPED THERE -->
 
 ## `lodash.get`
 
