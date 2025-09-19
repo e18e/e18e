@@ -37,7 +37,7 @@ if (existsSync('/etc/passwd')) // [!code ++]
 import pathExists from 'path-exists' // [!code --]
 
 const path = '/path/to/package.json'
-const exists = await pathExists(path); // [!code --]
+const exists = await pathExists(path) // [!code --]
 const file = Bun.file(path) // [!code ++]
 const exists = await file.exists() // boolean [!code ++]
 ```
