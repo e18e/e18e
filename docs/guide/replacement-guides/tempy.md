@@ -12,14 +12,11 @@ Example:
 
 ```js
 import {temporaryDirectory} from 'tempy' // [!code --]
-const tempDir = temporaryDirectory() // [!code --]
-
 import {mkdtemp, realpath} from 'node:fs/promises' // [!code ++]
 import {join} from 'node:path' // [!code ++]
 import {tmpdir} from 'node:os' // [!code ++]
 
-// macOS and some other platforms may return a symlink from `os.tmpdir`.
-// For some applications, this can cause problems; thus, we use `realpath`.
+const tempDir = temporaryDirectory() // [!code --]
 const tempDir = await mkdtemp(join(await realpath(tmpdir()), 'foo-')) // [!code ++]
 ```
 
@@ -34,12 +31,12 @@ await temporaryDirectoryTask(async tempDir => { // [!code --]
 import {rm, writeFile} from 'node:fs/promises' // [!code ++]
 import {join} from 'node:path' // [!code ++]
 
-try { // [!code ++]
-  await writeFile(join(tempDir, 'bar.txt'), 'Hello, world!', {encoding: 'utf-8'}); // [!code ++]
-  await writeFile(join(tempDir, 'baz.txt'), '...', {encoding: 'utf-8'}); // [!code ++]
-} finally { // [!code ++]
-  await rm(tempDir, {recursive: true}); // [!code ++]
-} // [!code ++]
+try {
+  await writeFile(join(tempDir, 'bar.txt'), 'Hello, world!', {encoding: 'utf-8'});
+  await writeFile(join(tempDir, 'baz.txt'), '...', {encoding: 'utf-8'});
+} finally {
+  await rm(tempDir, {recursive: true});
+}
 ```
 
 ## Deno
