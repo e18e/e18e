@@ -10,6 +10,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | Module | Auto-fixable |
 | -- | -- |
 | [`@jsdevtools/ez-spawn`](./replacement-guides/ez-spawn.md) | :x: |
+| [`axios`](./replacement-guides/axios.md) | :x: |
 | [`body-parser`](./replacement-guides/body-parser.md) | :x: |
 | [`buf-compare`](./replacement-guides/buf-compare.md) | :x: |
 | [`buffer-equal`](./replacement-guides/buffer-equal.md) | :x: |
