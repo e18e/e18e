@@ -43,6 +43,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`md5`](./replacement-guides/md5.md) | :ballot_box_with_check: |
 | [`moment`](./replacement-guides/moment.md) | :x: |
 | [`npm-run-all`](./replacement-guides/npm-run-all.md) | :x: |
+| [`object-hash`](./replacement-guides/object-hash.md) | :x: |
 | [`path-exists`](./replacement-guides/path-exists.md) | :x: |
 | [`pkg-dir`](./replacement-guides/pkg-dir.md) | :x: |
 | [`read-package-up`](./replacement-guides/read-package-up.md) | :x: |
