@@ -25,6 +25,7 @@ Most options available to `glob` are available in `tinyglobby`, read more at the
 
 Example:
 
+<!-- eslint-skip -->
 ```ts
 import { glob } from 'glob' // [!code --]
 import { glob } from 'node:fs/promises' // [!code ++]
@@ -51,6 +52,7 @@ for await (const result of glob('src/**/*.ts', { cwd })) {
 
 Example:
 
+<!-- eslint-skip -->
 ```ts
 import { fdir } from 'fdir' // [!code ++]
 import { glob } from 'glob' // [!code --]

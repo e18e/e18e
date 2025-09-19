@@ -33,6 +33,7 @@ nanoid(10) // e.g., "NG3oYbq9qE"
 
 ### Custom alphabet (replacement for `shortid.characters`)
 
+<!-- eslint-skip -->
 ```ts
 shortid.characters('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$@') // [!code --]
 import { customAlphabet } from 'nanoid' // [!code ++]
@@ -41,4 +42,3 @@ const alphabet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
 const makeId = customAlphabet(alphabet, 12) // [!code ++]
 const id = makeId() // [!code ++]
 ```
-
