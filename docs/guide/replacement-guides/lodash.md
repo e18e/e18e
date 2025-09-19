@@ -822,6 +822,8 @@ function conformsTo(object, source) { // [!code ++]
 } // [!code ++]
 ```
 
+<!-- --- FINISHED THERE --- -->
+
 ## `lodash.constant`
 
 `lodash.constant` creates a function that always returns the same value.
