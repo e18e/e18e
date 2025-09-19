@@ -19,8 +19,11 @@ export default antfu(
   {
     files: ['docs/guide/replacement-guides/**/*.md/*'],
     rules: {
-      'perfectionist/sort-imports': 'off',
+      'antfu/curly': 'off',
+      'antfu/if-newline': 'off',
       'jsonc/no-dupe-keys': 'off',
+      'perfectionist/sort-imports': 'off',
+      'style/indent': 'off',
     },
   },
 )
