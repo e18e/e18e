@@ -22,6 +22,8 @@ const { stdout } = await x('ls', ['-l'], { throwOnError: true }) // [!code ++]
 
 If you prefer a very thin wrapper over `child_process.spawn` (including full spawn options and optional shell), [`nanoexec`](https://github.com/fabiospampinato/nanoexec) is another light alternative. Its `stdout`/`stderr` are Buffers.
 
+Example:
+
 ```ts
 import { execa } from 'execa' // [!code --]
 import exec from 'nanoexec' // [!code ++]
@@ -36,6 +38,8 @@ await exec('echo "example"', { shell: true }) // [!code ++]
 ## Bun
 
 If you’re on Bun, its built-in [`$`](https://bun.com/reference/bun/$) template tag can replace `execa`’s script-style usage:
+
+Example:
 
 ```ts
 import { $ } from 'execa' // [!code --]
