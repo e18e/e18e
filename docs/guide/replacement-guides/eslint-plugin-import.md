@@ -12,7 +12,7 @@ description: Modern alternative to eslint-plugin-import, which helps with lintin
 
 ```js
 import importPlugin from 'eslint-plugin-import' // [!code --]
-import { importX, createNodeResolver } from 'eslint-plugin-import-x' // [!code ++]
+import { createNodeResolver, importX } from 'eslint-plugin-import-x' // [!code ++]
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript' // [!code ++]
 
 export default [
