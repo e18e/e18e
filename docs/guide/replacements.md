@@ -25,6 +25,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`eslint-plugin-import`](./replacement-guides/eslint-plugin-import.md) | :x: |
 | [`eslint-plugin-node`](./replacement-guides/eslint-plugin-node.md) | :x: |
 | [`eslint-plugin-vitest`](./replacement-guides/eslint-plugin-vitest.md) | :x: |
+| [`execa`](./replacement-guides/execa.md) | :x: |
 | [`ez-spawn`](./replacement-guides/ez-spawn.md) | :x: |
 | [`faker`](./replacement-guides/faker.md) | :x: |
 | [`fast-glob`](./replacement-guides/fast-glob.md) | :x: |
