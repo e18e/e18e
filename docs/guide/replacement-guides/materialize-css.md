@@ -8,7 +8,7 @@ description: Modern alternatives to materialize-css (Materialize) and modern Mat
 
 [`@materializecss/materialize`](https://github.com/materializecss/materialize) is a community-maintained fork of [`Materialize`](https://github.com/Dogfalo/materialize). Acts as a practical replacement for the original materialize-css package.
 
-## `material-web`
+## `@material/web`
 
 > [!NOTE]
 > The project is currently in maintenance mode pending new maintainers.
