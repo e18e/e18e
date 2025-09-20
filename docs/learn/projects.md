@@ -173,6 +173,21 @@ The e18e community is actively working on countless initiatives, both large and 
   </p>
 </div>
 
+<div class="project-card">
+  <div class="project-header">
+    <img src="https://github.com/sveltejs.png" alt="Svelte" class="org-avatar">
+    <div class="project-info">
+      <h4><a href="https://github.com/sveltejs/svelte">Svelte DX Optimization</a></h4>
+    </div>
+  </div>
+  <div class="collaboration-row">
+    In collaboration with: <a href="https://github.com/sveltejs/svelte" target="_blank">Svelte</a>
+  </div>
+  <p class="project-description">
+    Improving the speed and install size of Svelte's tooling and developer libraries.
+  </p>
+</div>
+
 ## Get Involved
 
 Want to contribute to any of these projects? Join our [discord](https://chat.e18e.dev/) and say Hi!
