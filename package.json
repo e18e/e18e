@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@10.4.0",
+  "packageManager": "pnpm@10.17.0",
   "scripts": {
     "dev": "pnpm -C docs run dev",
     "build": "pnpm -C docs run build",
@@ -13,12 +13,12 @@
     "add-replacement": "node ./scripts/add-replacement.js"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.17.0",
-    "@types/node": "^22.13.4",
-    "eslint": "^9.31.0",
-    "lint-staged": "^15.4.3",
-    "simple-git-hooks": "^2.11.1",
-    "typescript": "~5.7.3"
+    "@antfu/eslint-config": "^5.3.0",
+    "@types/node": "^24.5.2",
+    "eslint": "^9.35.0",
+    "lint-staged": "^16.1.6",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "~5.9.2"
   },
   "pnpm": {
     "peerDependencyRules": {
