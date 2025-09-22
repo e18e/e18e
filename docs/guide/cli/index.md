@@ -78,11 +78,9 @@ e18e-cli migrate [packages...] [options]
 - `packages...` - Names of packages to migrate (e.g., `chalk`, `lodash`)
 
 **Options:**
-- `--all` - Run all available migrations
 - `--dry-run` - Don't apply any fixes, only show what would change
 - `--include <pattern>` - Files to migrate. Default: `**/*.{ts,js}`
 - `--interactive` - Run in interactive mode
-- `--manifest <path>` - Use custom migration manifest file(s)
 
 **Examples:**
 ```sh
@@ -92,29 +90,24 @@ e18e-cli migrate chalk lodash
 # Preview changes without applying
 e18e-cli migrate chalk --dry-run
 
-# Migrate all available packages
-e18e-cli migrate --all
-
 # Interactive mode to select packages
 e18e-cli migrate --interactive
-
-# Use custom migration manifest
-e18e-cli migrate --manifest ./custom-migrations.json
 ```
 
-## Migration System
+## Replacements System
 
-The CLI uses a set of codemods from the [module-replacements](https://github.com/es-tooling/module-replacements-codemods) project for migrations.
+The CLI uses a set of codemods from the [module-replacements-codemods](https://github.com/es-tooling/module-replacements-codemods) project for migrations, and replacements from the [replacements list](https://e18e.dev/guide/replacements.html).
 
-### Default Migrations
+### Default Replacements
 
-The CLI comes with pre-configured migrations for common performance optimizations. You can find the list of the current replacements in the [replacements docs](https://e18e.dev/guide/replacements.html).
+The CLI comes with pre-configured replacements for common performance optimizations. You can find the list of the current replacements in the [replacements docs](https://e18e.dev/guide/replacements.html).
 
 > [!IMPORTANT]
 > The replacement list is still being developed and expanded. The current list represents the initial set of well-tested migrations. More replacements will be added as they are validated and tested across the ecosystem.
 
 ### Custom Manifests
-You can bring your own migration rules by providing custom manifest files:
+
+You can bring your own replacement rules by providing custom manifest files:
 
 ```json
 {
@@ -129,66 +122,10 @@ You can bring your own migration rules by providing custom manifest files:
 ```
 
 Use custom manifests with the `--manifest` option:
-```sh
-e18e-cli migrate --manifest ./my-migrations.json
-```
-
-## What the CLI Analyzes
-
-The `analyze` command runs several checks on your project:
-
-1. Check for TypeScript declaration file issues (using [ATTW](https://github.com/arethetypeswrong/arethetypeswrong))
-2. Validate package.json and publishing configuration (using [Publint](https://github.com/arethetypeswrong/publint))
-3. Identify opportunities to replace packages with more performant alternatives (using [module-replacements](https://github.com/es-tooling/module-replacements))
-4. Analyze your dependency tree for optimization opportunities
-
-## Example Workflow
 
 ```sh
-# 1. Analyze your project
-e18e-cli analyze
-
-# 2. Review the findings and recommendations
-# Look for warnings, suggestions, and optimization opportunities
-
-# 3. Migrate packages (preview first)
-e18e-cli migrate --all --dry-run
-
-# 4. Apply migrations
-e18e-cli migrate --all
-
-# 5. Verify improvements
-e18e-cli analyze
+e18e-cli analyze --manifest ./my-replacements.json
 ```
-
-## Development Workflow
-
-The CLI can be used in your development workflow:
-
-### Package Scripts
-```json
-{
-  "scripts": {
-    "analyze": "e18e-cli analyze",
-    "migrate": "e18e-cli migrate --interactive"
-  }
-}
-```
-
-### Local Development
-```sh
-# Run analysis during development
-npm run analyze
-
-# Check for migration opportunities
-e18e-cli migrate --dry-run
-```
-
-## Community
-
-- **Discord**: [Join our community](https://chat.e18e.dev)
-- **GitHub**: [Report issues and contribute](https://github.com/e18e/cli)
-- **Documentation**: [Full documentation](https://e18e.dev)
 
 ## Troubleshooting
 
@@ -215,10 +152,3 @@ e18e-cli analyze --log-level debug
 ```
 
 This will show detailed information about what the CLI is doing and help identify issues.
-
-## Support
-
-If you need help:
-1. Check the troubleshooting section above
-2. Search existing [GitHub issues](https://github.com/e18e/cli/issues)
-3. Ask questions in our [Discord server](https://chat.e18e.dev)

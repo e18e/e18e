@@ -117,10 +117,6 @@ export default defineConfig({
               link: '/guide/cli',
               items: [
                 {
-                  text: 'Installation',
-                  link: '/guide/cli/install',
-                },
-                {
                   text: 'analyze',
                   link: '/guide/cli/analyze',
                 },
