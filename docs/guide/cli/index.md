@@ -142,23 +142,6 @@ The `analyze` command runs several checks on your project:
 3. Identify opportunities to replace packages with more performant alternatives (using [module-replacements](https://github.com/es-tooling/module-replacements))
 4. Analyze your dependency tree for optimization opportunities
 
-## Features
-
-### Smart Analysis
-- **Automatic detection** of package managers and project structure
-- **Multiple analysis types** for comprehensive coverage
-- **Actionable recommendations** with clear next steps
-
-### Safe Migration
-- **Dry-run mode** to preview changes before applying
-- **Interactive selection** for choosing which packages to migrate
-- **Automatic rollback** support through git integration
-
-### Developer Experience
-- **Beautiful CLI interface** with progress indicators
-- **Comprehensive error handling** with helpful messages
-- **Integration ready** for CI/CD pipelines
-
 ## Example Workflow
 
 ```sh
