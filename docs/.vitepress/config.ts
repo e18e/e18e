@@ -1,6 +1,7 @@
 import process from 'node:process'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { defineConfig } from 'vitepress'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import { buildEnd } from './buildEnd.config'
 
 const ogTitle = 'e18e'
@@ -112,6 +113,20 @@ export default defineConfig({
               text: 'Replacements',
               link: '/guide/replacements',
             },
+            {
+              text: 'CLI',
+              link: '/guide/cli/',
+              items: [
+                {
+                  text: 'analyze',
+                  link: '/guide/cli/analyze',
+                },
+                {
+                  text: 'migrate',
+                  link: '/guide/cli/migrate',
+                },
+              ],
+            },
           ],
         },
       ],
@@ -140,6 +155,14 @@ export default defineConfig({
   },
   markdown: {
     codeTransformers: [transformerTwoslash()],
+    config(md) {
+      md.use(groupIconMdPlugin)
+    },
+  },
+  vite: {
+    plugins: [
+      groupIconVitePlugin(),
+    ],
   },
   buildEnd,
 })

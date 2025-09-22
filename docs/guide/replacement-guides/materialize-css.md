@@ -13,7 +13,6 @@ description: Modern alternatives to materialize-css (Materialize) and modern Mat
 > [!NOTE]
 > The project is currently in maintenance mode pending new maintainers.
 
-Modern Web Components implementing Material Design 3. 
+Modern Web Components implementing Material Design 3.
 
 [Project Page](https://github.com/material-components/material-web)
-
