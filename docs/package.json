@@ -7,12 +7,10 @@
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
-  "dependencies": {
-    "vitepress-plugin-group-icons": "1.6.3"
-  },
   "devDependencies": {
     "@shikijs/vitepress-twoslash": "^3.12.2",
     "feed": "^5.1.0",
-    "vitepress": "^2.0.0-alpha.12"
+    "vitepress": "^2.0.0-alpha.12",
+    "vitepress-plugin-group-icons": "1.6.3"
   }
 }
