@@ -115,7 +115,7 @@ export default defineConfig({
             },
             {
               text: 'CLI',
-              link: '/guide/cli',
+              link: '/guide/cli/',
               items: [
                 {
                   text: 'analyze',
