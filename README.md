@@ -23,9 +23,9 @@ Our aim is to provide a space for contributions, ideas and knowledge sharing aro
 
 Currently, there are three main areas of focus:
 
-- [cleanup](https://e18e.dev/guide/cleanup) - cleaning up dependency trees and modernizing popular tools and libraries across the ecosystem.
-- [speedup](https://e18e.dev/guide/speedup) - speeding up parts of the ecosystem many of us depend on.
-- [levelup](https://e18e.dev/guide/levelup) - documenting and providing modern, lighter alternatives to established tools and libraries we all regularly use.
+- [cleanup](https://e18e.dev/learn/cleanup) - cleaning up dependency trees and modernizing popular tools and libraries across the ecosystem.
+- [speedup](https://e18e.dev/learn/speedup) - speeding up parts of the ecosystem many of us depend on.
+- [levelup](https://e18e.dev/learn/levelup) - documenting and providing modern, lighter alternatives to established tools and libraries we all regularly use.
 
 ## Contributing
 

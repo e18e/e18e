@@ -65,27 +65,27 @@ export default defineConfig({
     },
 
     nav: [
-      { text: 'Guide', link: '/guide/', activeMatch: '/guide/(?!replacements)' },
+      { text: 'Learn', link: '/learn/' },
+      { text: 'Docs', link: '/docs/' },
       { text: 'Blog', link: '/blog' },
-      { text: 'Replacements', link: '/guide/replacements' },
     ],
 
     sidebar: {
-      '/guide/': [
+      '/learn/': [
         {
-          text: 'Guide',
+          text: 'Learn',
           items: [
             {
               text: 'Why e18e',
-              link: '/guide/',
+              link: '/learn/',
             },
             {
               text: 'Resources',
-              link: '/guide/resources',
+              link: '/learn/resources',
             },
             {
               text: 'Advocacy',
-              link: '/guide/advocacy',
+              link: '/learn/advocacy',
             },
           ],
         },
@@ -94,38 +94,49 @@ export default defineConfig({
           items: [
             {
               text: 'cleanup',
-              link: '/guide/cleanup',
+              link: '/learn/cleanup',
             },
             {
               text: 'speedup',
-              link: '/guide/speedup',
+              link: '/learn/speedup',
             },
             {
               text: 'levelup',
-              link: '/guide/levelup',
+              link: '/learn/levelup',
             },
           ],
         },
+      ],
+      '/docs/': [
         {
           text: 'Documentation',
           items: [
             {
-              text: 'Replacements',
-              link: '/guide/replacements',
+              text: 'Index',
+              link: '/docs/',
+            },
+          ],
+        },
+        {
+          text: 'Module Replacements',
+          items: [
+            {
+              text: 'List of replacements',
+              link: '/docs/replacements/',
+            },
+          ],
+        },
+        {
+          text: 'CLI',
+          link: '/docs/cli/',
+          items: [
+            {
+              text: 'analyze',
+              link: '/docs/cli/analyze',
             },
             {
-              text: 'CLI',
-              link: '/guide/cli/',
-              items: [
-                {
-                  text: 'analyze',
-                  link: '/guide/cli/analyze',
-                },
-                {
-                  text: 'migrate',
-                  link: '/guide/cli/migrate',
-                },
-              ],
+              text: 'migrate',
+              link: '/docs/cli/migrate',
             },
           ],
         },
