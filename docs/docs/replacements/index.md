@@ -10,12 +10,14 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | Module | Auto-fixable |
 | -- | -- |
 | [`@jsdevtools/ez-spawn`](./ez-spawn.md) | :x: |
+| [`axios`](./axios.md) | :x: |
 | [`body-parser`](./body-parser.md) | :x: |
 | [`buf-compare`](./buf-compare.md) | :x: |
 | [`buffer-equal`](./buffer-equal.md) | :x: |
 | [`buffer-equals`](./buffer-equals.md) | :x: |
 | [`builtin-modules`](./builtin-modules.md) | :x: |
 | [`chalk`](./chalk.md) | :ballot_box_with_check: |
+| [`cpx`](./cpx.md) | :x: |
 | [`deep-equal`](./deep-equal.md) | :ballot_box_with_check: |
 | [`depcheck`](./depcheck.md) | :x: |
 | [`dotenv`](./dotenv.md) | :x: |
@@ -37,9 +39,11 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`graphemer`](./graphemer.md) | :x: |
 | [`invariant`](./invariant.md) | :x: |
 | [`is-builtin-module`](./is-builtin-module.md) | :ballot_box_with_check: |
+| [`jQuery`](./jquery.md) | :x: |
 | [`js-yaml`](./js-yaml.md) | :x: |
 | [`jsx-ast-utils`](./jsx-ast-utils.md) | :x: |
 | [`lint-staged`](./lint-staged.md) | :x: |
+| [`materialize-css`](./materialize-css.md) | :x: |
 | [`md5`](./md5.md) | :ballot_box_with_check: |
 | [`moment`](./moment.md) | :x: |
 | [`npm-run-all`](./npm-run-all.md) | :x: |
