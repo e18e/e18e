@@ -11,7 +11,3 @@ Currently, there are three main areas of focus:
 - [cleanup](./cleanup.md) - cleaning up dependency trees and modernizing popular tools and libraries across the ecosystem.
 - [speedup](./speedup.md) - speeding up parts of the ecosystem many of us depend on.
 - [levelup](./levelup.md) - documenting and providing modern, lighter alternatives to established tools and libraries we all regularly use.
-
-## Tools
-
-- [CLI](./cli/) - The official e18e CLI for analyzing and optimizing your projects.

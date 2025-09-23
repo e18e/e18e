@@ -124,19 +124,19 @@ export default defineConfig({
               text: 'List of replacements',
               link: '/docs/replacements/',
             },
+          ],
+        },
+        {
+          text: 'CLI',
+          link: '/docs/cli/',
+          items: [
             {
-              text: 'CLI',
-              link: '/guide/cli/',
-              items: [
-                {
-                  text: 'analyze',
-                  link: '/guide/cli/analyze',
-                },
-                {
-                  text: 'migrate',
-                  link: '/guide/cli/migrate',
-                },
-              ],
+              text: 'analyze',
+              link: '/docs/cli/analyze',
+            },
+            {
+              text: 'migrate',
+              link: '/docs/cli/migrate',
             },
           ],
         },
