@@ -96,11 +96,11 @@ e18e-cli migrate --interactive
 
 ## Replacements System
 
-The CLI uses a set of codemods from the [module-replacements-codemods](https://github.com/es-tooling/module-replacements-codemods) project for migrations, and replacements from the [replacements list](https://e18e.dev/guide/replacements.html).
+The CLI uses a set of codemods from the [module-replacements-codemods](https://github.com/es-tooling/module-replacements-codemods) project for migrations, and replacements from the [replacements list](https://e18e.dev/docs/replacements.html).
 
 ### Default Replacements
 
-The CLI comes with pre-configured replacements for common performance optimizations. You can find the list of the current replacements in the [replacements docs](https://e18e.dev/guide/replacements.html).
+The CLI comes with pre-configured replacements for common performance optimizations. You can find the list of the current replacements in the [replacements docs](https://e18e.dev/docs/replacements.html).
 
 > [!IMPORTANT]
 > The replacement list is still being developed and expanded. The current list represents the initial set of well-tested migrations. More replacements will be added as they are validated and tested across the ecosystem.
