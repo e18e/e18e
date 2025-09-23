@@ -82,6 +82,18 @@ The e18e community is actively working on countless initiatives, both large and 
 
 <div class="project-card">
   <div class="project-header">
+    <img src="https://github.com/e18e.png" alt="e18e" class="org-avatar">
+    <div class="project-info">
+      <h4><a href="https://github.com/e18e/setup-publish">e18e Publish Workflow CLI</a></h4>
+    </div>
+  </div>
+  <p class="project-description">
+    A CLI to assist with setting up GitHub publish workflows securely.
+  </p>
+</div>
+
+<div class="project-card">
+  <div class="project-header">
     <img src="https://github.com/storybookjs.png" alt="Storybook" class="org-avatar">
     <div class="project-info">
       <h4><a href="https://github.com/storybookjs/storybook">Storybook Optimization</a></h4>
