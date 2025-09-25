@@ -37,6 +37,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-pkg`](./find-pkg.md) | :x: |
 | [`find-up`](./find-up.md) | :x: |
 | [`glob`](./glob.md) | :x: |
+| [`globby`](./globby.md) | :x: |
 | [`graphemer`](./graphemer.md) | :x: |
 | [`invariant`](./invariant.md) | :x: |
 | [`is-builtin-module`](./is-builtin-module.md) | :ballot_box_with_check: |
