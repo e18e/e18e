@@ -75,11 +75,8 @@ Example:
 
 ```ts
 import qs from 'qs' // [!code --]
-import { parse, stringify } from 'neoqs' // [!code ++]
+import * as qs from 'neoqs' // [!code ++]
 
-const obj1 = qs.parse('a[b][c]=1&arr[]=2&arr[]=3') // [!code --]
-const str1 = qs.stringify(obj1, { arrayFormat: 'brackets' }) // [!code --]
-
-const obj2 = parse('a[b][c]=1&arr[]=2&arr[]=3') // [!code ++]
-const str2 = stringify(obj2, { arrayFormat: 'brackets' }) // [!code ++]
+const obj = qs.parse('a[b][c]=1&arr[]=2&arr[]=3')
+const str = qs.stringify(obj, { arrayFormat: 'brackets' })
 ```
