@@ -5,6 +5,7 @@ import { h } from 'vue'
 import '@shikijs/vitepress-twoslash/style.css'
 import './styles/vars.css'
 import './styles/custom.css'
+import 'virtual:group-icons.css'
 
 export default {
   extends: DefaultTheme,
