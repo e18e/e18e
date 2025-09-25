@@ -13,18 +13,13 @@ Example:
 ```ts
 import qs from 'qs' // [!code --]
 
-const query = 'a=1&a=2&b=3' // [!code ++]
+const query = 'a=1&a=2&b=3'
+
 const obj = qs.parse(query) // [!code --]
+
 const sp = new URLSearchParams(query) // [!code ++]
 const obj = Object.fromEntries(sp) // [!code ++]
 const a = sp.getAll('a') // [!code ++]
-
-const input = { a: ['1', '2'], b: '3' } // [!code ++]
-const str = qs.stringify(input) // [!code --]
-const out = new URLSearchParams() // [!code ++]
-for (const v of input.a) out.append('a', v) // [!code ++]
-out.append('b', input.b) // [!code ++]
-const str = out.toString() // [!code ++]
 ```
 
 ## `fast-querystring`
