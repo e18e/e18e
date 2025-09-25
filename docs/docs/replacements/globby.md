@@ -4,7 +4,7 @@ description: Modern alternatives to the globby package for globbing and .gitigno
 
 # Replacements for `globby`
 
-## tinyglobby 
+## `tinyglobby`
 
 [`globby`](https://github.com/sindresorhus/globby) is a convenience wrapper around [`fast-glob`](https://github.com/mrmlnc/fast-glob). For details on migrating from `fast-glob`, see [the dedicated guide](./fast-glob.md).
 

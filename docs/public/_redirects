@@ -1,0 +1,4 @@
+/guide/replacements.html /docs/replacements 301
+/guide/replacements /docs/replacements 301
+/guide/replacement-guides/* /docs/replacements/:splat 301
+/guide/* /learn/:splat 301
