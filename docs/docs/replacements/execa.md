@@ -31,8 +31,6 @@ import exec from 'nanoexec' // [!code ++]
 const { stdout } = await execa('echo', ['example']) // [!code --]
 const res = await exec('echo', ['example']) // [!code ++]
 const stdout = res.stdout.toString('utf8') // [!code ++]
-
-await exec('echo "example"', { shell: true }) // [!code ++]
 ```
 
 ## Bun
