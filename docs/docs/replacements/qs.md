@@ -14,17 +14,17 @@ Example:
 import qs from 'qs' // [!code --]
 
 const query = 'a=1&a=2&b=3' // [!code ++]
-const obj = qs.parse(query) // { a: ['1','2'], b: '3' } [!code --]
+const obj = qs.parse(query) // [!code --]
 const sp = new URLSearchParams(query) // [!code ++]
-const obj = Object.fromEntries(sp) // { a: '2', b: '3' } [!code ++]
-const a = sp.getAll('a') // ['1', '2'] [!code ++]
+const obj = Object.fromEntries(sp) // [!code ++]
+const a = sp.getAll('a') // [!code ++]
 
 const input = { a: ['1', '2'], b: '3' } // [!code ++]
 const str = qs.stringify(input) // [!code --]
 const out = new URLSearchParams() // [!code ++]
 for (const v of input.a) out.append('a', v) // [!code ++]
 out.append('b', input.b) // [!code ++]
-const str = out.toString() // 'a=1&a=2&b=3' [!code ++]
+const str = out.toString() // [!code ++]
 ```
 
 ## `fast-querystring`
@@ -38,10 +38,10 @@ import qs from 'qs' // [!code --]
 import fqs from 'fast-querystring' // [!code ++]
 
 const obj = qs.parse('tag=a&tag=b') // [!code --]
-const obj = fqs.parse('tag=a&tag=b') // { tag: ['a', 'b'] } [!code ++]
+const obj = fqs.parse('tag=a&tag=b') // [!code ++]
 
 const str = qs.stringify({ tag: ['a', 'b'], q: 'x y' }) // [!code --]
-const str = fqs.stringify({ tag: ['a', 'b'], q: 'x y' }) // 'tag=a&tag=b&q=x%20y' [!code ++]
+const str = fqs.stringify({ tag: ['a', 'b'], q: 'x y' }) // [!code ++]
 ```
 
 ## `picoquery`
@@ -61,10 +61,10 @@ const opts = { // [!code ++]
 } // [!code ++]
 
 const obj = qs.parse('user[name]=foo&tags[]=bar&tags[]=baz') // [!code --]
-const obj = parse('user[name]=foo&tags[]=bar&tags[]=baz', opts) // { user: { name: 'foo' }, tags: ['bar','baz'] } [!code ++]
+const obj = parse('user[name]=foo&tags[]=bar&tags[]=baz', opts) // [!code ++]
 
 const str = qs.stringify({ user: { name: 'foo' }, tags: ['bar', 'baz'] }, { arrayFormat: 'brackets' }) // [!code --]
-const str = stringify({ user: { name: 'foo' }, tags: ['bar', 'baz'] }, opts) // 'user[name]=foo&tags[]=bar&tags[]=baz' [!code ++]
+const str = stringify({ user: { name: 'foo' }, tags: ['bar', 'baz'] }, opts) // [!code ++]
 ```
 
 ## `neoqs`
