@@ -48,6 +48,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`lint-staged`](./lint-staged.md) | :x: |
 | [`materialize-css`](./materialize-css.md) | :x: |
 | [`md5`](./md5.md) | :ballot_box_with_check: |
+| [`mkdirp`](./mkdirp.md) | :x: |
 | [`moment`](./moment.md) | :x: |
 | [`npm-run-all`](./npm-run-all.md) | :x: |
 | [`ora`](./ora.md) | :x: |
