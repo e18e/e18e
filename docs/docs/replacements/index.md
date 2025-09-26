@@ -51,6 +51,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`mkdirp`](./mkdirp.md) | :x: |
 | [`moment`](./moment.md) | :x: |
 | [`npm-run-all`](./npm-run-all.md) | :x: |
+| [`object-hash`](./object-hash.md) | :x: |
 | [`ora`](./ora.md) | :x: |
 | [`path-exists`](./path-exists.md) | :x: |
 | [`pkg-dir`](./pkg-dir.md) | :x: |
