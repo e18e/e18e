@@ -16,7 +16,6 @@ import qs from 'qs' // [!code --]
 const query = 'a=1&a=2&b=3'
 
 const obj = qs.parse(query) // [!code --]
-
 const sp = new URLSearchParams(query) // [!code ++]
 const obj = Object.fromEntries(sp) // [!code ++]
 const a = sp.getAll('a') // [!code ++]
