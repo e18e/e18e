@@ -23,14 +23,10 @@ const tempDir = await mkdtemp(join(await realpath(tmpdir()), 'foo-')) // [!code 
 Directory cleanup can be done by passing `{recursive: true}` to [`fs.rm`](https://nodejs.org/api/fs.html#fsrmpath-options-callback), available in v14.14.0 and up:
 
 ```js
-import { temporaryDirectoryTask } from 'tempy' // [!code --]
-
-import { rm, writeFile } from 'node:fs/promises' // [!code ++]
+import { rm, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
- // [!code --]
-await temporaryDirectoryTask(async (tempDir) => { // [!code --]
-  // foo...
-}) // [!code ++]
+
+// logic to create tempDir...
 
 try {
   await writeFile(join(tempDir, 'bar.txt'), 'Hello, world!', { encoding: 'utf-8' })
