@@ -6,7 +6,7 @@ description: Modern alternatives to the tempy package for creating temporary fil
 
 ## Node.js (since v14.x)
 
-Node.js has the [`fs.mkdtemp`](https://nodejs.org/api/fs.html#fsmkdtempprefix-options-callback) function for creating a unique temporary directory.
+Node.js has the [`fs.mkdtemp`](https://nodejs.org/api/fs.html#fsmkdtempprefix-options-callback) function for creating a unique temporary directory. Directory cleanup can be done by passing `{recursive: true}` to [`fs.rm`](https://nodejs.org/api/fs.html#fsrmpath-options-callback), available in v14.14.0 and up.
 
 Example:
 
@@ -18,23 +18,6 @@ import { tmpdir } from 'node:os' // [!code ++]
 
 const tempDir = temporaryDirectory() // [!code --]
 const tempDir = await mkdtemp(join(await realpath(tmpdir()), 'foo-')) // [!code ++]
-```
-
-Directory cleanup can be done by passing `{recursive: true}` to [`fs.rm`](https://nodejs.org/api/fs.html#fsrmpath-options-callback), available in v14.14.0 and up:
-
-```js
-import { rm, writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
-
-// logic to create tempDir...
-
-try {
-  await writeFile(join(tempDir, 'bar.txt'), 'Hello, world!', { encoding: 'utf-8' })
-  await writeFile(join(tempDir, 'baz.txt'), '...', { encoding: 'utf-8' })
-}
- finally {
-  await rm(tempDir, { recursive: true })
-}
 ```
 
 ## Deno
