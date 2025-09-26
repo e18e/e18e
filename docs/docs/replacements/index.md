@@ -20,6 +20,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`cpx`](./cpx.md) | :x: |
 | [`deep-equal`](./deep-equal.md) | :ballot_box_with_check: |
 | [`depcheck`](./depcheck.md) | :x: |
+| [`dot-prop`](./dot-prop.md) | :x: |
 | [`dotenv`](./dotenv.md) | :x: |
 | [`emoji-regex`](./emoji-regex.md) | :x: |
 | [`eslint-plugin-es`](./eslint-plugin-es.md) | :x: |
@@ -27,6 +28,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`eslint-plugin-import`](./eslint-plugin-import.md) | :x: |
 | [`eslint-plugin-node`](./eslint-plugin-node.md) | :x: |
 | [`eslint-plugin-vitest`](./eslint-plugin-vitest.md) | :x: |
+| [`execa`](./execa.md) | :x: |
 | [`ez-spawn`](./ez-spawn.md) | :x: |
 | [`faker`](./faker.md) | :x: |
 | [`fast-glob`](./fast-glob.md) | :x: |
@@ -36,6 +38,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-pkg`](./find-pkg.md) | :x: |
 | [`find-up`](./find-up.md) | :x: |
 | [`glob`](./glob.md) | :x: |
+| [`globby`](./globby.md) | :x: |
 | [`graphemer`](./graphemer.md) | :x: |
 | [`invariant`](./invariant.md) | :x: |
 | [`is-builtin-module`](./is-builtin-module.md) | :ballot_box_with_check: |
@@ -48,6 +51,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`moment`](./moment.md) | :x: |
 | [`npm-run-all`](./npm-run-all.md) | :x: |
 | [`object-hash`](./object-hash.md) | :x: |
+| [`ora`](./ora.md) | :x: |
 | [`path-exists`](./path-exists.md) | :x: |
 | [`pkg-dir`](./pkg-dir.md) | :x: |
 | [`read-package-up`](./read-package-up.md) | :x: |
