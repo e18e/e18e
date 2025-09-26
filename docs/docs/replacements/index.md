@@ -55,6 +55,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`ora`](./ora.md) | :x: |
 | [`path-exists`](./path-exists.md) | :x: |
 | [`pkg-dir`](./pkg-dir.md) | :x: |
+| [`qs`](./qs.md) | :x: |
 | [`read-package-up`](./read-package-up.md) | :x: |
 | [`read-pkg-up`](./read-pkg-up.md) | :x: |
 | [`read-pkg`](./read-pkg.md) | :x: |
