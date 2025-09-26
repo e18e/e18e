@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: Learn More
-      link: /guide/
+      link: /learn/
     - theme: alt
       text: Join us
       link: https://chat.e18e.dev
@@ -23,15 +23,15 @@ features:
   - icon: ✨
     title: Cleanup
     details: Removing redundant dependencies and replacing them with modern alternatives.
-    link: /guide/cleanup
+    link: /learn/cleanup
   - icon: ⚡️
     title: Speedup
     details: Improving the performance of widely used packages.
-    link: /guide/speedup
+    link: /learn/speedup
   - icon: 🧩
     title: Levelup
     details: Building modern alternatives to outdated packages.
-    link: /guide/levelup
+    link: /learn/levelup
 ---
 
 ## Welcome to e18e!
