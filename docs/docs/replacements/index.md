@@ -50,6 +50,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`md5`](./md5.md) | :ballot_box_with_check: |
 | [`moment`](./moment.md) | :x: |
 | [`npm-run-all`](./npm-run-all.md) | :x: |
+| [`ora`](./ora.md) | :x: |
 | [`path-exists`](./path-exists.md) | :x: |
 | [`pkg-dir`](./pkg-dir.md) | :x: |
 | [`read-package-up`](./read-package-up.md) | :x: |
