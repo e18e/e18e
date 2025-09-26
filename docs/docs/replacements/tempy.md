@@ -25,34 +25,18 @@ const tempDir = await mkdtemp(join(await realpath(tmpdir()), 'foo-')) // [!code 
 Deno provides built-in [`Deno.makeTempDir`](https://docs.deno.com/api/deno/~/Deno.makeTempDir) and [`Deno.makeTempFile`](https://docs.deno.com/api/deno/~/Deno.makeTempFile) for creating unique temporary directories and files in the system temp directory (or a custom `dir`). You can also set `prefix` and `suffix`. Both return the full path and require `--allow-write`.
 
 ```ts
-import { temporaryDirectory } from 'tempy'
- // [!code --]
+import { temporaryDirectory } from 'tempy' // [!code --]
+
 const tempDir = temporaryDirectory({ prefix: 'foo-' }) // [!code --]
 
 const tempDir = await Deno.makeTempDir({ prefix: 'foo-' }) // [!code ++]
-
-try { // [!code ++]
-  await Deno.writeTextFile(`${tempDir}/bar.txt`, 'Hello, world!') // [!code ++]
-  await Deno.writeTextFile(`${tempDir}/baz.txt`, '...') // [!code ++]
-}
- finally { // [!code ++]
-  await Deno.remove(tempDir, { recursive: true }) // [!code ++]
-} // [!code ++]
 ```
 
 ```ts
-import { temporaryFile } from 'tempy'
- // [!code --]
+import { temporaryFile } from 'tempy' // [!code --]
 const tempFile = temporaryFile({ extension: 'txt' }) // [!code --]
 
 const tempFile = await Deno.makeTempFile({ suffix: '.txt' }) // [!code ++]
-
-try { // [!code ++]
-  await Deno.writeTextFile(tempFile, 'contents') // [!code ++]
-}
- finally { // [!code ++]
-  await Deno.remove(tempFile) // [!code ++]
-} // [!code ++]
 ```
 
 > [!NOTE]
