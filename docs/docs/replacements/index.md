@@ -20,6 +20,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`cpx`](./cpx.md) | :x: |
 | [`deep-equal`](./deep-equal.md) | :ballot_box_with_check: |
 | [`depcheck`](./depcheck.md) | :x: |
+| [`dot-prop`](./dot-prop.md) | :x: |
 | [`dotenv`](./dotenv.md) | :x: |
 | [`emoji-regex`](./emoji-regex.md) | :x: |
 | [`eslint-plugin-es`](./eslint-plugin-es.md) | :x: |
