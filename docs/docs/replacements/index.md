@@ -11,6 +11,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | -- | -- |
 | [`@jsdevtools/ez-spawn`](./ez-spawn.md) | :x: |
 | [`axios`](./axios.md) | :x: |
+| [`bluebird`](./bluebird-q.md) | :x: |
 | [`body-parser`](./body-parser.md) | :x: |
 | [`buf-compare`](./buf-compare.md) | :x: |
 | [`buffer-equal`](./buffer-equal.md) | :x: |
