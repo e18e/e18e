@@ -28,6 +28,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`eslint-plugin-eslint-comments`](./eslint-plugin-eslint-comments.md) | :x: |
 | [`eslint-plugin-import`](./eslint-plugin-import.md) | :x: |
 | [`eslint-plugin-node`](./eslint-plugin-node.md) | :x: |
+| [`eslint-plugin-react`](./eslint-plugin-react.md) | :x: |
 | [`eslint-plugin-vitest`](./eslint-plugin-vitest.md) | :x: |
 | [`execa`](./execa.md) | :x: |
 | [`ez-spawn`](./ez-spawn.md) | :x: |
