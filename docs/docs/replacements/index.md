@@ -39,6 +39,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`find-file-up`](./find-file-up.md) | :x: |
 | [`find-pkg`](./find-pkg.md) | :x: |
 | [`find-up`](./find-up.md) | :x: |
+| [`fs-extra`](./fs-extra.md) | :x: |
 | [`glob`](./glob.md) | :x: |
 | [`globby`](./globby.md) | :x: |
 | [`graphemer`](./graphemer.md) | :x: |
