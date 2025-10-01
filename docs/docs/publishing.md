@@ -27,9 +27,20 @@ Basically, if you're a solo maintainer it may be safer to publish locally with 2
 
 If you're part of an org, or just want to use workflows, certainly do not publish locally.
 
-## Changesets Workflow
+## `@e18e/setup-publish`
 
-TODO: Explain roughly the same as the "Standard workflow", but using `changesets` to manage versions.
+TODO: Explain the setup-publish CLI which can help template some of these workflows out.
+
+## Recipes
+
+TODO: Explain some recipes for more advanced workflows. Each of these should be briefly explained but leave the detail to a GitHub repo we have yet to produce.
+
+Should include:
+
+- changesets
+- changelogithub
+
+Also:
 
 - Show a diagram of the flow possibly
 - Use the same steps as the standard flow mostly

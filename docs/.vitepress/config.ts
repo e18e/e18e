@@ -119,7 +119,7 @@ export default defineConfig({
               text: 'Publishing Packages',
               link: '/docs/publishing.html',
             },
-          ]
+          ],
         },
         {
           text: 'Module Replacements',
