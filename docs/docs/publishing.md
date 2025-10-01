@@ -166,15 +166,29 @@ This will give you a visualisation of what code has changed when a dependency up
 
 ## Further Security
 
-TODO: Explain further security measures that can be taken. Each as a sub-section
+### Use hardware security keys
 
-Probably these:
+Physical security keys (like YubiKey) provide strong 2FA protection and are generally much more secure than using an authenticator app or SMS.
 
-- Using physical security keys for 2FA
-  - Or webauthn if that isn't possible
-- Remove all npm tokens from your account
-- Add protection rules to branches and tags
-- Enable immutable releases
+### Use protection rules in GitHub
+
+We already noted that `main` should have a protection rule to prevent unreviewed changes. It would also be a good idea to add similar rules to any other long-lived branches you may have, and to _all_ tags.
+
+### Use immutable releases
+
+Enable [immutable releases](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/immutable-releases) on GitHub and this will prevent any changes to tags or GitHub releases after they are created. This will ensure that once a release is created, it cannot be modified or deleted.
+
+### Use an environment with required reviewers
+
+It is possible to specify an `environment` in your workflow:
+
+```yaml [publish.yml]
+jobs:
+  publish:
+    environment: production
+```
+
+In GitHub, you can then configure this environment to require manual approval before the job can proceed. This ensures that even if you manage to trigger the workflow, a human still needs to review and approve the job before it can publish.
 
 ## Sole Maintainer Considerations
 
