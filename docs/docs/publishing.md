@@ -222,4 +222,4 @@ If your GitHub token leaks somehow, an attack could publish through your trusted
 
 Once environment approvals support 2FA, this will no longer be a concern as the attacker would need to pass the 2FA check to approve the workflow.
 
-For these reasons, if you're a solo maintainer, you may want to consider publishing locally with 2FA enabled until this feature is available.
+For these reasons, if you're a solo maintainer, you may want to consider publishing locally with 2FA enabled until this feature is available. Having said that, **please ensure you still follow all other security recommendations in this document.**
