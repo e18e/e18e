@@ -145,15 +145,15 @@ This will ensure that any security vulnerabilities in your dependencies are addr
 
 It is important to keep your GitHub actions up to date, and always reference them using a full-length commit SHA.
 
-To assist with this, you can use the [`actions-up`](https://github.com/azat-io/actions-up) CLI.
-
-For example, to update and pin your existing actions:
+To assist with switching to using full-length commit SHAs, you can use the [`actions-up`](https://github.com/azat-io/actions-up) CLI.
 
 ```bash
 npx actions-up
 ```
 
 This will update your workflow files to use the latest commit SHA for each action.
+
+Once you've made the switch, you can then use dependabot, renovate or `actions-up` itself to keep your actions up to date.
 
 ### Linting workflows for issues and vulnerabilities
 
