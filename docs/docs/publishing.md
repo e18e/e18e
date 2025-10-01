@@ -24,12 +24,19 @@ Navigate to `Settings > Actions > General` and configure:
 
 These settings ensure that outside contributors cannot run arbitrary code in your workflows without your approval first, and that all actions used in your workflows are pinned to a specific commit SHA, preventing supply-chain attacks through action updates.
 
+> [!NOTE]
+> If your repository is part of an organization, we highly recommend you make these changes to the organisation as a whole rather than this specific repository.
+> This will ensure all repositories in the organisation have a consistent security measures in place.
+
 #### Branch Protection
 
 Navigate to `Settings > Branches` and configure:
 
 - ✓ Create a ruleset for your default branch (e.g. `main`)
 - ✓ Require a pull request before merging
+- ✓ Require approvals (set to at least 1)
+- ✓ Dismiss stale pull request approvals when new commits are pushed
+- ✓ Require approval of the most recent reviewable push
 
 This ensures that nobody can push directly to the `main` branch, and that all changes are reviewed before being merged.
 
@@ -73,6 +80,10 @@ There are a few important things to note about this workflow:
 - Install is done with `--ignore-scripts` to avoid running any lifecycle scripts that may be malicious
 
 When updating the workflow, keep these constraints in mind to ensure the security of your publishing process.
+
+> [!TIP]
+> It is also worth setting `ignore-scripts=true` in your project's `.npmrc` file so this applies to all installs, not just in the workflow.
+> Similarly, we highly recommend you do this for your local user using `npm config set -g ignore-scripts true`.
 
 ### Creating a Release
 
@@ -174,18 +185,6 @@ This will give you a visualisation of what code has changed when a dependency up
 
 ## Further Security
 
-### Use hardware security keys
-
-Physical security keys (like YubiKey) provide strong 2FA protection and are generally much more secure than using an authenticator app or SMS.
-
-### Use protection rules in GitHub
-
-We already noted that `main` should have a protection rule to prevent unreviewed changes. It would also be a good idea to add similar rules to any other long-lived branches you may have, and to _all_ tags.
-
-### Use immutable releases
-
-Enable [immutable releases](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/immutable-releases) on GitHub and this will prevent any changes to tags or GitHub releases after they are created. This will ensure that once a release is created, it cannot be modified or deleted.
-
 ### Use an environment with required reviewers
 
 It is possible to specify an `environment` in your workflow:
@@ -197,6 +196,21 @@ jobs:
 ```
 
 In GitHub, you can then configure this environment to require manual approval before the job can proceed. This ensures that even if you manage to trigger the workflow, a human still needs to review and approve the job before it can publish.
+
+> [!IMPORTANT]
+> If you do this, ensure that you set the environment in your npm trusted publishing settings too.
+
+### Use hardware security keys
+
+Physical security keys (like YubiKey) provide strong 2FA protection and are generally much more secure than using an authenticator app or SMS.
+
+### Use protection rules in GitHub
+
+We already noted that `main` should have a protection rule to prevent unreviewed changes. It would also be a good idea to add similar rules to any other long-lived branches you may have, and to _all_ tags.
+
+### Use immutable releases
+
+Enable [immutable releases](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/immutable-releases) on GitHub and this will prevent any changes to tags or GitHub releases after they are created. This will ensure that once a release is created, it cannot be modified or deleted.
 
 ## Sole Maintainer Considerations
 
