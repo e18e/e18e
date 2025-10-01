@@ -14,22 +14,30 @@ In this document, we will cover a typical workflow with security in mind, and so
 
 First thing is to ensure your GitHub repository is setup securely.
 
-For this, let's start by configuring some general settings. Inside the `Settings > Actions > General` section, enable the following options:
+#### Actions Settings
 
-- Check the "Require actions to be pinned to a full-length commit SHA" option
-- Check the "Require approval for first-time contributors" option
-- Ensure the default workflow permission is set to "Read repository contents and packages permissions"
+Navigate to `Settings > Actions > General` and configure:
 
-These will ensure that outside contributors cannot run arbitrary code in your workflows without your approval first, and that all actions used in your workflows are pinned to a specific commit SHA, preventing supply-chain attacks through action updates.
+- ✓ Require actions to be pinned to a full-length commit SHA
+- ✓ Require approval for first-time contributors
+- ✓ Set default workflow permissions to "Read repository contents and packages permissions"
 
-We also need to ensure that our branches are protected. Inside the `Settings > Branches` section, configure the following:
+These settings ensure that outside contributors cannot run arbitrary code in your workflows without your approval first, and that all actions used in your workflows are pinned to a specific commit SHA, preventing supply-chain attacks through action updates.
 
-- Create a ruleset for your default branch (e.g. `main`)
-- Require a pull request before merging
+#### Branch Protection
 
-This will ensure that nobody can push directly to the `main` branch, and that all changes are reviewed before being merged.
+Navigate to `Settings > Branches` and configure:
 
-Lastly, we need to ensure that no npm tokens are stored in the repository secrets. Inside the `Settings > Secrets & Variables > Actions` section, remove any existing npm secrets.
+- ✓ Create a ruleset for your default branch (e.g. `main`)
+- ✓ Require a pull request before merging
+
+This ensures that nobody can push directly to the `main` branch, and that all changes are reviewed before being merged.
+
+#### Secrets & Variables
+
+Navigate to `Settings > Secrets & Variables > Actions`:
+
+- Remove any existing npm secrets from repository secrets.
 
 ### Setting up Trusted Publishing
 
