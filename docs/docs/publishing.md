@@ -44,7 +44,7 @@ This ensures that nobody can push directly to the `main` branch, and that all ch
 
 Navigate to `Settings > Secrets & Variables > Actions`:
 
-- Remove any existing npm secrets from repository secrets.
+- Remove all unnecessary repository secrets (e.g. npm tokens, as OIDC can be used instead)
 
 ### Setting up Trusted Publishing
 
@@ -58,6 +58,9 @@ In this "Trusted Publishing" section, setup a trusted publisher for the workflow
 - Workflow filename is the name of the workflow file you'll create (e.g. `publish.yml`)
 
 While you're in there, also check the box for "Require two-factor authentication and disallow tokens (recommended)". This will ensure that manual publishing _must_ use 2FA.
+
+> [!TIP]
+> It can be a slow job opening all of your packages individually and changing these settings. To assist with this, you can use the [open-packages-on-npm](https://github.com/antfu/open-packages-on-npm) tool in your local repository to open the package(s) on npm, each in a new tab. You can then use this [userscript](https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md) to quickly update the trusted publisher settings on each page.
 
 ## Standard Workflow
 
