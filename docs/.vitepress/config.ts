@@ -115,6 +115,10 @@ export default defineConfig({
               text: 'Index',
               link: '/docs/',
             },
+            {
+              text: 'Publishing Packages',
+              link: '/docs/publishing.html',
+            },
           ],
         },
         {
