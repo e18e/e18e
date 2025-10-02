@@ -1,3 +1,19 @@
+---
+title: e18e (Ecosystem Performance) - Publishing Packages
+author:
+  - name: The e18e Contributors
+head:
+  - - meta
+    - property: og:title
+      content: e18e (Ecosystem Performance) - Publishing Packages
+  - - meta
+    - property: og:url
+      content: https://e18e.dev/docs/publishing.html
+  - - meta
+    - property: og:description
+      content: Best practices on publishing npm packages securely using GitHub Actions.
+---
+
 # Publishing Packages
 
 ## Introduction
