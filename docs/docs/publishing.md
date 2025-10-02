@@ -10,9 +10,20 @@ In this document, we will cover a typical workflow with security in mind, and so
 
 ## Prerequisites
 
+### Enforcing 2FA
+
+Before anything, it is important to enable 2FA in your various accounts and use a secure authentication method.
+
+In your npm account, navigate to the `Account` page and ensure you have 2FA enabled. Ideally, use a security key, otherwise use an authenticator app.
+
+Similarly, in your GitHub account, navigate to `Settings > Password and authentication` and ensure you have 2FA enabled. Again, ideally use a security key, otherwise use an authenticator app.
+
+> [!NOTE]
+> A security key isn't necessarily a physical key (e.g. YubiKey), it can also be something your OS provides, like Windows Hello or macOS Touch ID.
+
 ### Setting up the GitHub repository
 
-First thing is to ensure your GitHub repository is setup securely.
+Next, we need to ensure your GitHub repository is setup securely.
 
 #### Actions Settings
 
