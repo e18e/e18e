@@ -18,6 +18,8 @@ In your npm account, navigate to the `Account` page and ensure you have 2FA enab
 
 Similarly, in your GitHub account, navigate to `Settings > Password and authentication` and ensure you have 2FA enabled. Again, ideally use a security key, otherwise use an authenticator app.
 
+We also highly recommend you manage your passwords with a password manager, and ideally generate them.
+
 > [!NOTE]
 > A security key isn't necessarily a physical key (e.g. YubiKey), it can also be something your OS provides, like Windows Hello or macOS Touch ID.
 
