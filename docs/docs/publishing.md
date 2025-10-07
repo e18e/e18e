@@ -5,7 +5,7 @@ author:
 head:
   - - meta
     - property: og:title
-      content: e18e (Ecosystem Performance) - Publishing Packages
+      content: e18e (Ecosystem Performance) - Best Practices on Publishing npm Packages
   - - meta
     - property: og:url
       content: https://e18e.dev/docs/publishing.html
@@ -14,7 +14,7 @@ head:
       content: Best practices on publishing npm packages securely using GitHub Actions.
 ---
 
-# Publishing Packages
+# Best Practices on Publishing npm Packages
 
 ## Introduction
 
