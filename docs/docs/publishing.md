@@ -91,6 +91,9 @@ While you're in there, also check the box for "Require two-factor authentication
 > [!TIP]
 > It can be a slow job opening all of your packages individually and changing these settings. To assist with this, you can use the [open-packages-on-npm](https://github.com/antfu/open-packages-on-npm) tool in your local repository to open the package(s) on npm, each in a new tab. You can then use this [userscript](https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md) to quickly update the trusted publisher settings on each page.
 
+> [!NOTE]
+> Make sure your GitHub workflow is using Node.js v24.8.0 or higher for the publish step. This ensures automatic OIDC publishing is supported for npm.
+
 ## Standard Workflow
 
 Next, we need to create the GitHub workflow that will handle the publishing.
