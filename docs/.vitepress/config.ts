@@ -93,15 +93,15 @@ export default defineConfig({
           text: 'Performance',
           items: [
             {
-              text: 'cleanup',
+              text: 'Cleanup',
               link: '/learn/cleanup',
             },
             {
-              text: 'speedup',
+              text: 'Speedup',
               link: '/learn/speedup',
             },
             {
-              text: 'levelup',
+              text: 'Levelup',
               link: '/learn/levelup',
             },
           ],
