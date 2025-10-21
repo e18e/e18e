@@ -11,8 +11,8 @@ description: Modern alternatives to the find-cache-dir package for locating cach
 Example:
 
 ```ts
-import * as pkg from 'empathic' // [!code ++]
 import findCacheDirectory from 'find-cache-dir' // [!code --]
+import * as pkg from 'empathic' // [!code ++]
 
 findCacheDirectory({ name: 'foo' }) // [!code --]
 pkg.cache('foo') // [!code ++]

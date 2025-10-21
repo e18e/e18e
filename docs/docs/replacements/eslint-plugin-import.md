@@ -8,9 +8,9 @@ description: Modern alternative to eslint-plugin-import, which helps with lintin
 
 [`eslint-plugin-import-x`](https://github.com/un-ts/eslint-plugin-import-x) is a modern fork of [`eslint-plugin-import`](https://github.com/import-js/eslint-plugin-import). `import-x` focuses on faster module resolution via a Rust-based resolver, a smaller dependency footprint
 
-### Flat config
+If you're using Flat config:
 
-```js
+```ts
 import importPlugin from 'eslint-plugin-import' // [!code --]
 import { createNodeResolver, importX } from 'eslint-plugin-import-x' // [!code ++]
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript' // [!code ++]
@@ -33,9 +33,9 @@ export default [
 ]
 ```
 
-### Legacy config
+If you're using legacy config:
 
-```js
+```ts
 module.exports = {
   extends: [
     'eslint:recommended',

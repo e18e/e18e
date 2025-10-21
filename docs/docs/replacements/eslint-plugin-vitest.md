@@ -9,8 +9,8 @@ description: Modern alternatives to the eslint-plugin-vitest package for Vitest-
 [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslint-plugin-vitest) is the same project as `eslint-plugin-vitest` but re-published under a different name. `eslint-plugin-vitest` is no longer maintained because the [original maintainer has lost access to their old npm account](https://github.com/vitest-dev/eslint-plugin-vitest/issues/537).
 
 ```ts
-import vitest from '@vitest/eslint-plugin' // [!code ++]
 import vitest from 'eslint-plugin-vitest' // [!code --]
+import vitest from '@vitest/eslint-plugin' // [!code ++]
 
 export default [
   {

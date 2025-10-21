@@ -10,7 +10,6 @@ description: Modern alternatives to lint-staged for running commands on staged G
 
 package.json config:
 
-<!-- eslint-skip -->
 ```json
 {
   "lint-staged": { // [!code --]

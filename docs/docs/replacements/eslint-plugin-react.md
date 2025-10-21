@@ -10,9 +10,9 @@ description: Modern alternatives to the eslint-plugin-react package for React/JS
 
 Flat config example:
 
-```js
-import eslintReact from '@eslint-react/eslint-plugin' // [!code ++]
+```ts
 import reactPlugin from 'eslint-plugin-react' // [!code --]
+import eslintReact from '@eslint-react/eslint-plugin' // [!code ++]
 
 export default [
   {

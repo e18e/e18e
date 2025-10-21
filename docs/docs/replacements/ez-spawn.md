@@ -25,7 +25,7 @@ import ezSpawn from '@jsdevtools/ez-spawn' // [!code --]
 import { tokenizeArgs } from 'args-tokenizer' // [!code ++]
 import { x } from 'tinyexec' // [!code ++]
 
-const [command, ...args] = tokenizeArgs('ls -l') // [!code ++]
 await ezSpawn.async('ls -l') // [!code --]
+const [command, ...args] = tokenizeArgs('ls -l') // [!code ++]
 await x(command, args) // [!code ++]
 ```

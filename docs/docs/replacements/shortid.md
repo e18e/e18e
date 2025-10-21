@@ -14,26 +14,25 @@ description: Modern, secure alternatives to the shortid package for generating U
 - `shortid.seed()`/`shortid.worker()`: not needed and not provided by `nanoid` (it uses a secure random source). Avoid seeded/deterministic IDs for security.
 :::
 
-### Basic migration
+Example:
 
 ```ts
 import shortid from 'shortid' // [!code --]
 import { nanoid } from 'nanoid' // [!code ++]
 
 const id = shortid.generate() // [!code --]
-const id = nanoid() // [!code ++] => "V1StGXR8_Z5jdHi6B-myT"
+const id = nanoid() // [!code ++]
 ```
 
-### Control length
+Control length example:
 
 ```ts
 // shortid produced ~7-14 chars; with nanoid you pick the size explicitly:
 nanoid(10) // e.g., "NG3oYbq9qE"
 ```
 
-### Custom alphabet (replacement for `shortid.characters`)
+Custom alphabet (replacement for `shortid.characters`) example:
 
-<!-- eslint-skip -->
 ```ts
 shortid.characters('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$@') // [!code --]
 import { customAlphabet } from 'nanoid' // [!code ++]
