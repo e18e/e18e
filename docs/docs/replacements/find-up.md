@@ -68,6 +68,6 @@ await findUp( // [!code --]
 find.file( // [!code ++]
   'package.json',
    { stopAt: '/some/dir' }, // [!code --]
-  { last: '/some/dir' }, // [!code ++]
+   { last: '/some/dir' }, // [!code ++]
 )
 ```
