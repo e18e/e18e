@@ -1,27 +1,22 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const README_URL = 'https://raw.githubusercontent.com/outslept/module-replacements/refs/heads/transport-docs/docs/modules/README.md';
-const FILE_BASE  = 'https://raw.githubusercontent.com/outslept/module-replacements/refs/heads/transport-docs/docs/modules/';
-const DEST_DIR   = 'docs/docs/replacements';
+const BASE = 'https://raw.githubusercontent.com/outslept/module-replacements/refs/heads/transport-docs/';
+const DEST_DIR = 'docs/docs/replacements';
 
-const LF = s => s.replace(/\r\n/g, '\n');
+const LF = s => s.replaceAll('\r\n', '\n');
 
 async function fetchText(url) {
-  console.log(`[sync] fetch start url=${url}`);
   const r = await fetch(url);
   if (!r.ok) throw new Error(`Fetch ${r.status}: ${url}`);
-  const text = LF(await r.text());
-  console.log(`[sync] fetch ok url=${url} bytes=${text.length}`);
-  return text;
+  return LF(await r.text());
 }
 
 function extractModuleFilesFromReadme(md) {
-  console.log('[sync] extract files from README');
   const SECTION_START_RE = /^##\s+List of modules\b/;
-  const SECTION_END_RE   = /^##\s+/;
-  const BULLET_RE        = /^\s*-\s+/;
-  const MD_LINK_RE       = /\[[^\]]+\]\((?<href>[^)]+\.md)\)/;
+  const SECTION_END_RE = /^##\s+/;
+  const BULLET_RE = /^\s*-\s+/;
+  const MD_LINK_RE = /\[[^\]]+\]\((?<href>[^)]+\.md)\)/;
 
   const lines = LF(md).split('\n');
   const files = [];
@@ -34,50 +29,50 @@ function extractModuleFilesFromReadme(md) {
     }
     if (SECTION_END_RE.test(line)) break;
     if (!BULLET_RE.test(line)) continue;
-
     const m = MD_LINK_RE.exec(line);
     if (!m) continue;
-
     let href = m.groups?.href ?? '';
-    if (/^https?:\/\//.test(href)) continue;
-    href = href.replace(/^\.\//, '');
-    files.push(href);
+    files.push(href.replace(/^\.\//, ''));
   }
-  console.log(`[sync] README files count=${files.length}`);
-  files.forEach((f, i) => console.log(`[sync] README file[${i + 1}]=${f}`));
   return files;
 }
 
-function unwrapCommentedFrontmatterWithFlag(md) {
+function detectFrontmatterKind(md) {
   const lines = LF(md).split('\n');
-  let unwrapped = false;
+  if (lines.length >= 5 && lines[0].trim() === '<!--' && lines[1].trim() === '---' && lines[3].trim() === '---' && lines[4].trim() === '-->') {
+    return 'commented';
+  }
+  if (LF(md).startsWith('---\n') && LF(md).indexOf('\n---\n', 4) !== -1) return 'yaml';
+  return 'none';
+}
+
+function unwrapCommentedFrontmatter(md) {
+  const lines = LF(md).split('\n');
   if (lines.length >= 5 && lines[0].trim() === '<!--' && lines[4].trim() === '-->') {
     lines.splice(4, 1);
     lines.splice(0, 1);
-    unwrapped = true;
+    return lines.join('\n');
   }
-  const out = lines.join('\n');
-  return { text: out, unwrapped };
+  return md;
 }
 
-function stripOuterBlankLines(lines) {
+const stripOuterBlankLines = lines => {
   const out = [...lines];
   while (out.length && out[0].trim() === '') out.shift();
   while (out.length && out[out.length - 1].trim() === '') out.pop();
   return out;
-}
+};
 
-function isShellPromptBlock(lines) {
-  return lines.some(raw => {
+const isShellPromptBlock = lines =>
+  lines.some(raw => {
     const l = raw.trimStart();
     return /^[-+]\s*\$\s+\S/.test(l) || /^\$\s+\S/.test(l);
   });
-}
 
 function stripCodeAnnotations(text) {
   return text
-    .replace(/\s*\/\/\s*\[!code\s*(?:--|\+\+)\]\s*$/gm, '')
-    .replace(/\s*#\s*\[!code\s*(?:--|\+\+)\]\s*$/gm, '');
+    .replaceAll(/\s*\/\/\s*\[!code\s*(?:--|\+\+)\]\s*$/gm, '')
+    .replaceAll(/\s*#\s*\[!code\s*(?:--|\+\+)\]\s*$/gm, '');
 }
 
 function isJsonLike(text, lines) {
@@ -87,19 +82,11 @@ function isJsonLike(text, lines) {
     try { JSON.parse(stripCodeAnnotations(t)); return true; } catch {}
   }
   const propRe = /^\s*"[^"]+"\s*:/;
-  if (lines.some(l => propRe.test(l))) return true;
-  return false;
+  return lines.some(l => propRe.test(l));
 }
 
-function annotateSuffix(lang, mark) {
-  return lang === 'bash' ? ` # [!code ${mark}]` : ` // [!code ${mark}]`;
-}
+const annotateSuffix = (lang, mark) => (lang === 'bash' ? ` # [!code ${mark}]` : ` // [!code ${mark}]`);
 
-// preserve indentation when removing leading +/-
-// cases:
-// "-  X" → remove only "-"  → slice(1)
-// "- X"  → remove "- "      → slice(2)
-// "-X"   → remove "-"       → slice(1)
 function dropMarkerKeepIndent(line) {
   if (!line || (line[0] !== '-' && line[0] !== '+')) return line;
   const a = line[1] || '';
@@ -113,91 +100,57 @@ function convertShellDiff(lines) {
   const out = [];
   for (const raw of lines) {
     const l = raw.replace(/^\s+/, '');
-    if (/^-\s*\$\s+/.test(l)) {
-      out.push(l.replace(/^-\s*\$\s+/, '') + annotateSuffix('bash', '--'));
-    } else if (/^\+\s*\$\s+/.test(l)) {
-      out.push(l.replace(/^\+\s*\$\s+/, '') + annotateSuffix('bash', '++'));
-    } else if (/^-\s+/.test(l)) {
-      out.push(dropMarkerKeepIndent(l) + annotateSuffix('bash', '--'));
-    } else if (/^\+\s+/.test(l)) {
-      out.push(dropMarkerKeepIndent(l) + annotateSuffix('bash', '++'));
-    } else if (/^\$\s+/.test(l)) {
-      out.push(l.replace(/^\$\s+/, ''));
-    } else {
-      out.push(l);
-    }
+    if (/^-\s*\$\s+/.test(l)) out.push(l.replace(/^-\s*\$\s+/, '') + annotateSuffix('bash', '--'));
+    else if (/^\+\s*\$\s+/.test(l)) out.push(l.replace(/^\+\s*\$\s+/, '') + annotateSuffix('bash', '++'));
+    else if (/^-\s+/.test(l)) out.push(dropMarkerKeepIndent(l) + annotateSuffix('bash', '--'));
+    else if (/^\+\s+/.test(l)) out.push(dropMarkerKeepIndent(l) + annotateSuffix('bash', '++'));
+    else if (/^\$\s+/.test(l)) out.push(l.replace(/^\$\s+/, ''));
+    else out.push(l);
   }
   return out;
 }
 
-function needsEslintSkipTS(originalLines) {
-  const diffs = originalLines
-    .filter(l => l && (l[0] === '-' || l[0] === '+'))
-    .map(dropMarkerKeepIndent)
-    .map(s => s.trim());
-  const closersOnly = /^\s*[)\]}]+[,;)]*\s*$/;
-  const openersOnly = /^\s*[\[{(]+[,;)]?\s*$/;
-  return diffs.some(s => closersOnly.test(s) || openersOnly.test(s));
-}
-
-function transformDiffFencesOnly(md, fileCtx = '') {
-  let idx = 0;
+function transformDiffFencesOnly(md) {
   const fenceRE = /```([^\n]*)\n([\s\S]*?)```/g;
   return md.replace(fenceRE, (m, info, bodyRaw) => {
-    idx++;
     const infoStr = String(info || '').trim().toLowerCase();
     const firstTok = infoStr.split(/\s+/)[0] || '';
     if (firstTok !== 'diff') return m;
 
     let lines = stripOuterBlankLines(LF(bodyRaw).split('\n'));
-    const shellPrompt = isShellPromptBlock(lines);
-
-    if (shellPrompt) {
-      console.log(`[sync] fence-diff file=${fileCtx} idx=${idx} shell=1 action=convert-shell`);
+    if (isShellPromptBlock(lines)) {
       const converted = stripOuterBlankLines(convertShellDiff(lines)).join('\n');
       return '```bash\n' + converted + '\n```';
     }
 
     const forDetect = lines.map(l => (l[0] === '-' || l[0] === '+') ? dropMarkerKeepIndent(l) : l);
-    const jsonLike = isJsonLike(forDetect.join('\n'), forDetect);
-    const lang = jsonLike ? 'json' : 'ts';
+    const lang = isJsonLike(forDetect.join('\n'), forDetect) ? 'json' : 'ts';
 
-    console.log(`[sync] fence-diff file=${fileCtx} idx=${idx} shell=0 lang=${lang} action=annotate`);
     const converted = lines.map(l => {
       if (l[0] === '-') return `${dropMarkerKeepIndent(l)}${annotateSuffix(lang, '--')}`;
       if (l[0] === '+') return `${dropMarkerKeepIndent(l)}${annotateSuffix(lang, '++')}`;
       return l;
     }).join('\n');
 
-    const prefix = lang === 'ts' && needsEslintSkipTS(lines) ? '<!-- eslint-skip -->\n' : '';
-    return `${prefix}\`\`\`${lang}\n${converted}\n\`\`\``;
+    return `\`\`\`${lang}\n${converted}\n\`\`\``;
   });
 }
 
 async function main() {
-  console.log('[sync] start');
-  console.log(`[sync] index url=${README_URL}`);
-  const readme = await fetchText(README_URL);
+  const readme = await fetchText(BASE + 'docs/modules/README.md');
   const files = extractModuleFilesFromReadme(readme);
 
-  console.log(`[sync] ensure dest dir=${DEST_DIR}`);
   await mkdir(DEST_DIR, { recursive: true });
 
-  let count = 0;
   for (const rel of files) {
-    const url = FILE_BASE + rel;
-    const dest = path.join(DEST_DIR, path.basename(rel));
-    console.log(`[sync] file start rel=${rel} url=${url} dest=${dest}`);
-    const raw = await fetchText(url);
-    const { text, unwrapped } = unwrapCommentedFrontmatterWithFlag(raw);
-    console.log(`[sync] frontmatter unwrapped=${unwrapped ? 1 : 0} rel=${rel}`);
-    const out = transformDiffFencesOnly(text, rel);
-    await writeFile(dest, out);
-    console.log(`[sync] file wrote dest=${dest} bytes=${out.length}`);
-    count++;
+    const raw = await fetchText(BASE + 'docs/modules/' + rel);
+    const kind = detectFrontmatterKind(raw);
+    const out =
+      kind === 'none'
+        ? raw
+        : transformDiffFencesOnly(kind === 'commented' ? unwrapCommentedFrontmatter(raw) : raw);
+    await writeFile(path.join(DEST_DIR, path.basename(rel)), out);
   }
-
-  console.log(`[sync] done files=${count}`);
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+main().catch(() => process.exit(1));
