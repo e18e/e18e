@@ -10,7 +10,7 @@ description: Modern alternatives to the body-parser package for parsing HTTP req
 
 Example:
 
-```ts
+```js
 import bodyParser from 'body-parser' // [!code --]
 import { json, urlencoded } from 'milliparsec' // [!code ++]
 import express from 'express'

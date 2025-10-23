@@ -11,8 +11,8 @@ description: Modern alternatives to the find-cache-directory package for locatin
 Example:
 
 ```ts
-import findCacheDirectory from 'find-cache-directory' // [!code --]
 import * as pkg from 'empathic' // [!code ++]
+import findCacheDirectory from 'find-cache-directory' // [!code --]
 
 findCacheDirectory({ name: 'foo' }) // [!code --]
 pkg.cache('foo') // [!code ++]

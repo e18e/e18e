@@ -11,11 +11,18 @@ Since Node 20.x, you can use the [`styleText`](https://nodejs.org/api/util.html#
 Example:
 
 ```ts
-import chalk from 'chalk' // [!code --]
 import { styleText } from 'node:util' // [!code ++]
+import chalk from 'chalk' // [!code --]
 
 console.log(`Hello ${chalk.blue('blue')} world!`) // [!code --]
 console.log(`Hello ${styleText('blue', 'blue')} world!`) // [!code ++]
+```
+
+When using multiple styles, you can pass an array to `styleText`:
+
+```ts
+console.log(`I am ${chalk.blue.bgRed('blue on red')}!`) // [!code --]
+console.log(`I am ${styleText(['blue', 'bgRed'], 'blue on red')}!`) // [!code ++]
 ```
 
 > [!NOTE]
@@ -32,6 +39,7 @@ import picocolors from 'picocolors' // [!code ++]
 console.log(`Hello ${chalk.blue('blue')} world!`) // [!code --]
 console.log(`Hello ${picocolors.blue('blue')} world!`) // [!code ++]
 
+// A chained example
 console.log(chalk.blue.bgRed('blue on red')) // [!code --]
 console.log(picocolors.blue(picocolors.bgRed('blue on red'))) // [!code ++]
 ```
@@ -46,8 +54,8 @@ console.log(picocolors.blue(picocolors.bgRed('blue on red'))) // [!code ++]
 Example:
 
 ```ts
-import chalk from 'chalk' // [!code --]
 import ansis from 'ansis' // [!code ++]
+import chalk from 'chalk' // [!code --]
 
 console.log(`Hello ${chalk.blue('blue')} world!`) // [!code --]
 console.log(`Hello ${ansis.blue('blue')} world!`) // [!code ++]
@@ -73,7 +81,7 @@ While these libraries are primarily designed for terminal output, some projects 
 
 Following [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/console#styling_console_output), the native approach is `%c` directive in `console.log`:
 
-```ts
+```js
 console.log(
   'Hello %ce%c1%c8%ce',
   'color: #ec8f5e;',

@@ -13,6 +13,7 @@ import sortObj from 'sort-object' // [!code --]
 
 const sorted = sortObj(object) // [!code --]
 
+// Ascending A→Z
 const sorted = Object.fromEntries( // [!code ++]
   Object.entries(object).sort((a, b) => a[0].localeCompare(b[0])) // [!code ++]
 ) // [!code ++]
@@ -46,9 +47,11 @@ const sorted = Object.fromEntries( // [!code ++]
 import sortObj from 'sort-object' // [!code --]
 import sortObjectKeys from 'sort-object-keys' // [!code ++]
 
+// Default A→Z
 const sorted = sortObj(object) // [!code --]
 const sorted = sortObjectKeys(object) // [!code ++]
 
+// With comparator
 const sortedByCmp = sortObj(object, { sort: (a, b) => a.localeCompare(b) }) // [!code --]
 const sortedByCmp = sortObjectKeys(object, (a, b) => a.localeCompare(b)) // [!code ++]
 ```
