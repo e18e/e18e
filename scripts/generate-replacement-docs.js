@@ -89,9 +89,9 @@ function convertShellDiff(lines) {
   for (const raw of lines) {
     const l = raw.replace(/^\s+/, '')
     if (/^-\s*\$\s+/.test(l))
-      out.push(l.replace(/^-\s*\$\s+/, '') + annotateSuffix('bash', '--'))
+      out.push(l.replace(/^-+\s*\$\s+/, '') + annotateSuffix('bash', '--'))
     else if (/^\+\s*\$\s+/.test(l))
-      out.push(l.replace(/^\+\s*\$\s+/, '') + annotateSuffix('bash', '++'))
+      out.push(l.replace(/^\++\s*\$\s+/, '') + annotateSuffix('bash', '++'))
     else if (/^-\s+/.test(l))
       out.push(dropMarkerKeepIndent(l) + annotateSuffix('bash', '--'))
     else if (/^\+\s+/.test(l))
@@ -132,13 +132,18 @@ function transformDiffFencesOnly(md) {
   })
 }
 
+function ensureBlankLineAfterFrontmatter(md) {
+  return md.replace(/^(---\r?\n[\s\S]*?\r?\n---)(?:\r?\n)*/, '$1\n\n')
+}
+
 async function main() {
   const readme = await fetchText(`${BASE}docs/modules/README.md`)
   const files = extractModuleFilesFromReadme(readme)
   await mkdir(DEST_DIR, { recursive: true })
   for (const rel of files) {
     const raw = await fetchText(`${BASE}docs/modules/${rel}`)
-    const out = transformDiffFencesOnly(raw)
+    const normalized = ensureBlankLineAfterFrontmatter(raw)
+    const out = transformDiffFencesOnly(normalized)
     await writeFile(path.join(DEST_DIR, path.basename(rel)), out)
   }
 }
