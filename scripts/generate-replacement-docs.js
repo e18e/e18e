@@ -38,4 +38,4 @@ async function main() {
   }
 }
 
-main().catch(() => process.exit(1))
+main()
