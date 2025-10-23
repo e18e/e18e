@@ -13,11 +13,11 @@ You can follow roughly the same migration process as documented in the [`fast-gl
 If you don’t need `.gitignore` handling, prefer [`tinyglobby`](https://github.com/SuperchupuDev/tinyglobby/) - it’s smaller and faster. If you do need `.gitignore` behavior, pair `tinyglobby` with a small git-based helper. For most cases, this will likely be good enough.p
 
 ```ts
-import { execSync } from 'node:child_process';
-import { glob, escapePath } from 'tinyglobby';
+import { execSync } from 'node:child_process'
+import { escapePath, glob } from 'tinyglobby'
 
 async function globWithGitignore(patterns, options = {}) {
-  const { cwd = process.cwd(), ...restOptions } = options;
+  const { cwd = process.cwd(), ...restOptions } = options
 
   try {
     const gitIgnored = execSync(
@@ -26,17 +26,18 @@ async function globWithGitignore(patterns, options = {}) {
     )
     .split('\n')
     .filter(Boolean)
-    .map(p => escapePath(p));
+    .map(p => escapePath(p))
 
     return glob(patterns, {
       ...restOptions,
       cwd,
       ignore: [...(restOptions.ignore || []), ...gitIgnored]
-    });
-  } catch {
-    return glob(patterns, options);
+    })
+  }
+ catch {
+    return glob(patterns, options)
   }
 }
 
-const paths = await globWithGitignore(['**/*'], {cwd})
+const paths = await globWithGitignore(['**/*'], { cwd })
 ```
