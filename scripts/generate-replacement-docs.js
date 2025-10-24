@@ -1,41 +1,48 @@
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 const BASE = 'https://raw.githubusercontent.com/outslept/module-replacements/refs/heads/transport-docs/'
 const DEST_DIR = 'docs/docs/replacements'
+const ETAG_CACHE = 'node_modules/etag/etags.json'
 
-async function fetchText(url) {
-  const r = await fetch(url)
-  if (!r.ok)
-    throw new Error(`Fetch ${r.status}: ${url}`)
-  return r.text()
-}
+const fetchText = async u => (await fetch(u)).text()
 
 function extractModuleFilesFromReadme(md) {
-  const BULLET_RE = /^\s*-\s+/
-  const MD_LINK_RE = /\[[^\]]+\]\((?<href>[^)]+\.md)\)/
-  const lines = md.split('\n')
-  const files = []
-  for (const line of lines) {
-    if (!BULLET_RE.test(line))
-      continue
-    const m = MD_LINK_RE.exec(line)
-    if (!m)
-      continue
-    const href = m.groups?.href ?? ''
-    files.push(href.replace(/^\.\//, ''))
+  return md.split('\n').filter(l => /^\s*-\s+/.test(l)).map(l => /\[[^\]]+\]\(([^)]+\.md)\)/.exec(l)?.[1]).filter(Boolean).map(h => h.replace(/^\.\//, ''))
+}
+
+async function loadEtags() {
+  try {
+    return JSON.parse(await readFile(ETAG_CACHE, 'utf8'))
   }
-  return files
+  catch { return {} }
+}
+async function saveEtags(m) {
+  await mkdir(path.dirname(ETAG_CACHE), { recursive: true })
+  await writeFile(ETAG_CACHE, JSON.stringify(m))
+}
+
+async function fetchWithEtag(url, etag) {
+  const r = await fetch(url, { headers: etag ? { 'If-None-Match': etag } : undefined })
+  if (r.status === 304)
+    return { status: 304, etag }
+  return { status: 200, etag: r.headers.get('etag'), text: await r.text() }
 }
 
 async function main() {
+  const etags = await loadEtags()
+  await mkdir(DEST_DIR, { recursive: true })
   const readme = await fetchText(`${BASE}docs/modules/README.md`)
   const files = extractModuleFilesFromReadme(readme)
-  await mkdir(DEST_DIR, { recursive: true })
   for (const rel of files) {
-    const content = await fetchText(`${BASE}docs/modules/${rel}`)
-    await writeFile(path.join(DEST_DIR, path.basename(rel)), content)
+    const url = `${BASE}docs/modules/${rel}`
+    const r = await fetchWithEtag(url, etags[url])
+    if (r.status === 304)
+      continue
+    await writeFile(path.join(DEST_DIR, path.basename(rel)), r.text)
+    if (r.etag)
+      etags[url] = r.etag
   }
+  await saveEtags(etags)
 }
-
 main()
