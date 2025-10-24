@@ -6,7 +6,7 @@ const INDEX = path.join(DIR, 'index.md')
 
 function sortRows(rows) {
   return rows.sort((a, b) =>
-    a.display.localeCompare(b.display, undefined, { sensitivity: 'base', numeric: true })
+    a.display.localeCompare(b.display, undefined, { sensitivity: 'base', numeric: true }),
   )
 }
 
@@ -14,7 +14,8 @@ async function readTable() {
   const text = await readFile(INDEX, 'utf8')
   const lines = text.split('\n')
   const headerIdx = lines.findIndex(l => l.trim() === '| Module | Auto-fixable |')
-  if (headerIdx < 0 || lines[headerIdx + 1]?.trim() !== '| -- | -- |') throw new Error('Table not found')
+  if (headerIdx < 0 || lines[headerIdx + 1]?.trim() !== '| -- | -- |')
+    throw new Error('Table not found')
   const rowsStart = headerIdx + 2
   let rowsEnd = rowsStart
   while (rowsEnd < lines.length && lines[rowsEnd].trim().startsWith('|')) rowsEnd++
@@ -25,11 +26,13 @@ function parseRows(lines, rowsStart, rowsEnd) {
   const out = []
   for (let i = rowsStart; i < rowsEnd; i++) {
     const cells = lines[i].split('|').map(s => s.trim())
-    if (cells.length < 3) continue
+    if (cells.length < 3)
+      continue
     const cell = cells[1]
     const lp = cell.lastIndexOf('(')
     const rp = cell.lastIndexOf(')')
-    if (lp === -1 || rp === -1) continue
+    if (lp === -1 || rp === -1)
+      continue
     const href = cell.slice(lp + 1, rp).trim()
     const file = href.startsWith('./') ? href.slice(2) : href
     const lb = cell.indexOf('[')
