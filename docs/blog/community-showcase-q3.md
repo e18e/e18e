@@ -141,6 +141,39 @@ Much of this saving comes from publishing two separate packages - one for develo
 
 This means production installs will run _much_ faster, and the cost of the development tools is only paid when needed.
 
+## Upcoming projects
+
+### e18e CLI
+
+The e18e CLI project missed a few milestones and isn't quite ready yet. However, with the completion and success of the GitHub Action, we're now in a much better place to complete the work.
+
+This is core to the tooling the e18e community wants to provide, so we will be pushing hard to get this out soon!
+
+Our vision for the CLI is that it can offer roughly the following:
+
+- Dependency tree analysis matching that of the GitHub action
+- Automated migrations to suggested replacements
+- Publish linting
+- Type definition linting
+
+We are aiming to release an alpha version very soon, and will be reaching out to many of you to help test it out!
+
+### e18e MCP
+
+We're also working on an e18e MCP server! This will allow us to offer module replacements as a data source to LLMs.
+
+This is early stages but will hint to your chosen agent on which libraries to use and modern syntax to prefer.
+
+The same capability should be available via the e18e CLI, leaving the choice of which you use up to you.
+
+### Module replacements v2
+
+Finally, we're working on the next version of the module replacements data :tada:
+
+One of the goals of this is to allow us to support more engines other than Node, and to offer syntax-only replacements (e.g. new platform capabilities).
+
+Once this is complete, our tooling should be able to more intelligently suggest replacements based on your project's target environment. If you use Bun, for example, it will prefer built-in Bun APIs over third-party alternatives.
+
 ## Get involved
 
 If you'd like to help out, come [join our discord](https://chat.e18e.dev) and say Hi!
