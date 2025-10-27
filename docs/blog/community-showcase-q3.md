@@ -98,6 +98,8 @@ That's where [`modern-tar`](http://github.com/ayuhito/modern-tar) and [`nanotar`
 
 It comes in at just 37KB and 0 dependencies!
 
+This comes from the [unjs](https://github.com/unjs) ecosystem, which has many more lightweight packages like this. Thanks to [@pi0](https://bsky.app/profile/pi0.io) for this one!
+
 ### `modern-tar`
 
 While `nanotar` is great for parsing and creating tar files, it doesn't currently have a way to _extract_ them to the filesystem.
@@ -108,9 +110,36 @@ That's where [`modern-tar`](https://github.com/ayuhito/modern-tar) comes in!
 
 Similarly, it comes in at only 76KB and 0 dependencies :tada:
 
+Really awesome work by [@ayuhito](https://bsky.app/profile/ayuhito.com) here!
+
 ## Storybook
 
+Storybook strikes again with another huge saving - migrating to ESM only!
+
+They have announced Storybook v10 will be going [ESM only](https://storybook.js.org/blog/storybook-is-going-esm-only/). With this migration, they're able to drop all legacy CommonJS code from their published packages.
+
+Storybook and many other popular packages currently ship two builds in their npm packages - one for CommonJS (CJS) and one for ESM. This means even if you install into an ESM-only project, you will still download the legacy CommonJS build, along with the duplicated type definitions.
+
+By going ESM only, all of this falls away and there remains only one copy of everything.
+
+This drops the `storybook` package from **66MB** to **53MB**, a great saving!
+
+On top of this, even more savings were gained by [resolving some tree-shaking issues](https://github.com/storybookjs/storybook/pull/32800). Big thanks to [Bill](https://github.com/mrginglymus) for this one!
+
 ## Netlify
+
+Netlify have been collaborating with the e18e community for some time now, and putting great effort into improving the performance of their OSS packages.
+
+Recently, we've seen two huge savings from them:
+
+- `@netlify/edge-functions` went from **34MB** to **8.4KB**! ([Release notes](https://github.com/netlify/primitives/releases/tag/edge-functions-v3.0.0))
+- `@netlify/functions` went from **93MB** to **40KB**! ([Release notes](https://github.com/netlify/primitives/releases/tag/functions-v5.0.0))
+
+It's not often we get to see savings as crazy as these. The Netlify team have done an amazing job here.
+
+Much of this saving comes from publishing two separate packages - one for development (with a bunch of dev-time tools, emulators, etc.), and one for production (just the runtime code).
+
+This means production installs will run _much_ faster, and the cost of the development tools is only paid when needed.
 
 ## Get involved
 
