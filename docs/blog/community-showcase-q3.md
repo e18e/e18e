@@ -112,6 +112,20 @@ Similarly, it comes in at only 76KB and 0 dependencies :tada:
 
 Really awesome work by [@ayuhito](https://bsky.app/profile/ayuhito.com) here!
 
+## Immer
+
+Delving into the _speed up_ category, we've seen some great improvements to the popular [immer](https://github.com/immerjs/immer) library recently.
+
+[@acemarke](https://bsky.app/profile/acemarke.dev) has been hard at work doing deep dives into the CPU and memory performance of immer across the board. He has made an impressive number of optimizations, and is still going!
+
+You can read all about it on the latest [GitHub issue](https://github.com/immerjs/immer/pull/1183#issuecomment-3453662199), where he details many of the changes made so far.
+
+These optimizations have led to some impressive speed-ups. For example, the latest branch is often **20% faster** than `main` on many benchmarks!
+
+We also recently held our first community call, where we were lucky enough to have [@acemarke](https://bsky.app/profile/acemarke.dev) walk us through these improvements and show us more of the deeper investigation.
+
+Really great work here! :pray:
+
 ## Storybook
 
 Storybook strikes again with another huge saving - migrating to ESM only!
