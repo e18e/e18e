@@ -24,7 +24,7 @@ head:
 
 _October 26, 2025_
 
-# ![Community Showcase (Q3 2025)](/og/community-showcase-25-q2.png)
+# ![Community Showcase (Q3 2025)](/og/community-showcase-25-q3.png)
 
 A little late, but here is the Q3 2025 community showcase! :tada:
 
@@ -64,7 +64,7 @@ Of course, this also plugs into e18e's existing [module replacements](https://e1
 
 If a pull request introduces a dependency which the community have marked as having suggested replacements, it will be flagged by the action.
 
-### ...and many more!
+### What's next for the action?
 
 This action is still evolving, and we plan on adding more checks in the future. If you have any ideas or feedback, please [open an issue](https://github.com/e18e/action-dependency-diff/issues).
 
@@ -90,7 +90,7 @@ While investigating ways to reduce install size and complexity, a commonly raise
 
 Both of these packages are rather large, and the community have been itching to replace them with something more lightweight for a while now.
 
-That's where [`modern-tar`](http://github.com/ayuhito/modern-tar) and [`nanotar`](https://github.com/unjs/nanotar) come in!
+That's where [`modern-tar`](https://github.com/ayuhito/modern-tar) and [`nanotar`](https://github.com/unjs/nanotar) come in!
 
 ### `nanotar`
 
@@ -120,7 +120,7 @@ Delving into the _speed up_ category, we've seen some great improvements to the 
 
 You can read all about it on the latest [GitHub issue](https://github.com/immerjs/immer/pull/1183#issuecomment-3453662199), where he details many of the changes made so far.
 
-These optimizations have led to some impressive speed-ups. For example, the latest branch is often **20% faster** than `main` on many benchmarks!
+These optimizations have led to some impressive speed-ups. For example, the latest branch is **20% faster** than `main` on many benchmarks!
 
 We also recently held our first community call, where we were lucky enough to have [@acemarke](https://bsky.app/profile/acemarke.dev) walk us through these improvements and show us more of the deeper investigation.
 
