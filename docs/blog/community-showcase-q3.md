@@ -118,7 +118,12 @@ Delving into the _speed up_ category, we've seen some great improvements to the 
 
 [@acemarke](https://bsky.app/profile/acemarke.dev) has been hard at work doing deep dives into the CPU and memory performance of immer across the board. He has made an impressive number of optimizations, and is still going!
 
-You can read all about it on the latest [GitHub issue](https://github.com/immerjs/immer/pull/1183#issuecomment-3453662199), where he details many of the changes made so far.
+You can read all about it on the latest [GitHub issue](https://github.com/immerjs/immer/pull/1183#issuecomment-3453662199), where he details many of the changes made so far. Just a few highlights:
+
+- Improving iteration by avoiding `Reflect` and caching object shapes
+- Rewriting finalization to be callback based instead of recursive
+- Overriding array methods to avoid creating proxies on reads
+- Avoiding object spreads for shallow copies
 
 These optimizations have led to some impressive speed-ups. For example, the latest branch is **20% faster** than `main` on many benchmarks!
 
