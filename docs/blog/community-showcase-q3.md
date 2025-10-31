@@ -188,6 +188,18 @@ One of the goals of this is to allow us to support more engines other than Node,
 
 Once this is complete, our tooling should be able to more intelligently suggest replacements based on your project's target environment. If you use Bun, for example, it will prefer built-in Bun APIs over third-party alternatives.
 
+## ViteConf
+
+Earlier this month, the first in person ViteConf was held!
+
+A few of us went along, and we even had the first e18e talk there 🎉
+
+This was a great experience and so many people were interested in what the community has been up to. We'd love to make this more of a regular occurrence to help share the knowledge and increase collaboration.
+
+From this event alone, we've kicked off a few collaborations with Astro, Netlify, Nuxt, and more! 
+
+This was also the first time a few of us were in person together. Just a few of the amazing people who made the trip: [@antfu](https://bsky.app/profile/antfu.me), [@bluwy](https://bsky.app/profile/bluwy.me), [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social), [@pi0](https://bsky.app/profile/pi0.io) 🥳
+
 ## Get involved
 
 If you'd like to help out, come [join our discord](https://chat.e18e.dev) and say Hi!
