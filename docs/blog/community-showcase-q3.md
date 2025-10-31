@@ -19,7 +19,7 @@ head:
       content: An update on what the community have been up to in Q3 of 2025
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/community-showcase-25-q2.png
+      content: https://e18e.dev/og/community-showcase-25-q3.png
 ---
 
 _October 31, 2025_
