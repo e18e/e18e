@@ -188,6 +188,32 @@ One of the goals of this is to allow us to support more engines other than Node,
 
 Once this is complete, our tooling should be able to more intelligently suggest replacements based on your project's target environment. If you use Bun, for example, it will prefer built-in Bun APIs over third-party alternatives.
 
+## Package publishing guide
+
+In the wake of the recent supply chain attacks, many community members have been asking how to best secure their package publishing process.
+
+To help with this, we've put together a [package publishing guide](https://e18e.dev/docs/publishing.html) which goes over best practices for securely publishing your packages.
+
+In this guide, we cover how to configure a typical OIDC setup with GitHub Actions, as well as some best practices around keeping the workflow secure. We've also published a few different "recipes" to show how you can do the same with various changelog/release management tools.
+
+This is the result of many discussions in the community, so a big thanks to everyone who contributed! Particularly, thanks to [@sxzz](https://bsky.app/profile/sxzz.dev), [@dominikg](https://bsky.app/profile/dominikg.dev), and [@jviide](https://bsky.app/profile/jviide.iki.fi) for their help putting this together.
+
+## Community calls / stream
+
+We had a small trial of a community call when [@acemarke](https://bsky.app/profile/acemarke.dev) presented his immer optimizations. This was a great success, so we plan on doing more of these in the future!
+
+Nothing is set in stone yet, but we're planning on doing a monthly community call, usually with a guest speaker from the community. Hopefully, this will give some good insight into what people are working on, and will help teach us all new things.
+
+Keep an eye out for announcements in our [Discord](https://chat.e18e.dev) when the next one is scheduled.
+
+## Working Draft podcast
+
+The Working Draft podcast also recently had an e18e-focused episode! You can check it out on their [website](https://workingdraft.de/684/) (Note it is in German language).
+
+Great work by [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social) and [@thealexlichter](https://bsky.app/profile/thealexlichter.com) for representing the community so well.
+
+We're always happy to see community members getting involved in advocating for better practices around performance like this. If you run a similar podcast or want to suggest one for us to appear on, please let us know in the Discord!
+
 ## ViteConf
 
 Earlier this month, the first in person ViteConf was held!
@@ -196,9 +222,9 @@ A few of us went along, and we even had the first e18e talk there 🎉
 
 This was a great experience and so many people were interested in what the community has been up to. We'd love to make this more of a regular occurrence to help share the knowledge and increase collaboration.
 
-From this event alone, we've kicked off a few collaborations with Astro, Netlify, Nuxt, and more! 
+From this event alone, we've kicked off a few collaborations with Astro, Netlify, Nuxt, and more!
 
-This was also the first time a few of us were in person together. Just a few of the amazing people who made the trip: [@antfu](https://bsky.app/profile/antfu.me), [@bluwy](https://bsky.app/profile/bluwy.me), [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social), [@pi0](https://bsky.app/profile/pi0.io) 🥳
+This was also the first time a few of us were in person together. Just a few of the amazing people in our community who made the trip: [@antfu](https://bsky.app/profile/antfu.me), [@bluwy](https://bsky.app/profile/bluwy.me), [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social), [@pi0](https://bsky.app/profile/pi0.io) 🥳
 
 ## Get involved
 
