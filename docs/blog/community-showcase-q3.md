@@ -3,7 +3,7 @@ title: Community Showcase (Q3 2025)
 author:
   - name: The e18e Contributors
 sidebar: false
-date: 2025-10-26
+date: 2025-10-31
 head:
   - - meta
     - property: og:type
@@ -22,7 +22,7 @@ head:
       content: https://e18e.dev/og/community-showcase-25-q2.png
 ---
 
-_October 26, 2025_
+_October 31, 2025_
 
 # ![Community Showcase (Q3 2025)](/og/community-showcase-25-q3.png)
 
