@@ -27,7 +27,7 @@ _May XX, 2025_
 
 ![Tinyglobby migration and matching at the speed of light)](/og/tinyglobby-migration.png)
 
-My story with dependencies is odd. I started coding in JavaScript about five years ago,
+My story with dependencies is odd. I started coding in JavaScript about six years ago,
 and over time I started to notice just how big my lockfiles were getting every time
 I wanted to use a new library. Most subdependencies didn't even seem related to the libraries I was using.
 I had a low-end laptop until recently, and every time this happened I'd notice just how slow installations were getting.
@@ -44,14 +44,19 @@ I would have never thought I'd spend the rest of the year working on globs.
 
 Since some people from e18e were also stuck on lightweight globs, we decided it was best if my little tsup PR
 of less than 100 lines would be turned into its own library, so that others could benefit from its small size.
+This is the story of that library.
+
+## tinyglobby
+
+`tinyglobby` is an attempt at having a glob library that's as small as possible without sacrificing on performance.
 
 ## Dependency savings
 
 Let's take a look at some comparisons with other libraries in this space:
 
-- `globby` consists of [24 packages by 14 maintainers](https://npmgraph.js.org/?q=globby) with an [install size of 631KB](https://pkg-size.dev/globby)
+- `globby` consists of [24 packages by 14 maintainers](https://npmgraph.js.org/?q=globby) with an [install size of 637KB](https://pkg-size.dev/globby)
 - `fast-glob` consists of [18 packages by 12 maintainers](https://npmgraph.js.org/?q=fast-glob) with an [install size of 513KB](https://pkg-size.dev/fast-glob)
-- **`tinyglobby` consists of [3 packages by 6 maintainers](https://npmgraph.js.org/?q=tinyglobby) with an [install size of 162KB](https://pkg-size.dev/tinyglobby)**
+- **`tinyglobby` consists of [3 packages by 6 maintainers](https://npmgraph.js.org/?q=tinyglobby) with an [install size of 179KB](https://pkg-size.dev/tinyglobby)**
 
 Having fewer packages reduces the need to have as many people with access to merge and release new versions thus reducing supply chain vulnerabilities, of which we've seen a number of in the npm ecosystem. For example, just recently, users of `glob`, which has 26 dependencies, were affected by a supply chain attack in which a dependency - `strip-ansi` - [was compromised](https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack). Users of `tinyglobby` would not have been affected by this particular attack and face far less risk of similar attacks in the future.
 
@@ -71,7 +76,7 @@ A whole raft of popular build tools now rely solely on tinyglobby for glob funct
 - lerna
 - and many more...
 
-None of these tools have a deep dependency on other glob libraries - all of them use tinyglobby all the way down 🎉 
+None of these tools have a deep dependency on other glob libraries - all of them use tinyglobby all the way down 🎉
 
 Similarly, many popular frameworks have made the same move:
 
@@ -93,11 +98,27 @@ For projects that are new or have recently updated dependencies, `tinyglobby` is
 
 ## Performance
 
-TODO: Insert benchmark here
+The journey with `tinyglobby` started out focusing more on size rather than performance. After many months past its
+initial release though, I am proud to say that it is not only smaller but also faster than alternatives for
+the vast majority of use cases.
+
+A few months ago, a important performance improvement was achieved that applied to every use case that didn't
+glob outside the cwd used. Comparing benchmarks between the newest release and the previous one shows a considerable
+speedup! [Here's one](https://bsky.app/profile/superchupu.dev/post/3ly6vfdn6n225) where `tinyglobby` didn't use to be the fastest: globbing `packages/*.tsconfig.json` in the `typescript-eslint` repository:
+
+------------------------------------
+|                     | ops/s      |
+----------------------|-------------
+| `tinyglobby` 0.2.15 | 2357 ± 100 |
+| `tinyglobby` 0.2.14 | 981 ± 131  |
+| `fast-glob`         | 1878 ± 110 |
+| `glob`              | 1767 ± 95  |
+| `node:fs` glob      | 941 ± 74   |
+------------------------------------
 
 ## Stability
 
-`tinyglobby` is a newer library, so you may ask whether switching to it introduces a higher risk of bugs. It is certainly true that libraries take time to mature. In tinyglobby's earlier days some projects faced regressions. However, those issues have all now been fixed. With such widespread adoption by high profile widely-used projects in the ecosystem, any bugs in `tinyglobby` are found and reported quickly. Each issue has been patched with an included test and as a result `tinyglobby` now has over 100 individual tests. When there has been a bug in `tinyglobby`, it's been relatively straightforward to identify whether it's in `tinyglobby` itself or one of its two dependencies. It can be much harder to track down an issue in a library with 17 dependencies or even to see all of the issues across all of the repos that might be present. In fact, `fast-glob` and its dependencies together have roughly twice as many open issues as `tinyglobby` and its dependencies combined. `tinyglobby` has been very actively maintained and has the support of the e18e community who have been instrumental in identifying issues and their root causes.
+`tinyglobby` is a newer library, so you may ask whether switching to it introduces a higher risk of bugs. It is certainly true that libraries take time to mature. In tinyglobby's earlier days some projects faced regressions. However, those issues have all now been fixed. With such widespread adoption by high profile widely-used projects in the ecosystem, any bugs in `tinyglobby` are found and reported quickly. Each issue has been patched with an included test and as a result `tinyglobby` now has over 100 individual tests. When there has been a bug in `tinyglobby`, it's been relatively straightforward to identify whether it's in `tinyglobby` itself or one of its two dependencies. It can be much harder to track down an issue in a library with 17 dependencies or even to see all of the issues across all of the repos that might be present. In fact, `fast-glob` and its dependencies together have roughly twice as many open issues as `tinyglobby` and its dependencies combined. `tinyglobby` has been very actively maintained and has the support of the e18e community who have been instrumental in identifying issues and their root causes. The [biggest release so far](https://bsky.app/profile/superchupu.dev/post/3ly6vfczjq225), `0.2.15`, has so far zero regressions reported despite it changing a lot of internals!
 
 ## Standing on the shoulders of giants
 
