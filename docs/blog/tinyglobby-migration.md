@@ -60,9 +60,11 @@ Let's take a look at some comparisons with other libraries in this space:
 
 Having fewer packages reduces the need to have as many people with access to merge and release new versions thus reducing supply chain vulnerabilities, of which we've seen a number of in the npm ecosystem. For example, just recently, users of `glob`, which has 26 dependencies, were affected by a supply chain attack in which a dependency - `strip-ansi` - [was compromised](https://socket.dev/blog/npm-author-qix-compromised-in-major-supply-chain-attack). Users of `tinyglobby` would not have been affected by this particular attack and face far less risk of similar attacks in the future.
 
-### Deduplication
+### High adoption enables deduplication
 
-Of course `globby` and `fast-glob` are widely used so you may question whether switching a library to use `tinyglobby` just results in more dependencies rather than any savings once dependency deduplication is factored in.
+Of course, `globby` and `fast-glob` are widely used, so you may question whether switching to `tinyglobby` just results in more dependencies rather than any savings once dependency deduplication is factored in.
+
+Fortunately, the community have been hard at work consolidating around the use of tinyglobby and reducing this problem. 
 
 A whole raft of popular build tools now rely solely on tinyglobby for glob functionality:
 
@@ -102,9 +104,9 @@ The journey with `tinyglobby` started out focusing more on size rather than perf
 initial release though, I am proud to say that it is not only smaller but also faster than alternatives for
 the vast majority of use cases.
 
-A few months ago, a important performance improvement was achieved that applied to every use case that didn't
+A few months ago, an important performance improvement was achieved that applied to every use case that didn't
 glob outside the cwd used. Comparing benchmarks between the newest release and the previous one shows a considerable
-speedup! [Here's one](https://bsky.app/profile/superchupu.dev/post/3ly6vfdn6n225) where `tinyglobby` didn't use to be the fastest: globbing `packages/*.tsconfig.json` in the `typescript-eslint` repository:
+speedup! [Here's one](https://bsky.app/profile/superchupu.dev/post/3ly6vfdn6n225) where `tinyglobby` didn't use to be the fastest - globbing `packages/*.tsconfig.json` in the `typescript-eslint` repository:
 
 ------------------------------------
 |                     | ops/s      |
