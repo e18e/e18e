@@ -25,7 +25,7 @@ head:
 
 _May XX, 2025_
 
-![Tinyglobby migration and matching at the speed of light)](/og/tinyglobby-migration.png)
+![Tinyglobby: a success story in modernization and performance)](/og/tinyglobby-migration.png)
 
 My story with dependencies is odd. I started coding in JavaScript about six years ago,
 and over time I started to notice just how big my lockfiles were getting every time
