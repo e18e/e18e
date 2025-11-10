@@ -1,5 +1,5 @@
 ---
-title: Tinyglobby migration and matching at the speed of light
+title: 'Tinyglobby: a success story in modernization and performance'
 author:
   - name: Madeline Gurriarán
 sidebar: false
@@ -11,7 +11,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Tinyglobby migration and matching at the speed of light
+      content: 'Tinyglobby: a success story in modernization and performance'
   - - meta
     - property: og:url
       content: https://e18e.dev/blog/tinyglobby-migration
@@ -44,11 +44,6 @@ I would have never thought I'd spend the rest of the year working on globs.
 
 Since some people from e18e were also stuck on lightweight globs, we decided it was best if my little tsup PR
 of less than 100 lines would be turned into its own library, so that others could benefit from its small size.
-This is the story of that library.
-
-## tinyglobby
-
-`tinyglobby` is an attempt at having a glob library that's as small as possible without sacrificing on performance.
 
 ## Dependency savings
 
@@ -64,7 +59,7 @@ Having fewer packages reduces the need to have as many people with access to mer
 
 Of course, `globby` and `fast-glob` are widely used, so you may question whether switching to `tinyglobby` just results in more dependencies rather than any savings once dependency deduplication is factored in.
 
-Fortunately, the community have been hard at work consolidating around the use of tinyglobby and reducing this problem. 
+Fortunately, the community has been hard at work consolidating around the use of tinyglobby and reducing this problem.
 
 A whole raft of popular build tools now rely solely on tinyglobby for glob functionality:
 
