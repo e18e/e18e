@@ -102,28 +102,30 @@ A few months ago, an important performance improvement was achieved that applied
 glob outside the cwd used. Comparing benchmarks between the newest release and the previous one shows a considerable
 speedup! [Here's one](https://bsky.app/profile/superchupu.dev/post/3ly6vfdn6n225) where `tinyglobby` didn't use to be the fastest - globbing `packages/*.tsconfig.json` in the `typescript-eslint` repository:
 
-------------------------------------
 |                     | ops/s      |
-----------------------|-------------
+|---------------------|------------|
 | `tinyglobby` 0.2.15 | 2357 ± 100 |
 | `tinyglobby` 0.2.14 | 981 ± 131  |
 | `fast-glob`         | 1878 ± 110 |
 | `glob`              | 1767 ± 95  |
 | `node:fs` glob      | 941 ± 74   |
-------------------------------------
 
 ## Stability
 
 `tinyglobby` is a newer library, so you may be wondering whether switching to it introduces a higher risk of undiscovered bugs or not. This is where `tinyglobby` is fortunate in that it has been able to take on learnings from those which came before it, including edge-cases and bugs.
 
-In tinyglobby's earlier days, some users encountered regressions. However, those issues have all now been fixed. With such widespread adoption by high profile widely-used projects in the ecosystem, any bugs in `tinyglobby` are found and reported quickly.
+In `tinyglobby`'s earlier days, some users encountered regressions, thankfully, the vast majority of issues were quick to be fixed. With such widespread adoption by high profile widely-used projects in the ecosystem, any bugs in `tinyglobby` are found and reported quickly.
 
-On top of this, each fixed issue introduces an associated test and, as a result, `tinyglobby` now has over 100 individual tests. These regression tests will help ensure no breaking changes occur in future, too.
+On top of this, each fixed issue introduces an associated test and, as a result, `tinyglobby` has over 100 individual tests. These regression tests will help ensure no breaking changes occur in the future, too.
 
-When there has been a bug in `tinyglobby`, it's been relatively straightforward to identify whether it's in `tinyglobby` itself or one of its two dependencies. It can be much harder to track down an issue in a library with 17 dependencies or even to see all of the issues across all of the repos that might be present. In fact, `fast-glob` and its dependencies together have roughly twice as many open issues as `tinyglobby` and its dependencies combined. `tinyglobby` has been very actively maintained and has the support of the e18e community who have been instrumental in identifying issues and their root causes. The [biggest release so far](https://bsky.app/profile/superchupu.dev/post/3ly6vfczjq225), `0.2.15`, has so far zero regressions reported despite it changing a lot of internals!
+When there has been a bug in `tinyglobby`, it's been relatively straightforward to identify whether it's in `tinyglobby` itself or one of its two dependencies. It can be much harder to track down an issue in a library with 17 dependencies or even to see all of the issues across all of the repos that might be present. In fact, `fast-glob` and its dependencies together have roughly twice as many open issues as `tinyglobby` and its dependencies combined.
+
+`tinyglobby` has been very actively maintained and has the support of the e18e community who have been instrumental in identifying issues and their root causes. The [biggest release so far](https://bsky.app/profile/superchupu.dev/post/3ly6vfczjq225), `0.2.15`, has so far zero regressions reported despite it changing a lot of internals!
 
 ## Standing on the shoulders of giants
 
-`tinyglobby` depends on `fdir` and `picomatch` and would not be possible without them. I've learned a lot about the complexity of globbing over the past year and it is wonderful being able to rely on `picomatch` as a battle-tested library implementing this functionality. And `fdir` lets us build on top of the fastest directory crawler on Node, which can easily crawl a directory containing 1 million files in < 1 second.
+`tinyglobby` depends on `fdir` and `picomatch` and would not be possible without them. I've learned a lot about the complexity of globbing over the past year and a half and it is wonderful being able to rely on `picomatch` as a battle-tested library implementing this functionality. And `fdir` lets us build on top of the fastest directory crawler on Node, which can easily crawl a directory containing 1 million files in < 1 second.
 
-I'd also like to thank the authors of `globby` and `fast-glob` - Sindre Sorhus and Denis Malinochkin. `tinyglobby` is API-compatible with a subset of their APIs, which have found widespread adoption in the ecosystem. The creation of `tinyglobby` is in no way a criticism of their work. Those libraries implement a lot of functionality and are a great solution for many users. `tinyglobby` is meant as a lightweight alternative for the vast majority of projects that don't need the full breadth of options provided by those libraries. Additionally, a special thanks should be given to Sindre for helping to push forward the ecosystem in ways that e18e is also working on. E.g. Sindre has converted many of his packages to be ESM-only. While this has made upgrades difficult for consumers in the past, all LTS versions of Node now support the `module-sync` export path, which should greatly ease adoption of ESM packages by CJS code.
+I'd also like to thank the authors of `globby` and `fast-glob` - Sindre Sorhus and Denis Malinochkin. `tinyglobby` is API-compatible with a subset of their APIs, which have found widespread adoption in the ecosystem. The creation of `tinyglobby` is in no way a criticism of their work. Those libraries implement a lot of functionality and are a great solution for many users!
+
+`tinyglobby` is meant as a lightweight alternative for the vast majority of projects that don't need the full breadth of options provided by those libraries. Additionally, a special thanks should be given to Sindre for helping to push forward the ecosystem in ways that e18e is also working on. E.g. Sindre has converted many of his packages to be ESM-only. While this has made upgrades difficult for consumers in the past, all LTS versions of Node now support importing ESM code from CJS, which should greatly ease adoption of ESM-only packages.
