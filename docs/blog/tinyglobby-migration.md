@@ -4,7 +4,7 @@ author:
   - name: Madeline Gurriarán
 sidebar: false
 # placeholder
-date: 2025-05-22
+date: 2025-11-11
 head:
   - - meta
     - property: og:type
@@ -17,13 +17,13 @@ head:
       content: https://e18e.dev/blog/tinyglobby-migration
   - - meta
     - property: og:description
-      content: Our journey so far as a community leading into 2025
+      content: The story of Tinyglobby, one of the e18e community's most successful projects
   - - meta
     - property: og:image
       content: https://e18e.dev/og/tinyglobby-migration.png
 ---
 
-_May XX, 2025_
+_November 11, 2025_
 
 ![Tinyglobby: a success story in modernization and performance)](/og/tinyglobby-migration.png)
 
