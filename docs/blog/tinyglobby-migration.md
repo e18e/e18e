@@ -1,5 +1,5 @@
 ---
-title: 'Tinyglobby: a success story in modernization and performance'
+title: 'tinyglobby: a success story in modernization and performance'
 author:
   - name: Madeline Gurriarán
 sidebar: false
@@ -10,7 +10,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: 'Tinyglobby: a success story in modernization and performance'
+      content: 'tinyglobby: a success story in modernization and performance'
   - - meta
     - property: og:url
       content: https://e18e.dev/blog/tinyglobby-migration
@@ -24,7 +24,7 @@ head:
 
 _November 11, 2025_
 
-![Tinyglobby: a success story in modernization and performance)](/og/tinyglobby-migration.png)
+![tinyglobby: a success story in modernization and performance)](/og/tinyglobby-migration.png)
 
 My story with dependencies is odd. I started coding in JavaScript about six years ago,
 and over time I started to notice just how big my lockfiles were getting every time
@@ -58,9 +58,9 @@ Having fewer packages reduces the need to have as many people with access to mer
 
 Of course, `globby` and `fast-glob` are widely used, so you may question whether switching to `tinyglobby` just results in more dependencies rather than any savings once dependency deduplication is factored in.
 
-Fortunately, the community has been hard at work consolidating around the use of tinyglobby and reducing this problem.
+Fortunately, the community has been hard at work consolidating around the use of `tinyglobby` and reducing this problem.
 
-A whole raft of popular build tools now rely solely on tinyglobby for glob functionality:
+A whole raft of popular build tools now rely solely on `tinyglobby` for glob functionality:
 
 - Vite
 - SWC
@@ -72,7 +72,7 @@ A whole raft of popular build tools now rely solely on tinyglobby for glob funct
 - lerna
 - and many more...
 
-None of these tools have a deep dependency on other glob libraries - all of them use tinyglobby all the way down 🎉
+None of these tools have a deep dependency on other glob libraries - all of them use `tinyglobby` all the way down 🎉
 
 Similarly, many popular frameworks have made the same move:
 
