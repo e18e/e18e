@@ -19,7 +19,7 @@ head:
       content: The story of tinyglobby, one of the e18e community's most successful projects
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/tinyglobby-migration.png
+      content: https://e18e.dev/og/tinyglobby-migration.webp
 ---
 
 _November 11, 2025_
