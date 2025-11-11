@@ -114,9 +114,11 @@ speedup! [Here's one](https://bsky.app/profile/superchupu.dev/post/3ly6vfdn6n225
 
 `tinyglobby` is a newer library, so you may be wondering whether switching to it introduces a higher risk of undiscovered bugs or not. This is where `tinyglobby` is fortunate in that it has been able to take on learnings from those which came before it, including edge-cases and bugs.
 
-In `tinyglobby`'s earlier days, some users encountered regressions, thankfully, the vast majority of issues were quick to be fixed. With such widespread adoption by high profile widely-used projects in the ecosystem, any bugs in `tinyglobby` are found and reported quickly.
+In `tinyglobby`'s earlier days, some users encountered regressions. Thankfully, the vast majority of issues were quick to be fixed. With such widespread adoption by high profile widely-used projects in the ecosystem, any bugs in `tinyglobby` are found and reported quickly.
 
 On top of this, each fixed issue introduces an associated test and, as a result, `tinyglobby` has over 100 individual tests. These regression tests will help ensure no breaking changes occur in the future, too.
+
+The few remaining behavior differences between `tinyglobby` and its alternatives are well-known and have been documented in the [project's website](https://superchupu.dev/tinyglobby/comparison), which aims to serve as a comprehensive guide and reference point.
 
 When there has been a bug in `tinyglobby`, it's been relatively straightforward to identify whether it's in `tinyglobby` itself or one of its two dependencies. It can be much harder to track down an issue in a library with 17 dependencies or even to see all of the issues across all of the repos that might be present. In fact, `fast-glob` and its dependencies together have roughly twice as many open issues as `tinyglobby` and its dependencies combined.
 
