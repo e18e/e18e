@@ -3,7 +3,6 @@ title: 'Tinyglobby: a success story in modernization and performance'
 author:
   - name: Madeline Gurriarán
 sidebar: false
-# placeholder
 date: 2025-11-11
 head:
   - - meta
@@ -17,7 +16,7 @@ head:
       content: https://e18e.dev/blog/tinyglobby-migration
   - - meta
     - property: og:description
-      content: The story of Tinyglobby, one of the e18e community's most successful projects
+      content: The story of tinyglobby, one of the e18e community's most successful projects
   - - meta
     - property: og:image
       content: https://e18e.dev/og/tinyglobby-migration.png
