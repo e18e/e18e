@@ -26,6 +26,8 @@ _November 11, 2025_
 
 ![tinyglobby: a success story in modernization and performance)](/og/tinyglobby-migration.webp)
 
+**Author:** Madeline Gurriarán ([@superchupu](https://bsky.app/profile/superchupu.dev))
+
 My story with dependencies is odd. I started coding in JavaScript about six years ago,
 and over time I started to notice just how big my lockfiles were getting every time
 I wanted to use a new library. Most subdependencies didn't even seem related to the libraries I was using.
