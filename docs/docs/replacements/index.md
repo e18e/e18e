@@ -20,6 +20,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`chalk`](./chalk.md) | :ballot_box_with_check: |
 | [`core-util-is`](./core-util-is.md) | :x: |
 | [`cpx`](./cpx.md) | :x: |
+| [`crypto-js`](./crypto-js.md) | :x: |
 | [`deep-equal`](./deep-equal.md) | :ballot_box_with_check: |
 | [`depcheck`](./depcheck.md) | :x: |
 | [`dot-prop`](./dot-prop.md) | :x: |
@@ -50,6 +51,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`js-yaml`](./js-yaml.md) | :x: |
 | [`jsx-ast-utils`](./jsx-ast-utils.md) | :x: |
 | [`lint-staged`](./lint-staged.md) | :x: |
+| [`lodash-underscore`](./lodash-underscore.md) | :x: |
 | [`materialize-css`](./materialize-css.md) | :x: |
 | [`md5`](./md5.md) | :ballot_box_with_check: |
 | [`mkdirp`](./mkdirp.md) | :x: |
@@ -61,8 +63,8 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`pkg-dir`](./pkg-dir.md) | :x: |
 | [`qs`](./qs.md) | :x: |
 | [`read-package-up`](./read-package-up.md) | :x: |
-| [`read-pkg-up`](./read-pkg-up.md) | :x: |
 | [`read-pkg`](./read-pkg.md) | :x: |
+| [`read-pkg-up`](./read-pkg-up.md) | :x: |
 | [`readable-stream`](./readable-stream.md) | :x: |
 | [`rimraf`](./rimraf.md) | :x: |
 | [`shortid`](./shortid.md) | :x: |
@@ -72,4 +74,5 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 | [`tempy`](./tempy.md) | :x: |
 | [`traverse`](./traverse.md) | :ballot_box_with_check: |
 | [`uri-js`](./uri-js.md) | :x: |
+| [`utf8`](./utf8.md) | :x: |
 | [`xmldom`](./xmldom.md) | :x: |
