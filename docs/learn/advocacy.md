@@ -1,3 +1,7 @@
+---
+description: Best practices for contributing e18e performance improvements to open source projects.
+---
+
 # Advocacy
 
 Much of e18e's work involves making changes in existing open source repositories.
