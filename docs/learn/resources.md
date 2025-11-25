@@ -1,3 +1,7 @@
+---
+description: Tools, websites, and resources for improving the JavaScript ecosystem.
+---
+
 # Resources
 
 ## Efforts

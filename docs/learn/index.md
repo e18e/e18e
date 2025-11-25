@@ -1,3 +1,7 @@
+---
+description: An initiative to improve performance and modernize the JavaScript ecosystem.
+---
+
 # Why e18e
 
 The e18e project is an initiative to bring together the groups and individuals who are passionate about improving performance of the JavaScript ecosystem.

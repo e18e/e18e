@@ -1,3 +1,7 @@
+---
+description: Cleaning up dependency trees and modernizing packages across the ecosystem.
+---
+
 # Cleanup
 
 The JavaScript ecosystem has grown massively over the years, in both good and bad ways. We have all the packages and choice we want, but have built up a vast amount of technical debt along the way.

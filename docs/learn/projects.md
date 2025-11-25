@@ -1,5 +1,6 @@
-<style scoped>
-</style>
+---
+description: A list of ongoing and upcoming projects by the e18e community.
+---
 
 # Ongoing Projects
 

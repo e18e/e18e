@@ -1,3 +1,7 @@
+---
+description: Profiling and improving performance of popular projects across the ecosystem.
+---
+
 # Speedup
 
 A major part of improving the ecosystem for everyone is _speed_. The speed of core packages, tools, and more can always be improved and will benefit the community as a whole.
