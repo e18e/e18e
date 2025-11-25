@@ -87,6 +87,10 @@ export default defineConfig({
               text: 'Advocacy',
               link: '/learn/advocacy',
             },
+            {
+              text: 'Ongoing Projects',
+              link: '/learn/projects',
+            },
           ],
         },
         {
