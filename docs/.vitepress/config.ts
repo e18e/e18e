@@ -97,15 +97,15 @@ export default defineConfig({
           text: 'Performance',
           items: [
             {
-              text: 'cleanup',
+              text: 'Cleanup',
               link: '/learn/cleanup',
             },
             {
-              text: 'speedup',
+              text: 'Speedup',
               link: '/learn/speedup',
             },
             {
-              text: 'levelup',
+              text: 'Levelup',
               link: '/learn/levelup',
             },
           ],
@@ -118,6 +118,10 @@ export default defineConfig({
             {
               text: 'Index',
               link: '/docs/',
+            },
+            {
+              text: 'Publishing Packages',
+              link: '/docs/publishing.html',
             },
           ],
         },
