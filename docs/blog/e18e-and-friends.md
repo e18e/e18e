@@ -38,7 +38,7 @@ The e18e community has so many amazing people from all corners of the JavaScript
 
 As the host, we're super excited to have [@thealexlichter](https://bsky.app/profile/thealexlichter.com) on board!
 
-Alex has been a long time advocate for performance in the JavaScript ecosystem. As part of the [void zero](https://voidzero.dev/) team, he's also been hard at work pushing web tooling forward with projects like [rolldown](https://rolldown.rs/).
+Alex has been a long time advocate for performance in the JavaScript ecosystem. As part of the [VoidZero](https://voidzero.dev/) team, he's also been hard at work pushing web tooling forward with projects like [Rolldown](https://rolldown.rs/).
 
 He's also done some great talks and has hosted the [DejaVue](https://dejavue.fm/) podcast for some time now, so we're really excited to have him leading the show.
 
