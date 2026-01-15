@@ -26,15 +26,13 @@ _January 15, 2026_
 
 # ![e18e & friends](/og/community-showcase-25-q3.png)
 
-Today, we're excited to reveal our brand new community show, _e18e & Friends_!
+We're starting a new community show: _e18e & Friends_!
 
 ## What is e18e & Friends?
 
-The e18e community has so many amazing people from all corners of the JavaScript ecosystem. Library authors, contributors, engine implementors, framework maintainers, and many more.
+**e18e & Friends** is a new live streamed show where we catch up with friends from around the JavaScript ecosystem. Often people working on performance and modernization projects, but really anyone who has something interesting to share!
 
-A large part of the e18e community's existence is to help share knowledge around performance, and improve collaboration in the space.
-
-With this in mind, we're creating a new **monthly** live stream where we can catch up with some of these friends on the cool things they're working on: **e18e & Friends!**
+The e18e community has so many amazing people from all corners of the JavaScript ecosystem. Library authors, contributors, engine implementors, framework maintainers, and many more. We'd love to bring some of these folks together and provide a platform to share their work more widely.
 
 ## Introducing the host...
 
