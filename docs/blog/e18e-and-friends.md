@@ -52,4 +52,4 @@ We'll also spend some time answering questions from the audience, so make sure t
 
 ## Join us live!
 
-If you'd like to join us live for the first episode of _e18e & Friends_, you can find the event on [Discord](https://chat.e18e.dev). We will be streaming on **February 10th, 2026 at ?? GMT**.
+If you'd like to join us live for the first episode of _e18e & Friends_, you can find the event on [Discord](https://chat.e18e.dev). We will be streaming on **February 10th, 2026 at 7pm CET**.
