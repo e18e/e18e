@@ -28,7 +28,7 @@ _January 22, 2026_
 
 ![October Contributions Cover Image](/og/the-year-ahead-2026.png)
 
-We haven't had a blog post in a while, mostly thanks to the holiday season but also because many of us have been hard at work on some fairly chunky e18e projects lately! So let's have a look ahead at what's coming in 2026 and a small recap on what we got up to last year :rocket:
+We haven't had a blog post in a while, largely due to the holiday season but also because many of us have been hard at work on some fairly chunky e18e projects lately! So let's have a look ahead at what's coming in 2026 and a small recap on what we got up to last year :rocket:
 
 ## 2025 Recap
 
@@ -62,7 +62,7 @@ TODO - add more contributions here
 
 ## Sponsored by Google Chrome :rocket:
 
-A huge milestone this week, the Google Chrome team have officially sponsored us as part of their Chrome Performance fund! :tada:
+A huge milestone this week: the Google Chrome team have officially sponsored us as part of their Chrome Performance fund! :tada:
 
 The e18e community and the Chrome team share a lot of the same goals - improving web performance and modernizing the code we ship to users on the web. So it is great to have their support and be able to collaborate more closely.
 
@@ -117,7 +117,7 @@ This will lead to us being able to make smarter suggestions in tools like the ES
 
 ## Replacements GitHub action
 
-Very early design stages right now, but we're cooking up a GitHub action which will automatically create pull requests for module replacements and syntax improvements.
+We're in the very early design stages, but we're cooking up a GitHub action which will automatically create pull requests for module replacements and syntax improvements!
 
 This action should do a lot of what the CLI and the ESLint plugin do, but in an automated fashion and focused around migrations rather than analysis.
 
@@ -125,9 +125,9 @@ Think of it as dependabot for modernization and performance improvements!
 
 ## Framework Performance
 
-A very exciting, ambitious project - the framework performance tracker is something we've been discussing for a while now. This will be a website which tracks various useful performance metrics across popular web meta-frameworks (e.g. nuxt, next, astro, sveltekit, etc).
+The framework performance tracker is an exciting, ambitious project we've been discussing for a while now. This will be a website which tracks various useful performance metrics across popular web meta-frameworks (e.g. nuxt, next, astro, sveltekit, etc).
 
-This is going to be a large project since there are a crazy amount of potential metrics to track, and every framework does things slightly different from the last. If we can pull it off, though, it will be an incredibly useful resource for tracking how frameworks are doing in the performance space over time.
+This is going to be a large project since there are a crazy number of potential metrics to track, and every framework does things slightly different from the last. If we can pull it off, though, it will be an incredibly useful resource for tracking how frameworks are doing in the performance space over time.
 
 Initially, we're not focusing on _comparison_, but just facts. Some examples of what we're tracking:
 
@@ -158,7 +158,7 @@ More to come on this front soon :rocket:
 
 ## Runtime analysis
 
-This one isn't well defined yet, but is something we've been discussing on and off for a while now - a way to analyze the runtime code of a given web app for redundant polyfills, legacy code, and other improveable areas.
+This one isn't well defined yet, but is something we've been discussing on and off for a while now - a way to analyze the runtime code of a given web app for redundant polyfills, legacy code, and other improvable areas.
 
 It is a fairly difficult problem to solve, but would allow us to give suggestions outside of developer workflows, and reach a wider audience.
 
