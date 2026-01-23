@@ -19,14 +19,14 @@ head:
       content: A look ahead at what's coming in 2026 for the e18e community
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/october-contributions-showcase.png
+      content: https://e18e.dev/og/the-year-ahead-2026.png
 ---
 
 # The Year Ahead (2026)
 
 _January 22, 2026_
 
-![October Contributions Cover Image](/og/october-contributions-showcase.png)
+![October Contributions Cover Image](/og/the-year-ahead-2026.png)
 
 We haven't had a blog post in a while, mostly thanks to the holiday season but also because many of us have been hard at work on some fairly chunky e18e projects lately! So let's have a look ahead at what's coming in 2026 and a small recap on what we got up to last year :rocket:
 
