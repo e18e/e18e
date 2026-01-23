@@ -42,11 +42,13 @@ In 2025, we saw a great number of contributions, new projects, and milestones ac
 - [awesome-e18e](https://github.com/e18e/awesome-e18e) list to showcase performance-focused projects and resources
 - [setup-publish](https://github.com/e18e/setup-publish) CLI to help scaffold GitHub workflows for publishing npm packages
 
-### Notable Contributions
+### Notable Wins
 
 - [11x improvement in Astro rendering](https://github.com/withastro/astro/pull/15123)
 - [@acemarke](https://bsky.app/profile/acemarke.dev)'s [work](https://github.com/immerjs/immer/pulls?q=is%3Apr+is%3Aclosed+author%3Amarkerikson) on improving immer performance by over 25%
 - Various [improvements to svelte's language tools](https://github.com/sveltejs/language-tools/pull/2852)
+- TypeScript ESLint dropped their dependency count from 44 to 26, primarly thanks to the switch from `fast-glob` to [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) ([PR here](https://github.com/typescript-eslint/typescript-eslint/pull/11740), big thanks to [@benmccann](https://bsky.app/profile/benmccann.com))
+- Storybook massively [reduced its number of dependencies](https://storybook.js.org/blog/storybook-bloat-fixed/), and [switched to ESM only](https://storybook.js.org/blog/storybook-is-going-esm-only/)
 
 TODO - add more contributions here
 
