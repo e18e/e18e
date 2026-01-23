@@ -127,7 +127,7 @@ Think of it as dependabot for modernization and performance improvements!
 
 The framework performance tracker is an exciting, ambitious project we've been discussing for a while now. This will be a website which tracks various useful performance metrics across popular web meta-frameworks (e.g. nuxt, next, astro, sveltekit, etc).
 
-This is going to be a large project since there are a crazy number of potential metrics to track, and every framework does things slightly different from the last. If we can pull it off, though, it will be an incredibly useful resource for tracking how frameworks are doing in the performance space over time.
+This is going to be a large project since there are a crazy number of potential metrics to track, and every framework does things differently from the last. If we can pull it off, though, it will be an incredibly useful resource for tracking how frameworks are doing in the performance space over time.
 
 Initially, we're not focusing on _comparison_, but just facts. Some examples of what we're tracking:
 
