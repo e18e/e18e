@@ -60,19 +60,17 @@ TODO - add more contributions here
 - [obug](https://www.npmjs.com/package/obug) reached 6.7M weekly downloads
 - [modern-tar](https://www.npmjs.com/package/modern-tar) reached 309K weekly downloads
 
-## Sponsored by Google :rocket:
+## Sponsored by Google Chrome :rocket:
 
-TODO - maybe a chrome logo or something here? or combined e18e/chrome logo?
+A huge milestone this week, the Google Chrome team have officially sponsored us as part of their Chrome Performance fund! :tada:
 
-TODO - do we want to make it clear that this is a Chrome thing, not Google-wide?
+The e18e community and the Chrome team share a lot of the same goals - improving web performance and modernizing the code we ship to users on the web. So it is great to have their support and be able to collaborate more closely.
 
-A huge milestone today, Google have officially sponsored us as part of their Chrome Performance fund! :tada:
+They have been very active as part of the [WebDX community group](https://www.w3.org/community/webdx/), a w3c group which aims to improve developer experience on the web. Two notable projects from this group will be fundamental for much of the tooling we're building in e18e - [baseline](https://web.dev/baseline), and the [web-features](https://github.com/web-platform-dx/web-features) project.
 
-The Chrome team have been hard at work on improving adoption of modern web features, and providing tooling to help developers improve performance of their web apps.
+As part of the next major version of the [module-replacements](https://github.com/es-tooling/module-replacements) data set, we will be integrating both baseline and web-features. These will allow us to make much smarter suggestions based on the target environments of a project, as well as being able to suggest syntax and API replacements based on feature support.
 
-The [web-features](https://github.com/web-platform-dx/web-features) project is a great example of this, providing a data set which documents the current support of features across browsers, in relation to [baseline](https://web.dev/baseline). This data will allow tools to make smarter suggestions based on what features are safe to use today, and will certainly be useful in many of the e18e projects.
-
-In collaboration with the Chrome team, we will be working on integrating data like this into our existing tools and [module-replacements](https://github.com/es-tooling/module-replacements-codemods/) data set.
+This support is very much appreciated and will go a long way to helping us improve performance across the entire ecosystem :pray:
 
 ## Project Leads
 
@@ -157,6 +155,14 @@ Ultimately, it will focus on these areas:
 This and the [ESLint plugin](https://github.com/e18e/eslint-plugin) will achieve roughly the same goals - allowing you to choose the one you prefer based on your workflow.
 
 More to come on this front soon :rocket:
+
+## Runtime analysis
+
+This one isn't well defined yet, but is something we've been discussing on and off for a while now - a way to analyze the runtime code of a given web app for redundant polyfills, legacy code, and other improveable areas.
+
+It is a fairly difficult problem to solve, but would allow us to give suggestions outside of developer workflows, and reach a wider audience.
+
+Especially for helping reduce reliance on redundant polyfills, this could be a very useful tool.
 
 ## Get involved
 
