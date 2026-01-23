@@ -87,6 +87,18 @@ Current leads:
 - [@thealexlichter](https://bsky.app/profile/thealexlichter.com) - e18e & Friends
 - [@alexanderkaran](https://bsky.app/profile/alexanderkaran.bsky.social) - framework performance tracker
 
+## e18e & Friends
+
+[@thealexlichter](https://bsky.app/profile/thealexlichter.com) has been a long-time member of the e18e community, and is now the host of our new show: **e18e & Friends!**
+
+Every month, we will invite a guest from the wider community to chat about what they've been working on, often with a focus on the performance space.
+
+This will be live streamed so we can take questions from the audience, and recorded for later viewing on YouTube.
+
+The first episode will be live on the **10th February**, and the guest is yet to be announced!
+
+Follow along on [Discord](https://chat.e18e.dev) for updates :rocket:
+
 ## Module Replacements v3
 
 The [module replacements](https://github.com/es-tooling/module-replacements) project has been core to the e18e community since the beginning. It provides a data set which maps older, heavier dependencies to modern, more performant alternatives.
@@ -102,6 +114,14 @@ All of these are limitations of the schema we use, in that we simply don't have 
 The next version of this data set will introduce a new schema which supports all of these use cases, and more!
 
 This will lead to us being able to make smarter suggestions in tools like the ESLint plugin, based on baseline and engine constraints rather than just a flat list of recommendations.
+
+## Replacements GitHub action
+
+Very early design stages right now, but we're cooking up a GitHub action which will automatically create pull requests for module replacements and syntax improvements.
+
+This action should do a lot of what the CLI and the ESLint plugin do, but in an automated fashion and focused around migrations rather than analysis.
+
+Think of it as dependabot for modernization and performance improvements!
 
 ## Framework Performance
 
@@ -121,18 +141,6 @@ Initially, we're not focusing on _comparison_, but just facts. Some examples of 
 
 Some of these may change, and we will likely add many more. Overall, the goal is to provide an overview of each meta-framework and how focused they are on performance.
 
-## e18e & Friends
-
-[@thealexlichter](https://bsky.app/profile/thealexlichter.com) has been a long-time member of the e18e community, and is now the host of our new show: **e18e & Friends!**
-
-Every month, we will invite a guest from the wider community to chat about what they've been working on, often with a focus on the performance space.
-
-This will be live streamed so we can take questions from the audience, and recorded for later viewing on YouTube.
-
-The first episode will be live on the **10th February**, and the guest is yet to be announced!
-
-Follow along on [Discord](https://chat.e18e.dev) for updates :rocket:
-
 ## e18e CLI
 
 The [e18e CLI](https://github.com/e18e/cli) has had a bumpy start while we figured out the scope and the right developer experience. Though we've had a few delays, we are now well on our way to a stable release!
@@ -147,14 +155,6 @@ Ultimately, it will focus on these areas:
 This and the [ESLint plugin](https://github.com/e18e/eslint-plugin) will achieve roughly the same goals - allowing you to choose the one you prefer based on your workflow.
 
 More to come on this front soon :rocket:
-
-## Replacements GitHub action
-
-Very early design stages right now, but we're cooking up a GitHub action which will automatically create pull requests for module replacements and syntax improvements.
-
-This action should do a lot of what the CLI and the ESLint plugin do, but in an automated fashion and focused around migrations rather than analysis.
-
-Think of it as dependabot for modernization and performance improvements!
 
 ## Get involved
 
