@@ -135,11 +135,26 @@ Follow along on [Discord](https://chat.e18e.dev) for updates :rocket:
 
 ## e18e CLI
 
-TODO
+The [e18e CLI](https://github.com/e18e/cli) has had a bumpy start while we figured out the scope and the right developer experience. Though we've had a few delays, we are now well on our way to a stable release!
+
+Ultimately, it will focus on these areas:
+
+- Dependency analysis
+- Security analysis (e.g. trust levels)
+- Replacement suggestions
+- Replacement migrations
+
+This and the [ESLint plugin](https://github.com/e18e/eslint-plugin) will achieve roughly the same goals - allowing you to choose the one you prefer based on your workflow.
+
+More to come on this front soon :rocket:
 
 ## Replacements GitHub action
 
-TODO
+Very early design stages right now, but we're cooking up a GitHub action which will automatically create pull requests for module replacements and syntax improvements.
+
+This action should do a lot of what the CLI and the ESLint plugin do, but in an automated fashion and focused around migrations rather than analysis.
+
+Think of it as dependabot for modernization and performance improvements!
 
 ## Get involved
 
