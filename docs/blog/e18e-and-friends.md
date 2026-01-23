@@ -19,12 +19,12 @@ head:
       content: Introducing our new live streamed community show where we catch up with friends every month!
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/community-showcase-25-q3.png
+      content: https://e18e.dev/og/e18e-and-friends-announcement.webp
 ---
 
 _January 23, 2026_
 
-# ![e18e & friends](/og/community-showcase-25-q3.png)
+# ![e18e & friends](/og/e18e-and-friends-announcement.webp)
 
 We're starting a new community show: _e18e & Friends_!
 
