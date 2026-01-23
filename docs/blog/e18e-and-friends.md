@@ -3,7 +3,7 @@ title: "e18e & Friends: Community Show"
 author:
   - name: The e18e Contributors
 sidebar: false
-date: 2026-01-15
+date: 2026-01-23
 head:
   - - meta
     - property: og:type
@@ -22,7 +22,7 @@ head:
       content: https://e18e.dev/og/community-showcase-25-q3.png
 ---
 
-_January 15, 2026_
+_January 23, 2026_
 
 # ![e18e & friends](/og/community-showcase-25-q3.png)
 
