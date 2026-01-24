@@ -125,21 +125,21 @@ Think of it as dependabot for modernization and performance improvements!
 
 ## Framework Performance
 
-The framework performance tracker is an exciting, ambitious project we've been discussing for a while now. This will be a website which tracks various useful performance metrics across popular web meta-frameworks (e.g. nuxt, next, astro, sveltekit, etc).
+The framework performance tracker is an exciting new project we've had brewing for a while now. A website which tracks various useful performance metrics across popular web meta-frameworks like Nuxt, Astro, and SvelteKit.
 
-This is going to be a large project since there are a crazy number of potential metrics to track, and every framework does things differently from the last. If we can pull it off, though, it will be an incredibly useful resource for tracking how frameworks are doing in the performance space over time.
+Comparing these frameworks is a complex task, as they all do things very differently and each framework has its own strengths it prioritizes in its own documented metrics. By creating this tracker, we hope to provide a more objective view of how they perform across the board.
 
-Initially, we're not focusing on _comparison_, but just facts. Some examples of what we're tracking:
+To start, we're going to focus on a set of core metrics rather than comparisons, with the goal of expanding this over time. For example, `node_modules` size and build times might look something like this (with imaginary data):
 
-- Build times of typical starter projects
-- Bundle sizes (both dev and prod)
-- Install sizes
-- Install times
-- Amount of legacy code and polyfills shipped to the browser by default
-- Dependency analysis (duplicates, redundant packages, unmaintained, etc.)
-- Security (audits, trust levels)
+| Framework | Install Size | Build Time |
+| - | - | - |
+| Framework A | 45 MB | 1.2s |
+| Framework B | 287 MB | 3.1s |
+| Framework C | 112 MB | 1.8s |
 
-Some of these may change, and we will likely add many more. Overall, the goal is to provide an overview of each meta-framework and how focused they are on performance.
+Many of these metrics should then be helpful for teams when choosing a framework, as well as tracking how each framework improves over time.
+
+This is a large project; there's a lot to track and comparing fairly across frameworks isn't trivial. But if we pull it off, it'll be a genuinely useful resource for seeing how frameworks evolve in the performance space over time.
 
 ## e18e CLI
 
