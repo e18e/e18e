@@ -131,7 +131,7 @@ Comparing these frameworks is a complex task, as they all do things very differe
 
 To start, we're going to focus on a set of core metrics rather than comparisons, with the goal of expanding this over time. For example, `node_modules` size and build times might look something like this (with imaginary data):
 
-| Framework | Install Size | Build Time |
+| Framework | `node_modules` Size | Build Time |
 | - | - | - |
 | Framework A | 45 MB | 1.2s |
 | Framework B | 287 MB | 3.1s |
