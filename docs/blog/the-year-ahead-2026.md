@@ -3,7 +3,7 @@ title: The Year Ahead (2026)
 author:
   - name: James Garbutt
 sidebar: false
-date: 2026-01-22
+date: 2026-01-24
 head:
   - - meta
     - property: og:type
@@ -24,7 +24,7 @@ head:
 
 # The Year Ahead (2026)
 
-_January 22, 2026_
+_January 24, 2026_
 
 ![October Contributions Cover Image](/og/the-year-ahead-2026.png)
 
@@ -48,9 +48,10 @@ In 2025, we saw a great number of contributions, new projects, and milestones ac
 - [@acemarke](https://bsky.app/profile/acemarke.dev)'s [work](https://github.com/immerjs/immer/pulls?q=is%3Apr+is%3Aclosed+author%3Amarkerikson) on improving immer performance by over 25%
 - Various [improvements to svelte's language tools](https://github.com/sveltejs/language-tools/pull/2852)
 - TypeScript ESLint dropped their dependency count from 44 to 26, primarily thanks to the switch from `fast-glob` to [tinyglobby](https://github.com/SuperchupuDev/tinyglobby) ([PR here](https://github.com/typescript-eslint/typescript-eslint/pull/11740), big thanks to [@benmccann](https://bsky.app/profile/benmccann.com))
-- Storybook massively [reduced its number of dependencies](https://storybook.js.org/blog/storybook-bloat-fixed/), and [switched to ESM only](https://storybook.js.org/blog/storybook-is-going-esm-only/)
-
-TODO - add more contributions here
+- Storybook greatly [reduced its number of dependencies](https://storybook.js.org/blog/storybook-bloat-fixed/), and [switched to ESM only](https://storybook.js.org/blog/storybook-is-going-esm-only/)
+- The new Prettier CLI was [released](https://prettier.io/blog/2025/06/23/3.6.0), bringing huge performance improvements
+- Netlify reduced their functions package from [93MB to 40KB](https://github.com/netlify/primitives/releases/tag/functions-v5.0.0)
+- Many popular projects successfully migrated to ES modules only (e.g. parse5, chokidar, storybook, and more)
 
 ### Milestones
 
