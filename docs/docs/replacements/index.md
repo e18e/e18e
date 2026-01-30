@@ -2,6 +2,19 @@
 
 When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depend) or the [CLI](https://github.com/e18e/cli), you may be suggested replacement modules for dependencies you have. This is a list of replacements, along with their migration guides and any useful information.
 
+## What are these?
+
+The e18e community maintains a list of modules and their recommended replacements via the [module-replacements](https://github.com/es-tooling/module-replacements) repository.
+
+Typically, a module might be flagged as replaceable if it:
+
+- Is no longer actively maintained
+- Has more performant or modern alternatives
+- Has known security vulnerabilities
+- Lacks support for modern JavaScript features (e.g. ES Modules, TypeScript)
+
+Where it was not possible to contribute upstream to the existing modules, replacement modules have been created by the wider community in most cases.
+
 ## List of replaceable modules
 
 > [!NOTE]
