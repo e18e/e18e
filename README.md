@@ -37,6 +37,10 @@ See [Contributing Guide](https://github.com/e18e/e18e/blob/main/CONTRIBUTING.md)
 - The docs site was created using the [Vite docs](https://vitejs.dev) as a base.
 - The repo follows [Anthony Fu](https://github.com/antfu)'s recommendations.
 
+## Sponsors
+
+![e18e community sponsors](./docs/public/sponsors.svg)
+
 ## License
 
 [MIT](./LICENSE) License © 2024-Present e18e Contributors

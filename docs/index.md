@@ -49,3 +49,5 @@ Join us at the [e18e Discord server](https://chat.e18e.dev) and collaborate with
 Sponsorships make a lot of our community's work possible. We primarily use them to reward members who have made great steps ahead in the ecosystem, or to fund larger projects which need more attention.
 
 You can help out by sponsoring our [Open Collective](https://opencollective.com/e18e) :blue_heart:.
+
+![e18e community sponsors](/sponsors.svg)
