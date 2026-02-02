@@ -50,4 +50,4 @@ Sponsorships make a lot of our community's work possible. We primarily use them 
 
 You can help out by sponsoring our [Open Collective](https://opencollective.com/e18e) :blue_heart:.
 
-![e18e community sponsors](/sponsors.svg)
+<img src="/sponsors.svg" alt="e18e community sponsors" style="display: block; margin: 0 auto;" />
