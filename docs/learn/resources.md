@@ -42,6 +42,7 @@ description: Tools, websites, and resources for improving the JavaScript ecosyst
 | [pkg-size.dev](https://pkg-size.dev/) | Explores npm packages with fresh installs to show actual size, dependencies, and helps optimize your node_modules |
 | [snyk](https://snyk.io/) | Finds and fixes vulnerabilities in open source dependencies |
 | [socket.dev](https://socket.dev/) | Security-focused tool that analyzes dependencies for vulnerabilities |
+| [npmx.dev](https://npmx.dev/) | A better browser for the npm registry |
 
 ## Learning
 
