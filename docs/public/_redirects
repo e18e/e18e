@@ -2,3 +2,4 @@
 /guide/replacements /docs/replacements 301
 /guide/replacement-guides/* /docs/replacements/:splat 301
 /guide/* /learn/:splat 301
+/r/:module /docs/replacements/:module 301
