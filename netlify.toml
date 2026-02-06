@@ -10,5 +10,5 @@ NODE_OPTIONS = "--max_old_space_size=4096"
 node_bundler = "esbuild"
 
 [[redirects]]
-from = "/replace/:module"
+from = "/r/:module"
 to = "/docs/replacements/:module.html"
