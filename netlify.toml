@@ -8,7 +8,3 @@ NODE_OPTIONS = "--max_old_space_size=4096"
 
 [functions]
 node_bundler = "esbuild"
-
-[[redirects]]
-from = "/r/:module"
-to = "/docs/replacements/:module.html"
