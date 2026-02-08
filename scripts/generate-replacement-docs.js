@@ -1,23 +1,25 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
+import { parseArgs } from 'node:util'
 
-const BASE = 'https://raw.githubusercontent.com/es-tooling/module-replacements/refs/heads/main/'
 const DEST_DIR = 'docs/docs/replacements'
 const INDEX_PATH = path.join(DEST_DIR, 'index.md')
 
-async function fetchText(u) {
-  try {
-    const response = await fetch(u)
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`)
-    }
-    return await response.text()
-  }
-  catch (error) {
-    throw new Error(`Failed to fetch ${u}: ${error.message}`)
-  }
+const { values } = parseArgs({
+  options: {
+    path: { type: 'string' },
+  },
+})
+
+const sourceDir = values.path
+
+if (!sourceDir) {
+  console.error('Usage: node scripts/generate-replacement-docs.js --path <path-to-module-replacements>')
+  process.exit(1)
 }
+
+const modulesDir = path.join(sourceDir, 'docs', 'modules')
 
 function extractModuleFilesFromReadme(md) {
   return md.split('\n').filter(l => /^\s*-\s+/.test(l)).map(l => /\[[^\]]+\]\(([^)]+\.md)\)/.exec(l)?.[1]).filter(Boolean).map(h => h.replace(/^\.\//, ''))
@@ -75,11 +77,10 @@ async function main() {
     console.log('Starting replacement docs generation...\n')
 
     await mkdir(DEST_DIR, { recursive: true })
-    console.log(`Created directory: ${DEST_DIR}\n`)
 
-    const readme = await fetchText(`${BASE}docs/modules/README.md`)
+    const readme = await readFile(path.join(modulesDir, 'README.md'), 'utf-8')
     const files = extractModuleFilesFromReadme(readme)
-    console.log(`\nFound ${files.length} replacement docs to download\n`)
+    console.log(`Found ${files.length} replacement docs to copy\n`)
 
     let success = 0
     let failed = 0
@@ -87,10 +88,9 @@ async function main() {
 
     for (const rel of files) {
       try {
-        const url = `${BASE}docs/modules/${rel}`
-        const r = await fetchText(url)
+        const srcPath = path.join(modulesDir, rel)
         const destPath = path.join(DEST_DIR, path.basename(rel))
-        await writeFile(destPath, r)
+        await copyFile(srcPath, destPath)
         console.log(`✓ ${path.basename(rel)}`)
         downloadedFiles.push(path.basename(rel))
         success++

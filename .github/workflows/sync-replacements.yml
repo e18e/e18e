@@ -1,0 +1,67 @@
+name: Sync module replacements
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Weekly on Monday at 9am UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Get current pinned SHA
+        id: current
+        run: echo "sha=$(cat scripts/module-replacements.sha)" >> "$GITHUB_OUTPUT"
+
+      - name: Get latest upstream SHA
+        id: latest
+        run: echo "sha=$(git ls-remote https://github.com/es-tooling/module-replacements.git refs/heads/main | cut -f1)" >> "$GITHUB_OUTPUT"
+
+      - name: Check for changes
+        if: steps.current.outputs.sha != steps.latest.outputs.sha
+        id: check
+        run: echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout upstream docs
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          repository: es-tooling/module-replacements
+          ref: ${{ steps.latest.outputs.sha }}
+          path: /tmp/module-replacements
+
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        if: steps.check.outputs.changed == 'true'
+        with:
+          node-version: 22
+
+      - name: Update SHA and generate docs
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          echo "${{ steps.latest.outputs.sha }}" > scripts/module-replacements.sha
+          node scripts/generate-replacement-docs.js --path /tmp/module-replacements
+
+      - name: Create pull request
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b sync-module-replacements
+          git add scripts/module-replacements.sha docs/docs/replacements/index.md
+          git commit -m "chore: sync module replacements to ${{ steps.latest.outputs.sha }}"
+          git push -f origin sync-module-replacements
+          if ! gh pr view sync-module-replacements --json state -q '.state' 2>/dev/null | grep -q OPEN; then
+            gh pr create \
+              --title "chore: sync module replacements" \
+              --body "Updates pinned module-replacements SHA from \`${{ steps.current.outputs.sha }}\` to \`${{ steps.latest.outputs.sha }}\`.
+
+          [View upstream changes](https://github.com/es-tooling/module-replacements/compare/${{ steps.current.outputs.sha }}...${{ steps.latest.outputs.sha }})"
+          fi

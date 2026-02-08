@@ -13,3 +13,7 @@ node_modules
 .eslintcache
 docs/.vitepress/cache/
 vite.config.ts.timestamp-*
+
+# Generated replacement docs (sourced from es-tooling/module-replacements)
+docs/docs/replacements/*.md
+!docs/docs/replacements/index.md

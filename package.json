@@ -7,11 +7,11 @@
   "scripts": {
     "dev": "pnpm -C docs run dev",
     "build": "pnpm -C docs run build",
+    "build:ci": "bash scripts/build.sh",
     "serve": "pnpm -C docs run serve",
     "lint": "eslint --cache .",
     "lint:fix": "pnpm lint --fix",
-    "add-replacement": "node ./scripts/add-replacement.js",
-    "fetch-replacements": "node ./scripts/generate-replacement-docs.js"
+    "add-replacement": "node ./scripts/add-replacement.js"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.3.0",
