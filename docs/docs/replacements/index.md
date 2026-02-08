@@ -23,7 +23,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | Module | Auto-fixable |
 | -- | -- |
 | [`@jsdevtools/ez-spawn`](./ez-spawn.md) | :x: |
-| [`axios`](./axios.md) | :x: |
+| [`axios`](./fetch.md) | :x: |
 | [`bluebird`](./bluebird-q.md) | :x: |
 | [`body-parser`](./body-parser.md) | :x: |
 | [`buf-compare`](./buf-compare.md) | :x: |
