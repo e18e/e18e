@@ -48,16 +48,9 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/e18e' },
     ],
 
-    /* TODO: Algolia search
-    algolia: {
-      appId: '',
-      apiKey: '',
-      indexName: 'e18e',
-      searchParameters: {
-        facetFilters: ['tags:en'],
-      },
+    search: {
+      provider: 'local',
     },
-    */
 
     footer: {
       message: `Released under the MIT License. (${commitRef})`,
