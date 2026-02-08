@@ -8,6 +8,10 @@ The e18e community is actively working on countless initiatives, both large and 
 
 ## Ongoing Projects
 
+### [e18e ESLint Plugin ↗](https://github.com/e18e/eslint-plugin)
+
+An ESLint plugin that provides rules for modernizing JavaScript and TypeScript codebases. Includes rules for promoting modern syntax, suggesting lighter-weight alternatives to popular libraries, and identifying patterns that can be optimized for better performance.
+
 ### [e18e CLI ↗](https://github.com/e18e/cli)
 
 A command-line tool for scanning your codebase to detect replaceable code and dependencies. Features an auto-fix capability to migrate code to better alternatives automatically.
