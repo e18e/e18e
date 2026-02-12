@@ -39,7 +39,11 @@ See [Contributing Guide](https://github.com/e18e/e18e/blob/main/CONTRIBUTING.md)
 
 ## Sponsors
 
-![e18e community sponsors](./docs/public/sponsors.svg)
+<p align="center">
+  <a href="https://e18e.dev/sponsors.svg">
+    <img src="https://e18e.dev/sponsors.svg" alt="e18e community sponsors" />
+  </a>
+</p>
 
 ## License
 
