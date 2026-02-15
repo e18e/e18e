@@ -1,0 +1,49 @@
+name: Sync module replacements
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Weekly on Monday at 9am UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    if: github.repository == 'e18e/e18e'
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        if: steps.check.outputs.changed == 'true'
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+        
+      - name: Run SponsorKit
+        run: pnpm sponsorkit
+        env:
+          SPONSORKIT_OPENCOLLECTIVE_KEY: ${{ env.SPONSORKIT_OPENCOLLECTIVE_KEY }}
+          
+      - name: Check for changes
+        id: changes
+        run: git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b sync-sponsors
+          git add docs/public/sponsors.svg
+          git commit -m "chore: sync sponsors"
+          git push -f origin sync-sponsors
+          if ! gh pr view sync-sponsors --json state -q '.state' 2>/dev/null | grep -q OPEN; then
+            gh pr create --title "chore: sync sponsors" 
+          fi
