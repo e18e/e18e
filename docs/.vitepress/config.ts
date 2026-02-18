@@ -39,7 +39,7 @@ export default defineConfig({
     editLink: {
       pattern: ({ filePath }) => {
         if (filePath.startsWith('docs/replacements/')) {
-          return `https://github.com/es-tooling/module-replacements/edit/main/${filePath.replace('docs/replacements/', 'modules/')}`;
+          return `https://github.com/es-tooling/module-replacements/edit/main/${filePath.replace('docs/replacements/', 'docs/modules/')}`;
         }
         return `https://github.com/e18e/e18e/edit/main/docs/${filePath}`;
       },
