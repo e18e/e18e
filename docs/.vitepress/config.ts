@@ -37,7 +37,7 @@ export default defineConfig({
     logo: '/logo.svg',
 
     editLink: {
-      pattern: 'https://github.com/e18e/e18e/edit/main/docs/:path',
+      pattern: 'https://github.com/es-tooling/module-replacements/edit/main/:path',
       text: 'Suggest changes to this page',
     },
 
