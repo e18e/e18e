@@ -21,8 +21,6 @@ jobs:
           node-version: 22
 
       - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
-        with:
-          cache: true
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -30,7 +28,7 @@ jobs:
       - name: Run SponsorKit
         run: pnpm sponsorkit
         env:
-          SPONSORKIT_OPENCOLLECTIVE_KEY: ${{ env.SPONSORKIT_OPENCOLLECTIVE_KEY }}
+          SPONSORKIT_OPENCOLLECTIVE_KEY: ${{ secrets.SPONSORKIT_OPENCOLLECTIVE_KEY }}
 
       - name: Check for changes
         id: changes
