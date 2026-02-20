@@ -14,7 +14,7 @@ The analyze command runs multiple analysis plugins on your project:
 ## Usage
 
 ```sh
-e18e-cli analyze [path] [options]
+npx @e18e/cli analyze [path] [options]
 ```
 
 ### Arguments
@@ -37,13 +37,13 @@ e18e-cli analyze [path] [options]
 
 ```sh
 # Analyze current directory
-e18e-cli analyze
+npx @e18e/cli analyze
 
 # Analyze specific directory
-e18e-cli analyze ./my-project
+npx @e18e/cli analyze ./my-project
 
 # Analyze a tarball
-e18e-cli analyze ./my-package.tgz
+npx @e18e/cli analyze ./my-package.tgz
 ```
 
 ## Configuration
