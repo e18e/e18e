@@ -13,7 +13,7 @@ head:
       content: Collaborating with npmx
   - - meta
     - property: og:url
-      content: https://e18e.dev/blog/collaborating-with-npmx
+      content: https://e18e.dev/blog/npmx-collaboration
   - - meta
     - property: og:description
       content: How the e18e community have been collaborating with npmx to create a better experience for the ecosystem
