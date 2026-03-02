@@ -3,7 +3,7 @@ title: Collaborating with npmx
 author:
   - name: James Garbutt
 sidebar: false
-date: 2026-03-02
+date: 2026-03-03
 head:
   - - meta
     - property: og:type
@@ -21,7 +21,7 @@ head:
 
 # Collaborating with npmx
 
-_March 2, 2025_
+_March 3, 2025_
 
 As part of reaching more developers with best practice advice and tools, we have recently started collaborating with the great new [npmx](https://npmx.dev/) project!
 
