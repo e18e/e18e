@@ -220,20 +220,35 @@ This will give you a visualisation of what code has changed when a dependency up
 
 ## Further Security
 
-### Use an environment with required reviewers
+### Use a GitHub environment to secure publishing
 
-It is possible to specify an `environment` in your workflow:
-
-```yaml [publish.yml]
-jobs:
-  publish:
-    environment: production
-```
-
-In GitHub, you can then configure this environment to require manual approval before the job can proceed. This ensures that even if you manage to trigger the workflow, a human still needs to review and approve the job before it can publish.
+You can use Github environments to enforce branch protection rules and prevent bypassing code reviews.
 
 > [!IMPORTANT]
-> If you do this, ensure that you set the environment in your npm trusted publishing settings too.
+> This is crucial if you use oidc trusted publishing in a repository where many accounts have write access.
+>
+> Without it, every account with write access to your repository can publish unreviewed changes to the registry by creating a new branch and modifying the release workflow
+
+Environments are managed under `https://github.com/<your-repo>/settings/environments`
+
+- Create one for publishing e.g. `publish`
+  - do not allow administrators bypass protection rules
+  - Limit it to only allow your active release branches (eg. `main`, `v1`, `v2`). Do not use patterns, hardcode exact branch names and remove them from the environment when they are no longer active.
+- add the `environment` key in your publish job
+  ```yaml [publish.yml]
+  jobs:
+    publish:
+      environment: publish
+  ```
+- Update your npm package trusted publisher settings on `npmjs.com/package/<your-package>/access` to include the environment name
+
+
+> [!TIP]
+> You can also configure the `publish` environment in GitHub to require manual approval before the job can proceed.
+>
+> This ensures that even if someone manages to add bad code to a release branch and trigger the workflow, a human still has to review and approve the job before it can publish.
+
+
 
 ### Use hardware security keys
 
