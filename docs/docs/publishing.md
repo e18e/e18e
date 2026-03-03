@@ -232,9 +232,9 @@ You can use Github environments to enforce branch protection rules and prevent b
 Environments are managed under `https://github.com/<your-repo>/settings/environments`
 
 - Create one for publishing e.g. `publish`
-  - do not allow administrators bypass protection rules
-  - Limit it to only allow your active release branches (eg. `main`, `v1`, `v2`). Do not use patterns, hardcode exact branch names and remove them from the environment when they are no longer active.
-- add the `environment` key in your publish job
+  - Do not allow administrators bypass protection rules
+  - Limit it to only allow your active release branches (e.g. `main`, `v1`, `v2`). Do not use patterns, hardcode exact branch names and remove them from the environment when they are no longer active.
+- Add the `environment` key in your publish job
   ```yaml [publish.yml]
   jobs:
     publish:
