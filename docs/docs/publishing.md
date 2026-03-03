@@ -220,7 +220,7 @@ This will give you a visualisation of what code has changed when a dependency up
 
 ## Further Security
 
-### Use a GitHub environment to secure publishing
+### Use a GitHub environment
 
 You can use Github environments to enforce branch protection rules and prevent bypassing code reviews.
 
