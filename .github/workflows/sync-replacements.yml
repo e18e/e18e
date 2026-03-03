@@ -14,10 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'e18e/e18e'
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Checkout e18e repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          path: e18e
 
       - name: Get current pinned SHA
         id: current
+        working-directory: e18e
         run: echo "sha=$(cat scripts/module-replacements.sha)" >> "$GITHUB_OUTPUT"
 
       - name: Get latest upstream SHA
@@ -35,7 +39,7 @@ jobs:
         with:
           repository: es-tooling/module-replacements
           ref: ${{ steps.latest.outputs.sha }}
-          path: /tmp/module-replacements
+          path: module-replacements
 
       - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
         if: steps.check.outputs.changed == 'true'
@@ -44,12 +48,14 @@ jobs:
 
       - name: Update SHA and generate docs
         if: steps.check.outputs.changed == 'true'
+        working-directory: e18e
         run: |
           echo "${{ steps.latest.outputs.sha }}" > scripts/module-replacements.sha
-          node scripts/generate-replacement-docs.js --path /tmp/module-replacements
+          node scripts/generate-replacement-docs.js --path "${{ github.workspace }}/module-replacements"
 
       - name: Create pull request
         if: steps.check.outputs.changed == 'true'
+        working-directory: e18e
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
