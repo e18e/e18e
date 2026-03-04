@@ -48,6 +48,10 @@ export default defineConfig({
       if (platinums.includes(sponsor.sponsor.login)) {
         sponsor.monthlyDollars = Infinity
       }
+
+      if (sponsor.sponsor.login === 'chrome') {
+        sponsor.sponsor.name = 'Chrome'
+      }
     }
     return sponsors
   },
