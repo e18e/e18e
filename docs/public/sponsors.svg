@@ -16,7 +16,7 @@ text {
 }
 </style>
 <text x="400" y="40" text-anchor="middle" class="sponsorkit-tier-title">Platinum Sponsors</text><a href="https://google.com/chrome" class="sponsorkit-link" target="_blank" id="chrome">
-  <text x="400" y="173" text-anchor="middle" class="sponsorkit-name" fill="currentColor">Chrome's</text>
+  <text x="400" y="173" text-anchor="middle" class="sponsorkit-name" fill="currentColor">Chrome</text>
   
   <clipPath id="cda06da">
     <rect x="355" y="65" width="90" height="90" rx="9" ry="9" />
