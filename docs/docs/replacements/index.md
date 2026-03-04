@@ -34,8 +34,10 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`core-util-is`](./core-util-is.md) | :x: |
 | [`cpx`](./cpx.md) | :x: |
 | [`crypto-js`](./crypto-js.md) | :x: |
+| [`debug`](./debug.md) | :x: |
 | [`deep-equal`](./deep-equal.md) | :ballot_box_with_check: |
 | [`depcheck`](./depcheck.md) | :x: |
+| [`detect-package-manager`](./detect-package-manager.md) | :x: |
 | [`dot-prop`](./dot-prop.md) | :x: |
 | [`dotenv`](./dotenv.md) | :x: |
 | [`emoji-regex`](./emoji-regex.md) | :x: |
@@ -55,9 +57,11 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`find-pkg`](./find-pkg.md) | :x: |
 | [`find-up`](./find-up.md) | :x: |
 | [`fs-extra`](./fs-extra.md) | :x: |
+| [`get-stream`](./get-stream.md) | :x: |
 | [`glob`](./glob.md) | :x: |
 | [`globby`](./globby.md) | :x: |
 | [`graphemer`](./graphemer.md) | :x: |
+| [`gzip-size`](./gzip-size.md) | :x: |
 | [`invariant`](./invariant.md) | :x: |
 | [`is-builtin-module`](./is-builtin-module.md) | :ballot_box_with_check: |
 | [`jQuery`](./jquery.md) | :x: |
@@ -74,6 +78,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`ora`](./ora.md) | :x: |
 | [`path-exists`](./path-exists.md) | :x: |
 | [`pkg-dir`](./pkg-dir.md) | :x: |
+| [`portal-vue`](./portal-vue.md) | :x: |
 | [`qs`](./qs.md) | :x: |
 | [`read-package-up`](./read-package-up.md) | :x: |
 | [`read-pkg`](./read-pkg.md) | :x: |
@@ -85,6 +90,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`string-width`](./string-width.md) | :x: |
 | [`strip-ansi`](./strip-ansi.md) | :x: |
 | [`tempy`](./tempy.md) | :x: |
+| [`toml`](./toml.md) | :x: |
 | [`traverse`](./traverse.md) | :ballot_box_with_check: |
 | [`uri-js`](./uri-js.md) | :x: |
 | [`utf8`](./utf8.md) | :x: |
