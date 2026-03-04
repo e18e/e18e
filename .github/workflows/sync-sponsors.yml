@@ -46,5 +46,5 @@ jobs:
           git commit -m "chore: sync sponsors"
           git push -f origin sync-sponsors
           if ! gh pr view sync-sponsors --json state -q '.state' 2>/dev/null | grep -q OPEN; then
-            gh pr create --title "chore: sync sponsors"
+            gh pr create --title "chore: sync sponsors" --body "sync sponsors"
           fi
