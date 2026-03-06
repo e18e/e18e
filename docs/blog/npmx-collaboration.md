@@ -21,7 +21,7 @@ head:
 
 # Collaborating with npmx
 
-_March 3, 2025_
+_March 3, 2026_
 
 As part of reaching more developers with best practice advice and tools, we have recently started collaborating with the great new [npmx](https://npmx.dev/) project!
 
