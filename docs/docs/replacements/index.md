@@ -28,6 +28,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`body-parser`](./body-parser.md) | :x: |
 | [`buf-compare`](./buf-compare.md) | :x: |
 | [`buffer-equal`](./buffer-equal.md) | :x: |
+| [`buffer-equal-constant-time`](./buffer-equal-constant-time.md) | :x: |
 | [`buffer-equals`](./buffer-equals.md) | :x: |
 | [`builtin-modules`](./builtin-modules.md) | :x: |
 | [`chalk`](./chalk.md) | :ballot_box_with_check: |
