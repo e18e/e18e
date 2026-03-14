@@ -51,6 +51,7 @@ export default defineConfig({
 
       if (sponsor.sponsor.login === 'chrome') {
         sponsor.sponsor.name = 'Chrome'
+        sponsor.sponsor.avatarUrl = 'https://raw.githubusercontent.com/alrra/browser-logos/ce0aac887b51c78c4f616adcdddfa08dbf0cd4a9/src/chrome/chrome.svg'
       }
     }
     return sponsors
