@@ -242,13 +242,10 @@ Environments are managed under `https://github.com/<your-repo>/settings/environm
   ```
 - Update your npm package trusted publisher settings on `npmjs.com/package/<your-package>/access` to include the environment name
 
-
 > [!TIP]
 > You can also configure the `publish` environment in GitHub to require manual approval before the job can proceed.
 >
 > This ensures that even if someone manages to add bad code to a release branch and trigger the workflow, a human still has to review and approve the job before it can publish.
-
-
 
 ### Use hardware security keys
 
