@@ -13,6 +13,7 @@ node_modules
 .eslintcache
 docs/.vitepress/cache/
 vite.config.ts.timestamp-*
+.sponsorkit-cache.json
 
 # Generated replacement docs (sourced from es-tooling/module-replacements)
 docs/docs/replacements/*.md
