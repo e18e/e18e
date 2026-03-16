@@ -105,7 +105,7 @@ glob outside the cwd used. Comparing benchmarks between the newest release and t
 speedup! [Here's one](https://bsky.app/profile/superchupu.dev/post/3ly6vfdn6n225) where `tinyglobby` didn't use to be the fastest - globbing `packages/*.tsconfig.json` in the `typescript-eslint` repository:
 
 |                     | ops/s      |
-|---------------------|------------|
+| ------------------- | ---------- |
 | `tinyglobby` 0.2.15 | 2357 ± 100 |
 | `tinyglobby` 0.2.14 | 981 ± 131  |
 | `fast-glob`         | 1878 ± 110 |

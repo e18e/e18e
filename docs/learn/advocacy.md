@@ -36,8 +36,8 @@ When a project creates a built output such as bundled JS files, and a cleanup is
 
 This is important because:
 
-* Many changes might change the devDependency tree size, but not impact the bundle
-* Swapping out direct usage of a dependency that is also deeply required might result in a net bigger bundle
+- Many changes might change the devDependency tree size, but not impact the bundle
+- Swapping out direct usage of a dependency that is also deeply required might result in a net bigger bundle
 
 In the latter case, you might consider prioritizing working on the upstream consumers of that dependency first.
 
@@ -77,8 +77,8 @@ Be careful not to make these common mistakes, as that weakens the case for your 
 Don't be vague.
 Indicating that a cleanup could offer bug fixes, improved developer experience, or other features in the abstract is not convincing without any evidence those impact the project.
 
-* For bug fixes, be sure to have a reproduction -- much like any other kind of bug report
-* For developer experience and other features, you'll similarly want to be able to demonstrate why the new way is tangibly better
+- For bug fixes, be sure to have a reproduction -- much like any other kind of bug report
+- For developer experience and other features, you'll similarly want to be able to demonstrate why the new way is tangibly better
 
 ### Downloads and Stars
 

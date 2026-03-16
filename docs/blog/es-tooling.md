@@ -71,6 +71,7 @@ Read more at the [module replacements project](https://github.com/es-tooling/mod
 The module replacements codemods project is an effort to automate the ecosystem cleanup. Taking the module replacements as input, we aim to have automated codemods for all packages listed. This way other tooling can use these codemods to perform transformations on projects automatically. For example, a codemod for the `is-even` package would result in:
 
 Before:
+
 ```js
 const isEven = require('is-even')
 
@@ -78,6 +79,7 @@ console.log(isEven(2))
 ```
 
 After:
+
 ```js
 console.log(2 % 2 === 0)
 ```
