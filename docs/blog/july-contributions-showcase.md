@@ -53,7 +53,7 @@ If you haven't yet seen the replacements project, it basically provides communit
 
 The [codemods project](https://github.com/es-tooling/module-replacements-codemods/) is another consumer of these lists. It provides a place for the community to contribute codemods which can automatically migrate your code to a given replacement package or native functionality.
 
-[@passle_](https://x.com/passle_) has done great work here starting and maintaining the codemods project, and the community have contributed [_many codemods_](https://github.com/es-tooling/module-replacements-codemods/) already.
+[@passle\_](https://x.com/passle_) has done great work here starting and maintaining the codemods project, and the community have contributed [_many codemods_](https://github.com/es-tooling/module-replacements-codemods/) already.
 
 The future of the [es-tooling](https://github.com/es-tooling) organisation will likely involve a CLI which can apply these codemods for you. Keep an eye out for it in future!
 

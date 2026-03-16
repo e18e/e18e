@@ -25,11 +25,11 @@ e18e-cli analyze [path] [options]
 
 ### Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `--pack` | `enum` | `auto` | Package manager to use for packing. Options: `auto`, `npm`, `yarn`, `pnpm`, `bun`, `none` |
-| `--log-level` | `enum` | `info` | Set the log level. Options: `debug`, `info`, `warn`, `error` |
-| `--manifest` | `string[]` | `[]` | Path(s) to custom manifest file(s) for module replacements analysis |
+| Option        | Type       | Default | Description                                                                               |
+| ------------- | ---------- | ------- | ----------------------------------------------------------------------------------------- |
+| `--pack`      | `enum`     | `auto`  | Package manager to use for packing. Options: `auto`, `npm`, `yarn`, `pnpm`, `bun`, `none` |
+| `--log-level` | `enum`     | `info`  | Set the log level. Options: `debug`, `info`, `warn`, `error`                              |
+| `--manifest`  | `string[]` | `[]`    | Path(s) to custom manifest file(s) for module replacements analysis                       |
 
 ## Examples
 
@@ -51,6 +51,7 @@ e18e-cli analyze ./my-package.tgz
 ### Package Manager Detection
 
 The CLI automatically detects your package manager based on lock files:
+
 - `package-lock.json` → npm
 - `yarn.lock` → yarn
 - `pnpm-lock.yaml` → pnpm

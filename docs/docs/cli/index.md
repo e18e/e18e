@@ -47,14 +47,17 @@ e18e-cli analyze [path] [options]
 ```
 
 **Arguments:**
+
 - `path` (optional) - Path to a directory or tarball file to analyze. Defaults to current directory.
 
 **Options:**
+
 - `--pack <type>` - Package manager to use for packing. Options: `auto`, `npm`, `yarn`, `pnpm`, `bun`, `none`. Default: `auto`
 - `--log-level <level>` - Set the log level. Options: `debug`, `info`, `warn`, `error`. Default: `info`
 - `--manifest <path>` - Path(s) to custom manifest file(s) for module replacements analysis
 
 **Examples:**
+
 ```sh
 # Analyze current project
 e18e-cli analyze
@@ -75,14 +78,17 @@ e18e-cli migrate [packages...] [options]
 ```
 
 **Arguments:**
+
 - `packages...` - Names of packages to migrate (e.g., `chalk`, `lodash`)
 
 **Options:**
+
 - `--dry-run` - Don't apply any fixes, only show what would change
 - `--include <pattern>` - Files to migrate. Default: `**/*.{ts,js}`
 - `--interactive` - Run in interactive mode
 
 **Examples:**
+
 ```sh
 # Migrate specific packages
 e18e-cli migrate chalk lodash
@@ -132,14 +138,17 @@ e18e-cli analyze --manifest ./my-replacements.json
 ### Common Issues
 
 **"No package.json found"**
+
 - Make sure you're running the command from a project directory
 - Check that package.json exists in the current or specified directory
 
 **"Path must be a tarball file or a directory"**
+
 - Ensure the path you're providing is valid
 - For tarballs, make sure the file has a `.tgz` extension
 
 **Permission errors**
+
 - Try running with `npx` instead of global installation
 - Check file permissions in your project directory
 

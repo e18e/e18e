@@ -21,11 +21,11 @@ e18e-cli migrate [packages...] [options]
 
 ### Options
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `--dry-run` | `boolean` | `false` | Don't apply any fixes, only show what would change |
-| `--include` | `string` | `**/*.{ts,js}` | Files to migrate (glob pattern) |
-| `--interactive` | `boolean` | `false` | Run in interactive mode |
+| Option          | Type      | Default        | Description                                        |
+| --------------- | --------- | -------------- | -------------------------------------------------- |
+| `--dry-run`     | `boolean` | `false`        | Don't apply any fixes, only show what would change |
+| `--include`     | `string`  | `**/*.{ts,js}` | Files to migrate (glob pattern)                    |
+| `--interactive` | `boolean` | `false`        | Run in interactive mode                            |
 
 ## Examples
 
