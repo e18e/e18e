@@ -18,10 +18,10 @@ Some performance improvements can be detected via a linter.
 
 For those of us using ESLint, a few plugins are available which strongly align with the principals of the e18e effort:
 
-| Plugin | Description |
-| -- | -- |
-| [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) | Detects redundant packages and suggests more performant replacements |
-| [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files) | Detects barrel/index files |
+| Plugin                                                                                | Description                                                          |
+| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend)            | Detects redundant packages and suggests more performant replacements |
+| [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files) | Detects barrel/index files                                           |
 
 ### Biome
 

@@ -52,7 +52,7 @@ Unfortunately, none of these efforts really went anywhere. I struggled to find a
 
 Eventually, I created the [ecosystem-cleanup](https://github.com/es-tooling/ecosystem-cleanup) project as place to track performance improvements in popular open source projects.
 
-In the early days, this was basically me creating issues for myself to contribute to various OSS projects.  Things like:
+In the early days, this was basically me creating issues for myself to contribute to various OSS projects. Things like:
 
 - Removing redundant polyfills
 - Upgrading packages

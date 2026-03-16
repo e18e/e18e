@@ -158,21 +158,21 @@ Much of this was made possible by introducing some reproducible benchmarks to th
 
 For example, here's the result of searching for `packages/*/tsconfig.json` in TSESLint's monorepo _before_ the changes:
 
-| Task name          | Throughput avg (ops/s) | Throughput med (ops/s)  |
-| ------------------ | ---------------------- | ----------------------- |
-| **'tinyglobby'**   | **'891 ± 1.35%'**      | **'981 ± 131'**         |
-| 'fast-glob'        | '1822 ± 0.68%'         | '1878 ± 110'            |
-| 'glob'             | '1725 ± 0.61%'         | '1767 ± 95'             |
-| 'node:fs glob'     | '923 ± 0.67%'          | '941 ± 74'              |
+| Task name        | Throughput avg (ops/s) | Throughput med (ops/s) |
+| ---------------- | ---------------------- | ---------------------- |
+| **'tinyglobby'** | **'891 ± 1.35%'**      | **'981 ± 131'**        |
+| 'fast-glob'      | '1822 ± 0.68%'         | '1878 ± 110'           |
+| 'glob'           | '1725 ± 0.61%'         | '1767 ± 95'            |
+| 'node:fs glob'   | '923 ± 0.67%'          | '941 ± 74'             |
 
 And the result _after_ the changes:
 
-| Task name        | Throughput avg (ops/s) | Throughput med (ops/s)  |
-| ---------------- | ---------------------- | ----------------------- |
-| **'tinyglobby'** | **'2254 ± 0.42%'**     | **'2312 ± 89'**         |
-| 'fast-glob'      | '1868 ± 0.60%'         | '1903 ± 103'            |
-| 'glob'           | '1714 ± 0.58%'         | '1754 ± 85'             |
-| 'node:fs glob'   | '927 ± 0.78%'          | '983 ± 49'              |
+| Task name        | Throughput avg (ops/s) | Throughput med (ops/s) |
+| ---------------- | ---------------------- | ---------------------- |
+| **'tinyglobby'** | **'2254 ± 0.42%'**     | **'2312 ± 89'**        |
+| 'fast-glob'      | '1868 ± 0.60%'         | '1903 ± 103'           |
+| 'glob'           | '1714 ± 0.58%'         | '1754 ± 85'            |
+| 'node:fs glob'   | '927 ± 0.78%'          | '983 ± 49'             |
 
 In many cases, this now makes tinyglobby the fastest glob library available.
 
