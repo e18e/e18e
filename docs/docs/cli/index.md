@@ -161,3 +161,7 @@ e18e-cli analyze --log-level debug
 ```
 
 This will show detailed information about what the CLI is doing and help identify issues.
+
+## Learn more
+
+Want the full reference, options, and how the tool works? See the full documentation in the **[repository](https://github.com/e18e/cli)**.
