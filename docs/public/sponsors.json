@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Theo Browne",
+    "login": "theo-browne1",
+    "avatar": "https://opencollective.com/static/images/default-avatar.svg",
+    "amount": 5000,
+    "link": "https://opencollective.com/theo-browne1",
+    "org": false
+  },
+  {
+    "name": "Chrome",
+    "login": "chrome",
+    "avatar": "https://raw.githubusercontent.com/alrra/browser-logos/ce0aac887b51c78c4f616adcdddfa08dbf0cd4a9/src/chrome/chrome.svg",
+    "amount": 999999,
+    "link": "https://google.com/chrome",
+    "org": false
+  },
+  {
+    "name": "Rupert Klopper",
+    "login": "guest-ed9bf310",
+    "avatar": "https://opencollective.com/static/images/default-avatar.svg",
+    "amount": 287,
+    "link": "https://opencollective.com/guest-ed9bf310",
+    "org": false
+  },
+  {
+    "name": "Vitest",
+    "login": "vitest",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/73ffa14b-8d03-439d-8d3c-20be2078c83a/jpg-vitest.jpg",
+    "amount": 243,
+    "link": "https://t.co/fzb56mltNN",
+    "org": false
+  },
+  {
+    "name": "Anthony Fu Fund",
+    "login": "antfu",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/b086ceea-ea61-4df6-8906-7fd116313dfa/Badge.png",
+    "amount": 119,
+    "link": "https://antfu.me/",
+    "org": false
+  },
+  {
+    "name": "Antony DAVID",
+    "login": "guest-c8c516bc",
+    "avatar": "https://opencollective.com/static/images/default-avatar.svg",
+    "amount": 100,
+    "link": "https://opencollective.com/guest-c8c516bc",
+    "org": false
+  },
+  {
+    "name": "vlt",
+    "login": "vlt",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/db45f419-c83a-4165-8fcd-93392eb547ac/7x_cOEwA_400x400.jpg",
+    "amount": 86,
+    "link": "https://vlt.sh/",
+    "org": true
+  },
+  {
+    "name": "romhml",
+    "login": "romhml",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/625a2003-108c-4a37-bf1c-5248ca34e8aa/25613751.jpg",
+    "amount": 71,
+    "link": "https://github.com/romhml",
+    "org": false
+  },
+  {
+    "name": "Francesco Caveglia Beatris",
+    "login": "francesco-caveglia-beatris",
+    "avatar": "https://www.gravatar.com/avatar/e3d8b66563e0046b12e9bae5a00d50b0?default=404",
+    "amount": 50,
+    "link": "https://opencollective.com/francesco-caveglia-beatris",
+    "org": false
+  },
+  {
+    "name": "GitHub Sponsors",
+    "login": "github-sponsors",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/87b1d240-f617-11ea-9960-fd7e8ab20fe4.png",
+    "amount": 31,
+    "link": "https://github.com/sponsors/",
+    "org": true
+  },
+  {
+    "name": "Vasilii Kovalev",
+    "login": "vasilii-kovalev",
+    "avatar": "https://opencollective.com/static/images/default-avatar.svg",
+    "amount": 16,
+    "link": "https://github.com/vasilii-kovalev",
+    "org": false
+  },
+  {
+    "name": "simond.dev",
+    "login": "simonddev",
+    "avatar": "https://opencollective.com/static/images/default-avatar.svg",
+    "amount": 15,
+    "link": "https://opencollective.com/simonddev",
+    "org": false
+  },
+  {
+    "name": "Hyeseong Kim",
+    "login": "cometkim",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/04f5e1bf-965c-4a61-8c82-4badad63b952/20190202_115728.jpg",
+    "amount": 11,
+    "link": "https://blog.cometkim.kr/",
+    "org": false
+  },
+  {
+    "name": "Roman",
+    "login": "gameroman",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/b4de5beb-94ce-4307-854a-767ab499e349/image_fx.png",
+    "amount": 10,
+    "link": "https://rman.dev/",
+    "org": false
+  },
+  {
+    "name": "Tanguy",
+    "login": "tanguy",
+    "avatar": "https://opencollective.com/static/images/default-avatar.svg",
+    "amount": 6,
+    "link": "https://opencollective.com/tanguy",
+    "org": false
+  },
+  {
+    "name": "Benjamin Lannon",
+    "login": "lannonbr",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/9983ba75-a880-40a7-a00f-e4b2f6b8ed44/profile_pic_2024.jpg",
+    "amount": 6,
+    "link": "https://lannonbr.com/",
+    "org": false
+  },
+  {
+    "name": "Andrey Sitnik",
+    "login": "andrey-sitnik",
+    "avatar": "https://www.gravatar.com/avatar/cd32d17c95d3bfb352504c36462b98bd?default=404",
+    "amount": 5,
+    "link": "https://sitnik.ru",
+    "org": false
+  },
+  {
+    "name": "Philippe Serhal",
+    "login": "philippe-serhal",
+    "avatar": "https://opencollective.com/static/images/default-avatar.svg",
+    "amount": 5,
+    "link": "https://opencollective.com/philippe-serhal",
+    "org": false
+  },
+  {
+    "name": "Marco Solazzi",
+    "login": "marco-solazzi",
+    "avatar": "https://opencollective-production.s3.us-west-1.amazonaws.com/account-avatar/b221334b-ae5c-4c2e-94ce-e5531a35f528/marco-square.jpg",
+    "amount": 5,
+    "link": "https://marco.solazzi.me",
+    "org": false
+  }
+]
