@@ -1,3 +1,4 @@
+import fs from 'node:fs'
 import { defineConfig, presets } from 'sponsorkit'
 
 const platinums = ['chrome']
@@ -55,6 +56,26 @@ export default defineConfig({
       }
     }
     return sponsors
+  },
+  async onSponsorsReady(sponsors) {
+    await fs.promises.writeFile(
+      'docs/public/sponsors.json',
+      JSON.stringify(
+        sponsors
+          .filter(i => i.privacyLevel !== 'PRIVATE')
+          .map(i => ({
+            name: i.sponsor.name,
+            login: i.sponsor.login,
+            avatar: i.sponsor.avatarUrl,
+            amount: Number.isFinite(i.monthlyDollars) ? i.monthlyDollars : 999999,
+            link: i.sponsor.linkUrl || i.sponsor.websiteUrl,
+            org: i.sponsor.type === 'Organization',
+          }))
+          .sort((a, b) => b.amount - a.amount),
+        null,
+        2,
+      ),
+    )
   },
   renders: [
     {
