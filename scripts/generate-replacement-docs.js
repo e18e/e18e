@@ -5,6 +5,7 @@ import { parseArgs } from 'node:util'
 
 const DEST_DIR = 'docs/docs/replacements'
 const INDEX_PATH = path.join(DEST_DIR, 'index.md')
+const TABLE_HEADER_REGEX = /\|\s+Module\s+\|\s+Auto-fixable\s+\|/
 
 const { values } = parseArgs({
   options: {
@@ -30,7 +31,7 @@ async function updateIndexFile(downloadedFiles) {
     const indexContent = await readFile(INDEX_PATH, 'utf-8')
     const lines = indexContent.split('\n')
 
-    const tableStartIdx = lines.findIndex(l => l.includes('| Module | Auto-fixable |'))
+    const tableStartIdx = lines.findIndex(l => TABLE_HEADER_REGEX.test(l))
     if (tableStartIdx === -1) {
       console.warn('Could not find table header in index.md')
       return
