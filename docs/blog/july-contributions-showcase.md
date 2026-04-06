@@ -47,7 +47,7 @@ You can read about how this was achieve through these two PRs in particular:
 
 ## codemods
 
-One of the biggest steps forward with the [replacements project](https://github.com/es-tooling/module-replacements) has certainly been the [codemods](https://github.com/es-tooling/module-replacements-codemods) repo.
+One of the biggest steps forward with the [replacements project](https://github.com/e18e/module-replacements) has certainly been the [codemods](https://github.com/es-tooling/module-replacements-codemods) repo.
 
 If you haven't yet seen the replacements project, it basically provides community driven lists of suggested replacements to npm packages. These are then consumed by various tools, such as the [eslint plugin](https://github.com/es-tooling/eslint-plugin-depend).
 
@@ -61,7 +61,7 @@ The future of the [es-tooling](https://github.com/es-tooling) organisation will 
 
 While this hasn't been published yet, it is great progress, showing that even some aged projects are open to performance contributions.
 
-[This change](https://github.com/micromatch/to-regex-range/pull/17) removed, in this case, an unnecessary dependency often seen in the ongoing [cleanup work](https://github.com/es-tooling/ecosystem-cleanup/issues).
+[This change](https://github.com/micromatch/to-regex-range/pull/17) removed, in this case, an unnecessary dependency often seen in the ongoing [cleanup work](https://github.com/e18e/ecosystem-issues/issues).
 
 `is-number` may be small but is often entirely unnecessary. Most consumers can instead use something as simple as `typeof n === 'number'` and provide a stricter API rather than trying to coerce inputs.
 
@@ -73,13 +73,13 @@ Node has had a `recursive` option for `rmdir` (or `rm` in newer versions) for a 
 
 A small but effective win here is the [removal of rimraf](https://github.com/mapbox/node-pre-gyp/pull/720) from `node-pre-gyp`.
 
-It is worth mentioning, for those cases where you'd still like a CLI, you can use [an alternative](https://github.com/es-tooling/module-replacements/blob/main/docs/modules/rimraf.md).
+It is worth mentioning, for those cases where you'd still like a CLI, you can use [an alternative](https://github.com/e18e/module-replacements/blob/main/docs/modules/rimraf.md).
 
 Credit to [@benjaminmccann](https://x.com/benjaminmccann) for this one!
 
 ## picoquery
 
-As part of the [cleanup project](https://github.com/es-tooling/ecosystem-cleanup), we were in need of a fast and lightweight query-string parser/stringifier.
+As part of the [cleanup project](https://github.com/e18e/ecosystem-issues), we were in need of a fast and lightweight query-string parser/stringifier.
 
 Some excellent solutions exist for part of this:
 

@@ -35,8 +35,8 @@ Over the last few months, many of us have collaborated and connected through the
 
 A few popular projects that were running solo until now, have come together to create this:
 
-- [ecosystem-cleanup](https://github.com/43081j/ecosystem-cleanup).
-- [module-replacements](https://github.com/es-tooling/module-replacements).
+- [ecosystem-issue](https://github.com/e18e/ecosystem-issues).
+- [module-replacements](https://github.com/e18e/module-replacements).
 - [module-replacements-codemods](https://github.com/thepassle/module-replacements-codemods)
 - [fd-package-json](https://github.com/es-tooling/fd-package-json)
 
@@ -56,7 +56,7 @@ The cleanup project exists primarily as an issue tracker, tracking:
 
 If you want to help out, this project is a good starting point to find some open issues.
 
-Read more at the [ecosystem cleanup project](https://github.com/es-tooling/ecosystem-cleanup).
+Read more at the [ecosystem cleanup project](https://github.com/e18e/ecosystem-issues).
 
 ## Module replacements
 
@@ -64,7 +64,7 @@ The module replacements project is a community-led list of popular npm packages 
 
 Often, these replacements are native, or much faster and more modern packages. If you know of a good alternative to something, get involved and add to the list!
 
-Read more at the [module replacements project](https://github.com/es-tooling/module-replacements).
+Read more at the [module replacements project](https://github.com/e18e/module-replacements).
 
 ## Module replacements codemods
 

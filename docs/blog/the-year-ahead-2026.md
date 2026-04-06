@@ -69,7 +69,7 @@ The e18e community and the Chrome team share a lot of the same goals - improving
 
 They have been very active as part of the [WebDX community group](https://www.w3.org/community/webdx/), a w3c group which aims to improve developer experience on the web. Two notable projects from this group will be fundamental for much of the tooling we're building in e18e - [baseline](https://web.dev/baseline), and the [web-features](https://github.com/web-platform-dx/web-features) project.
 
-As part of the next major version of the [module-replacements](https://github.com/es-tooling/module-replacements) data set, we will be integrating both baseline and web-features. These will allow us to make much smarter suggestions based on the target environments of a project, as well as being able to suggest syntax and API replacements based on feature support.
+As part of the next major version of the [module-replacements](https://github.com/e18e/module-replacements) data set, we will be integrating both baseline and web-features. These will allow us to make much smarter suggestions based on the target environments of a project, as well as being able to suggest syntax and API replacements based on feature support.
 
 This support is very much appreciated and will go a long way to helping us improve performance across the entire ecosystem :pray:
 
@@ -102,7 +102,7 @@ Follow along on [Discord](https://chat.e18e.dev) for updates :rocket:
 
 ## Module Replacements v3
 
-The [module replacements](https://github.com/es-tooling/module-replacements) project has been core to the e18e community since the beginning. It provides a data set which maps older, heavier dependencies to modern, more performant alternatives.
+The [module replacements](https://github.com/e18e/module-replacements) project has been core to the e18e community since the beginning. It provides a data set which maps older, heavier dependencies to modern, more performant alternatives.
 
 This has done a great job so far, but has been lacking a few notable things:
 

@@ -107,7 +107,7 @@ Common considerations include:
 
 If a dependency is replaceable, look for alternatives. Good resources include:
 
-- The [module replacements repository](https://github.com/es-tooling/module-replacements/tree/main/docs/modules)
+- The [module replacements repository](https://github.com/e18e/module-replacements/tree/main/docs/modules)
 - [tinylibs](https://github.com/tinylibs/)
 - [unjs](https://github.com/unjs/)
 
