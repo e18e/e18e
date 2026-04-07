@@ -100,7 +100,7 @@ This has all been great to see and will hopefully lead to other large projects m
 
 The folks over at [nx](https://github.com/nrwl/nx/) have been incredibly active with the e18e community. They are definitely on the same page and have been moving fast to work with the community to land many improvements.
 
-You can see a lot of this in the [tracking issue](https://github.com/es-tooling/ecosystem-cleanup/issues/117) over on the ecosystem cleanup project. These issues are closing quickly, with contributions coming from a few different people in the e18e space.
+You can see a lot of this in the [tracking issue](https://github.com/e18e/ecosystem-issues/issues/117) over on the ecosystem cleanup project. These issues are closing quickly, with contributions coming from a few different people in the e18e space.
 
 Just a few examples of the improvements made:
 

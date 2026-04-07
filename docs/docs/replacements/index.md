@@ -4,7 +4,7 @@ When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depen
 
 ## What are these?
 
-The e18e community maintains a list of modules and their recommended replacements via the [module-replacements](https://github.com/es-tooling/module-replacements) repository.
+The e18e community maintains a list of modules and their recommended replacements via the [module-replacements](https://github.com/e18e/module-replacements) repository.
 
 Typically, a module might be flagged as replaceable if it:
 

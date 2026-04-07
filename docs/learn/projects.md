@@ -20,7 +20,7 @@ A command-line tool for scanning your codebase to detect replaceable code and de
 
 An MCP (Model Context Protocol) server that advises AI agents on legacy code patterns and dependencies that should be replaced with modern alternatives.
 
-### [Module Replacements](https://github.com/es-tooling/module-replacements)
+### [Module Replacements](https://github.com/e18e/module-replacements)
 
 A community-maintained list of recommended replacements for outdated or suboptimal dependencies. Helps developers make informed decisions about modernizing their dependency stack.
 

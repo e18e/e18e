@@ -107,8 +107,8 @@ Just a couple of plugins that are moving ahead on this:
 
 Do note, the community lead alternatives will certainly live on as they drop even more opinionated dependencies and logic. If you want to reduce your install footprint and get some performance gains, check out the alternatives docs for them here:
 
-- [`eslint-plugin-import`](https://github.com/es-tooling/module-replacements/blob/main/docs/modules/eslint-plugin-import.md)
-- [`eslint-plugin-react`](https://github.com/es-tooling/module-replacements/blob/main/docs/modules/eslint-plugin-react.md)
+- [`eslint-plugin-import`](https://github.com/e18e/module-replacements/blob/main/docs/modules/eslint-plugin-import.md)
+- [`eslint-plugin-react`](https://github.com/e18e/module-replacements/blob/main/docs/modules/eslint-plugin-react.md)
 
 ### strip-ansi
 
@@ -155,7 +155,7 @@ As part of this becoming available, the e18e community is preparing to help in a
 
 Huge reductions will happen once we are able to stop publishing dual packages. Big wins ahead!
 
-If you want to help out with this, we're [tracking the work on GitHub](https://github.com/es-tooling/ecosystem-cleanup/issues/129).
+If you want to help out with this, we're [tracking the work on GitHub](https://github.com/e18e/ecosystem-issues/issues/129).
 
 ### porffor passes 50% of ECMAScript tests
 

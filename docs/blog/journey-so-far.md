@@ -50,7 +50,7 @@ Unfortunately, none of these efforts really went anywhere. I struggled to find a
 
 ## Starting a cleanup
 
-Eventually, I created the [ecosystem-cleanup](https://github.com/es-tooling/ecosystem-cleanup) project as place to track performance improvements in popular open source projects.
+Eventually, I created the [ecosystem-cleanup](https://github.com/e18e/ecosystem-issues) project as place to track performance improvements in popular open source projects.
 
 In the early days, this was basically me creating issues for myself to contribute to various OSS projects. Things like:
 
@@ -91,8 +91,8 @@ All of these people and many others were working on some aspect of performance. 
 
 Several months later, here's a few stats from the past year:
 
-- ~150 issues in the [cleanup project](https://github.com/es-tooling/ecosystem-cleanup/) to track contributions to performance of other projects
-- ~100 merged PRs in the [module-replacements project](https://github.com/es-tooling/module-replacements) to document performant replacements to popular modules
+- ~150 issues in the [cleanup project](https://github.com/e18e/ecosystem-issues/) to track contributions to performance of other projects
+- ~100 merged PRs in the [module-replacements project](https://github.com/e18e/module-replacements) to document performant replacements to popular modules
 - ~150 codemods in the [module-replacements-codemods project](https://github.com/es-tooling/module-replacements-codemods) to automatically migrate to suggested replacements
 - 1000+ members in the [discord](https://chat.e18e.dev)
 

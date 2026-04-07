@@ -65,7 +65,7 @@ This is just the beginning of our collaboration and what we can achieve together
 - Adding richer advice with example code snippets and links to our tools
 - Highlighting packages with duplicate dependencies
 
-Thanks to our community-maintained [replacements data](https://github.com/es-tooling/module-replacements), much of this advice and more is already available to be surfaced.
+Thanks to our community-maintained [replacements data](https://github.com/e18e/module-replacements), much of this advice and more is already available to be surfaced.
 
 In addition to the module replacements data, we are also hard at work on a new data project which will provide enriched registry data. This will allow npmx and other tools to show things like license information, install sizes, and more.
 

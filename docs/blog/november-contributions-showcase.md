@@ -72,11 +72,11 @@ Sonda is a bundle analyzer which works with all popular bundlers and accurately 
 
 Another great contribution to the community recently is a tool by [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social) which can determine the dependents of a given package.
 
-Feel free to explore [e18e-tools source](https://github.com/fuzzyma/e18e-tools) and [an example of the produced output](https://github.com/es-tooling/ecosystem-cleanup/issues/137#issue-2702026306).
+Feel free to explore [e18e-tools source](https://github.com/fuzzyma/e18e-tools) and [an example of the produced output](https://github.com/e18e/ecosystem-issues/issues/137#issue-2702026306).
 
 This is such a useful tool since we have no easy API access to find this information right now.
 
-In many of the issues of the [cleanup project](https://github.com/es-tooling/ecosystem-cleanup/), we now have an incredibly useful list of all the top dependents of the target package. This is making the cleanup work so much easier.
+In many of the issues of the [cleanup project](https://github.com/e18e/ecosystem-issues), we now have an incredibly useful list of all the top dependents of the target package. This is making the cleanup work so much easier.
 
 Big thanks to [@fuzzyma](https://bsky.app/profile/fuzzyma.bsky.social) and [@devminer.xyz](https://bsky.app/profile/devminer.xyz) for making this a thing!
 
