@@ -133,16 +133,11 @@ export default defineConfig({
           ],
         },
         {
-          text: 'CLI',
-          link: '/docs/cli/',
+          text: 'Tools',
           items: [
             {
-              text: 'analyze',
-              link: '/docs/cli/analyze',
-            },
-            {
-              text: 'migrate',
-              link: '/docs/cli/migrate',
+              text: 'CLI',
+              link: '/docs/cli/',
             },
           ],
         },
