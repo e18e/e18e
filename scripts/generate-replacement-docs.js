@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
 import { parseArgs } from 'node:util'
@@ -22,8 +22,13 @@ if (!sourceDir) {
 
 const modulesDir = path.join(sourceDir, 'docs', 'modules')
 
-function extractModuleFilesFromReadme(md) {
-  return md.split('\n').filter(l => /^\s*-\s+/.test(l)).map(l => /\[[^\]]+\]\(([^)]+\.md)\)/.exec(l)?.[1]).filter(Boolean).map(h => h.replace(/^\.\//, ''))
+async function findNewModuleFiles() {
+  const [sourceFiles, destFiles] = await Promise.all([
+    readdir(modulesDir),
+    readdir(DEST_DIR).catch(() => []),
+  ])
+  const existing = new Set(destFiles)
+  return sourceFiles.filter(f => f.endsWith('.md') && f !== 'README.md' && !existing.has(f))
 }
 
 async function updateIndexFile(downloadedFiles) {
@@ -79,25 +84,22 @@ async function main() {
 
     await mkdir(DEST_DIR, { recursive: true })
 
-    const readme = await readFile(path.join(modulesDir, 'README.md'), 'utf-8')
-    const files = extractModuleFilesFromReadme(readme)
-    console.log(`Found ${files.length} replacement docs to copy\n`)
+    const files = await findNewModuleFiles()
+    console.log(`Found ${files.length} new replacement docs to copy\n`)
 
     let success = 0
     let failed = 0
     const downloadedFiles = []
 
-    for (const rel of files) {
+    for (const filename of files) {
       try {
-        const srcPath = path.join(modulesDir, rel)
-        const destPath = path.join(DEST_DIR, path.basename(rel))
-        await copyFile(srcPath, destPath)
-        console.log(`✓ ${path.basename(rel)}`)
-        downloadedFiles.push(path.basename(rel))
+        await copyFile(path.join(modulesDir, filename), path.join(DEST_DIR, filename))
+        console.log(`✓ ${filename}`)
+        downloadedFiles.push(filename)
         success++
       }
       catch (error) {
-        console.error(`✗ Failed: ${rel} - ${error.message}`)
+        console.error(`✗ Failed: ${filename} - ${error.message}`)
         failed++
       }
     }
