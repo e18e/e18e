@@ -92,7 +92,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`npm-run-all`](./npm-run-all.md)                                     | :x:                     |
 | [`object-hash`](./object-hash.md)                                     | :x:                     |
 | [`ora`](./ora.md)                                                     | :x:                     |
-| [`parseargs`](./parseargs.md) | :x: |
+| [`parseargs`](./parseargs.md)                                         | :x:                     |
 | [`path-exists`](./path-exists.md)                                     | :x:                     |
 | [`pbkdf2`](./pbkdf2.md)                                               | :x:                     |
 | [`pkg-dir`](./pkg-dir.md)                                             | :x:                     |
