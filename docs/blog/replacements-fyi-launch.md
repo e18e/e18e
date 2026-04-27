@@ -70,6 +70,8 @@ In a world driven largely by AI agents these days, we've also tried to make the 
 
 The [npmx](https://npmx.dev) site already exposes much of this data when viewing a package. For example, if you view `chalk` on npmx, you will see a notice telling you that Node natively supports `styleText` for terminal colours these days.
 
+![npmx chalk screenshot](/images/npmx-chalk.jpg)
+
 This has greatly improved the visibility of replacements, and has already led to many clean up PRs throughout the ecosystem.
 
 If you want to see more than the replacements of a package, npmx is still a great place to go. In addition to the replacement info, the e18e community has also collaborated with npmx on displaying things like package size changes, security notices, and more.
