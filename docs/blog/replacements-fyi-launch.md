@@ -19,14 +19,14 @@ head:
       content: A look at the new module replacements website and the collaboration that went into it
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/the-year-ahead-2026.png
+      content: https://e18e.dev/og/replacements-fyi-launch.webp
 ---
 
 # replacements.fyi - A new module replacements website
 
 _April 27, 2026_
 
-![replacements.fyi cover image](/og/the-year-ahead-2026.png)
+![replacements.fyi cover image](/og/replacements-fyi-launch.webp)
 
 [replacements.fyi](https://replacements.fyi) is live! :rocket:
 
