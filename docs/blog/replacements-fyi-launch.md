@@ -48,7 +48,7 @@ The solution? Build a dedicated site for exploring this data! A place where you 
 
 Two weeks ago, I threw the idea out there in the e18e Discord and asked a few people what they thought about it. That same day, [@paolo.ricciuti](https://bsky.app/profile/paolo.ricciuti.me) jumped on it and already had a basic svelte-powered site up and running by the end of the day! :fire:
 
-In the following days, [@AlexanderKaran](https://bsky.app/profile/alexanderkaran.bsky.social), [@rman](https://bsky.app/profile/rman.dev), and [@dreyfus](https://bsky.app/profile/dreyfus11.bsky.social) all joined in the fun and started working on the project with Paolo.
+In the following days, [@AlexanderKaran](https://bsky.app/profile/alexanderkaran.bsky.social), [Roman](https://bsky.app/profile/rman.dev), and [@dreyfus](https://bsky.app/profile/dreyfus11.bsky.social) all joined in the fun and started working on the project with Paolo.
 
 In the last week alone, there have been **26 merged PRs**. All of this before we'd even officially announced the project, purely from chatter in the e18e Discord.
 
