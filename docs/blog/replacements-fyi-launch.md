@@ -36,17 +36,17 @@ What makes this launch worth writing about isn't just the site though - it's how
 
 ## The idea
 
-The [module replacements](https://github.com/e18e/module-replacements) project provides community-defined mappings of npm packages to their recommended alternatives, whether those be native functionality, snippets, or other packages.
+The [module replacements](https://github.com/e18e/module-replacements) project provides a community-defined list of npm packages and their recommended alternatives, whether that's replacing with native functionality, small code snippets, or other packages entirely.
 
 This data is already used in various tools today, such as the [e18e ESLint plugin](https://github.com/e18e/eslint-plugin), the [e18e CLI](https://github.com/e18e/cli) and [npmx](https://npmx.dev).
 
-However, there isn't a great way to explore this data in a more general way. The e18e site has a set of [replacement docs](https://e18e.dev/docs/replacements/), but these are a subset of the data since they only list documented replacements. All native replacements and snippet replacements are missing in these docs.
+However, there isn't a great way to explore this data in a more general way. The e18e site has a set of [replacement docs](https://e18e.dev/docs/replacements/), but these only cover a subset of the data as they only list documented replacements. All native and snippet replacements are missing from these docs.
 
 The solution? Build a dedicated site for exploring this data! A place where you can search for packages and see if there are any replacements available, filter by runtime, and view the details of each replacement.
 
 ## The collaboration
 
-Two weeks ago, I threw the idea out there in the e18e Discord and asked a few people what they thought about it. That same day, [@paolo.ricciuti](https://bsky.app/profile/paolo.ricciuti.me) jumped on it and already had a basic svelte-powered site up and running by the end of the day! :fire:
+Two weeks ago, I threw the idea out there in the e18e Discord and asked a few people what they thought about it. That same day, [@paolo.ricciuti.me](https://bsky.app/profile/paolo.ricciuti.me) jumped on it and already had a basic svelte-powered site up and running by the end of the day! :fire:
 
 In the following days, [@AlexanderKaran](https://bsky.app/profile/alexanderkaran.bsky.social), [Roman](https://bsky.app/profile/rman.dev), and [@dreyfus](https://bsky.app/profile/dreyfus11.bsky.social) all joined in the fun and started working on the project with Paolo.
 
@@ -58,7 +58,7 @@ This kind of collaboration is always amazing to see. Just a great group of peopl
 
 The new [replacements.fyi](https://replacements.fyi) site is the result of this collaboration! :tada:
 
-The aim of this site is to be a focused tool just like [npmgraph](https://npmgraph.js.org) and [pkg-size](https://pkg-size.dev). It doesn't need to do everything, but it should do the one thing it does really well: make it easy to explore and discover module replacements.
+The aim of this site is to be a focused tool just like [npmgraph](https://npmgraph.js.org) and [pkg-size](https://pkg-size.dev). It doesn't need to do everything, but it should do one thing really well: make it easy to explore, discover, and understand module replacements.
 
 At its core, the site is a simple search interface that allows you to look up any npm package and see if there are any recommended replacements for it.
 
