@@ -62,7 +62,7 @@ The aim of this site is to be a focused tool just like [npmgraph](https://npmgra
 
 At its core, the site is a simple search interface that allows you to look up any npm package and see if there are any recommended replacements for it.
 
-The data gives us the ability to do more than this though. So we also expose filters to allow you to narrow down replacements by runtime, and we show details for each replacement, including the minimum runtime version required, plus links to documentation and examples where available.
+The data gives us the ability to do more than this though. Unlocked by the work on the upcoming module replacements v3, we can expose filters that allow you to narrow down replacements by runtime. From the runtime itself, to the specific versions you're targeting - plus links to documentation and examples where available.
 
 In a world driven largely by AI agents these days, we've also tried to make the site as agent-friendly as possible. Giving agents direct access to replacement advice means something like Claude can now produce code which leans more towards using native functionality than installing new dependencies.
 
