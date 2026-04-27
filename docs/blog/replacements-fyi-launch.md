@@ -1,5 +1,5 @@
 ---
-title: Launching replacements.fyi - A new module replacements website
+title: replacements.fyi - A new module replacements website
 author:
   - name: James Garbutt
 sidebar: false
@@ -10,7 +10,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Launching replacements.fyi - A new module replacements website
+      content: replacements.fyi - A new module replacements website
   - - meta
     - property: og:url
       content: https://e18e.dev/blog/replacements-fyi-launch
@@ -22,7 +22,7 @@ head:
       content: https://e18e.dev/og/the-year-ahead-2026.png
 ---
 
-# Launching replacements.fyi - A new module replacements website
+# replacements.fyi - A new module replacements website
 
 _April 27, 2026_
 
