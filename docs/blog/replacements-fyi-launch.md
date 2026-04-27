@@ -42,7 +42,7 @@ This data is already used in various tools today, such as the [e18e ESLint plugi
 
 However, there isn't a great way to explore this data in a more general way. The e18e site has a set of [replacement docs](https://e18e.dev/docs/replacements/), but these only cover a subset of the data as they only list documented replacements. All native and snippet replacements are missing from these docs.
 
-The solution? Build a dedicated site for exploring this data! A place where you can search for packages and see if there are any replacements available, filter by runtime, and view the details of each replacement.
+The solution? Build a dedicated site for exploring this data! A place where you can search for packages to see if there are any replacements available, filter by runtime, and view the details of them.
 
 ## The collaboration
 
