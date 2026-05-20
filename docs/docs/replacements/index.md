@@ -24,6 +24,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | --------------------------------------------------------------------- | ----------------------- |
 | [`@jsdevtools/ez-spawn`](./ez-spawn.md)                               | :x:                     |
 | [`axios`](./fetch.md)                                                 | :x:                     |
+| [`bcrypt`](./bcrypt.md)                                               | :x:                     |
 | [`bluebird`](./bluebird-q.md)                                         | :x:                     |
 | [`body-parser`](./body-parser.md)                                     | :x:                     |
 | [`buf-compare`](./buf-compare.md)                                     | :x:                     |
@@ -33,6 +34,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`builtin-modules`](./builtin-modules.md)                             | :x:                     |
 | [`chalk`](./chalk.md)                                                 | :ballot_box_with_check: |
 | [`clean-webpack-plugin`](./clean-webpack-plugin.md)                   | :x:                     |
+| [`cli-builders`](./cli-builders.md)                                   | :x:                     |
 | [`clipboardy`](./clipboardy.md)                                       | :x:                     |
 | [`collection-map`](./collection-map.md)                               | :x:                     |
 | [`core-util-is`](./core-util-is.md)                                   | :x:                     |
@@ -110,6 +112,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`sort-object`](./sort-object.md)                                     | :x:                     |
 | [`source-map-explorer`](./source-map-explorer.md)                     | :x:                     |
 | [`split`](./split.md)                                                 | :x:                     |
+| [`sqlite3`](./sqlite3.md)                                             | :x:                     |
 | [`stream-buffers`](./stream-buffers.md)                               | :x:                     |
 | [`string-width`](./string-width.md)                                   | :x:                     |
 | [`strip-ansi`](./strip-ansi.md)                                       | :x:                     |
@@ -122,4 +125,5 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`utf8`](./utf8.md)                                                   | :x:                     |
 | [`uuidv4`](./uuidv4.md)                                               | :x:                     |
 | [`wellknown`](./wellknown.md)                                         | :x:                     |
+| [`wrap-ansi`](./wrap-ansi.md)                                         | :x:                     |
 | [`xmldom`](./xmldom.md)                                               | :x:                     |
