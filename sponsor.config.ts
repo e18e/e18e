@@ -28,6 +28,11 @@ export default defineConfig({
       preset: presets.medium,
     },
     {
+      title: 'Infra Partners',
+      monthlyDollars: 49.99,
+      preset: presets.large,
+    },
+    {
       title: 'Silver Sponsors',
       monthlyDollars: 50,
       preset: presets.large,
@@ -54,6 +59,21 @@ export default defineConfig({
         sponsor.sponsor.avatarUrl = 'https://raw.githubusercontent.com/alrra/browser-logos/ce0aac887b51c78c4f616adcdddfa08dbf0cd4a9/src/chrome/chrome.svg'
       }
     }
+
+    sponsors.push({
+      monthlyDollars: 49.99, // Infra Partners Tier
+      isOneTime: false,
+      tierName: 'Infra Partners',
+      sponsor: {
+        name: 'Depot',
+        avatarUrl: 'https://depot.dev/assets/brand/1693758816/depot-icon-on-dark.svg',
+        websiteUrl: 'https://depot.dev',
+        linkUrl: 'https://depot.dev',
+        login: 'depot',
+        type: 'Organization',
+      },
+    })
+
     return sponsors
   },
   renders: [
