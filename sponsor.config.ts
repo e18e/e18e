@@ -1,4 +1,4 @@
-import { defineConfig, presets } from 'sponsorkit'
+import { defineConfig, tierPresets } from 'sponsorkit'
 
 const platinums = ['chrome']
 
@@ -16,36 +16,36 @@ export default defineConfig({
     {
       title: 'Past Sponsors',
       monthlyDollars: -1,
-      preset: presets.xs,
+      preset: tierPresets.xs,
     },
     {
       title: 'Backers',
-      preset: presets.base,
+      preset: tierPresets.base,
     },
     {
       title: 'Sponsors',
       monthlyDollars: 10,
-      preset: presets.medium,
+      preset: tierPresets.medium,
     },
     {
       title: 'Infra Partners',
       monthlyDollars: 49.99,
-      preset: presets.large,
+      preset: tierPresets.large,
     },
     {
       title: 'Silver Sponsors',
       monthlyDollars: 50,
-      preset: presets.large,
+      preset: tierPresets.large,
     },
     {
       title: 'Gold Sponsors',
       monthlyDollars: 100,
-      preset: presets.xl,
+      preset: tierPresets.xl,
     },
     {
       title: 'Platinum Sponsors',
       monthlyDollars: Infinity,
-      preset: presets.xl,
+      preset: tierPresets.xl,
     },
   ],
   onSponsorsAllFetched(sponsors) {
