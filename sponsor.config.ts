@@ -1,4 +1,4 @@
-import { defineConfig, presets } from 'sponsorkit'
+import { defineConfig, tierPresets } from 'sponsorkit'
 
 const platinums = ['chrome']
 
@@ -16,31 +16,36 @@ export default defineConfig({
     {
       title: 'Past Sponsors',
       monthlyDollars: -1,
-      preset: presets.xs,
+      preset: tierPresets.xs,
     },
     {
       title: 'Backers',
-      preset: presets.base,
+      preset: tierPresets.base,
     },
     {
       title: 'Sponsors',
       monthlyDollars: 10,
-      preset: presets.medium,
+      preset: tierPresets.medium,
+    },
+    {
+      title: 'Infra Partners',
+      monthlyDollars: 49.99,
+      preset: tierPresets.large,
     },
     {
       title: 'Silver Sponsors',
       monthlyDollars: 50,
-      preset: presets.large,
+      preset: tierPresets.large,
     },
     {
       title: 'Gold Sponsors',
       monthlyDollars: 100,
-      preset: presets.xl,
+      preset: tierPresets.xl,
     },
     {
       title: 'Platinum Sponsors',
       monthlyDollars: Infinity,
-      preset: presets.xl,
+      preset: tierPresets.xl,
     },
   ],
   onSponsorsAllFetched(sponsors) {
@@ -54,6 +59,21 @@ export default defineConfig({
         sponsor.sponsor.avatarUrl = 'https://raw.githubusercontent.com/alrra/browser-logos/ce0aac887b51c78c4f616adcdddfa08dbf0cd4a9/src/chrome/chrome.svg'
       }
     }
+
+    sponsors.push({
+      monthlyDollars: 49.99, // Infra Partners Tier
+      isOneTime: false,
+      tierName: 'Infra Partners',
+      sponsor: {
+        name: 'Depot',
+        avatarUrl: 'https://depot.dev/assets/brand/1693758816/depot-icon-on-dark.svg',
+        websiteUrl: 'https://depot.dev',
+        linkUrl: 'https://depot.dev',
+        login: 'depot',
+        type: 'Organization',
+      },
+    })
+
     return sponsors
   },
   renders: [
