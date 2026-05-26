@@ -85,6 +85,7 @@ In this "Trusted Publishing" section, setup a trusted publisher for the workflow
 
 - Organisation and repository are the ones you're publishing from
 - Workflow filename is the name of the workflow file you'll create (e.g. `publish.yml`)
+- Check the `Allow npm stage publish` box only
 
 While you're in there, also check the box for "Require two-factor authentication and disallow tokens (recommended)". This will ensure that manual publishing _must_ use 2FA.
 
@@ -93,6 +94,18 @@ While you're in there, also check the box for "Require two-factor authentication
 
 > [!NOTE]
 > Make sure your GitHub workflow is using Node.js v24.8.0 or higher for the publish step. This ensures automatic trusted publishing is supported for npm. Alternatively, you can force npm to update by running `npm i -g npm` in a step in the workflow before you publish.
+
+### Staged Packages
+
+You may have noticed the `Allow npm stage publish` option in the trusted publishing settings. This means that when a workflow publishes a new version of your package, it will be published to the npm staging area rather than being immediately released.
+
+Once this happens, you will need to visit the staging page:
+
+```
+https://www.npmjs.com/settings/<YOUR_USERNAME_OR_ORG>/staged-packages
+```
+
+In this page, you can review and approve staged packages before they are released.
 
 ## Standard Workflow
 
@@ -113,6 +126,7 @@ There are a few important things to note about this workflow:
 - The package is built in a separate job to publishing, ensuring the publish permissions are not exposed to runtime build code
 - All actions are pinned to a full-length commit SHA
 - Install is done with `--ignore-scripts` to avoid running any lifecycle scripts that may be malicious
+- Versions are _staged_ to npm rather than directly published, which means you need to visit the npm staging page and approve them manually (with 2FA)
 
 When updating the workflow, keep these constraints in mind to ensure the security of your publishing process.
 
@@ -133,7 +147,9 @@ Then in the GitHub UI, navigate to the "Releases" page and click "Draft a new re
 
 You can now choose the tag you just pushed, and click "Generate release notes" to automatically generate the changelog from your commit history.
 
-Finally, click "Publish release" to trigger the workflow and publish your package.
+Now, click "Publish release" to trigger the workflow and stage your new package version.
+
+Finally, visit the npm staging page to review and approve the staged package, which will then be released.
 
 ## Alternative Workflows
 
@@ -166,7 +182,7 @@ In this workflow:
 
 - You must still push tags manually
 - Any time a tag is pushed, a GitHub release is created with a changelog generated from commit messages
-- Any time a tag is pushed, the package is published
+- Any time a tag is pushed, the package is staged (to the npm staging area)
 
 ## Maintenance & Tooling
 
@@ -258,15 +274,3 @@ We already noted that `main` should have a protection rule to prevent unreviewed
 ### Use immutable releases
 
 Enable [immutable releases](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/immutable-releases) on GitHub and this will prevent any changes to tags or GitHub releases after they are created. This will ensure that once a release is created, it cannot be modified or deleted.
-
-## Sole Maintainer Considerations
-
-There's currently a feature request and [ongoing discussion](https://github.com/orgs/community/discussions/174507#discussioncomment-14559845) about supporting 2FA for workflow approvals on GitHub.
-
-Until this is supported, using trusted publishing can actually be _less_ secure for solo-maintainers than publishing locally with 2FA enabled.
-
-If your GitHub token leaks somehow, an attack could publish through your trusted workflow the same way a legitimate release would.
-
-Once environment approvals support 2FA, this will no longer be a concern as the attacker would need to pass the 2FA check to approve the workflow.
-
-For these reasons, if you're a solo maintainer, you may want to consider publishing locally with 2FA enabled until this feature is available. Having said that, **please ensure you still follow all other security recommendations in this document.**
