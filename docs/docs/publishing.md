@@ -90,7 +90,17 @@ In this "Trusted Publishing" section, setup a trusted publisher for the workflow
 While you're in there, also check the box for "Require two-factor authentication and disallow tokens (recommended)". This will ensure that manual publishing _must_ use 2FA.
 
 > [!TIP]
-> It can be a slow job opening all of your packages individually and changing these settings. To assist with this, you can use the [open-packages-on-npm](https://github.com/antfu/open-packages-on-npm) tool in your local repository to open the package(s) on npm, each in a new tab. You can then use this [userscript](https://github.com/sxzz/userscripts/blob/main/src/npm-trusted-publisher.md) to quickly update the trusted publisher settings on each page.
+> You can also configure these settings from the npm CLI. To trust a GitHub Actions workflow and allow staged publishing, run:
+>
+> ```bash
+> npm trust github [package-name] --repo OWNER/REPO --file WORKFLOW_FILENAME.yml --allow-stage-publish
+> ```
+>
+> To require 2FA for publishing and disallow token-based publishing, run:
+>
+> ```bash
+> npm access set mfa=publish [package-name]
+> ```
 
 > [!NOTE]
 > Make sure your GitHub workflow is using Node.js v24.8.0 or higher for the publish step. This ensures automatic trusted publishing is supported for npm. Alternatively, you can force npm to update by running `npm i -g npm` in a step in the workflow before you publish.
