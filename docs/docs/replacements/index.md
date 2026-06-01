@@ -50,6 +50,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`dotenv`](./dotenv.md)                                               | :x:                     |
 | [`duplexer`](./duplexer.md)                                           | :x:                     |
 | [`emoji-regex`](./emoji-regex.md)                                     | :x:                     |
+| [`eslint-config-airbnb`](./eslint-config-airbnb.md)                   | :x:                     |
 | [`eslint-plugin-es`](./eslint-plugin-es.md)                           | :x:                     |
 | [`eslint-plugin-eslint-comments`](./eslint-plugin-eslint-comments.md) | :x:                     |
 | [`eslint-plugin-import`](./eslint-plugin-import.md)                   | :x:                     |
