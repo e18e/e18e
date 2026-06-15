@@ -77,6 +77,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`graphemer`](./graphemer.md)                                         | :x:                     |
 | [`graphviz`](./graphviz.md)                                           | :x:                     |
 | [`gzip-size`](./gzip-size.md)                                         | :x:                     |
+| [`html-minifier`](./html-minifier.md)                                 | :x:                     |
 | [`inherits`](./inherits.md)                                           | :x:                     |
 | [`invariant`](./invariant.md)                                         | :x:                     |
 | [`is-builtin-module`](./is-builtin-module.md)                         | :ballot_box_with_check: |
@@ -88,6 +89,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`lodash-underscore`](./lodash-underscore.md)                         | :x:                     |
 | [`materialize-css`](./materialize-css.md)                             | :x:                     |
 | [`md5`](./md5.md)                                                     | :ballot_box_with_check: |
+| [`mississippi`](./mississippi.md)                                     | :x:                     |
 | [`mkdirp`](./mkdirp.md)                                               | :x:                     |
 | [`mockdate`](./mockdate.md)                                           | :x:                     |
 | [`moment`](./moment.md)                                               | :x:                     |
@@ -122,6 +124,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`tokml`](./tokml.md)                                                 | :x:                     |
 | [`toml`](./toml.md)                                                   | :x:                     |
 | [`traverse`](./traverse.md)                                           | :ballot_box_with_check: |
+| [`tsup`](./tsup.md)                                                   | :x:                     |
 | [`uri-js`](./uri-js.md)                                               | :x:                     |
 | [`utf8`](./utf8.md)                                                   | :x:                     |
 | [`uuidv4`](./uuidv4.md)                                               | :x:                     |
