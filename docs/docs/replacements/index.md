@@ -41,6 +41,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`cosmiconfig`](./cosmiconfig.md)                                     | :x:                     |
 | [`cpx`](./cpx.md)                                                     | :x:                     |
 | [`crypto-js`](./crypto-js.md)                                         | :x:                     |
+| [`cwd`](./cwd.md)                                                     | :x:                     |
 | [`debug`](./debug.md)                                                 | :x:                     |
 | [`deep-equal`](./deep-equal.md)                                       | :ballot_box_with_check: |
 | [`deep-merge`](./deep-merge.md)                                       | :x:                     |
@@ -54,6 +55,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`eslint-plugin-es`](./eslint-plugin-es.md)                           | :x:                     |
 | [`eslint-plugin-eslint-comments`](./eslint-plugin-eslint-comments.md) | :x:                     |
 | [`eslint-plugin-import`](./eslint-plugin-import.md)                   | :x:                     |
+| [`eslint-plugin-jest-dom`](./eslint-plugin-jest-dom.md)               | :x:                     |
 | [`eslint-plugin-node`](./eslint-plugin-node.md)                       | :x:                     |
 | [`eslint-plugin-react`](./eslint-plugin-react.md)                     | :x:                     |
 | [`eslint-plugin-vitest`](./eslint-plugin-vitest.md)                   | :x:                     |
@@ -76,8 +78,10 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`globby`](./globby.md)                                               | :x:                     |
 | [`graphemer`](./graphemer.md)                                         | :x:                     |
 | [`graphviz`](./graphviz.md)                                           | :x:                     |
+| [`gray-matter`](./gray-matter.md)                                     | :x:                     |
 | [`gzip-size`](./gzip-size.md)                                         | :x:                     |
 | [`html-minifier`](./html-minifier.md)                                 | :x:                     |
+| [`http-proxy`](./http-proxy.md)                                       | :x:                     |
 | [`inherits`](./inherits.md)                                           | :x:                     |
 | [`invariant`](./invariant.md)                                         | :x:                     |
 | [`is-builtin-module`](./is-builtin-module.md)                         | :ballot_box_with_check: |
@@ -89,6 +93,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`lodash-underscore`](./lodash-underscore.md)                         | :x:                     |
 | [`materialize-css`](./materialize-css.md)                             | :x:                     |
 | [`md5`](./md5.md)                                                     | :ballot_box_with_check: |
+| [`micromatch`](./micromatch.md)                                       | :x:                     |
 | [`mississippi`](./mississippi.md)                                     | :x:                     |
 | [`mkdirp`](./mkdirp.md)                                               | :x:                     |
 | [`mockdate`](./mockdate.md)                                           | :x:                     |
@@ -112,6 +117,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`resolve`](./resolve.md)                                             | :x:                     |
 | [`rimraf`](./rimraf.md)                                               | :x:                     |
 | [`shortid`](./shortid.md)                                             | :x:                     |
+| [`slice-ansi`](./slice-ansi.md)                                       | :x:                     |
 | [`sort-object`](./sort-object.md)                                     | :x:                     |
 | [`source-map-explorer`](./source-map-explorer.md)                     | :x:                     |
 | [`split`](./split.md)                                                 | :x:                     |
