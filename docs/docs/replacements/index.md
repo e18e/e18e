@@ -40,6 +40,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`core-util-is`](./core-util-is.md)                                   | :x:                     |
 | [`cosmiconfig`](./cosmiconfig.md)                                     | :x:                     |
 | [`cpx`](./cpx.md)                                                     | :x:                     |
+| [`create-hmac`](./create-hmac.md)                                     | :x:                     |
 | [`crypto-js`](./crypto-js.md)                                         | :x:                     |
 | [`cwd`](./cwd.md)                                                     | :x:                     |
 | [`debug`](./debug.md)                                                 | :x:                     |
@@ -130,6 +131,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`tokml`](./tokml.md)                                                 | :x:                     |
 | [`toml`](./toml.md)                                                   | :x:                     |
 | [`traverse`](./traverse.md)                                           | :ballot_box_with_check: |
+| [`tsc`](./tsc.md)                                                     | :x:                     |
 | [`tsup`](./tsup.md)                                                   | :x:                     |
 | [`uri-js`](./uri-js.md)                                               | :x:                     |
 | [`utf8`](./utf8.md)                                                   | :x:                     |
