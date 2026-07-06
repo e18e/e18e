@@ -95,6 +95,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`materialize-css`](./materialize-css.md)                             | :x:                     |
 | [`md5`](./md5.md)                                                     | :ballot_box_with_check: |
 | [`micromatch`](./micromatch.md)                                       | :x:                     |
+| [`mime`](./mime.md)                                                   | :x:                     |
 | [`mississippi`](./mississippi.md)                                     | :x:                     |
 | [`mkdirp`](./mkdirp.md)                                               | :x:                     |
 | [`mockdate`](./mockdate.md)                                           | :x:                     |
@@ -126,6 +127,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`stream-buffers`](./stream-buffers.md)                               | :x:                     |
 | [`string-width`](./string-width.md)                                   | :x:                     |
 | [`strip-ansi`](./strip-ansi.md)                                       | :x:                     |
+| [`tar-fs`](./tar-fs.md)                                               | :x:                     |
 | [`tempy`](./tempy.md)                                                 | :x:                     |
 | [`through`](./through.md)                                             | :x:                     |
 | [`tokml`](./tokml.md)                                                 | :x:                     |
