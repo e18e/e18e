@@ -61,7 +61,7 @@ export default defineConfig({
     }
 
     sponsors.push({
-      monthlyDollars: 49.99, // Infra Partners Tier
+      monthlyDollars: 99.99, // Infra Partners Tier
       isOneTime: false,
       tierName: 'Infra Partners',
       sponsor: {
