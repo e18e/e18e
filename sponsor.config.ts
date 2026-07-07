@@ -24,22 +24,22 @@ export default defineConfig({
     },
     {
       title: 'Sponsors',
-      monthlyDollars: 10,
+      monthlyDollars: 50,
       preset: tierPresets.medium,
     },
     {
       title: 'Infra Partners',
-      monthlyDollars: 49.99,
+      monthlyDollars: 99.99,
       preset: tierPresets.large,
     },
     {
       title: 'Silver Sponsors',
-      monthlyDollars: 50,
+      monthlyDollars: 100,
       preset: tierPresets.large,
     },
     {
       title: 'Gold Sponsors',
-      monthlyDollars: 100,
+      monthlyDollars: 500,
       preset: tierPresets.xl,
     },
     {
