@@ -131,7 +131,6 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`tempy`](./tempy.md)                                                 | :x:                     |
 | [`through`](./through.md)                                             | :x:                     |
 | [`tokml`](./tokml.md)                                                 | :x:                     |
-| [`toml`](./toml.md)                                                   | :x:                     |
 | [`traverse`](./traverse.md)                                           | :ballot_box_with_check: |
 | [`tsc`](./tsc.md)                                                     | :x:                     |
 | [`tsup`](./tsup.md)                                                   | :x:                     |
