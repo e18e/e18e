@@ -90,7 +90,6 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`js-yaml`](./js-yaml.md)                                             | :x:                     |
 | [`jsonwebtoken`](./jsonwebtoken.md)                                   | :x:                     |
 | [`jsx-ast-utils`](./jsx-ast-utils.md)                                 | :x:                     |
-| [`lint-staged`](./lint-staged.md)                                     | :x:                     |
 | [`lodash-underscore`](./lodash-underscore.md)                         | :x:                     |
 | [`materialize-css`](./materialize-css.md)                             | :x:                     |
 | [`md5`](./md5.md)                                                     | :ballot_box_with_check: |
