@@ -133,6 +133,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`traverse`](./traverse.md)                                           | :ballot_box_with_check: |
 | [`tsc`](./tsc.md)                                                     | :x:                     |
 | [`tsup`](./tsup.md)                                                   | :x:                     |
+| [`typescript-native-preview`](./typescript-native-preview.md)         | :x:                     |
 | [`uri-js`](./uri-js.md)                                               | :x:                     |
 | [`utf8`](./utf8.md)                                                   | :x:                     |
 | [`uuidv4`](./uuidv4.md)                                               | :x:                     |
