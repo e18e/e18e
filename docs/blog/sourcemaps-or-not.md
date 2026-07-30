@@ -142,7 +142,7 @@ Usually the people who need it are:
 - Anyone who debugs `node_modules` regularly in production
 - Anyone interpreting a production stack trace
 
-Also worth noting, only the third needs the original source code to be part of the published package, and only if the published code is not readable.
+Also worth noting, only the third point needs the original source code to be part of the published package, and only if the published code is not readable.
 
 ## Who pays for source maps?
 
@@ -165,6 +165,12 @@ If you're publishing code to npm, rule of thumb is:
 Minification, bundling, and tree-shaking are the user's responsibility rather than the package author's. On the other hand, if you're building an app, you should absolutely do these things to reduce the size of your runtime.
 
 Assuming you don't do either of these, the code is already readable, and source maps are generally not needed. This is the case for most packages, and is the recommended approach.
+
+### When minification might be appropriate
+
+Although you should generally not minify your published code, there are some exceptions. The general rule is: **if your package is a library, don't minify it. If your package is a runtime tool, it may make sense to minify it.** Making this decision is very similar to deciding [when to bundle](https://e18e.dev/blog/bundling-dependencies.html).
+
+For example, a CLI that nobody imports as a library may be a good candidate for minification. This is especially true for large CLIs like those provided for the various platforms (e.g. `wrangler`), or JavaScript frameworks (e.g. `sv`).
 
 ## Disabling source maps
 
