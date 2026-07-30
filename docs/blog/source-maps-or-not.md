@@ -124,7 +124,9 @@ So here, "publish readable code" is tricky because you don't author readable *Ja
 
 Svelte on the other hand answers the same problem in the opposite way. `svelte-package` publishes the `.svelte` files themselves (preprocessed and type-stripped, but still `.svelte`) and leaves compilation to the consumer's build. Nothing has been compiled when publishing the files, so there's nothing to map back to, and the package ships no source maps at all. It's a smaller install, and the debugger shows you something very close to the file the author actually wrote.
 
-The trade is that the compile step doesn't disappear, it just moves: every consumer now compiles on every cold build, and your source has to be understood by whichever Svelte version they happen to have. Neither approach is wrong, they're just different bets on what the consumer's build is able to do.
+But the compile step doesn't fully disappear. Instead it just moves as every consumer now compiles on every cold build, and your source has to be understood by whichever Svelte version they happen to have. Otherwise libraries require a certain Svelte version, which can create compatibility issues
+
+Neither approach is wrong. They are different bets on what the consumer's build is able to do. And depending on the approach you should consider whether source maps are needed or not.
 
 ## When we don't need source maps
 
