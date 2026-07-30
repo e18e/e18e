@@ -14,18 +14,18 @@ head:
       content: Source maps or not?
   - - meta
     - property: og:url
-      content: https://e18e.dev/blog/sourcemaps-or-not
+      content: https://e18e.dev/blog/source-maps-or-not
   - - meta
     - property: og:description
       content: Source maps are great for debugging, but should we be shipping them in production?
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/sourcemaps-or-not.png
+      content: https://e18e.dev/og/source-maps-or-not.png
 ---
 
 _July 30, 2026_
 
-# ![Source maps or not?](/og/sourcemaps-or-not.png)
+# ![Source maps or not?](/og/source-maps-or-not.png)
 
 As part of the [cleanup](https://e18e.dev/learn/cleanup.html) initiative in the e18e community, we aim to greatly reduce the size of high impact packages. As well as runtime size, this includes the **install size**.
 
@@ -115,17 +115,27 @@ In this situation, the stack traces are often worthless since they often point t
 
 ### Case 3: Custom syntaxes
 
-TODO (vue, svelte, etc.)
+The strongest case is when the original source isn't JavaScript at all.
+Let's take a look at two examples of this: Vue.js and Svelte.
+
+We start with the Vue.js library. What you author is a Single File Component, so putting your `<template>`, `<script>` and `<style>` in one `.vue` file. But what you publish is different: Instead of the `.vue` SFC, you usually publish a JavaScript module that was compiled by the Vue compiler. It looks nothing like the SFC you wrote.
+
+So here, "publish readable code" is tricky because you don't author readable *JavaScript*. This is a lossy transform, so if you publish compiled output, a source map with the sources embedded is the only way to map back.
+
+Svelte on the other hand answers the same problem in the opposite way. `svelte-package` publishes the `.svelte` files themselves (preprocessed and type-stripped, but still `.svelte`) and leaves compilation to the consumer's build. Nothing has been compiled when publishing the files, so there's nothing to map back to, and the package ships no source maps at all. It's a smaller install, and the debugger shows you something very close to the file the author actually wrote.
+
+The trade is that the compile step doesn't disappear, it just moves: every consumer now compiles on every cold build, and your source has to be understood by whichever Svelte version they happen to have. Neither approach is wrong, they're just different bets on what the consumer's build is able to do.
 
 ## When we don't need source maps
 
 When the code is readable, we don't need source maps.
 
-To summarise, taking the previous two cases into account:
+To summarise, taking the previous three cases into account:
 
 - JavaScript: no source maps needed.
 - TypeScript: no source maps needed, _unless_ the type information plays a significant role in understanding the code and stack traces.
 - Minified code: source maps are needed. Though as we'll see below, publishing minified code isn't recommended in the first place.
+- Custom syntaxes: source maps are needed, _unless_ you publish the original source itself and let the consumer compile it.
 
 On the second point, if the package publishes type definitions (e.g. `index.d.ts`), then the type information is still available to the consumer, and source maps may not be needed.
 
