@@ -2,6 +2,7 @@
 title: Source maps or not?
 author:
   - name: James Garbutt
+  - name: Alex Lichter
 sidebar: false
 date: 2026-07-30
 head:

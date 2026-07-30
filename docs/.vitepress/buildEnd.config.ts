@@ -37,11 +37,9 @@ export async function buildEnd(config: SiteConfig) {
       link: `${siteUrl}${url}`,
       description: excerpt,
       content: html,
-      author: [
-        {
-          name: frontmatter.author.name,
-        },
-      ],
+      author: frontmatter.author.map((author: { name: string }) => ({
+        name: author.name,
+      })),
       date: frontmatter.date,
     })
   }
