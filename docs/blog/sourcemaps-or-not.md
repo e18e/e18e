@@ -125,7 +125,7 @@ To summarise, taking the previous two cases into account:
 
 On the second point, if the package publishes type definitions (e.g. `index.d.ts`), then the type information is still available to the consumer, and source maps may not be needed.
 
-## _Who_ needs source maps?
+## Who needs source maps?
 
 This is an important question, and one we need to know the answer to before we can make a decision.
 
@@ -140,7 +140,7 @@ Usually the people who need it are:
 
 Also worth noting, only the third needs the original source code to be part of the published package, and only if the published code is not readable.
 
-## _Who_ pays for source maps?
+## Who pays for source maps?
 
 The people who need to be convinced to drop source maps are, in many cases, the same people who benefit from them. That's an awkward position to be in.
 
