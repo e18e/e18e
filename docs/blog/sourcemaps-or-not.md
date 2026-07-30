@@ -3,7 +3,7 @@ title: Source maps or not?
 author:
   - name: James Garbutt
 sidebar: false
-date: 2026-07-28
+date: 2026-07-30
 head:
   - - meta
     - property: og:type
@@ -19,12 +19,12 @@ head:
       content: Source maps are great for debugging, but should we be shipping them in production?
   - - meta
     - property: og:image
-      content: https://e18e.dev/og/bundling-dependencies.png
+      content: https://e18e.dev/og/sourcemaps-or-not.png
 ---
 
-_July 28, 2026_
+_July 30, 2026_
 
-# ![Source maps or not?](/og/bundling-dependencies.png)
+# ![Source maps or not?](/og/sourcemaps-or-not.png)
 
 As part of the [cleanup](https://e18e.dev/learn/cleanup.html) initiative in the e18e community, we aim to greatly reduce the size of high impact packages. As well as runtime size, this includes the **install size**.
 
