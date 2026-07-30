@@ -113,6 +113,10 @@ Minification is another case where source maps are useful. When we minify code, 
 
 In this situation, the stack traces are often worthless since they often point to a single, extremely long line of code. Similarly, debuggers do what they can by formatting the minified code on the fly, but this can cause chaos with jumping around and breakpoints.
 
+### Case 3: Custom syntaxes
+
+TODO (vue, svelte, etc.)
+
 ## When we don't need source maps
 
 When the code is readable, we don't need source maps.
@@ -147,10 +151,6 @@ The people who need to be convinced to drop source maps are, in many cases, the 
 The cost, though, isn't paid by the maintainer. It's paid once per install, by people who will never open a debugger on your package. Going back to the `magic-string` example, that 86KB saving isn't a single 86KB. It's 86KB in every `node_modules` directory which ends up with `magic-string` in it, and there are a very large number of those.
 
 The benefit of shipping source maps is concentrated in a handful of people who are already well equipped to debug the code. The cost is spread thinly across everyone else, which is often the kind of cost that never gets noticed by the person who is in a position to remove it.
-
-## A note on other syntax (Vue, Svelte, etc.)
-
-TODO
 
 ## Publish readable code
 
