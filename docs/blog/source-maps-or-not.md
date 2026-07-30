@@ -120,7 +120,7 @@ Let's take a look at two examples of this: Vue.js and Svelte.
 
 We start with the Vue.js library. What you author is a Single File Component, so putting your `<template>`, `<script>` and `<style>` in one `.vue` file. But what you publish is different: Instead of the `.vue` SFC, you usually publish a JavaScript module that was compiled by the Vue compiler. It looks nothing like the SFC you wrote.
 
-So here, "publish readable code" is tricky because you don't author readable *JavaScript*. This is a lossy transform, so if you publish compiled output, a source map with the sources embedded is the only way to map back.
+So here, "publish readable code" is tricky because you don't author readable _JavaScript_. This is a lossy transform, so if you publish compiled output, a source map with the sources embedded is the only way to map back.
 
 Svelte on the other hand answers the same problem in the opposite way. `svelte-package` publishes the `.svelte` files themselves (preprocessed and type-stripped, but still `.svelte`) and leaves compilation to the consumer's build. Nothing has been compiled when publishing the files, so there's nothing to map back to, and the package ships no source maps at all. It's a smaller install, and the debugger shows you something very close to the file the author actually wrote.
 
