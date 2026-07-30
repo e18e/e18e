@@ -58,7 +58,6 @@ Stripping the types gives us this JavaScript:
 export function greet(name) {
   return `Hello, ${name}!`
 }
-// # sourceMappingURL=greet.js.map
 ```
 
 And the source map which comes with it looks like this:
@@ -123,7 +122,7 @@ To summarise, taking the previous two cases into account:
 - TypeScript: no source maps needed, _unless_ the type information plays a significant role in understanding the code and stack traces.
 - Minified code: source maps are needed. Though as we'll see below, publishing minified code isn't recommended in the first place.
 
-The second point is subjective, but in general, if the code is readable and understandable, then source maps are not needed.
+On the second point, if the package publishes type definitions (e.g. `index.d.ts`), then the type information is still available to the consumer, and source maps may not be needed.
 
 ## _Who_ needs source maps?
 
@@ -212,3 +211,23 @@ For logging and error reporting, this is often enough to be useful, and it will 
 
 > [!TIP]
 > You can use [maplint](https://github.com/43081j/maplint) to validate your source maps and ensure they are correct.
+
+## Source map servers?
+
+In the .NET world, we have "symbol servers" and "Source Link". Symbol servers are basically servers which host the symbols (equivalent of source mappings) for a given package, while Source Link provides a way to link to the original source. This means that debuggers can pull the symbols and source code when needed, rather than shipping them with the package.
+
+It would be interesting to see if this same concept could apply to the JavaScript ecosystem. Instead of having to choose between debuggability and install size, we could have the best of both worlds. The package would be small, but if you need to debug it, you can download the source maps from a server.
+
+Today, this is roughly doable by having `sourceMappingURL` point to a URL instead of a local file, but not all runtimes support doing such an external request during debugging. Similarly, there's no standardised place to host the source maps.
+
+A thing to keep an eye on here is the [debug IDs proposal](https://github.com/tc39/ecma426/blob/main/proposals/debug-id.md), which will define a standard way of identifying which source maps correspond to which published code.
+
+## Conclusion
+
+We can wrap up most of the decision making process into these points:
+
+- Prefer shipping readable code over minified code
+- If you must ship minified code, ship source maps (possibly without source content)
+- Otherwise, source maps are generally not needed
+
+If you have any comments or questions on this topic, feel free to reach out on the [e18e Discord](https://chat.e18e.dev/).
