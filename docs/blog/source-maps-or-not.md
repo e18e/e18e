@@ -180,7 +180,7 @@ Assuming you don't do either of these, the code is already readable, and source 
 
 ### When minification might be appropriate
 
-Although you should generally not minify your published code, there are some exceptions. The general rule is: **if your package is a library, don't minify it. If your package is a runtime tool, it may make sense to minify it.** Making this decision is very similar to deciding [when to bundle](https://e18e.dev/blog/bundling-dependencies.html).
+Although you should generally not minify your published code, there are some exceptions. The general rule is: **if your package is a library, don't minify it. If your package is a tool that people use directly, it may make sense to minify it.** Making this decision is very similar to deciding [when to bundle](https://e18e.dev/blog/bundling-dependencies.html).
 
 For example, a CLI that nobody imports as a library may be a good candidate for minification. This is especially true for large CLIs like those provided for the various platforms (e.g. `wrangler`), or JavaScript frameworks (e.g. `sv`).
 
