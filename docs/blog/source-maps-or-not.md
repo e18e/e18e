@@ -80,8 +80,8 @@ Note that the `sourcesContent` field contains an entire copy of the original fil
 Basically, we have three options when producing a source map:
 
 1. Include the original source code in the source map (as above)
-2. Include the original source code in a separate file, and reference it from the source map
-3. Do not include the original source code at all, and just include the mappings
+2. Include the original source code alongside the source map
+3. Include only the mappings, and point `sources` at a remote URL
 
 In the first two cases, both the original source code and the published code will be shipped, which often means more than double the install size. In the last case, the map will generally be smaller than the published code, but still non-zero of course.
 
@@ -103,7 +103,7 @@ We basically need source maps when the published code is _lossy_. That is, when 
 
 ### Case 1: TypeScript
 
-The most common case for this is TypeScript. When we transpile TypeScript to JavaScript, we lose the type information. The output is still very much readable code, but is still lossy in that it no longer contains the types.
+The most common case for this is TypeScript. When we transpile TypeScript to JavaScript, we lose the type information. The output is still very much readable code, but is still lossy in that it no longer contains the types directly (though we usually ship `.d.ts` files for that too).
 
 Often this is fine since the code is still readable and navigable, but in some cases, the type information is just as important as the code itself. This won't be the average case, but it is a case that should be considered.
 
@@ -120,7 +120,7 @@ Let's take a look at two examples of this: Vue.js and Svelte.
 
 We start with the Vue.js library. What you author is a Single File Component, so putting your `<template>`, `<script>` and `<style>` in one `.vue` file. But what you publish is different: Instead of the `.vue` SFC, you usually publish a JavaScript module that was compiled by the Vue compiler. It looks nothing like the SFC you wrote.
 
-So here, "publish readable code" is tricky because you don't author readable _JavaScript_. This is a lossy transform, so if you publish compiled output, a source map with the sources embedded is the only way to map back.
+So here, "publish readable code" is tricky because you don't author readable _JavaScript_. This is a lossy transform, so if you publish compiled output, a source map is the only way to map back.
 
 Svelte on the other hand answers the same problem in the opposite way. `svelte-package` publishes the `.svelte` files themselves (preprocessed and type-stripped, but still `.svelte`) and leaves compilation to the consumer's build. Nothing has been compiled when publishing the files, so there's nothing to map back to, and the package ships no source maps at all. It's a smaller install, and the debugger shows you something very close to the file the author actually wrote.
 
@@ -209,24 +209,39 @@ export default defineConfig({
 
 ## If you must ship source maps
 
-If you must ship source maps, it may be worth purposely excluding the original sources.
+If you must ship source maps, it may be worth linking to the original source code remotely rather than including it in the published package. This will save install size, but will still allow some debuggers to show the original source code when needed.
 
-The primary use for source maps in production is really to get a nicer stack trace, rather than to debug the code.
+> [!NOTE]
+> Not all debuggers support remote sources yet. Check the documentation of the one you use.
 
-For example, using TypeScript:
+Even where the sources can't be fetched, the map still does the more important job in production: stack traces keep the original file names and line numbers, which is what error reporting relies on.
+
+In TypeScript, this is the `sourceRoot` option:
 
 ```json
 {
   "compilerOptions": {
     "sourceMap": true,
-    "inlineSources": false
+    "sourceRoot": "https://raw.githubusercontent.com/some-user/some-pkg/v1.2.3/src/"
   }
 }
 ```
 
-If you do this, debuggers will try to load the original source **and will fail**. Instead, they will fall back to showing the published code, so you lose the ability to step through the original source. However, the stack trace filenames and locations will still point to the original source code.
+The resulting source map then looks like this:
 
-For logging and error reporting, this is often enough to be useful, and it will save a lot of install size.
+```json
+{
+  "version": 3,
+  "sourceRoot": "https://raw.githubusercontent.com/some-user/some-pkg/v1.2.3/src/",
+  "sources": ["greet.ts"],
+  "mappings": "AAAO,SAAS,MAAM,MAAsB;AAC1C,SAAO,UAAU,IAAI;AACvB;",
+  "names": []
+}
+```
+
+There's no `sourcesContent` here, so the map stays small. Instead, `sourceRoot` is prepended to each entry in `sources`, so the debugger resolves `greet.ts` to a URL it can fetch on demand.
+
+Note that the URL must point at an immutable location, such as a tag or commit rather than a branch, otherwise the sources will drift out of sync with the mappings.
 
 > [!TIP]
 > You can use [maplint](https://github.com/43081j/maplint) to validate your source maps and ensure they are correct.
@@ -246,7 +261,7 @@ A thing to keep an eye on here is the [debug IDs proposal](https://github.com/tc
 We can wrap up most of the decision making process into these points:
 
 - Prefer shipping readable code over minified code
-- If you must ship minified code, ship source maps (possibly without source content)
+- If you must ship minified code, ship source maps (possibly with sources hosted remotely)
 - Otherwise, source maps are generally not needed
 
 If you have any comments or questions on this topic, feel free to reach out on the [e18e Discord](https://chat.e18e.dev/).
