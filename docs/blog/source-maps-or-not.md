@@ -4,7 +4,7 @@ author:
   - name: James Garbutt
   - name: Alex Lichter
 sidebar: false
-date: 2026-07-30
+date: 2026-07-31
 head:
   - - meta
     - property: og:type
@@ -23,7 +23,7 @@ head:
       content: https://e18e.dev/og/source-maps-or-not.png
 ---
 
-_July 30, 2026_
+_July 31, 2026_
 
 # ![Source maps or not?](/og/source-maps-or-not.png)
 
