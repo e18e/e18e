@@ -31,6 +31,9 @@ As part of the [cleanup](https://e18e.dev/learn/cleanup.html) initiative in the 
 
 Often a big saving can be made by removing source maps, but when is this the right thing to do? In this post, we’ll explore the pros and cons of shipping source maps in production.
 
+> [!NOTE]
+> This post is focusing on publishing of npm packages. If you're building an app, you probably should ship source maps.
+
 ## What are source maps?
 
 The code we ship to production is often different to the code we write. This can be due to transpilation (TypeScript), minification, or just regular bundling. Source maps are a way to map the code we ship back to the code we wrote, so that when an error occurs, we can see the original source code in the stack trace.
