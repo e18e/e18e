@@ -56,7 +56,6 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`eslint-plugin-es`](./eslint-plugin-es.md)                           | :x:                     |
 | [`eslint-plugin-eslint-comments`](./eslint-plugin-eslint-comments.md) | :x:                     |
 | [`eslint-plugin-import`](./eslint-plugin-import.md)                   | :x:                     |
-| [`eslint-plugin-jest-dom`](./eslint-plugin-jest-dom.md)               | :x:                     |
 | [`eslint-plugin-node`](./eslint-plugin-node.md)                       | :x:                     |
 | [`eslint-plugin-react`](./eslint-plugin-react.md)                     | :x:                     |
 | [`eslint-plugin-vitest`](./eslint-plugin-vitest.md)                   | :x:                     |
