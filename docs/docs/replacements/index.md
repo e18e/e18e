@@ -1,6 +1,9 @@
 # Replacements
 
-When using the [ESLint plugin](https://github.com/es-tooling/eslint-plugin-depend) or the [CLI](https://github.com/e18e/cli), you may be suggested replacement modules for dependencies you have. This is a list of replacements, along with their migration guides and any useful information.
+When using the [e18e ESLint plugin](https://github.com/e18e/eslint-plugin) or the [CLI](https://github.com/e18e/cli), you may be suggested replacement modules for dependencies you have. This is a list of replacements, along with their migration guides and any useful information.
+
+> [!NOTE]
+> The e18e ESLint plugin replaces [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend) and includes its module-replacement functionality (the `ban-dependencies` rule), as well as many other performance related rules.
 
 ## What are these?
 

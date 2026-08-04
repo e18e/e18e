@@ -10,7 +10,7 @@ The e18e community is actively working on countless initiatives, both large and 
 
 ### [e18e ESLint Plugin](https://github.com/e18e/eslint-plugin)
 
-An ESLint plugin that provides rules for modernizing JavaScript and TypeScript codebases. Includes rules for promoting modern syntax, suggesting lighter-weight alternatives to popular libraries, and identifying patterns that can be optimized for better performance.
+An ESLint plugin that provides rules for modernizing JavaScript and TypeScript codebases. Includes rules for promoting modern syntax, suggesting lighter-weight alternatives to popular libraries, and identifying patterns that can be optimized for better performance. It replaces the standalone [eslint-plugin-depend](https://github.com/es-tooling/eslint-plugin-depend), incorporating it's dependency replacement feature (the `ban-dependencies` rule).
 
 ### [e18e CLI](https://github.com/e18e/cli)
 
