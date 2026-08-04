@@ -15,18 +15,19 @@ description: Tools, websites, and resources for improving the JavaScript ecosyst
 
 ## Tools
 
-|                                                                                       | Description                                                                                                                                     |
-| ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [arethetypeswrong](https://arethetypeswrong.github.io/)                               | Analyzes npm packages for issues with TypeScript types, particularly ESM-related module resolution problems                                     |
-| [Biome's noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)              | Biome plugin to avoid barrel files                                                                                                              |
-| [Biome's noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)           | Biome plugin to avoid re-export all                                                                                                             |
-| [@e18e/eslint-plugin](https://github.com/e18e/eslint-plugin)                          | Official ESLint plugin for modernizing code and suggesting dependency alternatives                                                              |
-| [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files) | ESLint plugin to avoid barrel files                                                                                                             |
-| [howfat](https://github.com/megahertz/howfat)                                         | Shows how much space a package takes up on disk including dependencies                                                                          |
-| [Knip](https://knip.dev)                                                              | Finds and fixes unused files, dependencies and exports in JavaScript and TypeScript projects                                                    |
-| [Package Size Calculator](https://github.com/TheDevMinerTV/package-size-calculator)   | CLI to calculate the size of a package after removing/replacing dependencies, or calculating the difference of two versions of the same package |
-| [publint](https://publint.dev/)                                                       | Lints npm packages to ensure wide compatibility across environments like Vite, Webpack, Rollup, and Node.js                                     |
-| [unplugin-purge-polyfills](https://github.com/danielroe/unplugin-purge-polyfills)     | Unplugin to replace package imports with native code                                                                                            |
+|                                                                                                  | Description                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [arethetypeswrong](https://arethetypeswrong.github.io/)                                          | Analyzes npm packages for issues with TypeScript types, particularly ESM-related module resolution problems                                     |
+| [Biome's noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)                         | Biome plugin to avoid barrel files                                                                                                              |
+| [Biome's noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)                      | Biome plugin to avoid re-export all                                                                                                             |
+| [Biome's noRestrictedDependencies](https://biomejs.dev/linter/rules/no-restricted-dependencies/) | Biome rule to suggest modern alternatives for outdated or heavy dependencies                                                                    |
+| [@e18e/eslint-plugin](https://github.com/e18e/eslint-plugin)                                     | Official ESLint plugin for modernizing code and suggesting dependency alternatives                                                              |
+| [eslint-plugin-barrel-files](https://github.com/thepassle/eslint-plugin-barrel-files)            | ESLint plugin to avoid barrel files                                                                                                             |
+| [howfat](https://github.com/megahertz/howfat)                                                    | Shows how much space a package takes up on disk including dependencies                                                                          |
+| [Knip](https://knip.dev)                                                                         | Finds and fixes unused files, dependencies and exports in JavaScript and TypeScript projects                                                    |
+| [Package Size Calculator](https://github.com/TheDevMinerTV/package-size-calculator)              | CLI to calculate the size of a package after removing/replacing dependencies, or calculating the difference of two versions of the same package |
+| [publint](https://publint.dev/)                                                                  | Lints npm packages to ensure wide compatibility across environments like Vite, Webpack, Rollup, and Node.js                                     |
+| [unplugin-purge-polyfills](https://github.com/danielroe/unplugin-purge-polyfills)                | Unplugin to replace package imports with native code                                                                                            |
 
 ## Websites
 
