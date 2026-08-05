@@ -2,7 +2,7 @@
 
 > This is adapted from [Angular's commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular).
 
-#### TL;DR:
+### TL;DR:
 
 Messages must be matched by the following regex:
 
@@ -11,7 +11,7 @@ Messages must be matched by the following regex:
 /^(revert: )?(feat|fix|docs|dx|refactor|perf|test|workflow|build|ci|chore|types|wip|release|deps)(\(.+\))?: .{1,50}/
 ```
 
-#### Examples
+### Examples
 
 Appears under "Features" header, `dev` subheader:
 
@@ -43,7 +43,7 @@ revert: feat(compiler): add 'comments' option
 This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 ```
 
-### Full Message Format
+#### Full Message Format
 
 A commit message consists of a **header**, **body** and **footer**. The header has a **type**, **scope** and **subject**:
 
@@ -57,21 +57,21 @@ A commit message consists of a **header**, **body** and **footer**. The header h
 
 The **header** is mandatory and the **scope** of the header is optional.
 
-### Revert
+#### Revert
 
 If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. In the body, it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
 
-### Type
+#### Type
 
 If the prefix is `feat`, `fix` or `perf`, it will appear in the changelog. However, if there is any [BREAKING CHANGE](#footer), the commit will always appear in the changelog.
 
 Other prefixes are up to your discretion. Suggested prefixes are `docs`, `chore`, `style`, `refactor`, and `test` for non-changelog related tasks.
 
-### Scope
+#### Scope
 
 The scope could be anything specifying the place of the commit change. For example `dev`, `build`, `workflow`, `cli` etc...
 
-### Subject
+#### Subject
 
 The subject contains a succinct description of the change:
 
@@ -79,12 +79,12 @@ The subject contains a succinct description of the change:
 - don't capitalize the first letter
 - no dot (.) at the end
 
-### Body
+#### Body
 
 Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
 The body should include the motivation for the change and contrast this with previous behavior.
 
-### Footer
+#### Footer
 
 The footer should contain any information about **Breaking Changes** and is also the place to
 reference GitHub issues that this commit **Closes**.
