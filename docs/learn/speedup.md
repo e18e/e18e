@@ -29,6 +29,7 @@ Biome supports some rules out of the box which align with e18e:
 
 - [noBarrelFile](https://biomejs.dev/linter/rules/no-barrel-file/)
 - [noReExportAll](https://biomejs.dev/linter/rules/no-re-export-all/)
+- [noRestrictedDependencies](https://biomejs.dev/linter/rules/no-restricted-dependencies/) (module-replacements)
 
 ### Oxlint
 
