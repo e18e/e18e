@@ -21,7 +21,8 @@
     "lint-staged": "^16.1.6",
     "simple-git-hooks": "^2.13.1",
     "sponsorkit": "^17.0.0",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "vitepress-plugin-llms": "^1.13.2"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -31,6 +32,7 @@
     },
     "onlyBuiltDependencies": [
       "esbuild",
+      "sharp",
       "simple-git-hooks"
     ]
   },
