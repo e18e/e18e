@@ -143,11 +143,11 @@ Next, use [fuzzyma's tool](https://github.com/fuzzyma/e18e-tools) to find packag
 Here's an example that displays the top 100 dependents of `lodash`:
 
 ```sh
-npx github:Fuzzyma/e18e-tools lodash -n 100 -U https://npm.devminer.xyz/registry
+npx github:Fuzzyma/e18e-tools lodash -n 100 -U https://npm.devminer.xyz/live_registry
 ```
 
 You can post the results as Markdown in your GitHub issue and then create PRs for affected projects:
 
 ```sh
-npx github:Fuzzyma/e18e-tools lodash -n 100 -q -o md  -U https://npm.devminer.xyz/registry > md-output.md
+npx github:Fuzzyma/e18e-tools lodash -n 100 -q -o md  -U https://npm.devminer.xyz/live_registry > md-output.md
 ```
