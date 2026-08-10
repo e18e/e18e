@@ -40,10 +40,12 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`cli-builders`](./cli-builders.md)                                   | :x:                     |
 | [`clipboardy`](./clipboardy.md)                                       | :x:                     |
 | [`collection-map`](./collection-map.md)                               | :x:                     |
+| [`concat-stream`](./concat-stream.md)                                 | :x:                     |
 | [`core-util-is`](./core-util-is.md)                                   | :x:                     |
 | [`cosmiconfig`](./cosmiconfig.md)                                     | :x:                     |
 | [`cpx`](./cpx.md)                                                     | :x:                     |
 | [`create-hmac`](./create-hmac.md)                                     | :x:                     |
+| [`cross-spawn`](./cross-spawn.md)                                     | :x:                     |
 | [`crypto-js`](./crypto-js.md)                                         | :x:                     |
 | [`cwd`](./cwd.md)                                                     | :x:                     |
 | [`debug`](./debug.md)                                                 | :x:                     |
@@ -51,6 +53,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`deep-merge`](./deep-merge.md)                                       | :x:                     |
 | [`depcheck`](./depcheck.md)                                           | :x:                     |
 | [`detect-package-manager`](./detect-package-manager.md)               | :x:                     |
+| [`dev-null`](./dev-null.md)                                           | :x:                     |
 | [`dot-prop`](./dot-prop.md)                                           | :x:                     |
 | [`dotenv`](./dotenv.md)                                               | :x:                     |
 | [`duplexer`](./duplexer.md)                                           | :x:                     |
