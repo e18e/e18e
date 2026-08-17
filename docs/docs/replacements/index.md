@@ -52,12 +52,14 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`deep-equal`](./deep-equal.md)                                       | :ballot_box_with_check: |
 | [`deep-merge`](./deep-merge.md)                                       | :x:                     |
 | [`depcheck`](./depcheck.md)                                           | :x:                     |
+| [`desm`](./desm.md)                                                   | :x:                     |
 | [`detect-package-manager`](./detect-package-manager.md)               | :x:                     |
 | [`dev-null`](./dev-null.md)                                           | :x:                     |
 | [`dot-prop`](./dot-prop.md)                                           | :x:                     |
 | [`dotenv`](./dotenv.md)                                               | :x:                     |
 | [`duplexer`](./duplexer.md)                                           | :x:                     |
 | [`emoji-regex`](./emoji-regex.md)                                     | :x:                     |
+| [`error-stack-parser`](./error-stack-parser.md)                       | :x:                     |
 | [`eslint-config-airbnb`](./eslint-config-airbnb.md)                   | :x:                     |
 | [`eslint-plugin-es`](./eslint-plugin-es.md)                           | :x:                     |
 | [`eslint-plugin-eslint-comments`](./eslint-plugin-eslint-comments.md) | :x:                     |
@@ -122,6 +124,8 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`readable-stream`](./readable-stream.md)                             | :x:                     |
 | [`resolve`](./resolve.md)                                             | :x:                     |
 | [`rimraf`](./rimraf.md)                                               | :x:                     |
+| [`schema-validation`](./schema-validation.md)                         | :x:                     |
+| [`semver`](./semver.md)                                               | :x:                     |
 | [`shortid`](./shortid.md)                                             | :x:                     |
 | [`slice-ansi`](./slice-ansi.md)                                       | :x:                     |
 | [`sort-object`](./sort-object.md)                                     | :x:                     |
@@ -138,6 +142,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`traverse`](./traverse.md)                                           | :ballot_box_with_check: |
 | [`tsc`](./tsc.md)                                                     | :x:                     |
 | [`tsup`](./tsup.md)                                                   | :x:                     |
+| [`tweetnacl`](./tweetnacl.md)                                         | :x:                     |
 | [`typescript-native-preview`](./typescript-native-preview.md)         | :x:                     |
 | [`uri-js`](./uri-js.md)                                               | :x:                     |
 | [`utf8`](./utf8.md)                                                   | :x:                     |
@@ -145,3 +150,4 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`wellknown`](./wellknown.md)                                         | :x:                     |
 | [`wrap-ansi`](./wrap-ansi.md)                                         | :x:                     |
 | [`xmldom`](./xmldom.md)                                               | :x:                     |
+| [`yaml-ast-parser`](./yaml-ast-parser.md)                             | :x:                     |
