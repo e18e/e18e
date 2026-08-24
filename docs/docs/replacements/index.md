@@ -88,8 +88,10 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`graphviz`](./graphviz.md)                                           | :x:                     |
 | [`gray-matter`](./gray-matter.md)                                     | :x:                     |
 | [`gzip-size`](./gzip-size.md)                                         | :x:                     |
+| [`has-yarn`](./has-yarn.md)                                           | :x:                     |
 | [`html-minifier`](./html-minifier.md)                                 | :x:                     |
 | [`http-proxy`](./http-proxy.md)                                       | :x:                     |
+| [`img-colour`](./img-colour.md)                                       | :x:                     |
 | [`inherits`](./inherits.md)                                           | :x:                     |
 | [`invariant`](./invariant.md)                                         | :x:                     |
 | [`is-builtin-module`](./is-builtin-module.md)                         | :ballot_box_with_check: |
@@ -109,6 +111,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`node-telegram-bot-api`](./node-telegram-bot-api.md)                 | :x:                     |
 | [`npm-run-all`](./npm-run-all.md)                                     | :x:                     |
 | [`object-hash`](./object-hash.md)                                     | :x:                     |
+| [`open`](./open.md)                                                   | :x:                     |
 | [`ora`](./ora.md)                                                     | :x:                     |
 | [`parseargs`](./parseargs.md)                                         | :x:                     |
 | [`path-exists`](./path-exists.md)                                     | :x:                     |
@@ -138,6 +141,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`tar-fs`](./tar-fs.md)                                               | :x:                     |
 | [`tempy`](./tempy.md)                                                 | :x:                     |
 | [`through`](./through.md)                                             | :x:                     |
+| [`timezone-support`](./timezone-support.md)                           | :x:                     |
 | [`tokml`](./tokml.md)                                                 | :x:                     |
 | [`traverse`](./traverse.md)                                           | :ballot_box_with_check: |
 | [`tsc`](./tsc.md)                                                     | :x:                     |
@@ -147,6 +151,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`uri-js`](./uri-js.md)                                               | :x:                     |
 | [`utf8`](./utf8.md)                                                   | :x:                     |
 | [`uuidv4`](./uuidv4.md)                                               | :x:                     |
+| [`vue3-markdown-it`](./vue3-markdown-it.md)                           | :x:                     |
 | [`wellknown`](./wellknown.md)                                         | :x:                     |
 | [`wrap-ansi`](./wrap-ansi.md)                                         | :x:                     |
 | [`xmldom`](./xmldom.md)                                               | :x:                     |
