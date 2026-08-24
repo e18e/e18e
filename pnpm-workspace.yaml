@@ -1,5 +1,7 @@
 shellEmulator: true
 trustPolicy: no-downgrade
+minimumReleaseAge: 10080
+blockExoticSubdeps: true
 packages:
   - docs
 onlyBuiltDependencies:
