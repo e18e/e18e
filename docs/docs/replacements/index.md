@@ -109,6 +109,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`mockdate`](./mockdate.md)                                           | :x:                     |
 | [`moment`](./moment.md)                                               | :x:                     |
 | [`node-telegram-bot-api`](./node-telegram-bot-api.md)                 | :x:                     |
+| [`npm-check`](./npm-check.md)                                         | :x:                     |
 | [`npm-run-all`](./npm-run-all.md)                                     | :x:                     |
 | [`object-hash`](./object-hash.md)                                     | :x:                     |
 | [`open`](./open.md)                                                   | :x:                     |
