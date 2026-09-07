@@ -47,6 +47,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`create-hmac`](./create-hmac.md)                                     | :x:                     |
 | [`cross-spawn`](./cross-spawn.md)                                     | :x:                     |
 | [`crypto-js`](./crypto-js.md)                                         | :x:                     |
+| [`css-loader`](./css-loader.md)                                       | :x:                     |
 | [`cwd`](./cwd.md)                                                     | :x:                     |
 | [`debug`](./debug.md)                                                 | :x:                     |
 | [`deep-equal`](./deep-equal.md)                                       | :ballot_box_with_check: |
@@ -95,6 +96,8 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`inherits`](./inherits.md)                                           | :x:                     |
 | [`invariant`](./invariant.md)                                         | :x:                     |
 | [`is-builtin-module`](./is-builtin-module.md)                         | :ballot_box_with_check: |
+| [`is-utf8`](./is-utf8.md)                                             | :x:                     |
+| [`istanbul-lib-coverage`](./istanbul-lib-coverage.md)                 | :x:                     |
 | [`jQuery`](./jquery.md)                                               | :x:                     |
 | [`js-yaml`](./js-yaml.md)                                             | :x:                     |
 | [`jsonwebtoken`](./jsonwebtoken.md)                                   | :x:                     |
@@ -116,6 +119,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`ora`](./ora.md)                                                     | :x:                     |
 | [`parseargs`](./parseargs.md)                                         | :x:                     |
 | [`path-exists`](./path-exists.md)                                     | :x:                     |
+| [`path-root`](./path-root.md)                                         | :x:                     |
 | [`pbkdf2`](./pbkdf2.md)                                               | :x:                     |
 | [`pkg-dir`](./pkg-dir.md)                                             | :x:                     |
 | [`portal-vue`](./portal-vue.md)                                       | :x:                     |
