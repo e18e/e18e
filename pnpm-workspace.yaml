@@ -1,11 +1,15 @@
-shellEmulator: true
+minimumReleaseAgeExcludePrune: true
 trustPolicy: no-downgrade
-packages:
-  - docs
-onlyBuiltDependencies:
-  - esbuild
-  - sharp
-  - simple-git-hooks
+
 peerDependencyRules:
   allowAny:
     - eslint
+
+shellEmulator: true
+
+packages:
+  - docs
+
+allowBuilds:
+  esbuild: true
+  simple-git-hooks: true
