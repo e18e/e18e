@@ -3,7 +3,7 @@ import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import llmstxt, { copyOrDownloadAsMarkdownButtons } from 'vitepress-plugin-llms'
-import { buildEnd } from './buildEnd.config'
+import { buildEnd } from './buildEnd.config.ts'
 
 const ogTitle = 'e18e'
 const ogDescription = 'Ecosystem Performance'

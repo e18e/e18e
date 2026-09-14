@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@12.4.1",
   "scripts": {
     "dev": "pnpm -C docs run dev",
     "build": "pnpm -C docs run build",
@@ -14,15 +14,15 @@
     "add-replacement": "node ./scripts/add-replacement.js"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.2.0",
-    "@types/node": "^24.5.2",
-    "eslint": "^10.8.0",
+    "@antfu/eslint-config": "^9.5.1",
+    "@types/node": "^26.5.1",
+    "eslint": "^10.10.0",
     "eslint-plugin-format": "^2.0.1",
-    "lint-staged": "^17.3.0",
-    "simple-git-hooks": "^2.13.1",
+    "lint-staged": "^17.5.1",
+    "simple-git-hooks": "^2.14.0",
     "sponsorkit": "^18.0.0",
-    "typescript": "~5.9.2",
-    "vitepress-plugin-llms": "^1.13.2"
+    "typescript": "~6.0.3",
+    "vitepress-plugin-llms": "^1.14.0"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
@@ -31,5 +31,12 @@
     "*.{js,ts,tsx,vue,md}": [
       "eslint --cache --fix"
     ]
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.0.0",
+      "onFail": "download"
+    }
   }
 }
