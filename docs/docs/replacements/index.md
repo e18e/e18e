@@ -28,6 +28,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`@jsdevtools/ez-spawn`](./ez-spawn.md)                               | :x:                     |
 | [`axios`](./fetch.md)                                                 | :x:                     |
 | [`bcrypt`](./bcrypt.md)                                               | :x:                     |
+| [`better-auth-cli`](./better-auth-cli.md)                             | :x:                     |
 | [`bluebird`](./bluebird-q.md)                                         | :x:                     |
 | [`body-parser`](./body-parser.md)                                     | :x:                     |
 | [`buf-compare`](./buf-compare.md)                                     | :x:                     |
@@ -80,6 +81,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`find-cache-directory`](./find-cache-directory.md)                   | :x:                     |
 | [`find-file-up`](./find-file-up.md)                                   | :x:                     |
 | [`find-pkg`](./find-pkg.md)                                           | :x:                     |
+| [`find-process`](./find-process.md)                                   | :x:                     |
 | [`find-up`](./find-up.md)                                             | :x:                     |
 | [`fs-extra`](./fs-extra.md)                                           | :x:                     |
 | [`get-stream`](./get-stream.md)                                       | :x:                     |
@@ -96,8 +98,11 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`inherits`](./inherits.md)                                           | :x:                     |
 | [`invariant`](./invariant.md)                                         | :x:                     |
 | [`is-builtin-module`](./is-builtin-module.md)                         | :ballot_box_with_check: |
+| [`is-path-in-cwd`](./is-path-in-cwd.md)                               | :x:                     |
+| [`is-path-inside`](./is-path-inside.md)                               | :x:                     |
 | [`is-utf8`](./is-utf8.md)                                             | :x:                     |
 | [`istanbul-lib-coverage`](./istanbul-lib-coverage.md)                 | :x:                     |
+| [`istanbul-lib-instrument`](./istanbul-lib-instrument.md)             | :x:                     |
 | [`jQuery`](./jquery.md)                                               | :x:                     |
 | [`js-yaml`](./js-yaml.md)                                             | :x:                     |
 | [`jsonwebtoken`](./jsonwebtoken.md)                                   | :x:                     |
@@ -132,6 +137,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`readable-stream`](./readable-stream.md)                             | :x:                     |
 | [`resolve`](./resolve.md)                                             | :x:                     |
 | [`rimraf`](./rimraf.md)                                               | :x:                     |
+| [`rollup-plugin-terser`](./rollup-plugin-terser.md)                   | :x:                     |
 | [`schema-validation`](./schema-validation.md)                         | :x:                     |
 | [`semver`](./semver.md)                                               | :x:                     |
 | [`shortid`](./shortid.md)                                             | :x:                     |
