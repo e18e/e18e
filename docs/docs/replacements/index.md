@@ -163,6 +163,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`utf8`](./utf8.md)                                                   | :x:                     |
 | [`uuidv4`](./uuidv4.md)                                               | :x:                     |
 | [`vue3-markdown-it`](./vue3-markdown-it.md)                           | :x:                     |
+| [`wait-for-expect`](./wait-for-expect.md)                             | :x:                     |
 | [`wellknown`](./wellknown.md)                                         | :x:                     |
 | [`wrap-ansi`](./wrap-ansi.md)                                         | :x:                     |
 | [`xmldom`](./xmldom.md)                                               | :x:                     |
