@@ -137,6 +137,8 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`readable-stream`](./readable-stream.md)                             | :x:                     |
 | [`resolve`](./resolve.md)                                             | :x:                     |
 | [`rimraf`](./rimraf.md)                                               | :x:                     |
+| [`rollup-plugin-babel`](./rollup-plugin-babel.md)                     | :x:                     |
+| [`rollup-plugin-node-resolve`](./rollup-plugin-node-resolve.md)       | :x:                     |
 | [`rollup-plugin-terser`](./rollup-plugin-terser.md)                   | :x:                     |
 | [`schema-validation`](./schema-validation.md)                         | :x:                     |
 | [`semver`](./semver.md)                                               | :x:                     |
