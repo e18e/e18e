@@ -77,6 +77,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`faker`](./faker.md)                                                 | :x:                     |
 | [`fast-glob`](./fast-glob.md)                                         | :x:                     |
 | [`feather`](./feather.md)                                             | :x:                     |
+| [`feathers-hooks-common`](./feathers-hooks-common.md)                 | :x:                     |
 | [`find-cache-dir`](./find-cache-dir.md)                               | :x:                     |
 | [`find-cache-directory`](./find-cache-directory.md)                   | :x:                     |
 | [`find-file-up`](./find-file-up.md)                                   | :x:                     |
@@ -138,6 +139,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`resolve`](./resolve.md)                                             | :x:                     |
 | [`rimraf`](./rimraf.md)                                               | :x:                     |
 | [`rollup-plugin-babel`](./rollup-plugin-babel.md)                     | :x:                     |
+| [`rollup-plugin-commonjs`](./rollup-plugin-commonjs.md)               | :x:                     |
 | [`rollup-plugin-node-resolve`](./rollup-plugin-node-resolve.md)       | :x:                     |
 | [`rollup-plugin-terser`](./rollup-plugin-terser.md)                   | :x:                     |
 | [`schema-validation`](./schema-validation.md)                         | :x:                     |
