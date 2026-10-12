@@ -108,6 +108,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`js-yaml`](./js-yaml.md)                                             | :x:                     |
 | [`jsonwebtoken`](./jsonwebtoken.md)                                   | :x:                     |
 | [`jsx-ast-utils`](./jsx-ast-utils.md)                                 | :x:                     |
+| [`jszip`](./jszip.md)                                                 | :x:                     |
 | [`lodash-underscore`](./lodash-underscore.md)                         | :x:                     |
 | [`materialize-css`](./materialize-css.md)                             | :x:                     |
 | [`md5`](./md5.md)                                                     | :ballot_box_with_check: |
@@ -123,6 +124,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`object-hash`](./object-hash.md)                                     | :x:                     |
 | [`open`](./open.md)                                                   | :x:                     |
 | [`ora`](./ora.md)                                                     | :x:                     |
+| [`pako`](./pako.md)                                                   | :x:                     |
 | [`parseargs`](./parseargs.md)                                         | :x:                     |
 | [`path-exists`](./path-exists.md)                                     | :x:                     |
 | [`path-root`](./path-root.md)                                         | :x:                     |
