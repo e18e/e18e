@@ -37,6 +37,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`buffer-equals`](./buffer-equals.md)                                 | :x:                     |
 | [`builtin-modules`](./builtin-modules.md)                             | :x:                     |
 | [`chalk`](./chalk.md)                                                 | :ballot_box_with_check: |
+| [`classnames`](./classnames.md)                                       | :x:                     |
 | [`clean-webpack-plugin`](./clean-webpack-plugin.md)                   | :x:                     |
 | [`cli-builders`](./cli-builders.md)                                   | :x:                     |
 | [`clipboardy`](./clipboardy.md)                                       | :x:                     |
