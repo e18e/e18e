@@ -96,7 +96,6 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`gray-matter`](./gray-matter.md)                                     | :x:                     |
 | [`gzip-size`](./gzip-size.md)                                         | :x:                     |
 | [`has-yarn`](./has-yarn.md)                                           | :x:                     |
-| [`html-minifier`](./html-minifier.md)                                 | :x:                     |
 | [`http-proxy`](./http-proxy.md)                                       | :x:                     |
 | [`img-colour`](./img-colour.md)                                       | :x:                     |
 | [`inherits`](./inherits.md)                                           | :x:                     |
