@@ -86,6 +86,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`find-pkg`](./find-pkg.md)                                           | :x:                     |
 | [`find-process`](./find-process.md)                                   | :x:                     |
 | [`find-up`](./find-up.md)                                             | :x:                     |
+| [`form-data`](./form-data.md)                                         | :x:                     |
 | [`fs-extra`](./fs-extra.md)                                           | :x:                     |
 | [`get-stream`](./get-stream.md)                                       | :x:                     |
 | [`glob`](./glob.md)                                                   | :x:                     |
@@ -95,7 +96,6 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`gray-matter`](./gray-matter.md)                                     | :x:                     |
 | [`gzip-size`](./gzip-size.md)                                         | :x:                     |
 | [`has-yarn`](./has-yarn.md)                                           | :x:                     |
-| [`html-minifier`](./html-minifier.md)                                 | :x:                     |
 | [`http-proxy`](./http-proxy.md)                                       | :x:                     |
 | [`img-colour`](./img-colour.md)                                       | :x:                     |
 | [`inherits`](./inherits.md)                                           | :x:                     |
@@ -112,6 +112,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`jsx-ast-utils`](./jsx-ast-utils.md)                                 | :x:                     |
 | [`jszip`](./jszip.md)                                                 | :x:                     |
 | [`lodash-underscore`](./lodash-underscore.md)                         | :x:                     |
+| [`lru-cache`](./lru-cache.md)                                         | :x:                     |
 | [`materialize-css`](./materialize-css.md)                             | :x:                     |
 | [`md5`](./md5.md)                                                     | :ballot_box_with_check: |
 | [`micromatch`](./micromatch.md)                                       | :x:                     |
