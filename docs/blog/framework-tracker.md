@@ -46,11 +46,15 @@ The cost of using a meta-framework goes beyond page render speed. What about bui
 
 ## Impact so far
 
+While working with the meta-framework teams, our benchmarks started finding improvements, which we have started collecting on an [impact page](https://frameworks.e18e.dev/impact/). Sometimes we found these improvements by making our tests fairer. For example, while working with Daniel Roe from Nuxt to make our SSR Load benchmark test fair, we noticed that framework-specific Link components were impacting performance. Daniel used this to improve links in Vue and Nuxt while we split our tests: one without framework component links and one with.
+
+However, we are seeing the Framework Tracker being used in ways we could only hope for at the start:
+
 > As we work on a major version of Solid 2.0 I have used the framework tracker extensively to make improvements to our SSR throughput. It really is an important project for the ecosystem - Brenley (Solid)
 
-// Biggest ones so far Solids work on V2
-// Nuxt (Router Component)
-// TanStack
+By adding Solid 2.0 to Framework Tracker, Brenley has been able to compare it with SolidStart and ensure each release candidate improves.
+
+## Whats next
 
 ## Special Thanks
 
@@ -64,3 +68,4 @@ Every meta-framework team helped review and improve tests, so thank you all. We 
 - [Daniel](https://bsky.app/profile/danielroe.dev)
 - [Chris](https://e18e.dev/)
 - [Florian](https://bsky.app/profile/florian-lefebvre.dev)
+  // Add HTTP archive two members that helped a lot
