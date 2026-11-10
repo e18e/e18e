@@ -35,7 +35,13 @@ We've had the pleasure of working with many meta-framework teams on our journey 
 
 The cost of using a meta-framework goes beyond page render speed. What about build time or dependency installation time? If you work on smaller projects/teams, you might not notice these as much, but as you scale, they can cause bottlenecks and cost serious money. To cover all costs of using a meta-framework, we split benchmarks into two categories: [DevTime](https://frameworks.e18e.dev/dev-time/) and [RunTime](https://frameworks.e18e.dev/run-time/).
 
+We also track meta-frameworks over time, capturing every major and minor release, allowing you to see the progress a meta-framework makes, not just whether X is better than Y in one test.
+
 ### Dev Time
+
+For our initial release, we benchmark dependency count, node modules size, build/install times, dev server startup, Core-JS polyfills, browser baseline and minimum Node version.
+
+Some of these tests can vary widely from project to project, so to keep the comparison fair, we set up a starter project using the default/recommended set provided by each meta-framework's CLI or docs.
 
 ### Run Time
 
