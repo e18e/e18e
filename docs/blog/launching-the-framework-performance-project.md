@@ -131,3 +131,9 @@ Every meta-framework team helped review and improve our benchmarks, so thank you
 - [Barry](https://bsky.app/profile/tunetheweb.com)
 
 Finally, a big thank you to [Depot](https://depot.dev/) for sponsoring these benchmarks. With Depot, we can run several iterations in just a few minutes and check how consistent the results are across runs.
+
+## Sponsor this project
+
+The [e18e](https://e18e.dev/) community builds projects like this to help the wider ecosystem. All of this work is open source and free to use, but takes a lot of time and effort to maintain.
+
+If you would like to support this project, please consider sponsoring us through our [Open Collective](https://opencollective.com/e18e) :blue_heart:
