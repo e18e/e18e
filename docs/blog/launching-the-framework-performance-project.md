@@ -31,6 +31,15 @@ Our biggest learning from this: benchmarking meta-frameworks is hard. Often it i
 
 ## Why
 
+So why create this project? Doesn't every meta-framework have its own benchmarks and focus on performance? Well, that is actually the issue: each team measures performance differently, and each has its own priorities. Some meta-frameworks focus on server-side rendering, while others focus on client-side rendering. We are right back at the issue of comparing apples to spaceships.
+
+All of this inconsistency, and the fact that you're more likely to measure yourself in a category you know you excel in, makes it hard to get a clear picture from existing benchmarks.
+
+With this project, we want to achieve two things:
+
+- Help framework maintainers measure their own performance and improve it
+- Provide a set of clear and transparent benchmarks for the community to see how well each framework performs in different areas
+
 We've had the pleasure of working with many meta-framework teams on our journey to our first release. In this initial release, we cover Nuxt, Next.js, TanStack Start (React), Solid Start, Solid 2.0, Astro, SvelteKit, React Router and Pracht. If you're reading this and wondering where your favourite meta-framework is, please raise an issue in our [repo](https://github.com/e18e/framework-tracker/issues).
 
 ## What We Measure
