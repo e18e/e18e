@@ -64,8 +64,11 @@ Some of these tests can vary widely from project to project, so to keep the comp
 
 ## Core Web Vitals
 
-// Work on HTTP Archive
-// How these results can be miss-leading i.e loveable with TanStack or Solid having a smaller testing pool
+To continue our work of capturing the true cost of meta-frameworks, we are expanding our docs to include additional datasets. Thanks to Annie and Barry from Google and Ryan from the E18E community, we pulled in data from the HTTP Archive to provide real-world metrics. We also contributed back and added detection for TanStack, which was missing when we originally started the project. You can view the stats for supported meta-frameworks on its [own page](https://frameworks.e18e.dev/core-web-vitals/), with breakdowns by Desktop and Mobile.
+
+Just as isolated benchmarks can paint a different picture than real usage in production, HTTP archive data can too. A meta-framework doesn't control how people use it or where it's hosted vs the origin of traffic. Sample size can skew data as well; for example, Solid performs very well but has a very small sample size. Maybe everyone building in Solid is just very hyper-focused on performance 😉.
+
+The main takeaway here is that performance and benchmarking are a picture that needs to be looked at from many angles, thinking about all the impact, not just a cool image posted online.
 
 ## Impact so far
 
