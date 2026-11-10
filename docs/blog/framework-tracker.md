@@ -79,6 +79,8 @@ By adding Solid 2.0 to Framework Tracker, Brenley has been able to compare it wi
 
 ## Whats next
 
+We are already working on new benchmarks and adding more meta-frameworks to the project. While we have our own roadmap for new tests, we would love to hear your ideas. We already have an issue set up, so if you have an idea, [drop it in there](https://github.com/e18e/framework-tracker/issues/292).
+
 ## Special Thanks
 
 Every meta-framework team helped review and improve tests, so thank you all. We also want to thank the core contributors who worked on tests, UI/UX, colours, and more.
