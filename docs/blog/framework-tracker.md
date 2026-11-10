@@ -29,7 +29,15 @@ Our biggest takeaway has been that benchmarking meta-frameworks is tricky to get
 
 > Projects like the framework tracker are essential. We're all rightly allergic to hype-driven benchmarks. So it's good that e18e is helping provide continuous measurement and real data to keep us accountable and push us to continue to improve performance - Daniel Roe (Nuxt)
 
+We've had the pleasure of working with many meta-framework teams on our journey to our first release. In this initial release, we cover Nuxt, Next.js, TanStack Start (React), Solid Start, Solid 2.0, Astro, SvelteKit, React Router and Pracht. If you're reading this and wondering where your favourite meta-framework is, please raise an issue in our [repo](https://github.com/e18e/framework-tracker/issues).
+
 ## What We Measure
+
+The cost of using a meta-framework goes beyond page render speed. What about build time or dependency installation time? If you work on smaller projects/teams, you might not notice these as much, but as you scale, they can cause bottlenecks and cost serious money. To cover all costs of using a meta-framework, we split benchmarks into two categories: [DevTime](https://frameworks.e18e.dev/dev-time/) and [RunTime](https://frameworks.e18e.dev/run-time/).
+
+### Dev Time
+
+### Run Time
 
 ## Core Web Vitals
 
@@ -46,5 +54,13 @@ Our biggest takeaway has been that benchmarking meta-frameworks is tricky to get
 
 ## Special Thanks
 
-- Core contributors to the project
-- Framework teams that helped
+Every meta-framework team helped review and improve tests, so thank you all. We also want to thank the core contributors who worked on tests, UI/UX, colours, and more.
+
+- [Paul](https://bsky.app/profile/paulvall.dev)
+- [Brenelz](https://bsky.app/profile/brenelz.com)
+- [Ryan](https://bsky.app/profile/rdforte.bsky.social)
+- [Harry](https://e18e.dev/)
+- [Sheraff](https://bsky.app/profile/sheraff.dev)
+- [Daniel](https://bsky.app/profile/danielroe.dev)
+- [Chris](https://e18e.dev/)
+- [Florian](https://bsky.app/profile/florian-lefebvre.dev)
