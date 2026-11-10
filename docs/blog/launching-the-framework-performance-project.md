@@ -35,6 +35,8 @@ So why create this project? Doesn't every meta-framework have its own benchmarks
 
 All of this inconsistency, and the fact that you're more likely to measure yourself in a category you know you excel in, makes it hard to get a clear picture from existing benchmarks.
 
+On top of this, not all meta-framework teams have the time to build and maintain these benchmarks.
+
 With this project, we want to achieve two things:
 
 - Help framework maintainers measure their own performance and improve it
@@ -64,12 +66,16 @@ Some of these tests can vary widely from project to project, so to keep the comp
 
 ### Run Time
 
-- Client Side Rendered via Lighthouse
-- Server Side Rendered via Lighthouse
-- Initial Load
-- Server Side Rendered Throughput
-- Server Side Rendered Load Test
-- Server Side Rendered Load Test using Framework link components
+Our Run Time benchmarks use a different setup, with an app setup for each meta-framework. We do a lot of work to ensure these benchmarks are fair by running tests multiple times and recording the min, max, median, and variance of runs.
+
+We also partnered with [Depot](https://depot.dev/) to provide a consistent setup and run these benchmarks. Our initial Run Time benchmarks include:
+
+- Client-side rendered via Lighthouse (FP, FCP, INP)
+- Server-side rendered via Lighthouse (FP, FCP, INP)
+- Initial load (KB loaded for a basic web page)
+- Server-side rendered throughput (latency and request throughput using SSR)
+- Server-side rendered load test (latency of SSR request under load)
+- Server-side rendered load test using Framework link components
 
 ## Core Web Vitals
 
@@ -107,3 +113,5 @@ Every meta-framework team helped review and improve our benchmarks, so thank you
 - [Chris](https://m.webtoo.ls/@swithinbank)
 - [Florian](https://bsky.app/profile/florian-lefebvre.dev)
 - [Barry](https://bsky.app/profile/tunetheweb.com)
+
+Finally, a big thank you to [Depot](https://depot.dev/) for sponsoring these benchmarks. With Depot, we can run several iterations in just a few minutes and check how consistent the results are across runs.
