@@ -111,6 +111,8 @@ A few highlights from the [impact page](https://frameworks.e18e.dev/impact/) so 
 
 ## Whats next
 
+This is only the start. No benchmark is perfect, and we know people will question these results, which is exactly what we want. If you think a test is unfair or something is missing, tell us. Every bit of feedback makes the benchmarks more accurate, and better benchmarks help framework authors and developers alike.
+
 We are already working on new benchmarks and adding more meta-frameworks to the project. While we have our own roadmap for new tests, we would love to hear your ideas. We already have an issue set up, so if you have an idea, [drop it in there](https://github.com/e18e/framework-tracker/issues/292).
 
 ## Special Thanks
