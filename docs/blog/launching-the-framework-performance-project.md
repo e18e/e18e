@@ -21,19 +21,19 @@ head:
 
 _November 10, 2026_
 
-As part of the [speedup](https://e18e.dev/learn/speedup.html) initiative in the e18e community, we have been building a benchmark collection to measure the performance of meta-frameworks.
+Today we're excited to launch the [Framework Performance project](https://frameworks.e18e.dev/), a collection of benchmarks to measure the performance of meta-frameworks! :tada:
 
-What started as a project to provide a fair comparison of meta-frameworks and foster collaboration between authors has grown into helping authors develop new versions of their frameworks and find real performance bottlenecks before their first official release.
+What started as a project to provide a fair comparison of meta-frameworks and foster collaboration between authors has grown into something much bigger. Already, this has helped authors develop new versions of their frameworks and find real performance bottlenecks before release.
 
-Our biggest learning from this: benchmarking meta-frameworks is hard. Often it is like comparing apples to spaceships, as no two frameworks are built the same and most of them have slightly different target audiences. This has given us a new appreciation for benchmarks, showing that many metrics are needed to give a full picture rather than just one over-simplified number.
-
-> Projects like the framework tracker are essential. We're all rightly allergic to hype-driven benchmarks. So it's good that e18e is helping provide continuous measurement and real data to keep us accountable and push us to continue to improve performance - Daniel Roe (Nuxt)
+> Projects like the framework tracker are essential. We're all rightly allergic to hype-driven benchmarks. So it's good that e18e is helping provide continuous measurement and real data to keep us accountable and push us to continue to improve performance.
+>
+> \- Daniel Roe (Nuxt)
 
 ## Why
 
-So why create this project? Doesn't every meta-framework have its own benchmarks and focus on performance? Well, that is actually the issue: each team measures performance differently, and each has its own priorities. Some meta-frameworks focus on server-side rendering, while others focus on client-side rendering. We are right back at the issue of comparing apples to spaceships.
+So why create this project? Doesn't every meta-framework have its own benchmarks and focus on performance? Well, that is actually the issue: each team measures performance differently, and each has its own priorities. Some meta-frameworks focus on server-side rendering, while others focus on client-side rendering. Often it is like comparing apples to spaceships, as no two frameworks are built the same and most of them have slightly different target audiences.
 
-All of this inconsistency, and the fact that you're more likely to measure yourself in a category you know you excel in, makes it hard to get a clear picture from existing benchmarks.
+All of this inconsistency, and the fact that you're more likely to measure yourself in a category you know you excel in, makes it hard to get a clear picture from existing benchmarks. It's also why we believe many metrics are needed to give a full picture, rather than just one over-simplified number.
 
 On top of this, not all meta-framework teams have the time to build and maintain these benchmarks.
 
@@ -60,13 +60,13 @@ For our initial release, we benchmark:
 - Dev server startup
 - Core-JS polyfills
 - Browser baseline
-- Minimum Node version.
+- Minimum Node version
 
-Some of these tests can vary widely from project to project, so to keep the comparison fair, we set up a starter project using the default/recommended set provided by each meta-framework's CLI or docs.
+Some of these tests can vary widely from project to project, so to keep the comparison fair, we set up a starter project using the default/recommended setup provided by each meta-framework's CLI or docs. This also helps maintainers spot where their defaults could be improved.
 
 ### Run Time
 
-Our Run Time benchmarks use a different setup, with an app setup for each meta-framework. We do a lot of work to ensure these benchmarks are fair by running tests multiple times and recording the min, max, median, and variance of runs.
+Unlike Dev Time, our Run Time benchmarks build the same app in each meta-framework rather than using its defaults. Default setups can differ widely, and here we want to measure the framework itself. We also do a lot of work to ensure these benchmarks are fair by running tests multiple times and recording the min, max, median, and variance of runs.
 
 We also partnered with [Depot](https://depot.dev/) to provide a consistent setup and run these benchmarks. Our initial Run Time benchmarks include:
 
@@ -79,21 +79,30 @@ We also partnered with [Depot](https://depot.dev/) to provide a consistent setup
 
 ## Core Web Vitals
 
-To continue our work of capturing the true cost of meta-frameworks, we are expanding our docs to include additional datasets. Thanks to Annie and Barry from Google and Ryan from the E18E community, we pulled in data from the HTTP Archive to provide real-world metrics. We also contributed back and added detection for TanStack, which was missing when we originally started the project. You can view the stats for supported meta-frameworks on its [own page](https://frameworks.e18e.dev/core-web-vitals/), with breakdowns by Desktop and Mobile.
+To continue our work of capturing the true cost of meta-frameworks, we are expanding our docs to include additional datasets. Thanks to [Annie](https://bsky.app/profile/anniesullie.com) and [Barry](https://bsky.app/profile/tunetheweb.com) from Google and [Ryan](https://bsky.app/profile/rdforte.bsky.social) from the e18e community, we pulled in data from the [HTTP Archive](https://httparchive.org/) to provide real-world metrics. We also contributed back to this by adding detection for TanStack, which was missing when we originally started the project. You can view the stats for supported meta-frameworks on its [own page](https://frameworks.e18e.dev/core-web-vitals/), with breakdowns by Desktop and Mobile.
 
-Just as isolated benchmarks can paint a different picture than real usage in production, HTTP archive data can too. A meta-framework doesn't control how people use it or where it's hosted vs the origin of traffic. Sample size can skew data as well; for example, Solid performs very well but has a very small sample size. Maybe everyone building in Solid is just very hyper-focused on performance 😉.
+Just as isolated benchmarks can paint a different picture than real usage in production, HTTP Archive data can too. A meta-framework doesn't control how people use it or where it's hosted vs the origin of traffic. Sample size can skew data as well; for example, Solid scores very well, though from a much smaller sample of sites. Maybe everyone building with Solid is just hyper-focused on performance 😉.
 
-The main takeaway here is that performance and benchmarking are a picture that needs to be looked at from many angles, thinking about all the impact, not just a cool image posted online.
+The main takeaway is that performance needs to be looked at from many angles, considering the full impact, not just a single chart posted online.
 
 ## Impact so far
 
-While working with the meta-framework teams, our benchmarks started finding improvements, which we have started collecting on an [impact page](https://frameworks.e18e.dev/impact/). Sometimes we found these improvements by making our tests fairer. For example, while working with Daniel Roe from Nuxt to make our SSR Load benchmark test fair, we noticed that framework-specific Link components were impacting performance. Daniel used this to improve links in Vue and Nuxt while we split our tests: one without framework component links and one with.
+While working with the meta-framework teams, our benchmarks began surfacing opportunities for improvement, which we have started documenting on an [impact page](https://frameworks.e18e.dev/impact/). Sometimes we found these improvements by making our tests fairer. For example, while working with Daniel Roe to make our SSR Load benchmark fair, we noticed that framework-specific Link components were impacting performance. Daniel used this to improve links in Vue and Nuxt. Meanwhile, we split our tests into two: one without framework component links and one with.
 
-However, we are seeing the Framework Tracker being used in ways we could only hope for at the start:
+Beyond that, we are seeing the project being used in ways we could only hope for when we started:
 
-> As we work on a major version of Solid 2.0 I have used the framework tracker extensively to make improvements to our SSR throughput. It really is an important project for the ecosystem - Brenley (Solid)
+> As we work on a major version of Solid 2.0 I have used the framework tracker extensively to make improvements to our SSR throughput. It really is an important project for the ecosystem.
+>
+> \- Brenley (Solid)
 
-By adding Solid 2.0 to Framework Tracker, Brenley has been able to compare it with SolidStart and ensure each release candidate improves.
+By adding Solid 2.0 to the Framework Performance project, Brenley has been able to compare it with SolidStart and ensure each release candidate improves.
+
+A few highlights from the [impact page](https://frameworks.e18e.dev/impact/) so far:
+
+- **Nuxt:** internal `<NuxtLink>` anchors render directly on the server, cutting render time for internal links by ~58%
+- **React (Next.js):** RSC payload parsing is ~75% faster, speeding up frameworks built on it, including Next.js
+- **Solid 2.0:** three upstream fixes took the SSR load test from 170 to 280 req/s (one connection) and ~200 to ~390 req/s (concurrent)
+- **Vue Router & TanStack Router:** proposed fixes to make links cheaper to render, with Vue Router links 1.5-2.2x faster on the server
 
 ## Whats next
 
