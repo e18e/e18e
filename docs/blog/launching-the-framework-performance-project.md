@@ -1,5 +1,5 @@
 ---
-title: Framework Tracker
+title: Launching the Framework Performance project
 author:
   - name: Alexander Karan
 sidebar: false
@@ -10,10 +10,10 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Framework Tracker
+      content: Launching the Framework Performance project
   - - meta
     - property: og:url
-      content: https://e18e.dev/blog/framework-tracker
+      content: https://e18e.dev/blog/launching-the-framework-performance-project
   - - meta
     - property: og:description
       content: Benchmarking JavaScript meta-frameworks
@@ -86,7 +86,7 @@ We are already working on new benchmarks and adding more meta-frameworks to the 
 
 ## Special Thanks
 
-Every meta-framework team helped review and improve tests, so thank you all. We also want to thank the core contributors who worked on tests, UI/UX, colours, and more.
+Every meta-framework team helped review and improve our benchmarks, so thank you all. We also want to thank the core contributors who worked on tests, UI/UX, setups, and direction-setting, and who were always there to bounce ideas around.
 
 - [Annie](https://bsky.app/profile/anniesullie.com)
 - [Paul](https://bsky.app/profile/paulvall.dev)
