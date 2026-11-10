@@ -25,7 +25,7 @@ As part of the [speedup](https://e18e.dev/learn/speedup.html) initiative in the 
 
 What started as a project to provide a fair comparison of meta-frameworks and foster collaboration between authors has grown into helping authors develop new versions of their frameworks and find real performance bottlenecks before their first official release.
 
-Our biggest takeaway has been that benchmarking meta-frameworks is tricky to get right. Often it's like comparing apples to spaceships, so each test we add needs careful work. It's given us a new appreciation for benchmarks, showing that many approaches are needed to give a full picture rather than a screenshot of one bar or number being 10x higher than others.
+Our biggest learning from this: benchmarking meta-frameworks is hard. Often it is like comparing apples to spaceships, as no two frameworks are built the same and most of them have slightly different target audiences. This has given us a new appreciation for benchmarks, showing that many metrics are needed to give a full picture rather than just one over-simplified number.
 
 > Projects like the framework tracker are essential. We're all rightly allergic to hype-driven benchmarks. So it's good that e18e is helping provide continuous measurement and real data to keep us accountable and push us to continue to improve performance - Daniel Roe (Nuxt)
 
