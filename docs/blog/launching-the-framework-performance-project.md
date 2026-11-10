@@ -15,11 +15,16 @@ head:
     - property: og:url
       content: https://e18e.dev/blog/launching-the-framework-performance-project
   - - meta
+    - property: og:image
+      content: https://e18e.dev/og/launching-the-framework-performance-project.png
+  - - meta
     - property: og:description
       content: Benchmarking JavaScript meta-frameworks
 ---
 
 _November 10, 2026_
+
+# ![Launching the Framework Performance project](/og/launching-the-framework-performance-project.png)
 
 Today we're excited to launch the [Framework Performance project](https://frameworks.e18e.dev/), a collection of benchmarks to measure the performance of meta-frameworks! :tada:
 
