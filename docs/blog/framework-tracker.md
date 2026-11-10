@@ -41,11 +41,26 @@ We also track meta-frameworks over time, capturing every major and minor release
 
 ### Dev Time
 
-For our initial release, we benchmark dependency count, node modules size, build/install times, dev server startup, Core-JS polyfills, browser baseline and minimum Node version.
+For our initial release, we benchmark:
+
+- Dependency count
+- Node modules size
+- Build/install times
+- Dev server startup
+- Core-JS polyfills
+- Browser baseline
+- Minimum Node version.
 
 Some of these tests can vary widely from project to project, so to keep the comparison fair, we set up a starter project using the default/recommended set provided by each meta-framework's CLI or docs.
 
 ### Run Time
+
+- Client Side Rendered via Lighthouse
+- Server Side Rendered via Lighthouse
+- Initial Load
+- Server Side Rendered Throughput
+- Server Side Rendered Load Test
+- Server Side Rendered Load Test using Framework link components
 
 ## Core Web Vitals
 
@@ -68,12 +83,13 @@ By adding Solid 2.0 to Framework Tracker, Brenley has been able to compare it wi
 
 Every meta-framework team helped review and improve tests, so thank you all. We also want to thank the core contributors who worked on tests, UI/UX, colours, and more.
 
+- [Annie](https://bsky.app/profile/anniesullie.com)
 - [Paul](https://bsky.app/profile/paulvall.dev)
 - [Brenelz](https://bsky.app/profile/brenelz.com)
 - [Ryan](https://bsky.app/profile/rdforte.bsky.social)
-- [Harry](https://e18e.dev/)
+- [Harry](https://bsky.app/profile/the-intern.dev)
 - [Sheraff](https://bsky.app/profile/sheraff.dev)
 - [Daniel](https://bsky.app/profile/danielroe.dev)
-- [Chris](https://e18e.dev/)
+- [Chris](https://m.webtoo.ls/@swithinbank)
 - [Florian](https://bsky.app/profile/florian-lefebvre.dev)
-  // Add HTTP archive two members that helped a lot
+- Barry
