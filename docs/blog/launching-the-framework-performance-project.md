@@ -47,7 +47,7 @@ With this project, we want to achieve two things:
 - Help framework maintainers measure their own performance and improve it
 - Provide a set of clear and transparent benchmarks for the community to see how well each framework performs in different areas
 
-We've had the pleasure of working with many meta-framework teams on our journey to our first release. In this initial release, we cover Nuxt, Next.js, TanStack Start (React), Solid Start, Solid 2.0, Astro, SvelteKit, React Router and Pracht. If you're reading this and wondering where your favourite meta-framework is, please raise an issue in our [repo](https://github.com/e18e/framework-tracker/issues).
+We've had the pleasure of working with many meta-framework teams on our journey to our first release. In this initial release, we cover Nuxt, Next.js, TanStack Start (React), Solid Start, Solid 2.0, Astro, SvelteKit, React Router and Pracht. If you're reading this and wondering where your favourite meta-framework is, please raise an issue in our [repo](https://github.com/e18e/framework-performance/issues).
 
 ## What We Measure
 
@@ -113,7 +113,7 @@ A few highlights from the [impact page](https://frameworks.e18e.dev/impact/) so 
 
 This is only the start. No benchmark is perfect, and we know people will question these results, which is exactly what we want. If you think a test is unfair or something is missing, tell us. Every bit of feedback makes the benchmarks more accurate, and better benchmarks help framework authors and developers alike.
 
-We are already working on new benchmarks and adding more meta-frameworks to the project. While we have our own roadmap for new tests, we would love to hear your ideas. We already have an issue set up, so if you have an idea, [drop it in there](https://github.com/e18e/framework-tracker/issues/292).
+We are already working on new benchmarks and adding more meta-frameworks to the project. While we have our own roadmap for new tests, we would love to hear your ideas. We already have an issue set up, so if you have an idea, [drop it in there](https://github.com/e18e/framework-performance/issues/292).
 
 ## Special Thanks
 
