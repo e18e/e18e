@@ -94,4 +94,4 @@ Every meta-framework team helped review and improve tests, so thank you all. We 
 - [Daniel](https://bsky.app/profile/danielroe.dev)
 - [Chris](https://m.webtoo.ls/@swithinbank)
 - [Florian](https://bsky.app/profile/florian-lefebvre.dev)
-- Barry
+- [Barry](https://bsky.app/profile/tunetheweb.com)
