@@ -119,6 +119,7 @@ We are already working on new benchmarks and adding more meta-frameworks to the 
 
 Every meta-framework team helped review and improve our benchmarks, so thank you all. We also want to thank the core contributors who worked on tests, UI/UX, setups, and direction-setting, and who were always there to bounce ideas around.
 
+- [Alex](https://bsky.app/profile/infrequently.org)
 - [Annie](https://bsky.app/profile/anniesullie.com)
 - [Paul](https://bsky.app/profile/paulvall.dev)
 - [Brenelz](https://bsky.app/profile/brenelz.com)
