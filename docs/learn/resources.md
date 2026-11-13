@@ -35,6 +35,7 @@ description: Tools, websites, and resources for improving the JavaScript ecosyst
 | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [bundlejs](https://bundlejs.com/)            | In-browser bundler that shows package size with tree-shaking support, handles CSS and external files, and works with multiple CDNs |
 | [bundlephobia](https://bundlephobia.com/)    | Finds the cost of adding npm packages to your bundle                                                                               |
+| [CompatLab](https://compatlab.me/npm/compatibility) | Compares how exact npm package versions load with import and require on Node.js, Bun, and Deno |
 | [DepTree](https://deptree.rschristian.dev/)  | Visualizes a project's dependencies and highlights which of those dependencies could be replaced                                   |
 | [Ecosyste.ms](https://packages.ecosyste.ms/) | An open API service providing package, version and dependency metadata of many open source software ecosystems and registries      |
 | [node-modules.dev](https://node-modules.dev) | Online tool to visualize your node_modules, inspect dependencies, and analyze package structures with WebContainer support         |
