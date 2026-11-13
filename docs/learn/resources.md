@@ -31,20 +31,20 @@ description: Tools, websites, and resources for improving the JavaScript ecosyst
 
 ## Websites
 
-|                                              | Description                                                                                                                        |
-| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [bundlejs](https://bundlejs.com/)            | In-browser bundler that shows package size with tree-shaking support, handles CSS and external files, and works with multiple CDNs |
-| [bundlephobia](https://bundlephobia.com/)    | Finds the cost of adding npm packages to your bundle                                                                               |
-| [CompatLab](https://compatlab.me/npm/compatibility) | Compares how exact npm package versions load with import and require on Node.js, Bun, and Deno |
-| [DepTree](https://deptree.rschristian.dev/)  | Visualizes a project's dependencies and highlights which of those dependencies could be replaced                                   |
-| [Ecosyste.ms](https://packages.ecosyste.ms/) | An open API service providing package, version and dependency metadata of many open source software ecosystems and registries      |
-| [node-modules.dev](https://node-modules.dev) | Online tool to visualize your node_modules, inspect dependencies, and analyze package structures with WebContainer support         |
-| [npmgraph](https://npmgraph.js.org/)         | Visually displays a graph of a project's dependencies to get an idea of a projects module graph                                    |
-| [packagephobia](https://packagephobia.com/)  | Reports the "publish size" and "install size" of npm packages before installation, helping you evaluate disk space impact          |
-| [pkg-size.dev](https://pkg-size.dev/)        | Explores npm packages with fresh installs to show actual size, dependencies, and helps optimize your node_modules                  |
-| [snyk](https://snyk.io/)                     | Finds and fixes vulnerabilities in open source dependencies                                                                        |
-| [socket.dev](https://socket.dev/)            | Security-focused tool that analyzes dependencies for vulnerabilities                                                               |
-| [npmx.dev](https://npmx.dev/)                | A better browser for the npm registry with e18e recommendations and advice                                                         |
+|                                                     | Description                                                                                                                        |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [bundlejs](https://bundlejs.com/)                   | In-browser bundler that shows package size with tree-shaking support, handles CSS and external files, and works with multiple CDNs |
+| [bundlephobia](https://bundlephobia.com/)           | Finds the cost of adding npm packages to your bundle                                                                               |
+| [CompatLab](https://compatlab.me/npm/compatibility) | Compares how exact npm package versions load with import and require on Node.js, Bun, and Deno                                     |
+| [DepTree](https://deptree.rschristian.dev/)         | Visualizes a project's dependencies and highlights which of those dependencies could be replaced                                   |
+| [Ecosyste.ms](https://packages.ecosyste.ms/)        | An open API service providing package, version and dependency metadata of many open source software ecosystems and registries      |
+| [node-modules.dev](https://node-modules.dev)        | Online tool to visualize your node_modules, inspect dependencies, and analyze package structures with WebContainer support         |
+| [npmgraph](https://npmgraph.js.org/)                | Visually displays a graph of a project's dependencies to get an idea of a projects module graph                                    |
+| [packagephobia](https://packagephobia.com/)         | Reports the "publish size" and "install size" of npm packages before installation, helping you evaluate disk space impact          |
+| [pkg-size.dev](https://pkg-size.dev/)               | Explores npm packages with fresh installs to show actual size, dependencies, and helps optimize your node_modules                  |
+| [snyk](https://snyk.io/)                            | Finds and fixes vulnerabilities in open source dependencies                                                                        |
+| [socket.dev](https://socket.dev/)                   | Security-focused tool that analyzes dependencies for vulnerabilities                                                               |
+| [npmx.dev](https://npmx.dev/)                       | A better browser for the npm registry with e18e recommendations and advice                                                         |
 
 ## Learning
 
