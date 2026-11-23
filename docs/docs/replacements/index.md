@@ -80,6 +80,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`fast-glob`](./fast-glob.md)                                         | :x:                     |
 | [`feather`](./feather.md)                                             | :x:                     |
 | [`feathers-hooks-common`](./feathers-hooks-common.md)                 | :x:                     |
+| [`fftjs`](./fftjs.md)                                                 | :x:                     |
 | [`find-cache-dir`](./find-cache-dir.md)                               | :x:                     |
 | [`find-cache-directory`](./find-cache-directory.md)                   | :x:                     |
 | [`find-file-up`](./find-file-up.md)                                   | :x:                     |
@@ -135,6 +136,7 @@ Where it was not possible to contribute upstream to the existing modules, replac
 | [`pkg-dir`](./pkg-dir.md)                                             | :x:                     |
 | [`portal-vue`](./portal-vue.md)                                       | :x:                     |
 | [`portfinder`](./portfinder.md)                                       | :x:                     |
+| [`prop-types`](./prop-types.md)                                       | :x:                     |
 | [`qs`](./qs.md)                                                       | :x:                     |
 | [`react-helmet`](./react-helmet.md)                                   | :x:                     |
 | [`read-package-up`](./read-package-up.md)                             | :x:                     |
